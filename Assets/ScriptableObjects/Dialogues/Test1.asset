@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
+  m_Name: Test1
+  m_EditorClassIdentifier: 
+  charName: yapper?
+  text: meer yap yap yapping
+  voiceline: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  delay: 0
+  answers:
+  - {fileID: 11400000, guid: 95b586f4c7abab14a88e1c9dfb123167, type: 2}
+  - {fileID: 11400000, guid: 00044e847b8ffa349b9b49782a701744, type: 2}
+  - {fileID: 11400000, guid: b64b6ff6ae8d4ce4a8c8628123eaaca8, type: 2}
+  minigame: 0
+  sprite: {fileID: 0}
+  background: {fileID: 0}
