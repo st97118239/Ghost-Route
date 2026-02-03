@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -26,10 +28,26 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject answerButtonPrefab;
     private AnswerButton[] answerButtons;
 
+    [SerializeField] private string mainMenuSceneName;
+
     private static Dialogue currentDialogue;
+
+    [SerializeField] private Dialogue[] dialogues;
 
     private void Awake()
     {
+        string foundName = PlayerPrefs.GetString("DialogueID");
+
+        if (foundName != string.Empty)
+        {
+            foreach (Dialogue dialogue in dialogues)
+            {
+                if (dialogue.name != foundName) continue;
+                startingDialogue = dialogue;
+                break;
+            }
+        }
+
         if (answerButtonParent == null || answerButtonPrefab == null || answerCount == 0) return;
 
         answerButtons = new AnswerButton[answerCount];
@@ -130,5 +148,11 @@ public class DialogueManager : MonoBehaviour
         answerButtonParent.gameObject.SetActive(false);
 
         LoadNewDialogue(answer.dialogue);
+    }
+
+    public void MainMenuButton()
+    {
+        PlayerPrefs.SetString("DialogueID", currentDialogue.name);
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }
