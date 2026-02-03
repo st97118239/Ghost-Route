@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,8 +7,6 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     // TODO:
-    // Answer options
-    // Background switcher
     // Typewriter effect
     // Minigame starter
 
@@ -119,6 +115,8 @@ public class DialogueManager : MonoBehaviour
             charImage.sprite = currentDialogue.sprite;
         if (currentDialogue.background != null)
             backgroundImage.sprite = currentDialogue.background;
+        if (currentDialogue.voiceline != null) 
+            AudioManager.PlayVoiceline(currentDialogue.voiceline);
         nextButton.interactable = true;
     }
 
