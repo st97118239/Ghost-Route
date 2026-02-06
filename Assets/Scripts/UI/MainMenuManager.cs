@@ -23,11 +23,15 @@ public class MainMenuManager : MonoBehaviour
 
     private void Awake()
     {
-        if (shouldReset)
-            PlayerPrefs.DeleteAll();
-
         endings = _endings;
-        startButtonText.text = PlayerPrefs.GetString("DialogueID") == string.Empty ? "Start" : "Continue";
+
+        if (shouldReset)
+            SaveData.ResetData();
+
+
+        SaveData.LoadSave();
+
+        startButtonText.text = SaveData.currentDialogueID == string.Empty ? "Start" : "Continue";
     }
 
     public void Show()
@@ -54,6 +58,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void QuitButton()
     {
+        SaveData.Save();
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else

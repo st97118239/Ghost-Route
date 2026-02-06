@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,6 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     // TODO:
-    // Typewriter effect
     // Minigame starter
 
     [SerializeField] private Dialogue startingDialogue;
@@ -47,13 +47,11 @@ public class DialogueManager : MonoBehaviour
     private bool isFast;
     private bool isWaiting;
 
-    private int endingIdx;
     private Ending currentEnding;
 
     private void Awake()
     {
-        string foundName = PlayerPrefs.GetString("DialogueID");
-        //string foundName = string.Empty;
+        string foundName = SaveData.currentDialogueID;
 
         if (foundName != string.Empty)
         {
@@ -75,6 +73,7 @@ public class DialogueManager : MonoBehaviour
             button.Setup(this);
         }
 
+        typingSpeed = 1 - SaveData.textSpeed;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
@@ -152,11 +151,18 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = givenDialogue;
         nameBox.text = currentDialogue.charName;
         dialogueBox.SetActive(true);
-        if (currentDialogue.sprite != null)
+
+        if (currentDialogue.goreSprite != null && SaveData.showGore)
+            charImage.sprite = currentDialogue.goreSprite;
+        else if (currentDialogue.sprite != null)
             charImage.sprite = currentDialogue.sprite;
-        if (currentDialogue.background != null)
+
+        if (currentDialogue.goreBackground != null && SaveData.showGore)
+            backgroundImage.sprite = currentDialogue.goreBackground;
+        else if (currentDialogue.background != null)
             backgroundImage.sprite = currentDialogue.background;
-        if (currentDialogue.voiceline != null) 
+
+        if (currentDialogue.voiceline != null)
             AudioManager.PlayVoiceline(currentDialogue.voiceline);
 
         dialogueCoroutine = StartCoroutine(ShowDialogue());
@@ -233,14 +239,7 @@ public class DialogueManager : MonoBehaviour
     private void GetEnding()
     {
         currentEnding = currentDialogue.ending;
-        bool hasFound = false;
-        for (int i = 0; i < MainMenuManager.endings.Length; i++)
-        {
-            if (MainMenuManager.endings[i].endingID != currentEnding.endingID) continue;
-            endingIdx = i;
-            hasFound = true;
-            break;
-        }
+        bool hasFound = MainMenuManager.endings.Any(t => t.endingID == currentEnding.endingID);
 
         if (!hasFound)
         {
@@ -261,14 +260,17 @@ public class DialogueManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        PlayerPrefs.SetString("DialogueID", currentDialogue.name);
+        SaveData.textSpeed = 1 - typingSpeed;
+        SaveData.currentDialogueID = currentDialogue.name;
+        SaveData.Save();
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
     public void LeaveAfterEnding()
     {
-        PlayerPrefs.SetInt(currentEnding.endingID, 1);
-        PlayerPrefs.SetString("DialogueID", string.Empty);
+        SaveData.endings[currentEnding.endingID].isUnlocked = true;
+        SaveData.currentDialogueID = string.Empty;
+        SaveData.Save();
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }

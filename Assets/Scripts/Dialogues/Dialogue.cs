@@ -12,5 +12,7 @@ public class Dialogue : ScriptableObject
     public Minigames minigame;
     public Ending ending;
     public Sprite sprite;
+    public Sprite goreSprite;
     public Sprite background;
+    public Sprite goreBackground;
 }

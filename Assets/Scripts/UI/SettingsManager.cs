@@ -12,10 +12,12 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField] private GameObject textSpeedPanel;
     [SerializeField] private Slider textSpeedSlider;
-    [SerializeField] private float maxTextSpeed;
 
     [SerializeField] private GameObject windowTypePanel;
     [SerializeField] private int windowTypeIdx;
+    [SerializeField] private Image[] windowTypeCheckmarks;
+
+    [SerializeField] private Toggle showGoreToggle;
 
     [SerializeField] private GameObject bgmVolumePanel;
     [SerializeField] private Slider bgmVolumeSlider;
@@ -28,22 +30,12 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("NeedsSettings") == 0)
-        {
-            PlayerPrefs.SetInt("NeedsSettings", 1);
-            PlayerPrefs.SetFloat("TextSpeed", 0.5f);
-            PlayerPrefs.SetInt("WindowType", 0);
-            PlayerPrefs.SetFloat("BGMVolume", 1);
-            PlayerPrefs.SetFloat("SFXVolume", 1);
-            PlayerPrefs.SetFloat("VoicelinesVolume", 1);
-        }
-
-        textSpeedSlider.maxValue = maxTextSpeed;
-        textSpeedSlider.value = PlayerPrefs.GetFloat("TextSpeed", 0.5f);
-        windowTypeIdx = PlayerPrefs.GetInt("WindowType", 0);
-        bgmVolumeSlider.value = PlayerPrefs.GetFloat("BGMVolume", 1);
-        sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1);
-        voicelineVolumeSlider.value = PlayerPrefs.GetFloat("VoicelinesVolume", 1);
+        textSpeedSlider.value = 1 - SaveData.textSpeed;
+        windowTypeIdx = SaveData.windowType;
+        bgmVolumeSlider.value = SaveData.bgmVolume;
+        sfxVolumeSlider.value = SaveData.sfxVolume;
+        voicelineVolumeSlider.value = SaveData.voicelinesVolume;
+        showGoreToggle.isOn = SaveData.showGore;
         SetWindowType();
     }
 
@@ -71,7 +63,7 @@ public class SettingsManager : MonoBehaviour
         if (textSpeedPanel.activeSelf)
         {
             textSpeedPanel.SetActive(false);
-            PlayerPrefs.SetFloat("TextSpeed", textSpeedSlider.value);
+            SaveData.textSpeed = 1 - textSpeedSlider.value;
         }
         else
             textSpeedPanel.SetActive(true);
@@ -82,7 +74,7 @@ public class SettingsManager : MonoBehaviour
         if (windowTypePanel.activeSelf)
         {
             windowTypePanel.SetActive(false);
-            PlayerPrefs.SetInt("WindowType", windowTypeIdx);
+            SaveData.windowType = windowTypeIdx;
         }
         else
             windowTypePanel.SetActive(true);
@@ -107,6 +99,14 @@ public class SettingsManager : MonoBehaviour
             3 => FullScreenMode.Windowed,
             _ => Screen.fullScreenMode
         };
+
+        for (int i = 0; i < windowTypeCheckmarks.Length; i++) 
+            windowTypeCheckmarks[i].gameObject.SetActive(i == windowTypeIdx);
+    }
+
+    public void ShowGoreToggle()
+    {
+        SaveData.showGore = showGoreToggle.isOn;
     }
 
     public void BGMButton()
@@ -114,7 +114,7 @@ public class SettingsManager : MonoBehaviour
         if (bgmVolumePanel.activeSelf)
         {
             bgmVolumePanel.SetActive(false);
-            PlayerPrefs.SetFloat("BGMVolume", bgmVolumeSlider.value);
+            SaveData.bgmVolume = bgmVolumeSlider.value;
         }
         else
             bgmVolumePanel.SetActive(true);
@@ -125,7 +125,7 @@ public class SettingsManager : MonoBehaviour
         if (sfxVolumePanel.activeSelf)
         {
             sfxVolumePanel.SetActive(false);
-            PlayerPrefs.SetFloat("SFXVolume", sfxVolumeSlider.value);
+            SaveData.sfxVolume = sfxVolumeSlider.value;
         }
         else
             sfxVolumePanel.SetActive(true);
@@ -136,7 +136,7 @@ public class SettingsManager : MonoBehaviour
         if (voicelineVolumePanel.activeSelf)
         {
             voicelineVolumePanel.SetActive(false);
-            PlayerPrefs.SetFloat("VoicelinesVolume", voicelineVolumeSlider.value);
+            SaveData.voicelinesVolume = voicelineVolumeSlider.value;
         }
         else
             voicelineVolumePanel.SetActive(true);
@@ -149,7 +149,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ConfirmResetButton()
     {
-        PlayerPrefs.DeleteAll();
+        SaveData.ResetData();
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
@@ -160,6 +160,7 @@ public class SettingsManager : MonoBehaviour
 
     public void BackButton()
     {
+        SaveData.Save();
         mainMenu.Show();
         settingsCanvas.gameObject.SetActive(false);
     }

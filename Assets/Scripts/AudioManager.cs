@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        voicelineSource.volume = PlayerPrefs.GetFloat("VoicelinesVolume");
+        voicelineSource.volume = SaveData.voicelinesVolume;
     }
 
     public static void PlayVoiceline(AudioClip audioClip)

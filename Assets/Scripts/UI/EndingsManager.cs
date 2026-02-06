@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +28,7 @@ public class EndingsManager : MonoBehaviour
         for (int i = 0; i < buttonsText.Length; i++)
         {
             Ending ending = MainMenuManager.endings[i];
-            if (PlayerPrefs.GetInt(ending.endingID) == 1)
+            if (SaveData.endings[ending.endingID].isUnlocked)
             {
                 buttonsText[i].text = MainMenuManager.endings[i].endingName;
                 buttons[i].interactable = true;

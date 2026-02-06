@@ -7,4 +7,5 @@ public class Ending : ScriptableObject
     public string description;
     public Sprite badgeSprite;
     public string endingID;
+    public bool isUnlocked;
 }
