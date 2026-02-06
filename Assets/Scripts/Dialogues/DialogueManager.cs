@@ -30,9 +30,23 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Dialogue[] dialogues;
 
+    [SerializeField] private float timeAfterDialogue;
+    private WaitForSeconds timeAfterDialogueWait;
+    [SerializeField] private float typingSpeed;
+    private WaitForSeconds typingSpeedWait;
+    [SerializeField] private float fastTypingSpeed;
+    private WaitForSeconds fastTypingSpeedWait;
+
+    private Coroutine dialogueCoroutine;
+
+    private bool isTyping;
+    private bool isFast;
+    private bool isWaiting;
+
     private void Awake()
     {
-        string foundName = PlayerPrefs.GetString("DialogueID");
+        //string foundName = PlayerPrefs.GetString("DialogueID");
+        string foundName = string.Empty;
 
         if (foundName != string.Empty)
         {
@@ -53,6 +67,10 @@ public class DialogueManager : MonoBehaviour
             answerButtons[i] = button;
             button.Setup(this);
         }
+
+        typingSpeedWait = new WaitForSeconds(typingSpeed);
+        fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
+        timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
     }
 
     private void Start()
@@ -67,7 +85,18 @@ public class DialogueManager : MonoBehaviour
 
     public void BoxPress()
     {
-        StartCoroutine(StartDelay());
+        switch (isTyping)
+        {
+            case true when !isFast:
+                SkipDialogue();
+                break;
+            case true when isWaiting:
+                SkipWaitDialogue();
+                break;
+            case false:
+                StartCoroutine(StartDelay());
+                break;
+        }
     }
 
     private IEnumerator StartDelay()
@@ -108,7 +137,6 @@ public class DialogueManager : MonoBehaviour
     private void LoadNewDialogue(Dialogue givenDialogue)
     {
         currentDialogue = givenDialogue;
-        textBox.text = currentDialogue.text;
         nameBox.text = currentDialogue.charName;
         dialogueBox.SetActive(true);
         if (currentDialogue.sprite != null)
@@ -117,7 +145,48 @@ public class DialogueManager : MonoBehaviour
             backgroundImage.sprite = currentDialogue.background;
         if (currentDialogue.voiceline != null) 
             AudioManager.PlayVoiceline(currentDialogue.voiceline);
+
+        dialogueCoroutine = StartCoroutine(ShowDialogue());
+    }
+
+    private IEnumerator ShowDialogue()
+    {
+        isTyping = true;
         nextButton.interactable = true;
+        string fullText = currentDialogue.text;
+
+        for (int i = 0; i < fullText.Length + 1; i++)
+        {
+            textBox.text = fullText[..i];
+            if (isFast)
+                yield return fastTypingSpeedWait;
+            else
+                yield return typingSpeedWait;
+        }
+
+        if (isFast)
+        {
+            isWaiting = true;
+            yield return timeAfterDialogueWait;
+            isFast = false;
+            isWaiting = false;
+        }
+        isTyping = false;
+        dialogueCoroutine = null;
+    }
+
+    private void SkipDialogue()
+    {
+        isFast = true;
+    }
+    
+    private void SkipWaitDialogue()
+    {
+        StopCoroutine(dialogueCoroutine);
+        isWaiting = false;
+        isFast = false;
+        isTyping = false;
+        dialogueCoroutine = null;
     }
 
     private void LoadAnswers()

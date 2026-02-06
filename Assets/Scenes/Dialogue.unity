@@ -732,6 +732,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 772ba0e3565990c42b67fd67a6b5cbfc, type: 2}
   - {fileID: 11400000, guid: c89fbf1a420895042b7d9d41e790399a, type: 2}
   - {fileID: 11400000, guid: 7bfa9bcb2dc5e58428fd46419915c2a5, type: 2}
+  timeAfterDialogue: 0.5
+  typingSpeed: 0.075
+  fastTypingSpeed: 0.01
 --- !u!4 &1320757395
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,6 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a03a6fc56b1b634cb5df78d55afacba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voicelineSource: {fileID: 1510276226}
 --- !u!4 &1510276228
 Transform:
   m_ObjectHideFlags: 0
