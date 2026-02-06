@@ -24,6 +24,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject answerButtonPrefab;
     private AnswerButton[] answerButtons;
 
+    [SerializeField] private Canvas endingCanvas;
+    [SerializeField] private Image endingBadgeImage;
+    [SerializeField] private TMP_Text endingText;
+
     [SerializeField] private string mainMenuSceneName;
 
     private static Dialogue currentDialogue;
@@ -43,10 +47,13 @@ public class DialogueManager : MonoBehaviour
     private bool isFast;
     private bool isWaiting;
 
+    private int endingIdx;
+    private Ending currentEnding;
+
     private void Awake()
     {
-        //string foundName = PlayerPrefs.GetString("DialogueID");
-        string foundName = string.Empty;
+        string foundName = PlayerPrefs.GetString("DialogueID");
+        //string foundName = string.Empty;
 
         if (foundName != string.Empty)
         {
@@ -123,6 +130,12 @@ public class DialogueManager : MonoBehaviour
 
     private void DelayFinished()
     {
+        if (currentDialogue.ending != null)
+        {
+            GetEnding();
+            return;
+        }
+
         if (currentDialogue.answers != null && currentDialogue.answers.Length > 0)
         {
             LoadAnswers();
@@ -217,9 +230,45 @@ public class DialogueManager : MonoBehaviour
         LoadNewDialogue(answer.dialogue);
     }
 
+    private void GetEnding()
+    {
+        currentEnding = currentDialogue.ending;
+        bool hasFound = false;
+        for (int i = 0; i < MainMenuManager.endings.Length; i++)
+        {
+            if (MainMenuManager.endings[i].endingID != currentEnding.endingID) continue;
+            endingIdx = i;
+            hasFound = true;
+            break;
+        }
+
+        if (!hasFound)
+        {
+            Debug.LogError("Ending ID wasn't found in MainMenuManager endings");
+            SceneManager.LoadScene(mainMenuSceneName);
+            return;
+        }
+
+        ShowEnding();
+    }
+
+    private void ShowEnding()
+    {
+        endingBadgeImage.sprite = currentEnding.badgeSprite;
+        endingText.text = currentEnding.endingName;
+        endingCanvas.gameObject.SetActive(true);
+    }
+
     public void MainMenuButton()
     {
         PlayerPrefs.SetString("DialogueID", currentDialogue.name);
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void LeaveAfterEnding()
+    {
+        PlayerPrefs.SetInt(currentEnding.endingID, 1);
+        PlayerPrefs.SetString("DialogueID", string.Empty);
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }

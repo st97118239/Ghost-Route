@@ -19,5 +19,6 @@ MonoBehaviour:
   delay: 0
   answers: []
   minigame: 0
+  ending: {fileID: 11400000, guid: a7a9361dfb43c5645abca9789e07c383, type: 2}
   sprite: {fileID: 0}
   background: {fileID: 0}

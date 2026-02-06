@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField] private MainMenuManager mainMenu;
     [SerializeField] private Canvas settingsCanvas;
+
+    [SerializeField] private GameObject resetConfirmPanel;
+    [SerializeField] private string mainMenuSceneName;
 
     [SerializeField] private GameObject textSpeedPanel;
     [SerializeField] private Slider textSpeedSlider;
@@ -136,6 +140,22 @@ public class SettingsManager : MonoBehaviour
         }
         else
             voicelineVolumePanel.SetActive(true);
+    }
+
+    public void ResetDataButton()
+    {
+        resetConfirmPanel.SetActive(true);
+    }
+
+    public void ConfirmResetButton()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void CancelResetButton()
+    {
+        resetConfirmPanel.SetActive(false);
     }
 
     public void BackButton()
