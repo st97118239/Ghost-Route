@@ -30,7 +30,7 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-        textSpeedSlider.value = 1 - SaveData.textSpeed;
+        textSpeedSlider.value = SaveData.textSpeed;
         windowTypeIdx = SaveData.windowType;
         bgmVolumeSlider.value = SaveData.bgmVolume;
         sfxVolumeSlider.value = SaveData.sfxVolume;
@@ -63,7 +63,7 @@ public class SettingsManager : MonoBehaviour
         if (textSpeedPanel.activeSelf)
         {
             textSpeedPanel.SetActive(false);
-            SaveData.textSpeed = 1 - textSpeedSlider.value;
+            SaveData.textSpeed = textSpeedSlider.value;
         }
         else
             textSpeedPanel.SetActive(true);

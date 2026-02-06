@@ -12,6 +12,9 @@ public static class SaveData
     public static float voicelinesVolume;
     public static bool showGore;
 
+    public static string name;
+    public static string pronouns;
+
     public static Dictionary<string, Ending> endings;
 
     public static string currentDialogueID;
@@ -34,6 +37,9 @@ public static class SaveData
         sfxVolume = PlayerPrefs.GetFloat("SFXVolume");
         voicelinesVolume = PlayerPrefs.GetFloat("VoicelinesVolume");
         showGore = PlayerPrefs.GetInt("ShowGore") != 0;
+
+        name = PlayerPrefs.GetString("Name");
+        pronouns = PlayerPrefs.GetString("Pronouns");
 
         if (endings == null)
         {
@@ -68,6 +74,9 @@ public static class SaveData
         PlayerPrefs.SetFloat("VoicelinesVolume", voicelinesVolume);
         PlayerPrefs.SetInt("ShowGore", showGore ? 1 : 0);
 
+        PlayerPrefs.SetString("Name", name);
+        PlayerPrefs.SetString("Pronouns", pronouns);
+
         foreach (KeyValuePair<string, Ending> ending in endings) 
             PlayerPrefs.SetInt(ending.Key, ending.Value.isUnlocked ? 1 : 0);
 
@@ -79,12 +88,15 @@ public static class SaveData
         PlayerPrefs.DeleteAll();
 
         PlayerPrefs.SetInt("HasSave", 1);
-        PlayerPrefs.SetFloat("TextSpeed", 0.5f);
-        PlayerPrefs.SetInt("WindowType", 0);
+        PlayerPrefs.SetFloat("TextSpeed", 0.075f);
+        PlayerPrefs.SetInt("WindowType", 1);
         PlayerPrefs.SetFloat("BGMVolume", 1);
         PlayerPrefs.SetFloat("SFXVolume", 1);
         PlayerPrefs.SetFloat("VoicelinesVolume", 1);
         PlayerPrefs.SetInt("ShowGore", 1);
+
+        PlayerPrefs.SetString("Name", "");
+        PlayerPrefs.SetString("Pronouns", "she");
 
         CreateEndings();
 

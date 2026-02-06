@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private TMP_Text startButtonText;
 
     [SerializeField] private Canvas mainMenuCanvas;
+    [SerializeField] private CharCreatorManager charCreatorManager;
     [SerializeField] private SettingsManager settingsManager;
     [SerializeField] private EndingsManager endingsManager;
 
@@ -19,15 +20,9 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private Ending[] _endings;
 
-    [SerializeField] private bool shouldReset;
-
     private void Awake()
     {
         endings = _endings;
-
-        if (shouldReset)
-            SaveData.ResetData();
-
 
         SaveData.LoadSave();
 
@@ -41,7 +36,16 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene(gameSceneName);
+        if (SaveData.currentDialogueID == string.Empty)
+            ShowCharCreator();
+        else
+            SceneManager.LoadScene(gameSceneName);
+    }
+
+    public void ShowCharCreator()
+    {
+        charCreatorManager.Show();
+        mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void EndingsButton()

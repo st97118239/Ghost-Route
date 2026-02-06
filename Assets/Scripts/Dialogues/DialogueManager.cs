@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour
             button.Setup(this);
         }
 
-        typingSpeed = 1 - SaveData.textSpeed;
+        typingSpeed = SaveData.textSpeed;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
@@ -174,6 +174,9 @@ public class DialogueManager : MonoBehaviour
         nextButton.interactable = true;
         string fullText = currentDialogue.text;
 
+        fullText = fullText.Replace("{name}", SaveData.name);
+        fullText = fullText.Replace("{pronoun}", SaveData.pronouns);
+
         for (int i = 0; i < fullText.Length + 1; i++)
         {
             textBox.text = fullText[..i];
@@ -214,9 +217,9 @@ public class DialogueManager : MonoBehaviour
 
         answerButtonParent.gameObject.SetActive(true);
 
-        int max = answerButtons.Length;
+        int max = currentDialogue.answers.Length;
 
-        if (max > 3) max = 3;
+        if (max > answerButtons.Length) max = answerButtons.Length;
 
         for (int i = 0; i < max; i++)
         {
@@ -260,7 +263,7 @@ public class DialogueManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SaveData.textSpeed = 1 - typingSpeed;
+        SaveData.textSpeed = typingSpeed;
         SaveData.currentDialogueID = currentDialogue.name;
         SaveData.Save();
         SceneManager.LoadScene(mainMenuSceneName);

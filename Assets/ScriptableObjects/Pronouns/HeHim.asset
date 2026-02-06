@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b12b91a53e606748a04eea5aabe39f1, type: 3}
-  m_Name: Test1Answer2
+  m_Script: {fileID: 11500000, guid: 8a7cbe0c960119c4bae67beeac5c344f, type: 3}
+  m_Name: HeHim
   m_EditorClassIdentifier: 
-  text: ccccccccccccccc
-  dialogue: {fileID: 11400000, guid: c89fbf1a420895042b7d9d41e790399a, type: 2}
+  pronounsInMenu: He/Him
+  pronounInDialogue: he

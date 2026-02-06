@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b12b91a53e606748a04eea5aabe39f1, type: 3}
-  m_Name: Test1Answer1
+  m_Script: {fileID: 11500000, guid: 8a7cbe0c960119c4bae67beeac5c344f, type: 3}
+  m_Name: TheyThem
   m_EditorClassIdentifier: 
-  text: bbbbbbbbb
-  dialogue: {fileID: 11400000, guid: 772ba0e3565990c42b67fd67a6b5cbfc, type: 2}
+  pronounsInMenu: They/Them
+  pronounInDialogue: they
