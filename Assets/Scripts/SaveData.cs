@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public static class SaveData
@@ -18,6 +17,15 @@ public static class SaveData
     public static Dictionary<string, Ending> endings;
 
     public static string currentDialogueID;
+
+    public static bool hasPlayedGhostHunt;
+    public static int ghostHuntScore;
+
+    public static bool hasPlayedAcheron;
+    public static int acheronScore;
+
+    public static bool hasPlayedMemory;
+    public static int memoryScore;
 
     public static void LoadSave()
     {
@@ -52,6 +60,13 @@ public static class SaveData
         }
 
         currentDialogueID = PlayerPrefs.GetString("DialogueID");
+
+        hasPlayedGhostHunt = PlayerPrefs.GetInt("HasPlayedGhostHunt") != 0;
+        ghostHuntScore = PlayerPrefs.GetInt("GhostHuntScore");
+        hasPlayedAcheron = PlayerPrefs.GetInt("HasPlayedAcheron") != 0;
+        acheronScore = PlayerPrefs.GetInt("AcheronScore");
+        hasPlayedMemory = PlayerPrefs.GetInt("HasPlayedMemory") != 0;
+        memoryScore = PlayerPrefs.GetInt("MemoryScore");
     }
 
     private static void CreateEndings()
@@ -81,6 +96,13 @@ public static class SaveData
             PlayerPrefs.SetInt(ending.Key, ending.Value.isUnlocked ? 1 : 0);
 
         PlayerPrefs.SetString("DialogueID", currentDialogueID);
+
+        PlayerPrefs.SetInt("HasPlayedGhostHunt", hasPlayedGhostHunt ? 1 : 0);
+        PlayerPrefs.SetInt("GhostHuntScore", ghostHuntScore);
+        PlayerPrefs.SetInt("HasPlayedAcheron", hasPlayedAcheron ? 1 : 0);
+        PlayerPrefs.SetInt("AcheronScore", acheronScore);
+        PlayerPrefs.SetInt("HasPlayedMemory", hasPlayedMemory ? 1 : 0);
+        PlayerPrefs.SetInt("MemoryScore", memoryScore);
     }
 
     public static void ResetData()
@@ -95,9 +117,6 @@ public static class SaveData
         PlayerPrefs.SetFloat("VoicelinesVolume", 1);
         PlayerPrefs.SetInt("ShowGore", 1);
 
-        PlayerPrefs.SetString("Name", "");
-        PlayerPrefs.SetString("Pronouns", "she");
-
         CreateEndings();
 
         foreach (KeyValuePair<string, Ending> ending in endings)
@@ -106,7 +125,22 @@ public static class SaveData
             PlayerPrefs.SetInt(ending.Key, 0);
         }
 
+        ResetGameData();
+    }
+
+    public static void ResetGameData()
+    {
+        PlayerPrefs.SetString("Name", "");
+        PlayerPrefs.SetString("Pronouns", "she");
+
         PlayerPrefs.SetString("DialogueID", string.Empty);
+
+        PlayerPrefs.SetInt("HasPlayedGhostHunt", 0);
+        PlayerPrefs.SetInt("GhostHuntScore", 0);
+        PlayerPrefs.SetInt("HasPlayedAcheron", 0);
+        PlayerPrefs.SetInt("AcheronScore", 0);
+        PlayerPrefs.SetInt("HasPlayedMemory", 0);
+        PlayerPrefs.SetInt("MemoryScore", 0);
 
         SetData();
     }

@@ -1,5 +1,8 @@
 using System.Collections;
-using System.Linq;
+#if UNITY_EDITOR
+using System.IO;
+using System.Linq; // LINQ ONLY WORKS IN EDITOR
+#endif
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,9 +10,6 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    // TODO:
-    // Minigame starter
-
     [SerializeField] private Dialogue startingDialogue;
 
     [SerializeField] private GameObject dialogueBox;
@@ -51,6 +51,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
+        string[] files = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues");
+        int amt = files.Count(file => !file.EndsWith(".meta"));
+
+        if (dialogues.Length < amt)
+            Debug.LogWarning("Not all dialogues are in the dialogues variable. Please put them all in.");
+        else if (dialogues.Length > amt)
+            Debug.LogWarning("There are too many dialogues in the dialogues variable.");
+        else if (dialogues.Length == amt)
+            Debug.Log("All dialogues are in the variable.");
+#endif
+
         string foundName = SaveData.currentDialogueID;
 
         if (foundName != string.Empty)
@@ -86,6 +98,31 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("No Starting Dialogue is set");
             return;
         }
+
+        if (startingDialogue.minigame != Minigames.None)
+        {
+            int score = -1;
+            switch (startingDialogue.minigame)
+            {
+                case Minigames.GhostHunt when SaveData.hasPlayedGhostHunt:
+                    score = SaveData.ghostHuntScore;
+                    break;
+                case Minigames.Acheron when SaveData.hasPlayedAcheron:
+                    score = SaveData.acheronScore;
+                    break;
+                case Minigames.Memory when SaveData.hasPlayedMemory:
+                    score = SaveData.memoryScore;
+                    break;
+            }
+
+            if (score != -1)
+            {
+                startingDialogue = score >= startingDialogue.scoreToWin
+                    ? startingDialogue.wonDialogue
+                    : startingDialogue.loseDialogue;
+            }
+        }
+        
         LoadNewDialogue(startingDialogue);
     }
 
@@ -117,11 +154,6 @@ public class DialogueManager : MonoBehaviour
             }
 
             yield return new WaitForSeconds(currentDialogue.delay);
-
-            if (!shouldHide)
-            {
-                dialogueBox.SetActive(true);
-            }
         }
 
         DelayFinished();
@@ -134,6 +166,20 @@ public class DialogueManager : MonoBehaviour
             GetEnding();
             return;
         }
+
+        switch (currentDialogue.minigame)
+        {
+            case Minigames.None:
+            case Minigames.GhostHunt:
+            case Minigames.Acheron:
+                break;
+            case Minigames.Memory:
+                Save();
+                SceneManager.LoadScene("Memory");
+                return;
+        }
+
+        dialogueBox.SetActive(true);
 
         if (currentDialogue.answers != null && currentDialogue.answers.Length > 0)
         {
@@ -272,8 +318,14 @@ public class DialogueManager : MonoBehaviour
     public void LeaveAfterEnding()
     {
         SaveData.endings[currentEnding.endingID].isUnlocked = true;
-        SaveData.currentDialogueID = string.Empty;
         SaveData.Save();
+        SaveData.ResetGameData();
         SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    private static void Save()
+    {
+        SaveData.currentDialogueID = currentDialogue.name;
+        SaveData.Save();
     }
 }

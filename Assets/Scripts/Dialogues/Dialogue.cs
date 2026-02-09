@@ -10,6 +10,9 @@ public class Dialogue : ScriptableObject
     public float delay;
     public Answer[] answers;
     public Minigames minigame;
+    public int scoreToWin;
+    public Dialogue wonDialogue;
+    public Dialogue loseDialogue;
     public Ending ending;
     public Sprite sprite;
     public Sprite goreSprite;

@@ -22,6 +22,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00044e847b8ffa349b9b49782a701744, type: 2}
   - {fileID: 11400000, guid: b64b6ff6ae8d4ce4a8c8628123eaaca8, type: 2}
   minigame: 0
+  scoreToWin: 0
+  wonDialogue: {fileID: 0}
+  loseDialogue: {fileID: 0}
   ending: {fileID: 0}
   sprite: {fileID: 0}
   goreSprite: {fileID: 0}

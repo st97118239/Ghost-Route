@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: T1A2D3A1D0
+  m_Name: T1A2D3A1D1
   m_EditorClassIdentifier: 
   charName: :P
-  text: hmmmmmmm.....
+  text: hmmmmmmmmmmmmmmmmmmmMMMMMMMmmmmmmmmmmm..........
   voiceline: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: a3e54e126ebc79349abf95b5ee9f0898, type: 2}
-  delay: 3
+  nextDialogue: {fileID: 11400000, guid: b3b901c998fddc54c814f169190136b4, type: 2}
+  delay: 2.3
   answers: []
   minigame: 0
   scoreToWin: 0
