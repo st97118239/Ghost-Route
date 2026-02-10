@@ -20,7 +20,12 @@ public class AnswerButton : MonoBehaviour
     public void Load(Answer givenAnswer)
     {
         answer = givenAnswer;
-        text.text = answer.text;
+
+        string fullText = answer.text;
+        fullText = fullText.Replace("{name}", SaveData.name);
+        fullText = fullText.Replace("{pronoun}", SaveData.pronouns);
+
+        text.text = fullText;
         gameObject.SetActive(true);
     }
 

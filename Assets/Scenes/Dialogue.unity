@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33337cc64ccfae44fba259f3b6b81f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingDialogue: {fileID: 11400000, guid: 69327ba8b4db96a4ba2b6add0b030fca, type: 2}
+  startingDialogue: {fileID: 11400000, guid: ebc4db54699fc7a46898f0dcdb46cba1, type: 2}
   dialogueBox: {fileID: 1856836615}
   nextButton: {fileID: 1366641232}
   textBox: {fileID: 2040590048}
@@ -1193,6 +1193,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1229c5654f9bfe34bae54881ed0d7351, type: 2}
   - {fileID: 11400000, guid: a3e54e126ebc79349abf95b5ee9f0898, type: 2}
   - {fileID: 11400000, guid: b3b901c998fddc54c814f169190136b4, type: 2}
+  - {fileID: 11400000, guid: c5d664151668892429852bebe3cb39e5, type: 2}
+  - {fileID: 11400000, guid: 472e13636b7c0504fba83c46a80d1fc0, type: 2}
+  - {fileID: 11400000, guid: 6dcd46421706b0c4f9e3575c01e655d5, type: 2}
   - {fileID: 11400000, guid: 5e64e180454ccad43a700754ff654648, type: 2}
   - {fileID: 11400000, guid: ebc4db54699fc7a46898f0dcdb46cba1, type: 2}
   - {fileID: 11400000, guid: 7bfa9bcb2dc5e58428fd46419915c2a5, type: 2}

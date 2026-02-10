@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class SaveData
 {
@@ -49,17 +50,13 @@ public static class SaveData
         name = PlayerPrefs.GetString("Name");
         pronouns = PlayerPrefs.GetString("Pronouns");
 
-        if (endings == null)
-        {
-            CreateEndings();
-        }
-
-        foreach ((string id, Ending value) in endings)
-        {
-            value.isUnlocked = PlayerPrefs.GetInt(id) != 0;
-        }
-
         currentDialogueID = PlayerPrefs.GetString("DialogueID");
+
+        if (endings == null) 
+            CreateEndings();
+
+        foreach ((string id, Ending value) in endings) 
+            value.isUnlocked = PlayerPrefs.GetInt(id) != 0;
 
         hasPlayedGhostHunt = PlayerPrefs.GetInt("HasPlayedGhostHunt") != 0;
         ghostHuntScore = PlayerPrefs.GetInt("GhostHuntScore");
@@ -71,6 +68,12 @@ public static class SaveData
 
     private static void CreateEndings()
     {
+        if (MainMenuManager.endings == null)
+        {
+            SceneManager.LoadScene("Main Menu");
+            return;
+        }
+
         endings = new();
         foreach (Ending ending in MainMenuManager.endings)
         {
@@ -92,10 +95,12 @@ public static class SaveData
         PlayerPrefs.SetString("Name", name);
         PlayerPrefs.SetString("Pronouns", pronouns);
 
+        PlayerPrefs.SetString("DialogueID", currentDialogueID);
+
+        if (endings == null) CreateEndings();
+
         foreach (KeyValuePair<string, Ending> ending in endings) 
             PlayerPrefs.SetInt(ending.Key, ending.Value.isUnlocked ? 1 : 0);
-
-        PlayerPrefs.SetString("DialogueID", currentDialogueID);
 
         PlayerPrefs.SetInt("HasPlayedGhostHunt", hasPlayedGhostHunt ? 1 : 0);
         PlayerPrefs.SetInt("GhostHuntScore", ghostHuntScore);

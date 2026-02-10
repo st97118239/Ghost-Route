@@ -170,8 +170,14 @@ public class DialogueManager : MonoBehaviour
         switch (currentDialogue.minigame)
         {
             case Minigames.None:
+                break;
             case Minigames.GhostHunt:
+                Save();
+                SceneManager.LoadScene("Ghost Hunt");
+                break;
             case Minigames.Acheron:
+                Save();
+                SceneManager.LoadScene("Acheron");
                 break;
             case Minigames.Memory:
                 Save();

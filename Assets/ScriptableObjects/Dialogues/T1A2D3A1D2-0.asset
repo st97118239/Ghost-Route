@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: T1A2D3A1D2L
+  m_Name: T1A2D3A1D2-0
   m_EditorClassIdentifier: 
   charName: :>
-  text: loser L
+  text: aaaaaaaaaaaa
   voiceline: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: c5d664151668892429852bebe3cb39e5, type: 2}
+  nextDialogue: {fileID: 0}
   delay: 0
   answers: []
-  minigame: 0
-  scoreToWin: 0
-  wonDialogue: {fileID: 0}
-  loseDialogue: {fileID: 0}
+  minigame: 1
+  scoreToWin: 150
+  wonDialogue: {fileID: 11400000, guid: 6dcd46421706b0c4f9e3575c01e655d5, type: 2}
+  loseDialogue: {fileID: 11400000, guid: 472e13636b7c0504fba83c46a80d1fc0, type: 2}
   ending: {fileID: 0}
   sprite: {fileID: 0}
   goreSprite: {fileID: 0}
