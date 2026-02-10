@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,9 +8,6 @@ using Random = System.Random;
 
 public class MemoryManager : MonoBehaviour
 {
-    // TODO:
-    // SHOW POINTS IN UI
-
     [SerializeField] private OpponentManager opponentManager;
 
     [SerializeField] private GameObject clickBlocker;
@@ -31,6 +29,9 @@ public class MemoryManager : MonoBehaviour
 
     private int playerPoints;
     private int opponentPoints;
+
+    [SerializeField] private TMP_Text playerText;
+    [SerializeField] private TMP_Text opponentText;
 
     private readonly Random rng = new();
 
@@ -112,9 +113,15 @@ public class MemoryManager : MonoBehaviour
         if (cardsId[0] == cardsId[1])
         {
             if (turn == 0)
+            {
                 playerPoints++;
+                playerText.text = playerPoints.ToString();
+            }
             else
+            {
                 opponentPoints++;
+                opponentText.text = opponentPoints.ToString();
+            }
 
             CardObj card0 = cardsObj[cardsIdx[0]];
             CardObj card1 = cardsObj[cardsIdx[1]];
@@ -144,7 +151,8 @@ public class MemoryManager : MonoBehaviour
                 yield return Time.deltaTime;
             }
 
-            opponentManager.ForgetCards(cardsIdx[0], cardsIdx[1]);
+            opponentManager.ForgetCard(cardsIdx[0]);
+            opponentManager.ForgetCard(cardsIdx[1]);
             cardsLeft -= 2;
         }
         else
@@ -167,9 +175,12 @@ public class MemoryManager : MonoBehaviour
         }
 
         if (turn == 0)
+        {
+            opponentManager.NewTurn(false);
             clickBlocker.SetActive(false);
+        }
         else
-            opponentManager.StartTurn();
+            opponentManager.NewTurn(true);
     }
 
     public CardObj PickCard(int idx)
