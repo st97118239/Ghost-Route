@@ -60,11 +60,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84923532453b7f449fb14705f48fbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: []
+  ghosts:
+  - {fileID: 11400000, guid: 562c268f126bb6d44879b2ca569f512a, type: 2}
+  - {fileID: 11400000, guid: cc961bc53ed6bea45b98aba1a753abfd, type: 2}
+  - {fileID: 11400000, guid: 3371c7dd0d47d0643b1da676f69b3b38, type: 2}
+  ghostChance: 60
+  bunnies:
+  - {fileID: 11400000, guid: 812a3be4f9ff34d48abdb4587dcf677f, type: 2}
+  - {fileID: 11400000, guid: b2dd81b95adb50a4ca4e188d791f7605, type: 2}
+  - {fileID: 11400000, guid: 92dd5f3ecd46f2a46b5fce0fcfcf7e28, type: 2}
+  bunnyChance: 30
+  deers:
+  - {fileID: 11400000, guid: 93cf9ca3fc7b4a04682888577b9faeed, type: 2}
+  - {fileID: 11400000, guid: 85815deb2fc53964c829079c497d821e, type: 2}
+  - {fileID: 11400000, guid: 74485cf738e94f44bb88c96e3a28889b, type: 2}
+  deerChance: 10
   image: {fileID: 7101603400718163324}
   button: {fileID: 1593264474906569437}
   animator: {fileID: 220784185632277394}
   animIdx: 0
+  _timeToDisappear: 3
 --- !u!114 &7101603400718163324
 MonoBehaviour:
   m_ObjectHideFlags: 0

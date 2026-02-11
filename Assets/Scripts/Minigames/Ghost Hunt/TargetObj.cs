@@ -1,14 +1,21 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
 public class TargetObj : MonoBehaviour
 {
     private GhostHuntManager manager;
 
-    [SerializeField] private Target[] targets;
+    [SerializeField] private Target[] ghosts;
+    [SerializeField] private int ghostChance;
+    [SerializeField] private Target[] bunnies;
+    [SerializeField] private int bunnyChance;
+    [SerializeField] private Target[] deers;
+    [SerializeField] private int deerChance;
     private Target currentTarget;
+    private int totalChance;
 
     [SerializeField] private Image image;
     [SerializeField] private Button button;
@@ -26,9 +33,9 @@ public class TargetObj : MonoBehaviour
 
     private void Awake()
     {
-        if (targets == null || targets.Length == 0)
+        if (ghosts == null || ghosts.Length == 0)
         {
-            Debug.LogError(name + " is missing targets");
+            Debug.LogError(name + " is missing ghosts");
             return;
         }
         if (image == null)
@@ -49,6 +56,7 @@ public class TargetObj : MonoBehaviour
         image.enabled = false;
         button.enabled = false;
         timeToDisappear = new WaitForSeconds(_timeToDisappear);
+        totalChance = ghostChance + bunnyChance + deerChance;
     }
 
     public void Setup(GhostHuntManager givenManager, int givenIdx)
@@ -59,7 +67,14 @@ public class TargetObj : MonoBehaviour
 
     public void Show()
     {
-        currentTarget = targets[Random.Range(0, targets.Length)];
+        int chance = Random.Range(0, totalChance);
+        if (chance <= ghostChance)
+            currentTarget = ghosts[Random.Range(0, ghosts.Length)];
+        else if (chance > ghostChance && chance <= bunnyChance)
+            currentTarget = bunnies[Random.Range(0, bunnies.Length)];
+        else if (chance > bunnyChance)
+            currentTarget = deers[Random.Range(0, deers.Length)];
+
         image.sprite = currentTarget.sprite;
         image.enabled = true;
         button.enabled = true;
@@ -72,6 +87,7 @@ public class TargetObj : MonoBehaviour
     {
         if (disappearCoroutine != null)
             StopCoroutine(disappearCoroutine);
+        image.enabled = false;
         disappearCoroutine = StartCoroutine(Disappear(false));
         manager.Shoot(currentTarget.points);
     }
@@ -95,5 +111,12 @@ public class TargetObj : MonoBehaviour
         isActive = false;
         image.enabled = false;
         manager.Hide(idx);
+    }
+
+    public void Leave()
+    {
+        if (disappearCoroutine != null)
+            StopCoroutine(disappearCoroutine);
+        disappearCoroutine = StartCoroutine(Disappear(false));
     }
 }

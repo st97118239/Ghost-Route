@@ -31,6 +31,10 @@ public class GhostHuntManager : MonoBehaviour
 
     private int timeSinceLastSpawn;
 
+    [SerializeField] private Transform cursor;
+
+    private bool isPlaying;
+
     private void Start()
     {
 #if UNITY_EDITOR
@@ -68,6 +72,7 @@ public class GhostHuntManager : MonoBehaviour
 
     private IEnumerator SpawnLoop()
     {
+        isPlaying = true;
         disabledTargets = targetObjs.ToList();
         int max = startingMaxAmt;
         if (max == 0 && targetObjs.Length > 0)
@@ -79,6 +84,8 @@ public class GhostHuntManager : MonoBehaviour
             Debug.LogError("There are no target objects");
             yield break;
         }
+
+        StartCoroutine(FollowCursor());
 
         WaitForSeconds wait1Sec = new(1);
 
@@ -112,7 +119,38 @@ public class GhostHuntManager : MonoBehaviour
             yield return wait1Sec;
         }
 
+        if (targetsActive > 0)
+        {
+            foreach (TargetObj obj in targetObjs)
+            {
+                if (disabledTargets.Contains(obj)) continue;
+
+                obj.Leave();
+            }
+
+            yield return wait1Sec;
+        }
+
+        isPlaying = false;
+
+        yield return wait1Sec;
+
         EndGame();
+    }
+
+    private IEnumerator FollowCursor()
+    {
+        Cursor.visible = false;
+        cursor.gameObject.SetActive(true);
+
+        while (isPlaying)
+        {
+            cursor.position = Input.mousePosition;
+            yield return null;
+        }
+
+        cursor.gameObject.SetActive(false);
+        Cursor.visible = true;
     }
 
     private void EndGame()
