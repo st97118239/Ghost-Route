@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 #if UNITY_EDITOR
 using System.IO;
@@ -40,6 +41,11 @@ public class DialogueManager : MonoBehaviour
     private WaitForSeconds typingSpeedWait;
     [SerializeField] private float fastTypingSpeed;
     private WaitForSeconds fastTypingSpeedWait;
+
+    private WaitForSeconds wait1Second;
+
+    [SerializeField] private Animator ghostAnimator;
+    private static readonly int Move = Animator.StringToHash("Move");
 
     private Coroutine dialogueCoroutine;
 
@@ -89,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         typingSpeedWait = new WaitForSeconds(typingSpeed);
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
+        wait1Second = new WaitForSeconds(1);
     }
 
     private void Start()
@@ -156,6 +163,17 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(currentDialogue.delay);
         }
 
+        switch (currentDialogue.eventToPlay)
+        {
+            default:
+            case Events.None:
+                break;
+            case Events.GhostZoom:
+                ghostAnimator.SetTrigger(Move);
+                yield return wait1Second;
+                break;
+        }
+
         DelayFinished();
     }
 
@@ -169,6 +187,7 @@ public class DialogueManager : MonoBehaviour
 
         switch (currentDialogue.minigame)
         {
+            default:
             case Minigames.None:
                 break;
             case Minigames.GhostHunt:

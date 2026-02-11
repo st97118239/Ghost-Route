@@ -18,6 +18,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   delay: 0
   answers: []
+  eventToPlay: 1
   minigame: 1
   scoreToWin: 150
   wonDialogue: {fileID: 11400000, guid: 6dcd46421706b0c4f9e3575c01e655d5, type: 2}

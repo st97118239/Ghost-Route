@@ -9,6 +9,7 @@ public class Dialogue : ScriptableObject
     public Dialogue nextDialogue;
     public float delay;
     public Answer[] answers;
+    public Events eventToPlay;
     public Minigames minigame;
     public int scoreToWin;
     public Dialogue wonDialogue;
