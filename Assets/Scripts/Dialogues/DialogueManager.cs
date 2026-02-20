@@ -115,7 +115,7 @@ public class DialogueManager : MonoBehaviour
                     score = SaveData.ghostHuntScore;
                     break;
                 case Minigames.Acheron when SaveData.hasPlayedAcheron:
-                    score = SaveData.acheronScore;
+                    score = 0;
                     break;
                 case Minigames.Memory when SaveData.hasPlayedMemory:
                     score = SaveData.memoryScore;

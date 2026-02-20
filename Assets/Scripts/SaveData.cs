@@ -23,7 +23,6 @@ public static class SaveData
     public static int ghostHuntScore;
 
     public static bool hasPlayedAcheron;
-    public static int acheronScore;
 
     public static bool hasPlayedMemory;
     public static int memoryScore;
@@ -61,7 +60,6 @@ public static class SaveData
         hasPlayedGhostHunt = PlayerPrefs.GetInt("HasPlayedGhostHunt") != 0;
         ghostHuntScore = PlayerPrefs.GetInt("GhostHuntScore");
         hasPlayedAcheron = PlayerPrefs.GetInt("HasPlayedAcheron") != 0;
-        acheronScore = PlayerPrefs.GetInt("AcheronScore");
         hasPlayedMemory = PlayerPrefs.GetInt("HasPlayedMemory") != 0;
         memoryScore = PlayerPrefs.GetInt("MemoryScore");
     }
@@ -105,7 +103,6 @@ public static class SaveData
         PlayerPrefs.SetInt("HasPlayedGhostHunt", hasPlayedGhostHunt ? 1 : 0);
         PlayerPrefs.SetInt("GhostHuntScore", ghostHuntScore);
         PlayerPrefs.SetInt("HasPlayedAcheron", hasPlayedAcheron ? 1 : 0);
-        PlayerPrefs.SetInt("AcheronScore", acheronScore);
         PlayerPrefs.SetInt("HasPlayedMemory", hasPlayedMemory ? 1 : 0);
         PlayerPrefs.SetInt("MemoryScore", memoryScore);
     }
@@ -143,7 +140,6 @@ public static class SaveData
         PlayerPrefs.SetInt("HasPlayedGhostHunt", 0);
         PlayerPrefs.SetInt("GhostHuntScore", 0);
         PlayerPrefs.SetInt("HasPlayedAcheron", 0);
-        PlayerPrefs.SetInt("AcheronScore", 0);
         PlayerPrefs.SetInt("HasPlayedMemory", 0);
         PlayerPrefs.SetInt("MemoryScore", 0);
 

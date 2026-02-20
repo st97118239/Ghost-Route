@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingDialogue: {fileID: 11400000, guid: 69327ba8b4db96a4ba2b6add0b030fca, type: 2}
   dialogueBox: {fileID: 1856836615}
-  nextButton: {fileID: 0}
+  nextButton: {fileID: 506905423}
   textBox: {fileID: 2040590048}
   nameBox: {fileID: 1536483903}
   charImage: {fileID: 967216630}

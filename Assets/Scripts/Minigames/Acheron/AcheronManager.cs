@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AcheronManager : MonoBehaviour
 {
     public Player player;
 
-    [SerializeField] private Platform platforms;
-
     [SerializeField] private GameObject phantomPrefab;
-    [SerializeField] private GameObject ferrymanPrefab;
 
+    [SerializeField] private EventSystem eventSystem;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject deathScreen;
+    [SerializeField] private GameObject retryButton;
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private Transform heartPos;
     [SerializeField] private float heartSpacing;
@@ -19,7 +21,6 @@ public class AcheronManager : MonoBehaviour
     [SerializeField] private Sprite emptyHeartImage;
 
     public GameObject GetPhantomPrefab() => phantomPrefab;
-    public GameObject GetFerrymanPrefab() => ferrymanPrefab;
 
     private void Awake()
     {
@@ -31,13 +32,42 @@ public class AcheronManager : MonoBehaviour
         }
     }
 
+    public void Instakill()
+    {
+        for (int i = 0; i < heartCount; i++)
+        {
+            Hit();
+        }
+    }
+
     public void Hit()
     {
         heartCount--;
         hearts[heartCount].sprite = emptyHeartImage;
-        hearts[heartCount].gameObject.SetActive(false);
 
         if (heartCount <= 0)
-            player.Death();
+            player.End(true, false);
+    }
+
+    public void ShowDeathScreen()
+    {
+        deathScreen.SetActive(true);
+        eventSystem.SetSelectedGameObject(retryButton);
+    }
+
+    public void RetryButton()
+    {
+        SceneManager.LoadScene("Acheron");
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Finish()
+    {
+        SaveData.hasPlayedAcheron = true;
+        SceneManager.LoadScene("Dialogue");
     }
 }

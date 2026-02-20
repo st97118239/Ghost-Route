@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     private InputAction jump;
     private InputAction walkLeft;
     private InputAction walkRight;
+    private InputAction quit;
 
     private Platform currentPlatform;
 
@@ -39,21 +41,27 @@ public class Player : MonoBehaviour
 
     private Coroutine moveCoroutine;
 
+    private bool hasFinished;
+
     private void Awake()
     {
         jump = inputActionAsset.FindAction("Main/Move Up");
         walkLeft = inputActionAsset.FindAction("Main/Move Left");
         walkRight = inputActionAsset.FindAction("Main/Move Right");
+        quit = inputActionAsset.FindAction("Main/Quit");
 
-        jump.performed += _ => OnMoveUp();
-        walkLeft.started += _ => OnMoveLeft();
-        walkLeft.canceled += _ => OnMoveLeftCancel();
-        walkRight.started += _ => OnMoveRight();
-        walkRight.canceled += _ => OnMoveRightCancel();
+        jump.performed += OnMoveUp;
+        walkLeft.started += OnMoveLeft;
+        walkLeft.canceled += OnMoveLeftCancel;
+        walkRight.started += OnMoveRight;
+        walkRight.canceled += OnMoveRightCancel;
+        quit.performed += Quit;
+
 
         jump.Enable();
         walkLeft.Enable();
         walkRight.Enable();
+        quit.Enable();
     }
 
     private void Start()
@@ -78,7 +86,7 @@ public class Player : MonoBehaviour
         }
 
         if (transform.position.y <= deathY) 
-            Death();
+            acheronManager.Instakill();
     }
 
     private void FallStop()
@@ -87,34 +95,38 @@ public class Player : MonoBehaviour
         isOnGround = true;
     }
 
-    public void OnMoveUp()
+    public void OnMoveUp(InputAction.CallbackContext context)
     {
-        if (!isOnGround) return;
+        if (!isOnGround)
+        {
+            if (CheckIfOnGround()) isOnGround = true;
+            else return;
+        }
 
         StartJump();
     }
 
-    public void OnMoveLeft()
+    public void OnMoveLeft(InputAction.CallbackContext context)
     {
         isGoingLeft = true;
         isMoving = true;
         spriteRenderer.flipX = true;
     }
 
-    private void OnMoveLeftCancel()
+    private void OnMoveLeftCancel(InputAction.CallbackContext context)
     {
         if (isGoingLeft)
             isMoving = false;
     }
 
-    public void OnMoveRight()
+    public void OnMoveRight(InputAction.CallbackContext context)
     {
         isGoingLeft = false;
         isMoving = true;
         spriteRenderer.flipX = false;
     }
 
-    private void OnMoveRightCancel()
+    private void OnMoveRightCancel(InputAction.CallbackContext context)
     {
         if (!isGoingLeft)
             isMoving = false;
@@ -149,17 +161,27 @@ public class Player : MonoBehaviour
         isOnGround = false;
     }
 
+    private void Quit(InputAction.CallbackContext context)
+    {
+        End(false, false);
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.gameObject.CompareTag("Platform") || !isFalling) return;
+        if (other.gameObject.CompareTag("Spear"))
+            Hit();
+        else if (other.gameObject.CompareTag("Finish"))
+            End(false, true);
+        else if (other.gameObject.CompareTag("Platform") && isFalling)
+        {
+            if (!CheckIfOnGround()) return;
 
-        if (!CheckIfOnGround()) return;
-
-        FallStop();
-        if (currentPlatform)
-            currentPlatform.HitPlatform(false);
-        currentPlatform = other.gameObject.GetComponent<Platform>();
-        currentPlatform.HitPlatform(true);
+            FallStop();
+            if (currentPlatform)
+                currentPlatform.HitPlatform(false);
+            currentPlatform = other.gameObject.GetComponent<Platform>();
+            currentPlatform.HitPlatform(true);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -173,9 +195,33 @@ public class Player : MonoBehaviour
 
     public void Hit() => acheronManager.Hit();
 
-    public void Death()
+    public void End(bool dead, bool finish)
     {
-        currentPlatform.HitPlatform(false);
-        gameObject.SetActive(false);
+        if (hasFinished) return;
+        hasFinished = true;
+        jump.performed -= OnMoveUp;
+        jump.Disable();
+        walkLeft.started -= OnMoveLeft;
+        walkLeft.canceled -= OnMoveLeftCancel;
+        walkLeft.Disable();
+        walkRight.started -= OnMoveRight;
+        walkRight.canceled -= OnMoveRightCancel;
+        walkRight.Disable();
+        quit.performed -= Quit;
+        quit.Disable();
+
+        StopAllCoroutines();
+        
+        if (dead)
+        {
+            acheronManager.ShowDeathScreen();
+            if (currentPlatform)
+                currentPlatform.HitPlatform(false);
+            gameObject.SetActive(false);
+        }
+        else if (finish)
+            acheronManager.Finish();
+        else
+            acheronManager.Quit();
     }
 }
