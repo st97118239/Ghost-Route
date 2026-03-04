@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
 public class TargetObj : MonoBehaviour
@@ -69,11 +68,20 @@ public class TargetObj : MonoBehaviour
     {
         int chance = Random.Range(0, totalChance);
         if (chance <= ghostChance)
+        {
             currentTarget = ghosts[Random.Range(0, ghosts.Length)];
+            AudioManager.PlaySound(Sounds.SpawnGhost);
+        }
         else if (chance > ghostChance && chance <= bunnyChance)
+        {
             currentTarget = bunnies[Random.Range(0, bunnies.Length)];
+            AudioManager.PlaySound(Sounds.SpawnBunny);
+        }
         else if (chance > bunnyChance)
+        {
             currentTarget = deers[Random.Range(0, deers.Length)];
+            AudioManager.PlaySound(Sounds.SpawnDeer);
+        }
 
         image.sprite = currentTarget.sprite;
         image.enabled = true;
@@ -85,6 +93,7 @@ public class TargetObj : MonoBehaviour
 
     public void Shoot()
     {
+        AudioManager.PlaySound(Sounds.Hit);
         if (disappearCoroutine != null)
             StopCoroutine(disappearCoroutine);
         image.enabled = false;

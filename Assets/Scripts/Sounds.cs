@@ -1,0 +1,18 @@
+public enum Sounds
+{
+    None,
+    Music,
+    Click,
+    Dialogue,
+    Ending,
+    MemoryPoint,
+    Shoot,
+    Hit,
+    Wrong,
+    SpawnGhost,
+    SpawnBunny,
+    SpawnDeer,
+    Jump,
+    Damage,
+    Fall
+}

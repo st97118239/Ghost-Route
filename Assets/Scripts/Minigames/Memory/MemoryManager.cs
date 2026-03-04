@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -53,7 +54,9 @@ public class MemoryManager : MonoBehaviour
         turn = 0;
         clickBlocker.SetActive(false);
     }
-    
+
+    private void Start() => AudioManager.PlaySound(Sounds.Music);
+
     private void GenerateCardsArray()
     {
         Cards[] tempCards = new Cards[cards.Length * 2];
@@ -143,6 +146,8 @@ public class MemoryManager : MonoBehaviour
                 card1.transform.SetParent(moveAnimPosOpponent);
             }
 
+            AudioManager.PlaySound(Sounds.MemoryPoint);
+
             while (card0Rect.position != targetPos || card1Rect.position != targetPos)
             {
                 card0Rect.position = Vector2.MoveTowards(card0Rect.position, targetPos, moveAnimSpeed);
@@ -196,6 +201,7 @@ public class MemoryManager : MonoBehaviour
 
     public void EndGame()
     {
+        AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedMemory = true;
         SaveData.memoryScore = playerPoints;
         SceneManager.LoadScene("Dialogue");

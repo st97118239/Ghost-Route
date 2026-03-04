@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -28,6 +29,8 @@ public class MainMenuManager : MonoBehaviour
 
         startButtonText.text = SaveData.currentDialogueID == string.Empty ? "Start" : "Continue";
     }
+
+    private void Start() => AudioManager.PlaySound(Sounds.Music);
 
     public void Show()
     {

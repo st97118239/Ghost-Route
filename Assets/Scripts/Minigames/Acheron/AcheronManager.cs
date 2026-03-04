@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -32,12 +33,13 @@ public class AcheronManager : MonoBehaviour
         }
     }
 
+    private void Start() => AudioManager.PlaySound(Sounds.Music);
+
     public void Instakill()
     {
-        for (int i = 0; i < heartCount; i++)
-        {
+        AudioManager.PlaySound(Sounds.Fall);
+        for (int i = 0; i < heartCount; i++) 
             Hit();
-        }
     }
 
     public void Hit()

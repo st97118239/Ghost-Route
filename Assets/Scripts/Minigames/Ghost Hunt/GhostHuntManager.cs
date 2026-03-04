@@ -53,10 +53,12 @@ public class GhostHuntManager : MonoBehaviour
         if (startingMinAmt > targetObjs.Length) startingMinAmt = targetObjs.Length;
         if (startingMinAmt > maxTargetsOntAtOnce) startingMinAmt = maxTargetsOntAtOnce;
         StartCoroutine(SpawnLoop());
+        AudioManager.PlaySound(Sounds.Music);
     }
 
     public void Shoot(int amt)
     {
+        AudioManager.PlaySound(Sounds.Shoot);
         points += amt;
         pointText.text = points.ToString();
         if (points >= maxPoints) 
@@ -155,6 +157,7 @@ public class GhostHuntManager : MonoBehaviour
 
     private void EndGame()
     {
+        AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedGhostHunt = true;
         SaveData.ghostHuntScore = points;
         SceneManager.LoadScene("Dialogue");

@@ -115,6 +115,7 @@ public class SettingsManager : MonoBehaviour
         {
             bgmVolumePanel.SetActive(false);
             SaveData.bgmVolume = bgmVolumeSlider.value;
+            AudioManager.SetVolumes();
         }
         else
             bgmVolumePanel.SetActive(true);
@@ -126,6 +127,7 @@ public class SettingsManager : MonoBehaviour
         {
             sfxVolumePanel.SetActive(false);
             SaveData.sfxVolume = sfxVolumeSlider.value;
+            AudioManager.SetVolumes();
         }
         else
             sfxVolumePanel.SetActive(true);
@@ -137,6 +139,7 @@ public class SettingsManager : MonoBehaviour
         {
             voicelineVolumePanel.SetActive(false);
             SaveData.voicelinesVolume = voicelineVolumeSlider.value;
+            AudioManager.SetVolumes();
         }
         else
             voicelineVolumePanel.SetActive(true);

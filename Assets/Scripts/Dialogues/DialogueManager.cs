@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 #if UNITY_EDITOR
 using System.IO;
@@ -131,6 +130,8 @@ public class DialogueManager : MonoBehaviour
         }
         
         LoadNewDialogue(startingDialogue);
+
+        AudioManager.PlaySound(Sounds.Music);
     }
 
     public void BoxPress()
@@ -151,14 +152,14 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartDelay()
     {
+        AudioManager.PlaySound(Sounds.Dialogue);
+
         if (currentDialogue.delay > 0)
         {
             bool shouldHide = currentDialogue.answers != null && currentDialogue.answers.Length > 0;
 
-            if (!shouldHide)
-            {
+            if (!shouldHide) 
                 dialogueBox.SetActive(false);
-            }
 
             yield return new WaitForSeconds(currentDialogue.delay);
         }

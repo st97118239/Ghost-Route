@@ -1,7 +1,6 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -154,6 +153,7 @@ public class Player : MonoBehaviour
 
     private void StartJump()
     {
+        AudioManager.PlaySound(Sounds.Jump);
         rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 
         isOnGround = false;
@@ -193,7 +193,11 @@ public class Player : MonoBehaviour
 
     private bool CheckIfOnGround() => raycastPos.Select(t => Physics2D.Raycast(t.position, -Vector2.up, distanceToGround, platformLayer)).Any(ray => ray.collider != null);
 
-    public void Hit() => acheronManager.Hit();
+    public void Hit()
+    {
+        acheronManager.Hit();
+        AudioManager.PlaySound(Sounds.Damage);
+    }
 
     public void End(bool dead, bool finish)
     {
