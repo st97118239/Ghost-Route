@@ -59,6 +59,7 @@ public class AcheronManager : MonoBehaviour
 
     public void RetryButton()
     {
+        AudioManager.instance.PlayButtonClick();
         SceneManager.LoadScene("Acheron");
     }
 

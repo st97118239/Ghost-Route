@@ -106,6 +106,8 @@ public class MemoryManager : MonoBehaviour
             opponentManager.SeeCard(clickedCard, clickedCardIdx);
             StartCoroutine(CheckCards());
         }
+
+        AudioManager.PlaySound(Sounds.Click);
     }
 
     private IEnumerator CheckCards()

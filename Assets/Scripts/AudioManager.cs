@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
+    public static AudioManager instance;
 
     [SerializeField] private AudioSource voicelineSource;
     [SerializeField] private AudioSource musicSource;
