@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class EndingsManager : MonoBehaviour
@@ -15,6 +17,9 @@ public class EndingsManager : MonoBehaviour
     [SerializeField] private Button[] buttons;
     [SerializeField] private TMP_Text[] buttonsText;
 
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction devInputAction;
+
     private int endingIdx;
 
     private void Start()
@@ -25,6 +30,13 @@ public class EndingsManager : MonoBehaviour
             Debug.LogWarning("Only " + buttonsText.Length + " endings allowed");
         }
 
+        LoadEndings();
+
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+    }
+
+    private void LoadEndings()
+    {
         for (int i = 0; i < buttonsText.Length; i++)
         {
             Ending ending = MainMenuManager.endings[i];
@@ -45,6 +57,8 @@ public class EndingsManager : MonoBehaviour
     {
         endingsCanvas.gameObject.SetActive(true);
         AudioManager.PlaySound(Sounds.Ending);
+        devInputAction.performed += DevUnlockAllEndings;
+        devInputAction.Enable();
     }
 
     public void SelectEnding(int idx)
@@ -66,5 +80,17 @@ public class EndingsManager : MonoBehaviour
     {
         mainMenu.Show();
         endingsCanvas.gameObject.SetActive(false);
+        devInputAction.Disable();
+        devInputAction.performed -= DevUnlockAllEndings;
+    }
+
+    private void DevUnlockAllEndings(InputAction.CallbackContext context)
+    {
+        foreach (KeyValuePair<string, Ending> ending in SaveData.endings)
+            ending.Value.isUnlocked = true;
+
+        devInputAction.Disable();
+        devInputAction.performed -= DevUnlockAllEndings;
+        LoadEndings();
     }
 }

@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     private WaitForSeconds fastTypingSpeedWait;
 
     [SerializeField] private InputActionAsset inputActionAsset;
-    private InputAction devInputFieldAction;
+    private InputAction devInputAction;
     [SerializeField] private TMP_InputField dialogueInputField;
 
     private WaitForSeconds wait1Second;
@@ -102,9 +102,9 @@ public class DialogueManager : MonoBehaviour
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
         wait1Second = new WaitForSeconds(1);
 
-        devInputFieldAction = inputActionAsset.FindAction("Dev/Dev Input");
-        devInputFieldAction.performed += DevDialogueField;
-        devInputFieldAction.Enable();
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction.performed += DevDialogueField;
+        devInputAction.Enable();
     }
 
     private void Start()
@@ -394,8 +394,8 @@ public class DialogueManager : MonoBehaviour
 
     private void LoadScene(string sceneName)
     {
-        devInputFieldAction.performed -= DevDialogueField;
-        devInputFieldAction.Disable();
+        devInputAction.performed -= DevDialogueField;
+        devInputAction.Disable();
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -8476,6 +8476,7 @@ MonoBehaviour:
   - {fileID: 906368425}
   - {fileID: 1750004438}
   - {fileID: 418087500}
+  inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
 --- !u!4 &1110990022
 Transform:
   m_ObjectHideFlags: 0
