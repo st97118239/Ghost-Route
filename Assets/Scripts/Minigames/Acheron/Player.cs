@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     private InputAction walkLeft;
     private InputAction walkRight;
     private InputAction quit;
+    private InputAction devInputFieldAction;
 
     private Platform currentPlatform;
 
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
     private bool isOnGround;
     private bool isMoving;
     private bool isGoingLeft;
+    private bool isInvincible;
 
     private Coroutine moveCoroutine;
 
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
         walkLeft = inputActionAsset.FindAction("Main/Move Left");
         walkRight = inputActionAsset.FindAction("Main/Move Right");
         quit = inputActionAsset.FindAction("Main/Quit");
+        devInputFieldAction = inputActionAsset.FindAction("Dev/Dev Input");
 
         jump.performed += OnMoveUp;
         walkLeft.started += OnMoveLeft;
@@ -55,12 +58,14 @@ public class Player : MonoBehaviour
         walkRight.started += OnMoveRight;
         walkRight.canceled += OnMoveRightCancel;
         quit.performed += Quit;
+        devInputFieldAction.performed += DevInvincible;
 
 
         jump.Enable();
         walkLeft.Enable();
         walkRight.Enable();
         quit.Enable();
+        devInputFieldAction.Enable();
     }
 
     private void Start()
@@ -195,7 +200,8 @@ public class Player : MonoBehaviour
 
     public void Hit()
     {
-        acheronManager.Hit();
+        if (!isInvincible)
+            acheronManager.Hit();
         AudioManager.PlaySound(Sounds.Damage);
     }
 
@@ -213,6 +219,8 @@ public class Player : MonoBehaviour
         walkRight.Disable();
         quit.performed -= Quit;
         quit.Disable();
+        devInputFieldAction.performed -= DevInvincible;
+        devInputFieldAction.Disable();
 
         StopAllCoroutines();
         
@@ -227,5 +235,11 @@ public class Player : MonoBehaviour
             acheronManager.Finish();
         else
             acheronManager.Quit();
+    }
+
+    private void DevInvincible(InputAction.CallbackContext context)
+    {
+        isInvincible = true;
+        acheronManager.DevInvincible();
     }
 }

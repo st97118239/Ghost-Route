@@ -73,4 +73,12 @@ public class AcheronManager : MonoBehaviour
         SaveData.hasPlayedAcheron = true;
         SceneManager.LoadScene("Dialogue");
     }
+
+    public void DevInvincible()
+    {
+        for (int i = 0; i < heartCount; i++)
+        {
+            hearts[i].color = Color.grey;
+        }
+    }
 }
