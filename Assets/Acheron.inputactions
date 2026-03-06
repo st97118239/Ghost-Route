@@ -660,6 +660,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dev",
+            "id": "bd4448ec-0a1f-4db8-bb4c-24758e14b91c",
+            "actions": [
+                {
+                    "name": "Dialogue Field",
+                    "type": "Button",
+                    "id": "9f7ddd8e-7f77-48d6-9aaf-ccd990eaa759",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4d0aa69b-79ca-42dc-a89b-4f0db6e401c9",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialogue Field",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

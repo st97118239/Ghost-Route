@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: T1A2D3A1D2-0L
+  m_Name: T1A2D3A1D2-0-0
   m_EditorClassIdentifier: 
-  charName: :>
-  text: L
+  charName: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  text: platformer time!
   voiceline: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: be3ea11c6d872c54a89a68e3dda24015, type: 2}
+  nextDialogue: {fileID: 0}
   delay: 0
   answers: []
   eventToPlay: 0
-  minigame: 0
+  minigame: 2
   scoreToWin: 0
   wonDialogue: {fileID: 0}
   loseDialogue: {fileID: 0}

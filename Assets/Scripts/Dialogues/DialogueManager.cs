@@ -5,6 +5,7 @@ using System.Linq; // LINQ ONLY WORKS IN EDITOR
 #endif
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -41,12 +42,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float fastTypingSpeed;
     private WaitForSeconds fastTypingSpeedWait;
 
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction devInputFieldAction;
+    [SerializeField] private TMP_InputField dialogueInputField;
+
     private WaitForSeconds wait1Second;
 
     [SerializeField] private Animator ghostAnimator;
     private static readonly int Move = Animator.StringToHash("Move");
 
     private Coroutine dialogueCoroutine;
+    private Coroutine startDelayCoroutine;
 
     private bool isTyping;
     private bool isFast;
@@ -95,6 +101,10 @@ public class DialogueManager : MonoBehaviour
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
         wait1Second = new WaitForSeconds(1);
+
+        devInputFieldAction = inputActionAsset.FindAction("Dev/Dialogue Field");
+        devInputFieldAction.performed += DevDialogueField;
+        devInputFieldAction.Enable();
     }
 
     private void Start()
@@ -145,7 +155,7 @@ public class DialogueManager : MonoBehaviour
                 SkipWaitDialogue();
                 break;
             case false:
-                StartCoroutine(StartDelay());
+                startDelayCoroutine = StartCoroutine(StartDelay());
                 break;
         }
     }
@@ -353,5 +363,32 @@ public class DialogueManager : MonoBehaviour
     {
         SaveData.currentDialogueID = currentDialogue.name;
         SaveData.Save();
+    }
+
+    private void DevDialogueField(InputAction.CallbackContext context)
+    {
+        if (dialogueInputField.gameObject.activeSelf)
+            dialogueInputField.gameObject.SetActive(false);
+        else
+        {
+            dialogueInputField.text = string.Empty;
+            dialogueInputField.gameObject.SetActive(true);
+        }
+    }
+
+    public void DevDialogueFieldEnter()
+    {
+        string dialogueToFind = dialogueInputField.text;
+
+        foreach (Dialogue dialogue in dialogues)
+        {
+            if (dialogue.name != dialogueToFind) continue;
+
+            if (startDelayCoroutine != null) StopCoroutine(startDelayCoroutine);
+            if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
+
+            dialogueInputField.gameObject.SetActive(false);
+            LoadNewDialogue(dialogue);
+        }
     }
 }

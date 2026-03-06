@@ -15,14 +15,15 @@ MonoBehaviour:
   charName: :>
   text: W
   voiceline: {fileID: 0}
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: be3ea11c6d872c54a89a68e3dda24015, type: 2}
   delay: 0
   answers: []
+  eventToPlay: 0
   minigame: 0
   scoreToWin: 0
   wonDialogue: {fileID: 0}
   loseDialogue: {fileID: 0}
-  ending: {fileID: 11400000, guid: 4aac6eb7bff4840479de55616034cfca, type: 2}
+  ending: {fileID: 0}
   sprite: {fileID: 0}
   goreSprite: {fileID: 0}
   background: {fileID: 0}
