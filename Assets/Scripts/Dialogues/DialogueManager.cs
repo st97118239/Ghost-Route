@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
         wait1Second = new WaitForSeconds(1);
 
-        devInputFieldAction = inputActionAsset.FindAction("Dev/Dialogue Field");
+        devInputFieldAction = inputActionAsset.FindAction("Dev/Dev Input");
         devInputFieldAction.performed += DevDialogueField;
         devInputFieldAction.Enable();
     }
@@ -203,15 +203,15 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Minigames.GhostHunt:
                 Save();
-                SceneManager.LoadScene("Ghost Hunt");
+                LoadScene("Ghost Hunt");
                 break;
             case Minigames.Acheron:
                 Save();
-                SceneManager.LoadScene("Acheron");
+                LoadScene("Acheron");
                 break;
             case Minigames.Memory:
                 Save();
-                SceneManager.LoadScene("Memory");
+                LoadScene("Memory");
                 return;
         }
 
@@ -329,7 +329,7 @@ public class DialogueManager : MonoBehaviour
         if (!hasFound)
         {
             Debug.LogError("Ending ID wasn't found in MainMenuManager endings");
-            SceneManager.LoadScene(mainMenuSceneName);
+            LoadScene(mainMenuSceneName);
             return;
         }
 
@@ -348,7 +348,7 @@ public class DialogueManager : MonoBehaviour
         SaveData.textSpeed = typingSpeed;
         SaveData.currentDialogueID = currentDialogue.name;
         SaveData.Save();
-        SceneManager.LoadScene(mainMenuSceneName);
+        LoadScene(mainMenuSceneName);
     }
 
     public void LeaveAfterEnding()
@@ -356,7 +356,7 @@ public class DialogueManager : MonoBehaviour
         SaveData.endings[currentEnding.endingID].isUnlocked = true;
         SaveData.Save();
         SaveData.ResetGameData();
-        SceneManager.LoadScene(mainMenuSceneName);
+        LoadScene(mainMenuSceneName);
     }
 
     private static void Save()
@@ -390,5 +390,12 @@ public class DialogueManager : MonoBehaviour
             dialogueInputField.gameObject.SetActive(false);
             LoadNewDialogue(dialogue);
         }
+    }
+
+    private void LoadScene(string sceneName)
+    {
+        devInputFieldAction.performed -= DevDialogueField;
+        devInputFieldAction.Disable();
+        SceneManager.LoadScene(sceneName);
     }
 }

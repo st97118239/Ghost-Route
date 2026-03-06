@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -34,6 +35,9 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private TMP_Text playerText;
     [SerializeField] private TMP_Text opponentText;
 
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction devInputAction;
+
     private readonly Random rng = new();
 
     private int[] cardsIdx;
@@ -53,6 +57,10 @@ public class MemoryManager : MonoBehaviour
         opponentManager.Setup(cardAmt);
         turn = 0;
         clickBlocker.SetActive(false);
+
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction.performed += DevShowCards;
+        devInputAction.Enable();
     }
 
     private void Start() => AudioManager.PlaySound(Sounds.Music);
@@ -196,16 +204,26 @@ public class MemoryManager : MonoBehaviour
         return cardsObj[idx];
     }
 
-    public bool IsCardAllowed(int idx)
-    {
-        return cardsObj[idx].isActive;
-    }
+    public bool IsCardAllowed(int idx) => cardsObj[idx].isActive;
 
     public void EndGame()
     {
+        devInputAction.Disable();
+        devInputAction.performed -= DevShowCards;
         AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedMemory = true;
         SaveData.memoryScore = playerPoints;
         SceneManager.LoadScene("Dialogue");
+    }
+
+    private void DevShowCards(InputAction.CallbackContext context)
+    {
+        foreach (CardObj card in cardsObj)
+        {
+            if (card.isActive)
+                card.DevShowCard();
+        }
+
+        devInputAction.Disable();
     }
 }

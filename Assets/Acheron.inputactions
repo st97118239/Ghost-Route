@@ -666,7 +666,7 @@
             "id": "bd4448ec-0a1f-4db8-bb4c-24758e14b91c",
             "actions": [
                 {
-                    "name": "Dialogue Field",
+                    "name": "Dev Input",
                     "type": "Button",
                     "id": "9f7ddd8e-7f77-48d6-9aaf-ccd990eaa759",
                     "expectedControlType": "",
@@ -683,7 +683,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dialogue Field",
+                    "action": "Dev Input",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

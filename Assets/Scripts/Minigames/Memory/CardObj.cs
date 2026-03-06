@@ -15,6 +15,7 @@ public class CardObj : MonoBehaviour
     private bool isShowing;
     private bool isPressed;
     public bool isActive;
+    private bool isDevCheatActive;
 
     private MemoryManager memoryManager;
 
@@ -47,13 +48,26 @@ public class CardObj : MonoBehaviour
     {
         if (isShowing)
         {
-            image.sprite = backSprite;
+            if (!isDevCheatActive)
+                image.sprite = backSprite;
+            else
+                image.color = Color.grey;
             isShowing = false;
         }
         else
         {
-            image.sprite = frontSprite;
+            if (!isDevCheatActive)
+                image.sprite = frontSprite;
+            else
+                image.color = Color.white;
             isShowing = true;
         }
+    }
+
+    public void DevShowCard()
+    {
+        isDevCheatActive = true;
+        image.sprite = frontSprite;
+        image.color = isShowing ? Color.white : Color.grey;
     }
 }
