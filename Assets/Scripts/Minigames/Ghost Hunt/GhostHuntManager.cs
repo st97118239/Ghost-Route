@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GhostHuntManager : MonoBehaviour
 {
@@ -24,7 +25,11 @@ public class GhostHuntManager : MonoBehaviour
     [SerializeField] private TMP_Text pointText;
 
     [SerializeField] private int spawnChance;
-    [SerializeField] private int maxSecondsBetweenSpawns;
+    [SerializeField] private float minSecondsBetweenSpawns;
+    [SerializeField] private float devMinSecondsBetweenSpawns;
+
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction devInputAction;
 
     private int points;
     [SerializeField] private int maxPoints;
@@ -54,6 +59,10 @@ public class GhostHuntManager : MonoBehaviour
         if (startingMinAmt > maxTargetsOntAtOnce) startingMinAmt = maxTargetsOntAtOnce;
         StartCoroutine(SpawnLoop());
         AudioManager.PlaySound(Sounds.Music);
+
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction.performed += DevCheat;
+        devInputAction.Enable();
     }
 
     public void Shoot(int amt)
@@ -109,7 +118,7 @@ public class GhostHuntManager : MonoBehaviour
             timeText.text = timeLeft.ToString();
             timeSinceLastSpawn++;
 
-            if (timeLeft > canSpawnUntil && targetsActive < maxTargetsOntAtOnce && (Random.Range(0, 100) <= spawnChance || timeSinceLastSpawn >= maxSecondsBetweenSpawns))
+            if (timeLeft > canSpawnUntil && targetsActive < maxTargetsOntAtOnce && (Random.Range(0, 100) <= spawnChance || timeSinceLastSpawn >= minSecondsBetweenSpawns))
             {
                 int i = Random.Range(0, disabledTargets.Count);
                 disabledTargets[i].Show();
@@ -157,9 +166,22 @@ public class GhostHuntManager : MonoBehaviour
 
     private void EndGame()
     {
+        devInputAction.Disable();
+        devInputAction.performed -= DevCheat;
         AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedGhostHunt = true;
         SaveData.ghostHuntScore = points;
         SceneManager.LoadScene("Dialogue");
+    }
+
+    private void DevCheat(InputAction.CallbackContext context)
+    {
+        foreach (TargetObj target in targetObjs)
+        {
+            target.DevCheat();
+        }
+
+        minSecondsBetweenSpawns = devMinSecondsBetweenSpawns;
+        spawnChance = 100;
     }
 }

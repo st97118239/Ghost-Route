@@ -1583,6 +1583,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voicelineSource: {fileID: 0}
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  musicClip: {fileID: 0}
+  clickClip: {fileID: 0}
+  dialogueClip: {fileID: 0}
+  endingClip: {fileID: 0}
+  memoryPointClip: {fileID: 0}
+  shootClip: {fileID: 0}
+  hitClip: {fileID: 0}
+  wrongClip: {fileID: 0}
+  spawnGhostClip: {fileID: 0}
+  spawnBunnyClip: {fileID: 0}
+  spawnDeerClip: {fileID: 0}
+  jumpClip: {fileID: 0}
+  damageClip: {fileID: 0}
+  fallClip: {fileID: 0}
 --- !u!4 &1510276228
 Transform:
   m_ObjectHideFlags: 0
@@ -1720,7 +1736,9 @@ MonoBehaviour:
   timeText: {fileID: 364219887}
   pointText: {fileID: 740947854}
   spawnChance: 40
-  maxSecondsBetweenSpawns: 2
+  minSecondsBetweenSpawns: 2
+  devMinSecondsBetweenSpawns: 0
+  inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
   maxPoints: 150
   cursor: {fileID: 1363347958}
 --- !u!4 &1560070464

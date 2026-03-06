@@ -128,4 +128,11 @@ public class TargetObj : MonoBehaviour
             StopCoroutine(disappearCoroutine);
         disappearCoroutine = StartCoroutine(Disappear(false));
     }
+
+    public void DevCheat()
+    {
+        ghostChance = 100;
+        deerChance = 0;
+        bunnyChance = 0;
+    }
 }
