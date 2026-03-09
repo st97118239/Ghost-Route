@@ -71,7 +71,7 @@ public class CharCreatorManager : MonoBehaviour
     {
         SaveData.name = nameInput.text;
         SaveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
-        SceneManager.LoadScene(gameSceneName);
+        FadeManager.StartFade(false, LoadGame);
     }
 
     public void BackButton()
@@ -79,4 +79,6 @@ public class CharCreatorManager : MonoBehaviour
         mainMenu.Show();
         charCreatorCanvas.gameObject.SetActive(false);
     }
+
+    public void LoadGame() => SceneManager.LoadScene(gameSceneName);
 }

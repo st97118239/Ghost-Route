@@ -153,6 +153,11 @@ public class SettingsManager : MonoBehaviour
     public void ConfirmResetButton()
     {
         SaveData.ResetData();
+        FadeManager.StartFade(false, ReloadScene);
+    }
+
+    private void ReloadScene()
+    {
         SceneManager.LoadScene(mainMenuSceneName);
     }
 

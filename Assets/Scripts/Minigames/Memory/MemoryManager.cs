@@ -47,6 +47,7 @@ public class MemoryManager : MonoBehaviour
 
     private void Awake()
     {
+        FadeManager.Show();
         turn = -1;
         timeTillCheck = new WaitForSeconds(_timeTillCheck);
         cardsIdx = new[] { -1, -1 };
@@ -54,6 +55,12 @@ public class MemoryManager : MonoBehaviour
         GenerateCardsArray();
         cardsLeft = cardAmt;
         StartCoroutine(SpawnCards());
+    }
+
+    private void Start() => FadeManager.StartFade(true, StartGame);
+
+    private void StartGame()
+    {
         opponentManager.Setup(cardAmt);
         turn = 0;
         clickBlocker.SetActive(false);
@@ -61,9 +68,8 @@ public class MemoryManager : MonoBehaviour
         devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
         devInputAction.performed += DevShowCards;
         devInputAction.Enable();
+        AudioManager.PlaySound(Sounds.Music);
     }
-
-    private void Start() => AudioManager.PlaySound(Sounds.Music);
 
     private void GenerateCardsArray()
     {
@@ -177,7 +183,7 @@ public class MemoryManager : MonoBehaviour
             turn = turn == 0 ? 1 : 0;
         }
 
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(0.1f);
         cardsId[0] = string.Empty;
         cardsId[1] = string.Empty;
         cardsIdx[0] = -1;
@@ -213,8 +219,10 @@ public class MemoryManager : MonoBehaviour
         AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedMemory = true;
         SaveData.memoryScore = playerPoints;
-        SceneManager.LoadScene("Dialogue");
+        FadeManager.StartFade(false, ExitGame);
     }
+
+    private static void ExitGame() => SceneManager.LoadScene("Dialogue");
 
     private void DevShowCards(InputAction.CallbackContext context)
     {

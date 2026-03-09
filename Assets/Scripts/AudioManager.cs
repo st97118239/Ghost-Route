@@ -95,7 +95,7 @@ public class AudioManager : MonoBehaviour
 
         if (clipToPlay == null)
         {
-            Debug.LogError("Audio clip for " + sound + " is null");
+            Debug.LogWarning("Audio clip for " + sound + " is null");
             return;
         }
 

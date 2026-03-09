@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 #if UNITY_EDITOR
 using System.IO;
@@ -26,8 +27,10 @@ public class DialogueManager : MonoBehaviour
     private AnswerButton[] answerButtons;
 
     [SerializeField] private Canvas endingCanvas;
+    [SerializeField] private CanvasGroup endingCanvasGroup;
     [SerializeField] private Image endingBadgeImage;
     [SerializeField] private TMP_Text endingText;
+    [SerializeField] private float endingFadeTime;
 
     [SerializeField] private string mainMenuSceneName;
 
@@ -60,8 +63,11 @@ public class DialogueManager : MonoBehaviour
 
     private Ending currentEnding;
 
+    private string sceneToGoTo;
+
     private void Awake()
     {
+        FadeManager.Show();
 #if UNITY_EDITOR
         string[] files = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues");
         int amt = files.Count(file => !file.EndsWith(".meta"));
@@ -104,7 +110,10 @@ public class DialogueManager : MonoBehaviour
 
         devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
         devInputAction.performed += DevDialogueField;
-        devInputAction.Enable();
+
+        textBox.text = string.Empty;
+        nameBox.text = string.Empty;
+        dialogueBox.SetActive(false);
     }
 
     private void Start()
@@ -138,10 +147,16 @@ public class DialogueManager : MonoBehaviour
                     : startingDialogue.loseDialogue;
             }
         }
-        
-        LoadNewDialogue(startingDialogue);
 
         AudioManager.PlaySound(Sounds.Music);
+        FadeManager.StartFade(true, Load);
+        devInputAction.Enable();
+    }
+
+    private void Load()
+    {
+        dialogueBox.SetActive(true);
+        LoadNewDialogue(startingDialogue);
     }
 
     public void BoxPress()
@@ -203,15 +218,15 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Minigames.GhostHunt:
                 Save();
-                LoadScene("Ghost Hunt");
+                StartLoadScene("Ghost Hunt");
                 break;
             case Minigames.Acheron:
                 Save();
-                LoadScene("Acheron");
+                StartLoadScene("Acheron");
                 break;
             case Minigames.Memory:
                 Save();
-                LoadScene("Memory");
+                StartLoadScene("Memory");
                 return;
         }
 
@@ -329,7 +344,7 @@ public class DialogueManager : MonoBehaviour
         if (!hasFound)
         {
             Debug.LogError("Ending ID wasn't found in MainMenuManager endings");
-            LoadScene(mainMenuSceneName);
+            StartLoadScene(mainMenuSceneName);
             return;
         }
 
@@ -340,7 +355,26 @@ public class DialogueManager : MonoBehaviour
     {
         endingBadgeImage.sprite = currentEnding.badgeSprite;
         endingText.text = currentEnding.endingName;
+        StartCoroutine(EndingFade());
+    }
+
+    private IEnumerator EndingFade()
+    {
+        endingCanvasGroup.alpha = 0;
         endingCanvas.gameObject.SetActive(true);
+
+        for (float i = 0; i <= endingFadeTime + Time.deltaTime; i += Time.deltaTime)
+        {
+            if (i > endingFadeTime) i = endingFadeTime;
+
+            float fillAmount = i / endingFadeTime;
+
+            endingCanvasGroup.alpha = Mathf.Lerp(0, 1, fillAmount);
+
+            yield return null;
+        }
+
+        endingCanvasGroup.alpha = 1;
     }
 
     public void MainMenuButton()
@@ -348,7 +382,7 @@ public class DialogueManager : MonoBehaviour
         SaveData.textSpeed = typingSpeed;
         SaveData.currentDialogueID = currentDialogue.name;
         SaveData.Save();
-        LoadScene(mainMenuSceneName);
+        StartLoadScene(mainMenuSceneName);
     }
 
     public void LeaveAfterEnding()
@@ -356,7 +390,7 @@ public class DialogueManager : MonoBehaviour
         SaveData.endings[currentEnding.endingID].isUnlocked = true;
         SaveData.Save();
         SaveData.ResetGameData();
-        LoadScene(mainMenuSceneName);
+        StartLoadScene(mainMenuSceneName);
     }
 
     private static void Save()
@@ -392,10 +426,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void LoadScene(string sceneName)
+    private void StartLoadScene(string sceneName)
     {
         devInputAction.performed -= DevDialogueField;
         devInputAction.Disable();
-        SceneManager.LoadScene(sceneName);
+        sceneToGoTo = sceneName;
+        FadeManager.StartFade(false, LoadScene);
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(sceneToGoTo);
     }
 }

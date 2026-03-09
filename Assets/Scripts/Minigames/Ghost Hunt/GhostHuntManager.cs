@@ -42,6 +42,7 @@ public class GhostHuntManager : MonoBehaviour
 
     private void Start()
     {
+        FadeManager.Show();
 #if UNITY_EDITOR
         TargetObj[] objs = FindObjectsByType<TargetObj>(FindObjectsSortMode.None);
         foreach (TargetObj obj in objs)
@@ -57,6 +58,12 @@ public class GhostHuntManager : MonoBehaviour
 
         if (startingMinAmt > targetObjs.Length) startingMinAmt = targetObjs.Length;
         if (startingMinAmt > maxTargetsOntAtOnce) startingMinAmt = maxTargetsOntAtOnce;
+
+        FadeManager.StartFade(true, StartGame);
+    }
+
+    private void StartGame()
+    {
         StartCoroutine(SpawnLoop());
         AudioManager.PlaySound(Sounds.Music);
 
@@ -171,6 +178,11 @@ public class GhostHuntManager : MonoBehaviour
         AudioManager.PlaySound(Sounds.Ending);
         SaveData.hasPlayedGhostHunt = true;
         SaveData.ghostHuntScore = points;
+        FadeManager.StartFade(false, ExitGame);
+    }
+
+    private static void ExitGame()
+    {
         SceneManager.LoadScene("Dialogue");
     }
 

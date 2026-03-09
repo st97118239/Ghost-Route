@@ -22,6 +22,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Awake()
     {
+        FadeManager.Show();
         endings = _endings;
 
         SaveData.LoadSave();
@@ -29,7 +30,11 @@ public class MainMenuManager : MonoBehaviour
         startButtonText.text = SaveData.currentDialogueID == string.Empty ? "Start" : "Continue";
     }
 
-    private void Start() => AudioManager.PlaySound(Sounds.Music);
+    private void Start()
+    {
+        AudioManager.PlaySound(Sounds.Music);
+        FadeManager.StartFade(true, null);
+    }
 
     public void Show()
     {
@@ -41,7 +46,7 @@ public class MainMenuManager : MonoBehaviour
         if (SaveData.currentDialogueID == string.Empty)
             ShowCharCreator();
         else
-            SceneManager.LoadScene(gameSceneName);
+            FadeManager.StartFade(false, charCreatorManager.LoadGame);
     }
 
     public void ShowCharCreator()
@@ -65,6 +70,11 @@ public class MainMenuManager : MonoBehaviour
     public void QuitButton()
     {
         SaveData.Save();
+        FadeManager.StartFade(false, Quit);
+    }
+
+    private static void Quit()
+    {
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else

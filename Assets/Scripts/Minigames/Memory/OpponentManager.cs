@@ -19,6 +19,9 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] private float _timeBetweenCards;
     private WaitForSeconds timeBetweenCards;
 
+    [SerializeField] private float _timeBeforeStart;
+    [SerializeField] private WaitForSeconds timeBeforeStart;
+
     private int idx0;
     private int idx1;
 
@@ -39,6 +42,7 @@ public class OpponentManager : MonoBehaviour
             seenCardsMemory[i] = -1;
         }
         timeBetweenCards = new WaitForSeconds(_timeBetweenCards);
+        timeBeforeStart = new WaitForSeconds(_timeBeforeStart);
     }
 
     public void NewTurn(bool isOpponentTurn)
@@ -65,6 +69,8 @@ public class OpponentManager : MonoBehaviour
 
     private IEnumerator ChooseCards()
     {
+        yield return timeBeforeStart;
+
         StartCoroutine(CheckForMatch());
 
         if (idx0 > -1)

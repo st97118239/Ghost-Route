@@ -21,10 +21,13 @@ public class AcheronManager : MonoBehaviour
     private Image[] hearts;
     [SerializeField] private Sprite emptyHeartImage;
 
+    private string sceneToGoTo;
+
     public GameObject GetPhantomPrefab() => phantomPrefab;
 
     private void Awake()
     {
+        FadeManager.Show();
         hearts = new Image[heartCount];
         for (int i = 0; i < heartCount; i++)
         {
@@ -33,7 +36,11 @@ public class AcheronManager : MonoBehaviour
         }
     }
 
-    private void Start() => AudioManager.PlaySound(Sounds.Music);
+    private void Start()
+    {
+        AudioManager.PlaySound(Sounds.Music);
+        FadeManager.StartFade(true, null);
+    }
 
     public void Instakill()
     {
@@ -60,19 +67,24 @@ public class AcheronManager : MonoBehaviour
     public void RetryButton()
     {
         AudioManager.instance.PlayButtonClick();
-        SceneManager.LoadScene("Acheron");
+        sceneToGoTo = "Acheron";
+        FadeManager.StartFade(false, LoadScene);
     }
 
     public void Quit()
     {
-        SceneManager.LoadScene("Main Menu");
+        sceneToGoTo = "Main Menu";
+        FadeManager.StartFade(false, LoadScene);
     }
 
     public void Finish()
     {
         SaveData.hasPlayedAcheron = true;
-        SceneManager.LoadScene("Dialogue");
+        sceneToGoTo = "Dialogue";
+        FadeManager.StartFade(false, LoadScene);
     }
+
+    private void LoadScene() => SceneManager.LoadScene(sceneToGoTo);
 
     public void DevInvincible()
     {

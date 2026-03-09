@@ -21,7 +21,7 @@ MonoBehaviour:
   eventToPlay: 0
   minigame: 2
   scoreToWin: 0
-  wonDialogue: {fileID: 0}
+  wonDialogue: {fileID: 11400000, guid: 0b4681f8657214c4394e78f05a64f45a, type: 2}
   loseDialogue: {fileID: 0}
   ending: {fileID: 0}
   sprite: {fileID: 0}
