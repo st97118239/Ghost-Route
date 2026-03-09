@@ -80,7 +80,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("All dialogues are in the variable.");
 #endif
 
-        string foundName = SaveData.currentDialogueID;
+        string foundName = SaveDataManager.saveData.currentDialogueID;
 
         if (foundName != string.Empty)
         {
@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour
             button.Setup(this);
         }
 
-        typingSpeed = SaveData.textSpeed;
+        typingSpeed = SaveDataManager.saveData.textSpeed;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
@@ -129,14 +129,14 @@ public class DialogueManager : MonoBehaviour
             int score = -1;
             switch (startingDialogue.minigame)
             {
-                case Minigames.GhostHunt when SaveData.hasPlayedGhostHunt:
-                    score = SaveData.ghostHuntScore;
+                case Minigames.GhostHunt when SaveDataManager.saveData.hasPlayedGhostHunt:
+                    score = SaveDataManager.saveData.ghostHuntScore;
                     break;
-                case Minigames.Acheron when SaveData.hasPlayedAcheron:
+                case Minigames.Acheron when SaveDataManager.saveData.hasPlayedAcheron:
                     score = 0;
                     break;
-                case Minigames.Memory when SaveData.hasPlayedMemory:
-                    score = SaveData.memoryScore;
+                case Minigames.Memory when SaveDataManager.saveData.hasPlayedMemory:
+                    score = SaveDataManager.saveData.memoryScore;
                     break;
             }
 
@@ -249,12 +249,12 @@ public class DialogueManager : MonoBehaviour
         nameBox.text = currentDialogue.charName;
         dialogueBox.SetActive(true);
 
-        if (currentDialogue.goreSprite != null && SaveData.showGore)
+        if (currentDialogue.goreSprite != null && SaveDataManager.saveData.showGore)
             charImage.sprite = currentDialogue.goreSprite;
         else if (currentDialogue.sprite != null)
             charImage.sprite = currentDialogue.sprite;
 
-        if (currentDialogue.goreBackground != null && SaveData.showGore)
+        if (currentDialogue.goreBackground != null && SaveDataManager.saveData.showGore)
             backgroundImage.sprite = currentDialogue.goreBackground;
         else if (currentDialogue.background != null)
             backgroundImage.sprite = currentDialogue.background;
@@ -271,8 +271,8 @@ public class DialogueManager : MonoBehaviour
         nextButton.interactable = true;
         string fullText = currentDialogue.text;
 
-        fullText = fullText.Replace("{name}", SaveData.name);
-        fullText = fullText.Replace("{pronoun}", SaveData.pronouns);
+        fullText = fullText.Replace("{name}", SaveDataManager.saveData.name);
+        fullText = fullText.Replace("{pronoun}", SaveDataManager.saveData.pronouns);
 
         for (int i = 0; i < fullText.Length + 1; i++)
         {
@@ -379,24 +379,24 @@ public class DialogueManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SaveData.textSpeed = typingSpeed;
-        SaveData.currentDialogueID = currentDialogue.name;
-        SaveData.Save();
+        SaveDataManager.saveData.textSpeed = typingSpeed;
+        SaveDataManager.saveData.currentDialogueID = currentDialogue.name;
+        SaveDataManager.Save();
         StartLoadScene(mainMenuSceneName);
     }
 
     public void LeaveAfterEnding()
     {
-        SaveData.endings[currentEnding.endingID].isUnlocked = true;
-        SaveData.Save();
-        SaveData.ResetGameData();
+        SaveDataManager.saveData.endings[currentEnding.endingID].isUnlocked = true;
+        SaveDataManager.Save();
+        SaveDataManager.ResetGameData();
         StartLoadScene(mainMenuSceneName);
     }
 
     private static void Save()
     {
-        SaveData.currentDialogueID = currentDialogue.name;
-        SaveData.Save();
+        SaveDataManager.saveData.currentDialogueID = currentDialogue.name;
+        SaveDataManager.Save();
     }
 
     private void DevDialogueField(InputAction.CallbackContext context)

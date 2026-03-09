@@ -217,8 +217,8 @@ public class MemoryManager : MonoBehaviour
         devInputAction.Disable();
         devInputAction.performed -= DevShowCards;
         AudioManager.PlaySound(Sounds.Ending);
-        SaveData.hasPlayedMemory = true;
-        SaveData.memoryScore = playerPoints;
+        SaveDataManager.saveData.hasPlayedMemory = true;
+        SaveDataManager.saveData.memoryScore = playerPoints;
         FadeManager.StartFade(false, ExitGame);
     }
 

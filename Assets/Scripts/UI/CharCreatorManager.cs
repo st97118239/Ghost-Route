@@ -69,8 +69,8 @@ public class CharCreatorManager : MonoBehaviour
 
     public void ConfirmButton()
     {
-        SaveData.name = nameInput.text;
-        SaveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
+        SaveDataManager.saveData.name = nameInput.text;
+        SaveDataManager.saveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
         FadeManager.StartFade(false, LoadGame);
     }
 

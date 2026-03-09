@@ -115,10 +115,10 @@ public class AudioManager : MonoBehaviour
         if (instance == null) return;
 
         if (instance.voicelineSource)
-            instance.voicelineSource.volume = SaveData.voicelinesVolume;
+            instance.voicelineSource.volume = SaveDataManager.saveData.voicelinesVolume;
         if (instance.sfxSource)
-            instance.sfxSource.volume = SaveData.sfxVolume;
+            instance.sfxSource.volume = SaveDataManager.saveData.sfxVolume;
         if (instance.musicSource)
-            instance.musicSource.volume = SaveData.bgmVolume;
+            instance.musicSource.volume = SaveDataManager.saveData.bgmVolume;
     }
 }

@@ -22,8 +22,8 @@ public class AnswerButton : MonoBehaviour
         answer = givenAnswer;
 
         string fullText = answer.text;
-        fullText = fullText.Replace("{name}", SaveData.name);
-        fullText = fullText.Replace("{pronoun}", SaveData.pronouns);
+        fullText = fullText.Replace("{name}", SaveDataManager.saveData.name);
+        fullText = fullText.Replace("{pronoun}", SaveDataManager.saveData.pronouns);
 
         text.text = fullText;
         gameObject.SetActive(true);

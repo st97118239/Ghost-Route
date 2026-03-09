@@ -3,7 +3,6 @@ using TMPro;
 using UnityEditor;
 #endif
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -25,9 +24,9 @@ public class MainMenuManager : MonoBehaviour
         FadeManager.Show();
         endings = _endings;
 
-        SaveData.LoadSave();
+        SaveDataManager.LookForSave();
 
-        startButtonText.text = SaveData.currentDialogueID == string.Empty ? "Start" : "Continue";
+        startButtonText.text = SaveDataManager.saveData.currentDialogueID == string.Empty ? "Start" : "Continue";
     }
 
     private void Start()
@@ -43,7 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartButton()
     {
-        if (SaveData.currentDialogueID == string.Empty)
+        if (SaveDataManager.saveData.currentDialogueID == string.Empty)
             ShowCharCreator();
         else
             FadeManager.StartFade(false, charCreatorManager.LoadGame);
@@ -69,7 +68,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void QuitButton()
     {
-        SaveData.Save();
+        SaveDataManager.Save();
         FadeManager.StartFade(false, Quit);
     }
 

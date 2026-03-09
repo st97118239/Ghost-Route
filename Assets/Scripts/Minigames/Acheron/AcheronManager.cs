@@ -79,7 +79,7 @@ public class AcheronManager : MonoBehaviour
 
     public void Finish()
     {
-        SaveData.hasPlayedAcheron = true;
+        SaveDataManager.saveData.hasPlayedAcheron = true;
         sceneToGoTo = "Dialogue";
         FadeManager.StartFade(false, LoadScene);
     }

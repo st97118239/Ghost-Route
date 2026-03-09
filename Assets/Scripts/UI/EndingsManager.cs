@@ -40,7 +40,7 @@ public class EndingsManager : MonoBehaviour
         for (int i = 0; i < buttonsText.Length; i++)
         {
             Ending ending = MainMenuManager.endings[i];
-            if (SaveData.endings[ending.endingID].isUnlocked)
+            if (SaveDataManager.saveData.endings[ending.endingID].isUnlocked)
             {
                 buttonsText[i].text = MainMenuManager.endings[i].endingName;
                 buttons[i].interactable = true;
@@ -86,7 +86,7 @@ public class EndingsManager : MonoBehaviour
 
     private void DevUnlockAllEndings(InputAction.CallbackContext context)
     {
-        foreach (KeyValuePair<string, Ending> ending in SaveData.endings)
+        foreach (KeyValuePair<string, Ending> ending in SaveDataManager.saveData.endings)
             ending.Value.isUnlocked = true;
 
         devInputAction.Disable();

@@ -30,12 +30,12 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-        textSpeedSlider.value = SaveData.textSpeed;
-        windowTypeIdx = SaveData.windowType;
-        bgmVolumeSlider.value = SaveData.bgmVolume;
-        sfxVolumeSlider.value = SaveData.sfxVolume;
-        voicelineVolumeSlider.value = SaveData.voicelinesVolume;
-        showGoreToggle.isOn = SaveData.showGore;
+        textSpeedSlider.value = SaveDataManager.saveData.textSpeed;
+        windowTypeIdx = SaveDataManager.saveData.windowType;
+        bgmVolumeSlider.value = SaveDataManager.saveData.bgmVolume;
+        sfxVolumeSlider.value = SaveDataManager.saveData.sfxVolume;
+        voicelineVolumeSlider.value = SaveDataManager.saveData.voicelinesVolume;
+        showGoreToggle.isOn = SaveDataManager.saveData.showGore;
         SetWindowType();
     }
 
@@ -63,7 +63,7 @@ public class SettingsManager : MonoBehaviour
         if (textSpeedPanel.activeSelf)
         {
             textSpeedPanel.SetActive(false);
-            SaveData.textSpeed = textSpeedSlider.value;
+            SaveDataManager.saveData.textSpeed = textSpeedSlider.value;
         }
         else
             textSpeedPanel.SetActive(true);
@@ -74,7 +74,7 @@ public class SettingsManager : MonoBehaviour
         if (windowTypePanel.activeSelf)
         {
             windowTypePanel.SetActive(false);
-            SaveData.windowType = windowTypeIdx;
+            SaveDataManager.saveData.windowType = windowTypeIdx;
         }
         else
             windowTypePanel.SetActive(true);
@@ -106,7 +106,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ShowGoreToggle()
     {
-        SaveData.showGore = showGoreToggle.isOn;
+        SaveDataManager.saveData.showGore = showGoreToggle.isOn;
     }
 
     public void BGMButton()
@@ -114,7 +114,7 @@ public class SettingsManager : MonoBehaviour
         if (bgmVolumePanel.activeSelf)
         {
             bgmVolumePanel.SetActive(false);
-            SaveData.bgmVolume = bgmVolumeSlider.value;
+            SaveDataManager.saveData.bgmVolume = bgmVolumeSlider.value;
             AudioManager.SetVolumes();
         }
         else
@@ -126,7 +126,7 @@ public class SettingsManager : MonoBehaviour
         if (sfxVolumePanel.activeSelf)
         {
             sfxVolumePanel.SetActive(false);
-            SaveData.sfxVolume = sfxVolumeSlider.value;
+            SaveDataManager.saveData.sfxVolume = sfxVolumeSlider.value;
             AudioManager.SetVolumes();
         }
         else
@@ -138,7 +138,7 @@ public class SettingsManager : MonoBehaviour
         if (voicelineVolumePanel.activeSelf)
         {
             voicelineVolumePanel.SetActive(false);
-            SaveData.voicelinesVolume = voicelineVolumeSlider.value;
+            SaveDataManager.saveData.voicelinesVolume = voicelineVolumeSlider.value;
             AudioManager.SetVolumes();
         }
         else
@@ -152,7 +152,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ConfirmResetButton()
     {
-        SaveData.ResetData();
+        SaveDataManager.ResetData();
         FadeManager.StartFade(false, ReloadScene);
     }
 
@@ -168,7 +168,7 @@ public class SettingsManager : MonoBehaviour
 
     public void BackButton()
     {
-        SaveData.Save();
+        SaveDataManager.Save();
         mainMenu.Show();
         settingsCanvas.gameObject.SetActive(false);
     }

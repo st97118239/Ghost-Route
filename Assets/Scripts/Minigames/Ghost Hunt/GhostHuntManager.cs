@@ -176,8 +176,8 @@ public class GhostHuntManager : MonoBehaviour
         devInputAction.Disable();
         devInputAction.performed -= DevCheat;
         AudioManager.PlaySound(Sounds.Ending);
-        SaveData.hasPlayedGhostHunt = true;
-        SaveData.ghostHuntScore = points;
+        SaveDataManager.saveData.hasPlayedGhostHunt = true;
+        SaveDataManager.saveData.ghostHuntScore = points;
         FadeManager.StartFade(false, ExitGame);
     }
 
