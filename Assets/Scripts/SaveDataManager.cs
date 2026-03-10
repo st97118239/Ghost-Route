@@ -19,7 +19,24 @@ public static class SaveDataManager
     private static void LoadSave()
     {
         string json = File.ReadAllText(Application.persistentDataPath + "/SaveData.txt");
-        saveData = JsonUtility.FromJson<SaveData>(json);
+
+        try
+        {
+            saveData = JsonUtility.FromJson<SaveData>(json);
+        }
+        catch
+        {
+            Debug.LogError("Save file could not be loaded");
+            CreateSave();
+            return;
+        }
+
+        if (saveData == null)
+        {
+            Debug.LogError("Save file could not be loaded");
+            CreateSave();
+            return;
+        }
         saveData.endings = new();
         for (int i = 0; i < MainMenuManager.endings.Length; i++)
         {
@@ -28,11 +45,12 @@ public static class SaveDataManager
             ending.isUnlocked = saveData.endingUnlocked[i];
         }
 
-        Debug.Log("Save Loaded");
+        Debug.Log("Save loaded");
     }
 
     private static void CreateSave()
     {
+        Debug.Log("Creating new save data");
         saveData = new SaveData();
         saveData.Reset(MainMenuManager.endings);
         Save();
@@ -50,8 +68,16 @@ public static class SaveDataManager
             idx++;
         }
         string json = JsonUtility.ToJson(saveData);
-        File.WriteAllText(Application.persistentDataPath + "/SaveData.txt", json);
-        Debug.Log("Saved");
+        try
+        {
+            File.WriteAllText(Application.persistentDataPath + "/SaveData.txt", json);
+        }
+        catch
+        {
+            Debug.LogError("Save data could not be saved");
+            return;
+        }
+        Debug.Log("Successfully saved data");
     }
 
     public static void ResetData()

@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
     private Coroutine dialogueCoroutine;
     private Coroutine startDelayCoroutine;
 
+    private bool canClick;
     private bool isTyping;
     private bool isFast;
     private bool isWaiting;
@@ -161,6 +162,7 @@ public class DialogueManager : MonoBehaviour
 
     public void BoxPress()
     {
+        if (!canClick) return;
         switch (isTyping)
         {
             case true when !isFast:
@@ -177,6 +179,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartDelay()
     {
+        canClick = false;
         AudioManager.PlaySound(Sounds.Dialogue);
 
         if (currentDialogue.delay > 0)
@@ -268,6 +271,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ShowDialogue()
     {
         isTyping = true;
+        canClick = true;
         nextButton.interactable = true;
         string fullText = currentDialogue.text;
 
@@ -297,6 +301,7 @@ public class DialogueManager : MonoBehaviour
     private void SkipDialogue()
     {
         isFast = true;
+        //canClick = true;
     }
     
     private void SkipWaitDialogue()
@@ -305,6 +310,7 @@ public class DialogueManager : MonoBehaviour
         isWaiting = false;
         isFast = false;
         isTyping = false;
+        //canClick = true;
         dialogueCoroutine = null;
     }
 
