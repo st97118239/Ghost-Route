@@ -2,13 +2,17 @@
 using System.IO;
 using System.Linq;
 #endif
+using NewGraph;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Dialogues/Holder")]
 public class DialogueHolder : ScriptableObject
 {
+    public Dialogue startingDialogue;
     public Dialogue[] dialogues;
     public Answer[] answers;
+
+    private ScriptableGraphModel graph;
 
 #if UNITY_EDITOR
     public void CheckDialogues()

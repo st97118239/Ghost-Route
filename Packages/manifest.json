@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.gentlymad.graphviewbase": "https://github.com/Gentlymad-Studios/GraphViewBase.git",
+    "com.gentlymad.newgraph": "https://github.com/Gentlymad-Studios/NewGraph.git",
+    "com.gentlymad.odinserializer": "https://github.com/Gentlymad-Studios/OdinSerializer.git",
     "com.unity.collab-proxy": "2.10.0",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.38",

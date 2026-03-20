@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NewGraph;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private Dialogue startingDialogue;
+    private Dialogue startingDialogue;
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private Button nextButton;
@@ -35,6 +36,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private DialogueHolder dialogueHolder;
     private Dictionary<string, Dialogue> dialogues;
+
+    [SerializeField] private ScriptableGraphModel graph;
 
     [SerializeField] private float timeAfterDialogue;
     private WaitForSeconds timeAfterDialogueWait;
@@ -72,11 +75,19 @@ public class DialogueManager : MonoBehaviour
         dialogueHolder.CheckDialogues();
 #endif
 
+        if (SaveDataManager.saveData == null)
+        {
+            Debug.LogError("No game save was loaded");
+            return;
+        }
+
         dialogues = new Dictionary<string, Dialogue>();
         foreach (Dialogue dialogue in dialogueHolder.dialogues)
         {
             dialogues.Add(dialogue.name, dialogue);
         }
+
+        startingDialogue = dialogueHolder.startingDialogue;
 
         string foundName = SaveDataManager.saveData.currentDialogueID;
 
