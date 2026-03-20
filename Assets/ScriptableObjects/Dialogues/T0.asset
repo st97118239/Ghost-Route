@@ -16,8 +16,19 @@ MonoBehaviour:
   text: yap yap yap
   voiceline: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 34fdeef4fdd49c04184a3aa88f8674d4, type: 2}
+  nextDialogueID: T1
   delay: 0
   answers: []
+  answersID: []
+  eventToPlay: 0
   minigame: 0
+  scoreToWin: 0
+  wonDialogue: {fileID: 0}
+  winDialogueID: 
+  loseDialogue: {fileID: 0}
+  lostDialogueID: 
+  ending: {fileID: 0}
   sprite: {fileID: 21300000, guid: 23ece00da9d8bfb45942737ce41c5bee, type: 3}
+  goreSprite: {fileID: 0}
   background: {fileID: 0}
+  goreBackground: {fileID: 0}

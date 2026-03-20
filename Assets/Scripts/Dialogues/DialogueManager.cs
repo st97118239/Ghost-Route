@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
-#if UNITY_EDITOR
-using System.IO;
-using System.Linq; // LINQ ONLY WORKS IN EDITOR
-#endif
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,7 +33,8 @@ public class DialogueManager : MonoBehaviour
 
     private static Dialogue currentDialogue;
 
-    [SerializeField] private Dialogue[] dialogues;
+    [SerializeField] private DialogueHolder dialogueHolder;
+    private Dictionary<string, Dialogue> dialogues;
 
     [SerializeField] private float timeAfterDialogue;
     private WaitForSeconds timeAfterDialogueWait;
@@ -69,29 +67,21 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         FadeManager.Show();
-#if UNITY_EDITOR
-        string[] files = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues");
-        int amt = files.Count(file => !file.EndsWith(".meta"));
 
-        if (dialogues.Length < amt)
-            Debug.LogWarning("Not all dialogues are in the dialogues variable. Please put them all in.");
-        else if (dialogues.Length > amt)
-            Debug.LogWarning("There are too many dialogues in the dialogues variable.");
-        else if (dialogues.Length == amt)
-            Debug.Log("All dialogues are in the variable.");
+#if UNITY_EDITOR
+        dialogueHolder.CheckDialogues();
 #endif
+
+        dialogues = new Dictionary<string, Dialogue>();
+        foreach (Dialogue dialogue in dialogueHolder.dialogues)
+        {
+            dialogues.Add(dialogue.name, dialogue);
+        }
 
         string foundName = SaveDataManager.saveData.currentDialogueID;
 
         if (foundName != string.Empty)
-        {
-            foreach (Dialogue dialogue in dialogues)
-            {
-                if (dialogue.name != foundName) continue;
-                startingDialogue = dialogue;
-                break;
-            }
-        }
+            startingDialogue = FindDialogue(foundName);
 
         if (answerButtonParent == null || answerButtonPrefab == null || answerCount == 0) return;
 
@@ -127,19 +117,13 @@ public class DialogueManager : MonoBehaviour
 
         if (startingDialogue.minigame != Minigames.None)
         {
-            int score = -1;
-            switch (startingDialogue.minigame)
+            int score = startingDialogue.minigame switch
             {
-                case Minigames.GhostHunt when SaveDataManager.saveData.hasPlayedGhostHunt:
-                    score = SaveDataManager.saveData.ghostHuntScore;
-                    break;
-                case Minigames.Acheron when SaveDataManager.saveData.hasPlayedAcheron:
-                    score = 0;
-                    break;
-                case Minigames.Memory when SaveDataManager.saveData.hasPlayedMemory:
-                    score = SaveDataManager.saveData.memoryScore;
-                    break;
-            }
+                Minigames.GhostHunt when SaveDataManager.saveData.hasPlayedGhostHunt => SaveDataManager.saveData.ghostHuntScore,
+                Minigames.Acheron when SaveDataManager.saveData.hasPlayedAcheron => 0,
+                Minigames.Memory when SaveDataManager.saveData.hasPlayedMemory => SaveDataManager.saveData.memoryScore,
+                _ => -1
+            };
 
             if (score != -1)
             {
@@ -186,7 +170,7 @@ public class DialogueManager : MonoBehaviour
         {
             bool shouldHide = currentDialogue.answers != null && currentDialogue.answers.Length > 0;
 
-            if (!shouldHide) 
+            if (!shouldHide)
                 dialogueBox.SetActive(false);
 
             yield return new WaitForSeconds(currentDialogue.delay);
@@ -294,6 +278,7 @@ public class DialogueManager : MonoBehaviour
             isFast = false;
             isWaiting = false;
         }
+
         isTyping = false;
         dialogueCoroutine = null;
     }
@@ -301,16 +286,14 @@ public class DialogueManager : MonoBehaviour
     private void SkipDialogue()
     {
         isFast = true;
-        //canClick = true;
     }
-    
+
     private void SkipWaitDialogue()
     {
         StopCoroutine(dialogueCoroutine);
         isWaiting = false;
         isFast = false;
         isTyping = false;
-        //canClick = true;
         dialogueCoroutine = null;
     }
 
@@ -337,6 +320,7 @@ public class DialogueManager : MonoBehaviour
         {
             t.gameObject.SetActive(false);
         }
+
         answerButtonParent.gameObject.SetActive(false);
 
         LoadNewDialogue(answer.dialogue);
@@ -420,16 +404,15 @@ public class DialogueManager : MonoBehaviour
     {
         string dialogueToFind = dialogueInputField.text;
 
-        foreach (Dialogue dialogue in dialogues)
-        {
-            if (dialogue.name != dialogueToFind) continue;
+        Dialogue dialogue = FindDialogue(dialogueToFind);
 
-            if (startDelayCoroutine != null) StopCoroutine(startDelayCoroutine);
-            if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
+        if (dialogue == null) return;
 
-            dialogueInputField.gameObject.SetActive(false);
-            LoadNewDialogue(dialogue);
-        }
+        if (startDelayCoroutine != null) StopCoroutine(startDelayCoroutine);
+        if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
+
+        dialogueInputField.gameObject.SetActive(false);
+        LoadNewDialogue(dialogue);
     }
 
     private void StartLoadScene(string sceneName)
@@ -443,5 +426,10 @@ public class DialogueManager : MonoBehaviour
     private void LoadScene()
     {
         SceneManager.LoadScene(sceneToGoTo);
+    }
+
+    private Dialogue FindDialogue(string id)
+    {
+        return dialogues[id];
     }
 }
