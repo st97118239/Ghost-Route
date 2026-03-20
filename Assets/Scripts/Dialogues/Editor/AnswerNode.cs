@@ -12,6 +12,7 @@ public class AnswerNode : INode
 
     [GraphDisplay(DisplayType.BothViews)]
     public Answer answer;
+    [GraphDisplay(DisplayType.BothViews)]
     public string text;
     [Port, SerializeReference]
     public DialogueNode dialogue;

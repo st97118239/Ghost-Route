@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using NewGraph;
 
 using UnityEngine;
 using NewGraph;
 using UnityEditor;
+using System.Linq;
 
 /// <summary>
 /// Example to create a custom context menu.
@@ -19,9 +21,10 @@ public class CustomMenu : NewGraph.ContextMenu
         base.AddNodeEntries();
         AddNodeEntry("Dialogues/Refresh SOs", (obj) => { RefreshSO(); });
         AddNodeEntry("Dialogues/Create SOs", (obj) => { CreateMissingSO(); });
+        AddNodeEntry("Dialogues/Utility/Remove unused SOs", (obj) => { RemoveUnusedSO(); });
     }
 
-    private void CreateMissingSO()
+    private static void CreateMissingSO()
     {
         ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
         List<NodeModel> nodes = graph.Nodes;
@@ -45,6 +48,7 @@ public class CustomMenu : NewGraph.ContextMenu
             Dialogue dialogue = CreateInstance<Dialogue>();
             nodeData.dialogue = dialogue;
             AssetDatabase.CreateAsset(dialogue, "Assets/ScriptableObjects/Dialogues/" + node.GetHashCode() + ".asset");
+            EditorUtility.SetDirty(dialogue);
         }
 
         foreach (NodeModel node in answerNodes)
@@ -55,12 +59,13 @@ public class CustomMenu : NewGraph.ContextMenu
             Answer answer = CreateInstance<Answer>();
             nodeData.answer = answer;
             AssetDatabase.CreateAsset(answer, "Assets/ScriptableObjects/Answers/" + node.GetHashCode() + ".asset");
+            EditorUtility.SetDirty(answer);
         }
 
         RefreshSO();
     }
 
-    private void RefreshSO()
+    private static void RefreshSO()
     {
         ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
         DialogueHolder dialogueHolder = AssetDatabase.LoadAssetAtPath<DialogueHolder>("Assets/ScriptableObjects/DialogueHolder.asset");
@@ -114,7 +119,7 @@ public class CustomMenu : NewGraph.ContextMenu
             dialogueHolder.dialogues[i] = dialogue;
 
             if (nodeData.isDefault)
-                dialogueHolder.startingDialogue = dialogue;
+                dialogueHolder.startingDialogueID = dialogue.name;
 
             EditorUtility.SetDirty(dialogue);
         }
@@ -135,5 +140,73 @@ public class CustomMenu : NewGraph.ContextMenu
         }
 
         EditorUtility.SetDirty(dialogueHolder);
+    }
+
+    private static void RemoveUnusedSO()
+    {
+        ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
+        List<NodeModel> nodes = graph.Nodes;
+        string[] nodeNames = new string[nodes.Count];
+
+        for (int i = 0; i < nodeNames.Length; i++)
+        {
+            NodeModel node = nodes[i];
+            string nodeName = string.Empty;
+
+            if (node.GetName() == "DialogueNode")
+            {
+                DialogueNode nodeData = (DialogueNode)node.nodeData;
+
+                nodeName = nodeData.dialogue == null ? string.Empty : nodeData.dialogue.name;
+            }
+            else if (node.GetName() == "AnswerNode")
+            {
+                AnswerNode nodeData = (AnswerNode)node.nodeData;
+
+                nodeName = nodeData.answer == null ? string.Empty : nodeData.answer.name;
+            }
+
+            nodeNames[i] = nodeName;
+        }
+
+        string[] dialogueFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues");
+        string[] answerFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Answers");
+        string[] files = new string[dialogueFiles.Length + answerFiles.Length];
+
+        for (int i = 0; i < dialogueFiles.Length; i++) 
+            files[i] = dialogueFiles[i];
+
+        for (int i = 0; i < answerFiles.Length; i++)
+            files[i + dialogueFiles.Length] = answerFiles[i];
+
+        bool isAnswer = false;
+        for (int i = 0; i < files.Length; i++)
+        {
+            if (i >= dialogueFiles.Length) isAnswer = true;
+
+            string fileName = files[i];
+
+            if (fileName.EndsWith(".meta")) continue;
+
+            string[] parsedName = fileName.Split("\\");
+            fileName = parsedName[^1];
+            parsedName = fileName.Split(".");
+            fileName = parsedName[0];
+            files[i] = fileName;
+
+            bool foundName = false;
+            foreach (string t in nodeNames)
+            {
+                if (fileName == t)
+                {
+                    foundName = true;
+                    break;
+                }
+            }
+
+            if (foundName) continue;
+            string assetPath = isAnswer ? "Answers/" : "Dialogues/";
+            AssetDatabase.DeleteAsset("Assets/ScriptableObjects/" + assetPath + fileName + ".asset");
+        }
     }
 }

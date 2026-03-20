@@ -14,65 +14,122 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseModel:
     nodes:
-    - rid: 7815180677653463200
-    - rid: 7815180677653463206
-    - rid: 7815180677653463208
-    - rid: 7815180677653463210
-    - rid: 7815180677653463212
-    - rid: 7815180677653463214
-    - rid: 7815180677653463216
-    - rid: 7815180677653463218
-    - rid: 7815180677653463220
-    - rid: 7815180677653463237
-    - rid: 7815180677653463239
-    - rid: 7815180677653463241
-    - rid: 7815180677653463243
-    - rid: 7815180677653463245
-    - rid: 7815180677653463247
-    - rid: 7815180677653463251
-    - rid: 7815180677653463253
-    - rid: 7815180677653463255
-    - rid: 7815180677653463257
-    - rid: 7815180677653463261
-    - rid: 7815180677653463263
-    - rid: 7815180677653463265
-    - rid: 7815180677653463267
-    - rid: 7815180677653463269
-    - rid: 7815180677653463271
-    - rid: 7815180677653463273
-    - rid: 7815180677653463275
-    - rid: 7815180677653463277
+    - rid: 7815180684838567936
+    - rid: 7815180684838567938
+    - rid: 7815180684838567940
+    - rid: 7815180684838567942
+    - rid: 7815180684838567944
+    - rid: 7815180684838567946
+    - rid: 7815180684838567948
+    - rid: 7815180684838567950
+    - rid: 7815180684838567952
+    - rid: 7815180684838567954
+    - rid: 7815180684838568032
+    - rid: 7815180684838568034
+    - rid: 7815180684838568036
+    - rid: 7815180684838568038
+    - rid: 7815180684838568040
+    - rid: 7815180684838568042
+    - rid: 7815180684838568044
+    - rid: 7815180684838568046
+    - rid: 7815180684838568053
+    - rid: 7815180684838568057
+    - rid: 7815180684838568059
+    - rid: 7815180684838568061
+    - rid: 7815180684838568063
+    - rid: 7815180684838568065
+    - rid: 7815180684838568067
+    - rid: 7815180684838568069
+    - rid: 7815180684838568071
+    - rid: 7815180684838568073
+    - rid: 7815180684838568075
+    - rid: 7815180684838568077
+    - rid: 7815180684838568079
+    - rid: 7815180684838568081
+    - rid: 7815180684838568083
+    - rid: 7815180684838568085
+    - rid: 7815180684838568087
+    - rid: 7815180684838568089
+    - rid: 7815180684838568091
+    - rid: 7815180684838568093
+    - rid: 7815180684838568095
+    - rid: 7815180684838568097
+    - rid: 7815180684838568099
+    - rid: 7815180684838568101
+    - rid: 7815180684838568103
+    - rid: 7815180684838568105
+    - rid: 7815180684838568107
+    - rid: 7815180684838568109
+    - rid: 7815180684838568111
+    - rid: 7815180684838568113
+    - rid: 7815180684838568115
+    - rid: 7815180684838568117
+    - rid: 7815180684838568119
+    - rid: 7815180684838568121
+    - rid: 7815180684838568123
+    - rid: 7815180684838568125
+    - rid: 7815180684838568127
+    - rid: 7815180684838568129
+    - rid: 7815180684838568131
+    - rid: 7815180684838568133
+    - rid: 7815180684838568135
+    - rid: 7815180684838568137
+    - rid: 7815180684838568139
+    - rid: 7815180684838568141
+    - rid: 7815180684838568143
+    - rid: 7815180684838568145
+    - rid: 7815180684838568149
+    - rid: 7815180684838568151
+    - rid: 7815180684838568153
+    - rid: 7815180684838568155
+    - rid: 7815180684838568157
+    - rid: 7815180684838568159
+    - rid: 7815180684838568161
+    - rid: 7815180684838568163
+    - rid: 7815180684838568165
+    - rid: 7815180684838568167
+    - rid: 7815180684838568169
+    - rid: 7815180684838568171
+    - rid: 7815180684838568173
+    - rid: 7815180684838568175
+    - rid: 7815180684838568177
+    - rid: 7815180684838568179
+    - rid: 7815180684838568185
+    - rid: 7815180684838568187
+    - rid: 7815180684838568189
+    - rid: 7815180684838568192
     utilityNodes: []
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -223.87308, y: -100.15146, z: 0}
+    viewPosition: {x: -12972.809, y: -595.5864, z: 0}
     viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7815180677653463200
+    - rid: 7815180684838567936
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463201
-        nodeX: 234.55719
-        nodeY: 327.2899
+          rid: 7815180684838567937
+        nodeX: -113.58093
+        nodeY: 1038.537
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463201
+    - rid: 7815180684838567937
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: ee12900680a4e3b4ca0a008b16495cce, type: 2}
-        charName: yapper
-        text: aaaaaaaaaaaaaaaaaaa
+        dialogue: {fileID: 11400000, guid: 27cab8be85bc9dc4f946062c2a9b35db, type: 2}
+        charName: ???
+        text: Oh dear, you look like you've seen a ghost.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180677653463207
+          rid: -2
         delay: 0
-        answers: []
+        answers:
+        - rid: 7815180684838567939
         eventToPlay: 0
         minigame: 0
         scoreToWin: 0
@@ -86,30 +143,79 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 1
-    - rid: 7815180677653463206
+    - rid: 7815180684838567938
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463207
-        nodeX: 523.70746
-        nodeY: 311.3398
+          rid: 7815180684838567939
+        nodeX: 116.528625
+        nodeY: 1116.6323
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838567939
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 176b58c42a2a73b4eb89f08f90e867aa, type: 2}
+        text: Who are you?
+        dialogue:
+          rid: 7815180684838567941
+    - rid: 7815180684838567940
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838567941
+        nodeX: 360.52863
+        nodeY: 1036.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463207
+    - rid: 7815180684838567941
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 3c774687416d04c4889b34a237ada912, type: 2}
-        charName: yapper?
-        text: meer yap yap yapping
+        dialogue: {fileID: 11400000, guid: de40922f8f9b12b44ad842c73088552b, type: 2}
+        charName: Lethia
+        text: How rude of me, my name's Lethia
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838567943
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838567942
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838567943
+        nodeX: 587.5286
+        nodeY: 1036.6323
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838567943
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 91e763a0c47cfd44f9748fcc11216965, type: 2}
+        charName: Lethia
+        text: What's your name?
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
         delay: 0
         answers:
-        - rid: 7815180677653463209
-        - rid: 7815180677653463211
-        - rid: 7815180677653463213
+        - rid: 7815180684838567945
         eventToPlay: 0
         minigame: 0
         scoreToWin: 0
@@ -121,320 +227,47 @@ MonoBehaviour:
         sprite: {fileID: 0}
         goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 21300000, guid: 1885eb38370f1564594840dfb5e6d35a, type: 3}
+        goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463208
+    - rid: 7815180684838567944
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463209
-        nodeX: 840.5572
-        nodeY: 129.99142
+          rid: 7815180684838567945
+        nodeX: 815.5286
+        nodeY: 1112.6323
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463209
+    - rid: 7815180684838567945
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 10e63862c62527c49a9e4167a4572368, type: 2}
-        text: aaaaaa
+        answer: {fileID: 11400000, guid: 97daeee8ce009db4f98dbf390cdff1ad, type: 2}
+        text: '{name}'
         dialogue:
-          rid: 7815180677653463215
-    - rid: 7815180677653463210
+          rid: 7815180684838567947
+    - rid: 7815180684838567946
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463211
-        nodeX: 831.70123
-        nodeY: 348.11258
-        name: AnswerNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463211
-      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        answer: {fileID: 11400000, guid: 814a3252e87a6b94091db5502115b57c, type: 2}
-        text: bbbbbbbbb
-        dialogue:
-          rid: 7815180677653463217
-    - rid: 7815180677653463212
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463213
-        nodeX: 839.73425
-        nodeY: 601.7804
-        name: AnswerNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463213
-      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        answer: {fileID: 11400000, guid: 56ce1eba66ceb2e4ca27149accc0028c, type: 2}
-        text: cccccccccccc
-        dialogue:
-          rid: 7815180677653463238
-    - rid: 7815180677653463214
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463215
-        nodeX: 1175.9525
-        nodeY: -8.213507
+          rid: 7815180684838567947
+        nodeX: 1046.5286
+        nodeY: 1041.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463215
+    - rid: 7815180684838567947
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: cd292a9fa17e7f34180f41f4e0f7e132, type: 2}
-        charName: yap yap yapper
-        text: aaaaaaaaaa
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463219
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463216
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463217
-        nodeX: 1174.8864
-        nodeY: 293.9474
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463217
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 1be7396885544cd42bd2b816591d3f09, type: 2}
-        charName: yup
-        text: abbcdef
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463219
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463218
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463219
-        nodeX: 1523.673
-        nodeY: 299.3384
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463219
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 17f2d6b4e3a75034e88af8422d6a1285, type: 2}
-        charName: yapper!
-        text: yapppp
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463221
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463220
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463221
-        nodeX: 1801.6727
-        nodeY: 303.3384
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463221
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 4a57349b1dabaf04f8d6dba29012d980, type: 2}
-        charName: yapper!
-        text: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapppppppppppppppppppppppppppppppp
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: -2
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 11400000, guid: a7a9361dfb43c5645abca9789e07c383, type: 2}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463237
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463238
-        nodeX: 1180.7562
-        nodeY: 596.57916
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463238
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 0781e268b3c19ea48b918112b6305513, type: 2}
-        charName: :P
-        text: UwU
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463240
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463239
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463240
-        nodeX: 1486.7562
-        nodeY: 600.57916
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463240
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: bda3c069b4c875f4cb84a0b52ff03bda, type: 2}
-        charName: :P
-        text: a
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463242
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463241
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463242
-        nodeX: 1764.7562
-        nodeY: 604.57916
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463242
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: f18d71ad7b61cec47b556458a28d7fc0, type: 2}
-        charName: :P
-        text: b
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463244
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463243
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463244
-        nodeX: 2046.7562
-        nodeY: 605.57916
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463244
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 50e835065567b72439b002f835ae8a79, type: 2}
-        charName: :P
-        text: c?
+        dialogue: {fileID: 11400000, guid: 51d4b6cb164a8bc4a8efa4b79874b99f, type: 2}
+        charName: Lethia
+        text: Nice to meet you, {name}!
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
         delay: 0
         answers:
-        - rid: 7815180677653463246
-        - rid: 7815180677653463248
+        - rid: 7815180684838567949
         eventToPlay: 0
         minigame: 0
         scoreToWin: 0
@@ -448,59 +281,94 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463245
+    - rid: 7815180684838567948
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463246
-        nodeX: 2319.756
-        nodeY: 604.57916
+          rid: 7815180684838567949
+        nodeX: 1285.5876
+        nodeY: 1114.105
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463246
+    - rid: 7815180684838567949
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 6fa91f9e9cf87794bb2cd7923a25bd12, type: 2}
-        text: D
+        answer: {fileID: 11400000, guid: d365f1f74b7aba4499a70d8e476b7091, type: 2}
+        text: ...
         dialogue:
-          rid: 7815180677653463252
-    - rid: 7815180677653463247
+          rid: 7815180684838567951
+    - rid: 7815180684838567950
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463248
-        nodeX: 2321.756
-        nodeY: 760.57916
+          rid: 7815180684838567951
+        nodeX: 1517.4695
+        nodeY: 1031.6914
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838567951
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: c7472a79f3c1609439d5c568c3d08b09, type: 2}
+        charName: Lethia
+        text: You look a bit lost.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838567953
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838567952
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838567953
+        nodeX: 1755.5876
+        nodeY: 1094.1638
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463248
+    - rid: 7815180684838567953
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 0503d92b16c88ef4ba66fa3165de92e7, type: 2}
-        text: E
+        answer: {fileID: 11400000, guid: 070b37421d8d6fc4e844a8fff30baee3, type: 2}
+        text: Where am I?
         dialogue:
-          rid: 7815180677653463262
-    - rid: 7815180677653463251
+          rid: 7815180684838567955
+    - rid: 7815180684838567954
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463252
-        nodeX: 2619.5488
-        nodeY: 498.56952
+          rid: 7815180684838567955
+        nodeX: 1984.5286
+        nodeY: 1026.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463252
+    - rid: 7815180684838567955
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: aa49d7843ffcafd4cb3fc0e77f266bec, type: 2}
-        charName: :P
-        text: e
+        dialogue: {fileID: 11400000, guid: 9b8292274617d484a8261e1958a7b188, type: 2}
+        charName: Lethia
+        text: You haven't realised yet?
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180677653463254
+          rid: 7815180684838568033
         delay: 0
         answers: []
         eventToPlay: 0
@@ -516,25 +384,25 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463253
+    - rid: 7815180684838568032
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463254
-        nodeX: 2884.5488
-        nodeY: 493.56952
+          rid: 7815180684838568033
+        nodeX: 2214.1614
+        nodeY: 1026.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463254
+    - rid: 7815180684838568033
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 0e8ddd74e3a1a604db6cda34d35f8bb6, type: 2}
-        charName: :P
-        text: f
+        dialogue: {fileID: 11400000, guid: 99a160bccce153c4a857a5e6d7475c6d, type: 2}
+        charName: Lethia
+        text: Oh my, this can be a problem...
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180677653463256
+          rid: 7815180684838568035
         delay: 0
         answers: []
         eventToPlay: 0
@@ -550,25 +418,25 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463255
+    - rid: 7815180684838568034
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463256
-        nodeX: 3139.5488
-        nodeY: 492.56952
+          rid: 7815180684838568035
+        nodeX: 2442.1614
+        nodeY: 1028.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463256
+    - rid: 7815180684838568035
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 76ff68e984da0c346bfbe07376c52219, type: 2}
-        charName: :P
-        text: g
+        dialogue: {fileID: 11400000, guid: b04eb61dfb888254bbc09842aa0ad391, type: 2}
+        charName: Lethia
+        text: Don't worry about it... How am I gonna exlain this.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180677653463258
+          rid: 7815180684838568037
         delay: 0
         answers: []
         eventToPlay: 0
@@ -584,127 +452,25 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463257
+    - rid: 7815180684838568036
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463258
-        nodeX: 3406.5488
-        nodeY: 492.56952
+          rid: 7815180684838568037
+        nodeX: 2668.1614
+        nodeY: 1028.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463258
+    - rid: 7815180684838568037
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 2df8c22842998c94f94a903b2d03f7ea, type: 2}
-        charName: :P
-        text: die, {name}. {pronoun}
+        dialogue: {fileID: 11400000, guid: d8e70adf770438642aed9a30368734cb, type: 2}
+        charName: Lethia
+        text: Look over there, you see that?
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: -2
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 11400000, guid: 970e123609820dd4db208bfc78ccd597, type: 2}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463261
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463262
-        nodeX: 2605.0095
-        nodeY: 805.7929
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463262
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 8ab9874117ed71543870834994438e29, type: 2}
-        charName: :P
-        text: hmmmmmmmmmmmmmmmmmmmMMMMMMMmmmmmmmmmmm..........
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463264
-        delay: 2.3
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463263
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463264
-        nodeX: 2857.7603
-        nodeY: 807.09265
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463264
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 8c7a90bebd4783b49b30c9071eb0165b, type: 2}
-        charName: hmmmm...
-        text: memory time!
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: -2
-        delay: 1
-        answers: []
-        eventToPlay: 0
-        minigame: 3
-        scoreToWin: 5
-        wonDialogue:
-          rid: 7815180677653463266
-        loseDialogue:
-          rid: 7815180677653463276
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463265
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463266
-        nodeX: 3146.3096
-        nodeY: 743.3429
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463266
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 7cd5b1bce11a1f34694cb254126c3eb4, type: 2}
-        charName: :>
-        text: you won
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463268
+          rid: 7815180684838568039
         delay: 0
         answers: []
         eventToPlay: 0
@@ -720,59 +486,2113 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463267
+    - rid: 7815180684838568038
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463268
-        nodeX: 3435.1086
-        nodeY: 866.09705
+          rid: 7815180684838568039
+        nodeX: 2893.1614
+        nodeY: 1031.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463268
+    - rid: 7815180684838568039
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: c8d3c72304fa3ea44857dfede37e3a27, type: 2}
-        charName: :>
-        text: aaaaaaaaaa
+        dialogue: {fileID: 11400000, guid: 5131861cd29ea1f4cac98e1fbd04e87a, type: 2}
+        charName: Lethia
+        text: You got in an accident and it ended quite unfortunate.
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
         delay: 0
+        answers:
+        - rid: 7815180684838568041
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568040
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568041
+        nodeX: 3118.1614
+        nodeY: 1083.1904
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568041
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 7e2453a4e5a61df4898bfcc61c7b1f32, type: 2}
+        text: ...
+        dialogue:
+          rid: 7815180684838568043
+    - rid: 7815180684838568042
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568043
+        nodeX: 3356.1257
+        nodeY: 1036.6582
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568043
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 0d5b5cc4e05c8ce4f8593fcc16650e05, type: 2}
+        charName: 
+        text: You really don't remember?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568045
+        delay: 0
         answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568044
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568045
+        nodeX: 3576.1257
+        nodeY: 1035.6582
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568045
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 906e0a7e0d422004fb4691765ee86699, type: 2}
+        charName: 
+        text: You were just driving and a deer just crossed the road.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568047
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568046
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568047
+        nodeX: 3796.1257
+        nodeY: 1035.6582
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568047
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 4de6fe4b3090825499b3f5e92671d753, type: 2}
+        charName: 
+        text: You had to avoid it and ended up crashing your car really bad.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568054
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568053
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568054
+        nodeX: 4018.1416
+        nodeY: 1035.093
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568054
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f2bdec17caa4faf4f9013bd3cb8d9af3, type: 2}
+        charName: 
+        text: You died.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568058
+        - rid: 7815180684838568060
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568057
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568058
+        nodeX: 4252.1416
+        nodeY: 1043.093
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568058
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: fdba6afa9597ad245b678165c05c2bb7, type: 2}
+        text: I DIED?!
+        dialogue:
+          rid: 7815180684838568062
+    - rid: 7815180684838568059
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568060
+        nodeX: 4256.1416
+        nodeY: 1180.093
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568060
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: bd93095b0f0dff14c9ebe48ee3a3b8e1, type: 2}
+        text: Is this some sort of joke?
+        dialogue:
+          rid: 7815180684838568062
+    - rid: 7815180684838568061
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568062
+        nodeX: 4504.842
+        nodeY: 1035.6926
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568062
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 3de276ed067216f408f7e9cd350cb083, type: 2}
+        charName: 
+        text: I know, it is a lot to take.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568064
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568063
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568064
+        nodeX: 4747.1416
+        nodeY: 1032.6423
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568064
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f60f1b94112b1f04081727914d0a9688, type: 2}
+        charName: 
+        text: But, can you tell me something about yourself?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568066
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568065
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568066
+        nodeX: 4978.6426
+        nodeY: 1090.3923
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568066
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: bf8f401ce12d88845971bec72962ac52, type: 2}
+        text: ...
+        dialogue:
+          rid: 7815180684838568068
+    - rid: 7815180684838568067
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568068
+        nodeX: 5213.242
+        nodeY: 1034.2928
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568068
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 024b953230992614b873940a6a137f31, type: 2}
+        charName: 
+        text: Anything?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568070
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568069
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568070
+        nodeX: 5438.2764
+        nodeY: 1038.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568070
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 18dbcf79837918e4293c1126ce9f56de, type: 2}
+        charName: 
+        text: A favourite colour? Siblings? Pets?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568072
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568071
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568072
+        nodeX: 5672.2764
+        nodeY: 1084.8358
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568072
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 9f7c03a2943a8b44f9ffb1b3543451b0, type: 2}
+        text: I don't remember anything.
+        dialogue:
+          rid: 7815180684838568074
+    - rid: 7815180684838568073
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568074
+        nodeX: 5915.2764
+        nodeY: 1038.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568074
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: c37d0fd06fa5dd348bb43daaa39d8e0c, type: 2}
+        charName: 
+        text: Oh...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568076
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568075
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568076
+        nodeX: 6142.2764
+        nodeY: 1039.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568076
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f41f4a1fdbe324f42b47df140170e676, type: 2}
+        charName: 
+        text: This makes it a lot more difficult...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568078
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568077
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568078
+        nodeX: 6374.2764
+        nodeY: 1093.8358
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568078
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: cf20361f50dbc624fb67db8727df109c, type: 2}
+        text: Makes what difficult?
+        dialogue:
+          rid: 7815180684838568080
+    - rid: 7815180684838568079
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568080
+        nodeX: 6609.2764
+        nodeY: 1047.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568080
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 1b228317cee38d243a9b62e79454a284, type: 2}
+        charName: 
+        text: You see, I will help you through this world...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568082
+        - rid: 7815180684838568084
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568081
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568082
+        nodeX: 6845.2764
+        nodeY: 1054.8358
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568082
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: b23f9f063959e2642a0e9d9329be8ead, type: 2}
+        text: But, isn't that good?
+        dialogue:
+          rid: 7815180684838568086
+    - rid: 7815180684838568083
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568084
+        nodeX: 6845.2764
+        nodeY: 1202.8358
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568084
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 35f039c7d7f0bef4a90892401b9185c8, type: 2}
+        text: That's kind!
+        dialogue:
+          rid: 7815180684838568088
+    - rid: 7815180684838568085
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568086
+        nodeX: 7095.2764
+        nodeY: 946.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568086
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: dc0617f63eb7187458339a8aa65a5bb2, type: 2}
+        charName: 
+        text: It is, but...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568090
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568087
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568088
+        nodeX: 7097.2764
+        nodeY: 1200.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568088
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 7253b18eae0c8eb4196292331dbc5c4a, type: 2}
+        charName: 
+        text: Thank you, but...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568090
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568089
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568090
+        nodeX: 7375.2764
+        nodeY: 1058.8358
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568090
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 16ae8aaf293f0f44c94f93f78ac529c9, type: 2}
+        charName: 
+        text: You can't remember anything.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568092
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568091
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568092
+        nodeX: 7608.9697
+        nodeY: 1058.6221
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568092
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: a5ce74346484e9f438406805f27d87be, type: 2}
+        charName: 
+        text: Not a thing.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568094
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568093
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568094
+        nodeX: 7834.9697
+        nodeY: 1057.6221
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568094
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 663f5a170ddf54d47bdfe358189ded2d, type: 2}
+        charName: 
+        text: Which means our journey will be a bit... more difficult.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568096
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568095
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568096
+        nodeX: 8070.9697
+        nodeY: 1128.6221
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568096
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 7f46c934c9fe4fd4ab1876460463a4aa, type: 2}
+        text: Why?
+        dialogue:
+          rid: 7815180684838568098
+    - rid: 7815180684838568097
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568098
+        nodeX: 8302.472
+        nodeY: 1030.6377
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568098
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f80310a06ec6bf248b25700da5237208, type: 2}
+        charName: 
+        text: You need to remember to move on.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568100
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568099
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568100
+        nodeX: 8527.472
+        nodeY: 1032.6377
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568100
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 14226f2d9c60ba84f9af5d4c992edc1f, type: 2}
+        charName: 
+        text: Now all you remember is your name and the fact you died.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568102
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568101
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568102
+        nodeX: 8750.472
+        nodeY: 1031.6377
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568102
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: ebb3e118b880e1744a107996408b3951, type: 2}
+        charName: 
+        text: If you don't remember your life, the good, the bad, the things that
+          made you, you...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568104
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568103
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568104
+        nodeX: 8974.472
+        nodeY: 1032.6377
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568104
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 7401db8ed210d6c408af7f021bd0c8de, type: 2}
+        charName: 
+        text: You will get stuck here and never be able to move on.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568106
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568105
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568106
+        nodeX: 9206.947
+        nodeY: 1026.0251
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568106
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: be42d827940ac06469759e5d3cab92f6, type: 2}
+        charName: 
+        text: So, before we can give you a new life, let's help you remember your
+          old life first.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568108
+        - rid: 7815180684838568110
+        - rid: 7815180684838568112
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568107
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568108
+        nodeX: 9443.496
+        nodeY: 822.7479
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568108
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: bde2fa324a41fc44daad89b91f621055, type: 2}
+        text: But how?
+        dialogue:
+          rid: 7815180684838568114
+    - rid: 7815180684838568109
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568110
+        nodeX: 9455.97
+        nodeY: 1113.6221
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568110
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 9d25ee0ee2e4a0d4ba579401e85c61d6, type: 2}
+        text: Can't I just stay here?
+        dialogue:
+          rid: 7815180684838568118
+    - rid: 7815180684838568111
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568112
+        nodeX: 9456.97
+        nodeY: 1358.6221
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568112
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: f19a7f3824ef6514db549bf6b48968a5, type: 2}
+        text: Womp womp, I'm not going.
+        dialogue:
+          rid: 7815180684838568128
+    - rid: 7815180684838568113
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568114
+        nodeX: 10375.173
+        nodeY: 757.50446
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568114
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: eec7148ec65084048862d82817d3d367, type: 2}
+        charName: 
+        text: Hmmm, if I remember correctly...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568116
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568115
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568116
+        nodeX: 10603.173
+        nodeY: 758.50446
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568116
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 2fd18060b2b542b4780de6a6563c37d7, type: 2}
+        charName: 
+        text: Yes, just follow me.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568134
+        - rid: 7815180684838568136
+        - rid: 7815180684838568138
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568117
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568118
+        nodeX: 9707.12
+        nodeY: 1041.6208
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568118
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 5d34874ca80e7ac4b9c326d03569657b, type: 2}
+        charName: 
+        text: Did you listen to anything I just said?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568120
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568119
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568120
+        nodeX: 9931.041
+        nodeY: 1041.6208
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568120
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: d58996c29332f6c4b8a96c4744fd377d, type: 2}
+        charName: 
+        text: <i>Sigh</i> If you don't move on, you do realise you're STUCK here?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568122
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568121
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568122
+        nodeX: 10157.041
+        nodeY: 1041.6208
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568122
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 11989372e82d32347abc41b929d654c3, type: 2}
+        charName: 
+        text: No memories, no personality, nothing else but this forest.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568124
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568123
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568124
+        nodeX: 10380.041
+        nodeY: 1042.6208
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568124
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: d75ba7ea98d50cb4fa8777bf60f4f702, type: 2}
+        charName: 
+        text: You won't even be you, because you don't know what you like.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568126
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568125
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568126
+        nodeX: 10601.041
+        nodeY: 1038.6208
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568126
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 570be29dd55077441aa5cacc05d93c3c, type: 2}
+        charName: 
+        text: Now just follow me, I'm not letting you sulk here for all eternity.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568134
+        - rid: 7815180684838568136
+        - rid: 7815180684838568138
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568127
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568128
+        nodeX: 10149.225
+        nodeY: 1301.4333
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568128
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 92c74efd68023f346afac15604bf8a9d, type: 2}
+        charName: 
+        text: ...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568130
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568129
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568130
+        nodeX: 10374.225
+        nodeY: 1301.4333
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568130
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: b41bf305d427638489f620a4d2b10c97, type: 2}
+        charName: 
+        text: <i>This is going to be a long journey...</i>
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568132
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568131
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568132
+        nodeX: 10598.769
+        nodeY: 1302.1072
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568132
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 586b4481cdd9d8b4fb2718fcf9a348f2, type: 2}
+        charName: 
+        text: I'm not doing this, just follow me.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568134
+        - rid: 7815180684838568136
+        - rid: 7815180684838568138
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568133
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568134
+        nodeX: 10992.388
+        nodeY: 850.3991
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568134
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 12b4c1b419040f04faa27b6bdb4f9582, type: 2}
+        text: Why are you here?
+        dialogue:
+          rid: 7815180684838568140
+    - rid: 7815180684838568135
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568136
+        nodeX: 10994.69
+        nodeY: 1090.7493
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568136
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 1023d7cd4102e1c45beb4aca4b07b4c5, type: 2}
+        text: What are you?
+        dialogue:
+          rid: 7815180684838568142
+    - rid: 7815180684838568137
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568138
+        nodeX: 10995.838
+        nodeY: 1388.1993
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568138
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 0178a0b883a9b3d468282bf6afe790ed, type: 2}
+        text: How long have you been here?
+        dialogue:
+          rid: 7815180684838568150
+    - rid: 7815180684838568139
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568140
+        nodeX: 11706.581
+        nodeY: 776.96625
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568140
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 42c6a5fecb671794abbc7b39735a8565, type: 2}
+        charName: 
+        text: To help people accept they died, to help them move on and find their
+          next life.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568154
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568141
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568142
+        nodeX: 11249.987
+        nodeY: 1035.1486
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568142
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: c7b4258b43229a042ba586e484a4d0e9, type: 2}
+        charName: 
+        text: What am I? Such an odd question...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568144
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568143
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568144
+        nodeX: 11483.186
+        nodeY: 1034.749
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568144
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 9f778e3e40abf4d43913fcb6192f0aed, type: 2}
+        charName: 
+        text: Does it really matter WHAT I am?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568146
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568145
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568146
+        nodeX: 11709.186
+        nodeY: 1036.749
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568146
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 825e4dfcf38026947b31e40d2d98e895, type: 2}
+        charName: 
+        text: A ghost, a reaper, a guide, a friend, just give it a name you like.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568154
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568149
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568150
+        nodeX: 11473.881
+        nodeY: 1285.97
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568150
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 20ba71d51583bea44a479c4955ee75c0, type: 2}
+        charName: 
+        text: Time isn't really a thing here...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568152
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568151
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568152
+        nodeX: 11703.276
+        nodeY: 1286.2349
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568152
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 273e30c2c29e29d42b56aca3bb3ae7d9, type: 2}
+        charName: 
+        text: But it has been quite a while.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568154
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568153
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568154
+        nodeX: 12012.53
+        nodeY: 1103.3795
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568154
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 694885fa6dec01d48bc36f7491e933a8, type: 2}
+        text: What is this for a place?
+        dialogue:
+          rid: 7815180684838568156
+    - rid: 7815180684838568155
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568156
+        nodeX: 12243.584
+        nodeY: 1033.7297
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568156
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 837262be21abba3429e0c3573a837b06, type: 2}
+        charName: 
+        text: This place... for me it is home.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568158
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568157
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568158
+        nodeX: 12470.584
+        nodeY: 1030.7297
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568158
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: bdd61da47ac6daa4f865d02d1c26475d, type: 2}
+        charName: 
+        text: Some think it is the afterlife, but there is no such thing.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568160
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568159
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568160
+        nodeX: 12692.584
+        nodeY: 1030.7297
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568160
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 8232a96cc8dd0384083bf7c8a0d0f459, type: 2}
+        charName: 
+        text: Well, not really.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568162
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568161
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568162
+        nodeX: 12911.725
+        nodeY: 1030.7297
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568162
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: a16edd4310240704bae1fef0a7d097db, type: 2}
+        charName: 
+        text: <i>Sigh</i> It is an inbetween of life and death.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568164
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568163
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568164
+        nodeX: 13133.824
+        nodeY: 1031.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568164
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 17a0b63848a204e4198cbdd56f9cb3d5, type: 2}
+        charName: 
+        text: I'm pretty sure you people call it "purgatory", "a third state", "the
+          Grey Zone".
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568166
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568165
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568166
+        nodeX: 13353.824
+        nodeY: 1032.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568166
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 3e5d927c2cdfca44e8176b970e4c8081, type: 2}
+        charName: 
+        text: You can call it whatever you want, but in the end it is just a place.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568168
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568167
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568168
+        nodeX: 13574.382
+        nodeY: 1032.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568168
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 9d697bb9340a5cd41ac4b6db5bfa4144, type: 2}
+        charName: 
+        text: This place is different for everyone since this place is built on your
+          life.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568170
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568169
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568170
+        nodeX: 13795.382
+        nodeY: 1033.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568170
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: ea6e1130e83824844a1600eda5ad2ccb, type: 2}
+        charName: 
+        text: And everyone has lived a different life.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568172
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568171
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568172
+        nodeX: 14011.382
+        nodeY: 1035.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568172
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 52dedcdd2ce985c41a768a0dd683f2d2, type: 2}
+        charName: 
+        text: And since you don't remember anything, we need to walk a different
+          route.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568174
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568173
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568174
+        nodeX: 14228.382
+        nodeY: 1036.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568174
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 4bfd7c166b202bf4db8fb494cda76253, type: 2}
+        charName: 
+        text: But focus, we need to find a way out of this forest.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568176
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568175
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568176
+        nodeX: 14446.382
+        nodeY: 1038.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568176
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 25a2b9459ccfcf54f903675e877483fb, type: 2}
+        charName: 
+        text: If I'm correct, it should be right... there!
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568178
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568177
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568178
+        nodeX: 14665.382
+        nodeY: 1040.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568178
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 2f26eb4f25c52964992e2043e1ed5c3d, type: 2}
+        charName: 
+        text: Watch your step, you never know what could happen-
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568180
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568179
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568180
+        nodeX: 14882.9
+        nodeY: 1039.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568180
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: d6565076a362e674683f91975574727a, type: 2}
+        charName: 
+        text: 
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568186
         eventToPlay: 1
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        goreSprite: {fileID: 0}
+        background: {fileID: 0}
+        goreBackground: {fileID: 0}
+        isDefault: 0
+    - rid: 7815180684838568185
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568186
+        nodeX: 15110.9
+        nodeY: 1098.74
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568186
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: c230266ed96e54d4b9d2679091ef1f2c, type: 2}
+        text: What's that?
+        dialogue:
+          rid: 7815180684838568188
+    - rid: 7815180684838568187
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180684838568188
+        nodeX: 15337.9
+        nodeY: 1035.74
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180684838568188
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 2aae0881612fd06488c0fefe75bfbc96, type: 2}
+        charName: 
+        text: Ghosts.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180684838568193
+        delay: 0
+        answers: []
+        eventToPlay: 0
         minigame: 1
-        scoreToWin: 150
+        scoreToWin: 0
         wonDialogue:
-          rid: 7815180677653463270
+          rid: -2
         loseDialogue:
-          rid: 7815180677653463278
+          rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
         goreSprite: {fileID: 0}
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463269
+    - rid: 7815180684838568189
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463270
-        nodeX: 3714.1094
-        nodeY: 771.09705
+          rid: 7815180684838568190
+        nodeX: 0
+        nodeY: 0
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463270
+    - rid: 7815180684838568190
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: a59b3d5d8c1c7c3458e55ac8f3fd0c1f, type: 2}
-        charName: :>
-        text: W
+        dialogue: {fileID: 11400000, guid: dda9458998dc23d4ba6fd30ce4849d51, type: 2}
+        charName: 
+        text: 
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180677653463272
+          rid: -2
         delay: 0
         answers: []
         eventToPlay: 0
@@ -788,127 +2608,25 @@ MonoBehaviour:
         background: {fileID: 0}
         goreBackground: {fileID: 0}
         isDefault: 0
-    - rid: 7815180677653463271
+    - rid: 7815180684838568192
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
-          rid: 7815180677653463272
-        nodeX: 3997.641
-        nodeY: 918.9891
+          rid: 7815180684838568193
+        nodeX: 15566.897
+        nodeY: 1036.8595
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
-    - rid: 7815180677653463272
+    - rid: 7815180684838568193
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 87d774a94e33b00478cf84f07e41d89f, type: 2}
-        charName: aaaaaaaaaaaaaaaaaaaaaa
-        text: platformer time!
+        dialogue: {fileID: 11400000, guid: 53b0d4283ad5cc44cb55fecc5a0772e6, type: 2}
+        charName: 
+        text: Bleh.
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 2
-        scoreToWin: 0
-        wonDialogue:
-          rid: 7815180677653463274
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463273
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463274
-        nodeX: 4256.3086
-        nodeY: 923.9891
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463274
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 749583cd4eb08164c916c44433982585, type: 2}
-        charName: bbbbbbbb
-        text: yippee!
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: -2
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 11400000, guid: 4aac6eb7bff4840479de55616034cfca, type: 2}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463275
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463276
-        nodeX: 3141.3198
-        nodeY: 1023.9586
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463276
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: d45027ecbc9401c49a7be7c7a7c4afd0, type: 2}
-        charName: :>
-        text: loser L
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463268
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180677653463277
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180677653463278
-        nodeX: 3718.4878
-        nodeY: 1021.4474
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180677653463278
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: e3edc0ab3b5e44e4da43333216a06080, type: 2}
-        charName: :>
-        text: L
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180677653463272
         delay: 0
         answers: []
         eventToPlay: 0

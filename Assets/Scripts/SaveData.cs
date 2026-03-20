@@ -29,7 +29,7 @@ public class SaveData
 
     public void Reset(Ending[] givenEndings)
     {
-        textSpeed = 0.075f;
+        textSpeed = 0.04f;
         windowType = 1;
         bgmVolume = 1;
         sfxVolume = 1;

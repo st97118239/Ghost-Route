@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Dialogue startingDialogue;
+    private string startingDialogue;
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private Button nextButton;
@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private int answerCount;
     [SerializeField] private Transform answerButtonParent;
     [SerializeField] private GameObject answerButtonPrefab;
-    private AnswerButton[] answerButtons;
+    [SerializeField] private AnswerButton[] answerButtons;
 
     [SerializeField] private Canvas endingCanvas;
     [SerializeField] private CanvasGroup endingCanvasGroup;
@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private DialogueHolder dialogueHolder;
     private Dictionary<string, Dialogue> dialogues;
+    private Dictionary<string, Answer> answers;
 
     [SerializeField] private ScriptableGraphModel graph;
 
@@ -87,22 +88,22 @@ public class DialogueManager : MonoBehaviour
             dialogues.Add(dialogue.name, dialogue);
         }
 
-        startingDialogue = dialogueHolder.startingDialogue;
+        answers = new Dictionary<string, Answer>();
+        foreach (Answer answer in dialogueHolder.answers)
+        {
+            answers.Add(answer.name, answer);
+        }
+
+        startingDialogue = dialogueHolder.startingDialogueID;
 
         string foundName = SaveDataManager.saveData.currentDialogueID;
 
         if (foundName != string.Empty)
-            startingDialogue = FindDialogue(foundName);
+            startingDialogue = foundName;
 
-        if (answerButtonParent == null || answerButtonPrefab == null || answerCount == 0) return;
-
-        answerButtons = new AnswerButton[answerCount];
-        for (int i = 0; i < answerCount; i++)
-        {
-            AnswerButton button = Instantiate(answerButtonPrefab, answerButtonParent).GetComponent<AnswerButton>();
-            answerButtons[i] = button;
+        answerCount = answerButtons.Length;
+        foreach (AnswerButton button in answerButtons) 
             button.Setup(this);
-        }
 
         typingSpeed = SaveDataManager.saveData.textSpeed;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
@@ -126,9 +127,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (startingDialogue.minigame != Minigames.None)
+        Dialogue dialogue = FindDialogue(startingDialogue);
+
+        if (dialogue.minigame != Minigames.None)
         {
-            int score = startingDialogue.minigame switch
+            int score = dialogue.minigame switch
             {
                 Minigames.GhostHunt when SaveDataManager.saveData.hasPlayedGhostHunt => SaveDataManager.saveData.ghostHuntScore,
                 Minigames.Acheron when SaveDataManager.saveData.hasPlayedAcheron => 0,
@@ -138,9 +141,12 @@ public class DialogueManager : MonoBehaviour
 
             if (score != -1)
             {
-                startingDialogue = score >= startingDialogue.scoreToWin
-                    ? startingDialogue.wonDialogue
-                    : startingDialogue.loseDialogue;
+                startingDialogue = score >= dialogue.scoreToWin
+                    ? dialogue.wonDialogueID
+                    : dialogue.loseDialogueID;
+
+                if (startingDialogue == string.Empty)
+                    startingDialogue = dialogue.nextDialogueID;
             }
         }
 
@@ -179,7 +185,7 @@ public class DialogueManager : MonoBehaviour
 
         if (currentDialogue.delay > 0)
         {
-            bool shouldHide = currentDialogue.answers != null && currentDialogue.answers.Length > 0;
+            bool shouldHide = currentDialogue.answersID != null && currentDialogue.answersID.Length > 0;
 
             if (!shouldHide)
                 dialogueBox.SetActive(false);
@@ -217,11 +223,11 @@ public class DialogueManager : MonoBehaviour
             case Minigames.GhostHunt:
                 Save();
                 StartLoadScene("Ghost Hunt");
-                break;
+                return;
             case Minigames.Acheron:
                 Save();
                 StartLoadScene("Acheron");
-                break;
+                return;
             case Minigames.Memory:
                 Save();
                 StartLoadScene("Memory");
@@ -230,21 +236,22 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
 
-        if (currentDialogue.answers != null && currentDialogue.answers.Length > 0)
+        if (currentDialogue.answersID != null && currentDialogue.answersID.Length > 0)
         {
             LoadAnswers();
             return;
         }
 
-        if (currentDialogue.nextDialogue == null) return;
+        if (string.IsNullOrEmpty(currentDialogue.nextDialogueID)) return;
 
-        LoadNewDialogue(currentDialogue.nextDialogue);
+        LoadNewDialogue(currentDialogue.nextDialogueID);
     }
 
-    private void LoadNewDialogue(Dialogue givenDialogue)
+    private void LoadNewDialogue(string dialogueID)
     {
-        currentDialogue = givenDialogue;
-        nameBox.text = currentDialogue.charName;
+        currentDialogue = FindDialogue(dialogueID);
+        if (currentDialogue.charName != string.Empty)
+            nameBox.text = currentDialogue.charName;
         dialogueBox.SetActive(true);
 
         if (currentDialogue.goreSprite != null && SaveDataManager.saveData.showGore)
@@ -314,14 +321,14 @@ public class DialogueManager : MonoBehaviour
 
         answerButtonParent.gameObject.SetActive(true);
 
-        int max = currentDialogue.answers.Length;
+        int max = currentDialogue.answersID.Length;
 
         if (max > answerButtons.Length) max = answerButtons.Length;
 
         for (int i = 0; i < max; i++)
         {
             AnswerButton button = answerButtons[i];
-            button.Load(currentDialogue.answers[i]);
+            button.Load(FindAnswer(currentDialogue.answersID[i]));
         }
     }
 
@@ -334,7 +341,7 @@ public class DialogueManager : MonoBehaviour
 
         answerButtonParent.gameObject.SetActive(false);
 
-        LoadNewDialogue(answer.dialogue);
+        LoadNewDialogue(answer.dialogueID);
     }
 
     private void GetEnding()
@@ -413,9 +420,9 @@ public class DialogueManager : MonoBehaviour
 
     public void DevDialogueFieldEnter()
     {
-        string dialogueToFind = dialogueInputField.text;
+        string dialogueID = dialogueInputField.text;
 
-        Dialogue dialogue = FindDialogue(dialogueToFind);
+        Dialogue dialogue = FindDialogue(dialogueID);
 
         if (dialogue == null) return;
 
@@ -423,7 +430,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
 
         dialogueInputField.gameObject.SetActive(false);
-        LoadNewDialogue(dialogue);
+        LoadNewDialogue(dialogueID);
     }
 
     private void StartLoadScene(string sceneName)
@@ -441,6 +448,15 @@ public class DialogueManager : MonoBehaviour
 
     private Dialogue FindDialogue(string id)
     {
-        return dialogues[id];
+        if (!string.IsNullOrEmpty(id)) return dialogues[id];
+        Debug.LogWarning("Empty id given");
+        return null;
+    }
+
+    private Answer FindAnswer(string id)
+    {
+        if (!string.IsNullOrEmpty(id)) return answers[id];
+        Debug.LogWarning("Empty id given");
+        return null;
     }
 }
