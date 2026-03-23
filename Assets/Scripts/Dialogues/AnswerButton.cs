@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ public class AnswerButton : MonoBehaviour
 
     [SerializeField] private Button button;
     [SerializeField] private TMP_Text text;
+    [SerializeField] private RectTransform rectTrans;
+    [SerializeField] private VerticalLayoutGroup layoutGroup;
 
     private Answer answer;
 
@@ -27,6 +30,29 @@ public class AnswerButton : MonoBehaviour
 
         text.text = fullText;
         gameObject.SetActive(true);
+        StartCoroutine(ButtonAnimation());
+    }
+
+    private IEnumerator ButtonAnimation()
+    {
+        yield return null;
+        layoutGroup.enabled = true;
+        layoutGroup.enabled = false;
+        layoutGroup.enabled = true;
+        yield return null;
+
+        layoutGroup.enabled = false;
+        yield return null;
+
+        Vector2 targetPos = new(rectTrans.anchoredPosition.x - 1500, rectTrans.anchoredPosition.y);
+        yield return null;
+
+        while (rectTrans.anchoredPosition != targetPos)
+        {
+            rectTrans.anchoredPosition = Vector2.MoveTowards(rectTrans.anchoredPosition, targetPos, 10);
+
+            yield return Time.deltaTime;
+        }
     }
 
     public void Press()

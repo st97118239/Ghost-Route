@@ -319,7 +319,7 @@ public class DialogueManager : MonoBehaviour
     {
         nextButton.interactable = false;
 
-        answerButtonParent.gameObject.SetActive(true);
+        //answerButtonParent.gameObject.SetActive(true);
 
         int max = currentDialogue.answersID.Length;
 
@@ -339,7 +339,7 @@ public class DialogueManager : MonoBehaviour
             t.gameObject.SetActive(false);
         }
 
-        answerButtonParent.gameObject.SetActive(false);
+        //answerButtonParent.gameObject.SetActive(false);
 
         LoadNewDialogue(answer.dialogueID);
     }

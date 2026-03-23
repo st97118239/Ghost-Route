@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: Don't worry about it... How am I gonna exlain this.
   voiceline: {fileID: 0}
-  nextDialogueID: -1966559872
+  nextDialogueID: -1487859088
   delay: 0
   answersID: []
   eventToPlay: 0

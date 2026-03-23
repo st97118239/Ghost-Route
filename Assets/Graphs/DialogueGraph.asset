@@ -26,7 +26,6 @@ MonoBehaviour:
     - rid: 7815180684838567954
     - rid: 7815180684838568032
     - rid: 7815180684838568034
-    - rid: 7815180684838568036
     - rid: 7815180684838568038
     - rid: 7815180684838568040
     - rid: 7815180684838568042
@@ -100,8 +99,8 @@ MonoBehaviour:
     utilityNodes: []
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: 407.9834, y: -449.94177, z: 0}
-    viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+    viewPosition: {x: -508.59875, y: -101.669495, z: 0}
+    viewScale: {x: 0.375937, y: 0.375937, z: 1}
   references:
     version: 2
     RefIds:
@@ -112,8 +111,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567937
-        nodeX: -113.58093
-        nodeY: 1038.537
+        nodeX: 110.41907
+        nodeY: 1041.537
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -147,8 +146,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567939
-        nodeX: 116.528625
-        nodeY: 1116.6323
+        nodeX: 340.52863
+        nodeY: 1119.6323
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
@@ -164,8 +163,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567941
-        nodeX: 360.52863
-        nodeY: 1036.6323
+        nodeX: 584.5286
+        nodeY: 1039.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -198,8 +197,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567943
-        nodeX: 587.5286
-        nodeY: 1036.6323
+        nodeX: 811.5286
+        nodeY: 1039.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -233,8 +232,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567945
-        nodeX: 815.5286
-        nodeY: 1112.6323
+        nodeX: 1039.5286
+        nodeY: 1115.6323
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
@@ -250,8 +249,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567947
-        nodeX: 1046.5286
-        nodeY: 1041.6323
+        nodeX: 1270.5286
+        nodeY: 1044.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -285,8 +284,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567949
-        nodeX: 1285.5876
-        nodeY: 1114.105
+        nodeX: 1509.5876
+        nodeY: 1117.105
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
@@ -302,8 +301,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567951
-        nodeX: 1517.4695
-        nodeY: 1031.6914
+        nodeX: 1741.4695
+        nodeY: 1034.6914
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -337,8 +336,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567953
-        nodeX: 1755.5876
-        nodeY: 1094.1638
+        nodeX: 1979.5876
+        nodeY: 1097.1638
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
@@ -354,8 +353,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567955
-        nodeX: 1984.5286
-        nodeY: 1026.6323
+        nodeX: 2208.5286
+        nodeY: 1029.6323
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -388,8 +387,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568033
-        nodeX: 2214.1614
-        nodeY: 1026.1904
+        nodeX: 2438.1614
+        nodeY: 1029.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -422,8 +421,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568035
-        nodeX: 2442.1614
-        nodeY: 1028.1904
+        nodeX: 2666.1614
+        nodeY: 1031.1904
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -433,40 +432,6 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: b04eb61dfb888254bbc09842aa0ad391, type: 2}
         charName: Lethia
         text: Don't worry about it... How am I gonna exlain this.
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180684838568037
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180684838568036
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180684838568037
-        nodeX: 2668.1614
-        nodeY: 1028.1904
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180684838568037
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: d8e70adf770438642aed9a30368734cb, type: 2}
-        charName: Lethia
-        text: Look over there, you see that?
         voiceline: {fileID: 0}
         nextDialogue:
           rid: 7815180684838568039
