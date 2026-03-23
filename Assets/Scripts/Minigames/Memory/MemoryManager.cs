@@ -154,12 +154,14 @@ public class MemoryManager : MonoBehaviour
                 targetPos = moveAnimPosPlayer.position;
                 card0.transform.SetParent(moveAnimPosPlayer);
                 card1.transform.SetParent(moveAnimPosPlayer);
+                card0.PlayVoiceline(false);
             }
             else
             {
                 targetPos = moveAnimPosOpponent.position;
                 card0.transform.SetParent(moveAnimPosOpponent);
                 card1.transform.SetParent(moveAnimPosOpponent);
+                card0.PlayVoiceline(true);
             }
 
             AudioManager.PlaySound(Sounds.MemoryPoint);

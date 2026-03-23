@@ -96,13 +96,12 @@ MonoBehaviour:
     - rid: 7815180684838568179
     - rid: 7815180684838568185
     - rid: 7815180684838568187
-    - rid: 7815180684838568189
     - rid: 7815180684838568192
     utilityNodes: []
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -12972.809, y: -595.5864, z: 0}
-    viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
+    viewPosition: {x: 407.9834, y: -449.94177, z: 0}
+    viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -2563,40 +2562,6 @@ MonoBehaviour:
         answers: []
         eventToPlay: 0
         minigame: 1
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
-        background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
-    - rid: 7815180684838568189
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180684838568190
-        nodeX: 0
-        nodeY: 0
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180684838568190
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: dda9458998dc23d4ba6fd30ce4849d51, type: 2}
-        charName: 
-        text: 
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: -2
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        minigame: 0
         scoreToWin: 0
         wonDialogue:
           rid: -2

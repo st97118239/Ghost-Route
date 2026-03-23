@@ -70,4 +70,9 @@ public class CardObj : MonoBehaviour
         image.sprite = frontSprite;
         image.color = isShowing ? Color.white : Color.grey;
     }
+
+    public void PlayVoiceline(bool isOpponent)
+    {
+        AudioManager.PlayVoiceline(isOpponent ? card.opponentScoreVoiceline : card.playerScoreVoiceline);
+    }
 }

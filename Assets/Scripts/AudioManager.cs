@@ -37,8 +37,15 @@ public class AudioManager : MonoBehaviour
         if (instance.voicelineSource.isPlaying)
             instance.voicelineSource.Stop();
 
+        if (audioClip == null)
+        {
+            Debug.LogError("AudioClip is null.");
+            return;
+        }
+
         instance.voicelineSource.clip = audioClip;
         instance.voicelineSource.Play();
+        Debug.Log("Playing voice line " + audioClip.name);
     }
 
     public static void PlaySound(Sounds sound)
