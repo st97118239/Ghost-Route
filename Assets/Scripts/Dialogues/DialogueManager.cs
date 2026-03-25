@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
 
         startingDialogue = dialogueHolder.startingDialogueID;
 
-        if (shouldUseSave)
+        if (shouldUseSave && SaveDataManager.saveData != null)
         {
             string foundName = SaveDataManager.saveData.currentDialogueID;
 
@@ -114,7 +114,7 @@ public class DialogueManager : MonoBehaviour
         foreach (AnswerButton button in answerButtons) 
             button.Setup(this);
 
-        typingSpeed = SaveDataManager.saveData.textSpeed;
+        typingSpeed = SaveDataManager.saveData != null ? SaveDataManager.saveData.textSpeed : 0f;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
         fastTypingSpeedWait = new WaitForSeconds(fastTypingSpeed);
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
@@ -288,7 +288,6 @@ public class DialogueManager : MonoBehaviour
                 return;
         }
 
-        //if (textBox.text != string.Empty && textBox.text != "")
         dialogueBox.SetActive(true);
 
         if (currentDialogue.answersID != null && currentDialogue.answersID.Length > 0)
@@ -314,8 +313,10 @@ public class DialogueManager : MonoBehaviour
         if (nameText != null)
         {
             nameText.text = currentDialogue.charName;
-            if (nameBox != null)
+            if (nameBox != null && nameText.text != string.Empty)
                 nameBox.SetActive(true);
+            else if (nameBox != null)
+                nameBox.SetActive(false);
         }
         else if (nameBox != null)
             nameBox.SetActive(false);
@@ -573,8 +574,8 @@ public class DialogueManager : MonoBehaviour
         if (shouldUseSave)
         {
             SaveDataManager.saveData.endings[currentEnding.endingID].isUnlocked = true;
-            SaveDataManager.Save();
             SaveDataManager.ResetGameData();
+            SaveDataManager.Save();
         }
         StartLoadScene(mainMenuSceneName);
     }

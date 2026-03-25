@@ -32,6 +32,7 @@ public class CustomMenu : NewGraph.ContextMenu
         AddNodeEntry("Dialogues/Refresh SOs", (obj) => { RefreshSO(); });
         AddNodeEntry("Dialogues/Create SOs", (obj) => { CreateMissingSO(); });
         AddNodeEntry("Dialogues/Utility/Remove unused SOs", (obj) => { RemoveUnusedSO(); });
+        AddNodeEntry("Dialogues/Utility/Update SOs", (obj) => { UpdateSO(); });
     }
 
     private static void CreateMissingSO()
@@ -259,5 +260,63 @@ public class CustomMenu : NewGraph.ContextMenu
             assetPath = assetPath + dialogueHolderNode.graphName + "/";
             AssetDatabase.DeleteAsset("Assets/ScriptableObjects/" + assetPath + fileName + ".asset");
         }
+    }
+
+    private static void UpdateSO()
+    {
+        DialogueHolder dialogueHolder = null;
+
+        List<NodeModel> nodes = Window.graphController.graphData.Nodes;
+
+        List<NodeModel> dialogueNodes = new();
+        List<NodeModel> answerNodes = new();
+
+        foreach (NodeModel node in nodes)
+        {
+            if (node.GetName() == "DialogueNode")
+                dialogueNodes.Add(node);
+            else if (node.GetName() == "AnswerNode")
+                answerNodes.Add(node);
+            else if (node.GetName() == "DialogueHolderNode")
+            {
+                DialogueHolderNode nodeData = (DialogueHolderNode)node.nodeData;
+                dialogueHolder = nodeData.dialogueHolder;
+            }
+        }
+
+        if (dialogueHolder == null)
+        {
+            Debug.LogError("No DialogueHolderNode found");
+            return;
+        }
+
+        dialogueHolder.dialogues = new Dialogue[dialogueNodes.Count];
+        foreach (NodeModel node in dialogueNodes)
+        {
+            DialogueNode nodeData = (DialogueNode)node.nodeData;
+            Dialogue dialogue = nodeData.dialogue;
+
+            nodeData.charName = dialogue.charName;
+            nodeData.text = dialogue.text;
+            nodeData.voiceline = dialogue.voiceline;
+            nodeData.delay = dialogue.delay;
+            nodeData.eventToPlay = dialogue.eventToPlay;
+            nodeData.minigame = dialogue.minigame;
+            nodeData.scoreToWin = dialogue.scoreToWin;
+            nodeData.ending = dialogue.ending;
+            nodeData.sprite = dialogue.sprite;
+            nodeData.background = dialogue.background;
+        }
+
+        dialogueHolder.answers = new Answer[answerNodes.Count];
+        foreach (NodeModel node in answerNodes)
+        {
+            AnswerNode nodeData = (AnswerNode)node.nodeData;
+            Answer answer = nodeData.answer;
+
+            nodeData.text = answer.text;
+        }
+
+        Debug.Log("Saved dialogues");
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueHolder
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000, guid: 078f9b414457c3e4895bfbf195ea5c54, type: 2}
-  startingDialogueID: 1787666272
+  startingDialogueID: -1916325152
   dialogues:
   - {fileID: 11400000, guid: a1709a826d81a824884f7a66a1d52731, type: 2}
   - {fileID: 11400000, guid: fc5db5bbd211d0a4d88a0d55b67534f7, type: 2}
@@ -93,10 +93,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4e06105170e4064f95823b07e63e361, type: 2}
   - {fileID: 11400000, guid: c5ed42e805633684bb110543b763b5c5, type: 2}
   - {fileID: 11400000, guid: 10c46ce2db7a7084ca5d19eac9a7325d, type: 2}
-  - {fileID: 11400000, guid: df6eaffe5de00144c9a973ead88269e2, type: 2}
   - {fileID: 11400000, guid: feda10f6f37cf674297792e11497bd32, type: 2}
   - {fileID: 11400000, guid: 3fd1e493c6b302a489ad061bed7f4941, type: 2}
   - {fileID: 11400000, guid: d0ef899eafaa7be47afdbea500595889, type: 2}
+  - {fileID: 11400000, guid: f81efb064d9cf30428feda714de1dfcf, type: 2}
   answers:
   - {fileID: 11400000, guid: 52ed220018c1eb34383dbb1d105cfabc, type: 2}
   - {fileID: 11400000, guid: 87c2139b5a8befa4cbebd7578a83441f, type: 2}

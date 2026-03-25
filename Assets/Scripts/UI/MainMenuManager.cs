@@ -24,7 +24,8 @@ public class MainMenuManager : MonoBehaviour
         FadeManager.Show();
         endings = _endings;
 
-        SaveDataManager.LookForSave();
+        if (SaveDataManager.saveData == null)
+            SaveDataManager.LookForSave();
 
         startButtonText.text = SaveDataManager.saveData.currentDialogueID == string.Empty ? "Start" : "Continue";
     }

@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
+using UnityEngine.EventSystems;
 
 public class GhostHuntManager : MonoBehaviour
 {

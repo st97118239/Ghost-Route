@@ -123,15 +123,15 @@ MonoBehaviour:
     - rid: 7815180793305104622
     - rid: 7815180793305104624
     - rid: 7815180793305104626
-    - rid: 7815180799290638336
     - rid: 7815180799290638338
     - rid: 7815180799290638340
     - rid: 7815180799290638342
+    - rid: 7815180800402129055
     utilityNodes: []
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: 549.64716, y: -429.33038, z: 0}
-    viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+    viewPosition: {x: 571.6762, y: -536.86096, z: 0}
+    viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
@@ -168,8 +168,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 23ece00da9d8bfb45942737ce41c5bee, type: 3}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838567938
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -217,8 +217,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838567942
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -250,8 +250,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838567944
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -300,8 +300,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838567948
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -350,8 +350,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838567952
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -399,8 +399,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568032
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -431,8 +431,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568034
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -463,8 +463,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568038
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -496,8 +496,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568040
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -545,8 +545,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568044
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -577,8 +577,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568046
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -609,8 +609,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568053
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -643,8 +643,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568057
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -709,8 +709,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568063
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -742,8 +742,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568065
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -791,8 +791,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568069
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -824,8 +824,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568071
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -873,8 +873,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568075
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -906,8 +906,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568077
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -957,8 +957,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568081
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1023,8 +1023,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568087
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1055,8 +1055,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568089
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1087,8 +1087,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568091
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1119,8 +1119,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568093
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1152,8 +1152,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568095
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1201,8 +1201,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568099
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1233,8 +1233,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568101
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1266,8 +1266,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568103
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1298,8 +1298,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568105
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1334,8 +1334,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568107
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1417,8 +1417,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568115
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1449,8 +1449,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568117
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1481,8 +1481,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568119
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1513,8 +1513,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568121
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1545,8 +1545,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568123
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1577,8 +1577,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568125
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1609,8 +1609,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568127
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1641,8 +1641,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568129
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1673,8 +1673,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568131
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1705,8 +1705,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568133
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1790,8 +1790,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568141
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1822,8 +1822,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568143
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1854,8 +1854,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568145
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1887,8 +1887,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568149
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1919,8 +1919,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568151
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1952,8 +1952,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568153
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2001,8 +2001,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568157
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2033,8 +2033,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568159
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2065,8 +2065,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568161
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2097,8 +2097,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568163
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2130,8 +2130,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568165
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2162,8 +2162,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568167
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2195,8 +2195,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568169
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2227,8 +2227,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568171
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2260,8 +2260,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568173
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2292,8 +2292,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568175
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2324,8 +2324,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568177
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2356,8 +2356,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568179
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2389,8 +2389,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568185
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2438,8 +2438,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180684838568192
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2472,8 +2472,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180767088083035
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2507,15 +2507,15 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180789176336545
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180789176336546
-        nodeX: -489.3985
-        nodeY: 1415.5253
+        nodeX: -457.65848
+        nodeY: 1065.0626
         name: DialogueHolderNode
         isUtilityNode: 0
         foldouts: []
@@ -2525,7 +2525,7 @@ MonoBehaviour:
         graphName: MainDialogue
         dialogueHolder: {fileID: 11400000, guid: b76027e85b77c27459306d2684292f75, type: 2}
         startingDialogue:
-          rid: 7815180799290638337
+          rid: 7815180684838567937
     - rid: 7815180793305104570
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2590,8 +2590,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104576
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2626,8 +2626,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104580
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2709,8 +2709,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104588
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2741,8 +2741,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104590
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2773,8 +2773,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104592
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2805,8 +2805,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104594
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2837,8 +2837,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104596
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2869,8 +2869,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104598
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2901,8 +2901,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104600
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2934,8 +2934,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104604
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2983,8 +2983,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104608
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -3015,8 +3015,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104610
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -3047,8 +3047,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104612
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -3081,8 +3081,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104618
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -3148,8 +3148,8 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180793305104624
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -3185,7 +3185,7 @@ MonoBehaviour:
         text: Depends.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: -2
+          rid: 7815180800402129056
         delay: 0
         answers: []
         eventToPlay: 0
@@ -3197,47 +3197,15 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
-    - rid: 7815180799290638336
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180799290638337
-        nodeX: -90.14486
-        nodeY: 1487.6892
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180799290638337
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: df6eaffe5de00144c9a973ead88269e2, type: 2}
-        charName: 
-        text: 
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180799290638339
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        soundToPlay: 0
-        minigame: 1
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180799290638338
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180799290638339
-        nodeX: 131.25275
-        nodeY: 1486.3772
+        nodeX: 18991.834
+        nodeY: 1019.0276
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3261,15 +3229,15 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180799290638340
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180799290638341
-        nodeX: 349.25275
-        nodeY: 1486.3772
+        nodeX: 19209.834
+        nodeY: 1019.0276
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3293,15 +3261,15 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
     - rid: 7815180799290638342
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180799290638343
-        nodeX: 564.25275
-        nodeY: 1488.3772
+        nodeX: 19436.834
+        nodeY: 1012.0275
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3325,5 +3293,38 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 11400000, guid: 970e123609820dd4db208bfc78ccd597, type: 2}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
+    - rid: 7815180800402129055
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180800402129056
+        nodeX: 18756.549
+        nodeY: 1015.15955
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180800402129056
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f81efb064d9cf30428feda714de1dfcf, type: 2}
+        charName: Vicky
+        text: Deze minigames zet ik hier tijdelijk neer voor deze build, dus have
+          fun :)
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180799290638339
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
