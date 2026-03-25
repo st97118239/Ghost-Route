@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,12 +10,10 @@ public class Phantom : Enemy
 
     [SerializeField] private float enemyHeight = 0.8f;
 
-    public void Load(Platform givenPlatform)
+    public void Load(Platform givenPlatform, Player givenPlayer)
     {
         platform = givenPlatform;
-
-        if (player == null)
-            player = FindFirstObjectByType<Player>();
+        player = givenPlayer;
 
         StartCoroutine(Loop());
     }
@@ -34,6 +31,8 @@ public class Phantom : Enemy
                 {
                     Vector3 playerPos = new(Mathf.Clamp(player.transform.position.x, platform.borderLocations[1].position.x, platform.borderLocations[0].position.x), targetPos.y, 0);
                     transform.position = Vector3.MoveTowards(transform.position, playerPos, Time.deltaTime * moveSpeed);
+
+                    spriteRenderer.flipX = playerPos.x > transform.position.x;
                 }
                 else
                     transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * moveSpeed);
@@ -44,7 +43,7 @@ public class Phantom : Enemy
             if (borderIdx > platform.borderLocations.Length - 1)
                 borderIdx = 0;
 
-            spriteRenderer.flipX = borderIdx != 0;
+            spriteRenderer.flipX = borderIdx != 1;
 
             yield return null;
         }

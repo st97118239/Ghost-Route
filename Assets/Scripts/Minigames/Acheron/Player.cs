@@ -44,10 +44,22 @@ public class Player : MonoBehaviour
 
     private bool hasFinished;
 
+    public void ResetCam()
+    {
+        cam.transform.position = new Vector3(0, 0, cam.transform.position.z);
+    }
+
     public void Load()
     {
         gameObject.SetActive(true);
         isFalling = true;
+        hasFinished = false;
+        currentPlatform = null;
+        isMoving = false;
+        isOnGround = false;
+        isInvincible = false;
+        isGoingLeft = false;
+        spriteRenderer.flipX = false;
 
         jump = inputActionAsset.FindAction("Main/Move Up");
         walkLeft = inputActionAsset.FindAction("Main/Move Left");

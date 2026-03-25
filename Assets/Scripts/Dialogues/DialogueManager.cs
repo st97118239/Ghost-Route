@@ -14,7 +14,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private Button nextButton;
     [SerializeField] private TMP_Text textBox;
-    [SerializeField] private TMP_Text nameBox;
+    [SerializeField] private TMP_Text nameText;
+    [SerializeField] private GameObject nameBox;
     [SerializeField] private Image charImage;
     [SerializeField] private Image backgroundImage;
 
@@ -78,10 +79,18 @@ public class DialogueManager : MonoBehaviour
     {
         FadeManager.Show();
 
+#if UNITY_EDITOR
         if (SaveDataManager.saveData == null)
+            SaveDataManager.LookForSave();
+#endif
+
+        if (shouldUseSave)
         {
-            Debug.LogError("No game save was loaded");
-            return;
+            if (SaveDataManager.saveData == null)
+            {
+                Debug.LogError("No game save was loaded");
+                return;
+            }
         }
 
         dialogues = new Dictionary<string, Dialogue>();
@@ -119,8 +128,11 @@ public class DialogueManager : MonoBehaviour
 
         if (textBox != null)
             textBox.text = string.Empty;
-        if (nameBox != null)
-            nameBox.text = string.Empty;
+        if (nameText != null)
+        {
+            nameBox.SetActive(false);
+            nameText.text = string.Empty;
+        }
         dialogueBox.SetActive(false);
     }
 
@@ -299,8 +311,14 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ShowDialogue()
     {
-        if (nameBox != null)
-            nameBox.text = currentDialogue.charName;
+        if (nameText != null)
+        {
+            nameText.text = currentDialogue.charName;
+            if (nameBox != null)
+                nameBox.SetActive(true);
+        }
+        else if (nameBox != null)
+            nameBox.SetActive(false);
         if (currentDialogue.text == string.Empty)
         {
             textBox.text = string.Empty;

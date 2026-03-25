@@ -16,5 +16,4 @@ MonoBehaviour:
   startingDialogueID: -1205768560
   dialogues:
   - {fileID: 11400000, guid: b5518597cf632234d83d47aa96499318, type: 2}
-  - {fileID: 11400000, guid: 2379d6dbfb7764041ae64913c48ba1f8, type: 2}
   answers: []

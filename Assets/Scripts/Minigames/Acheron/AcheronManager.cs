@@ -19,6 +19,7 @@ public class AcheronManager : MonoBehaviour
     [SerializeField] private float heartSpacing;
     [SerializeField] private int heartCount;
     private Image[] hearts;
+    [SerializeField] private Sprite heartImage;
     [SerializeField] private Sprite emptyHeartImage;
     [SerializeField] private float timeBetweenHearts;
     private WaitForSeconds waitTimeBetweenHearts;
@@ -26,11 +27,14 @@ public class AcheronManager : MonoBehaviour
     [SerializeField] private GameObject startPanel;
     [SerializeField] private Button startButton;
 
+    [SerializeField] private Vector3 spawnPos;
+
     private string sceneToGoTo;
     public GameObject GetPhantomPrefab() => phantomPrefab;
 
     private void Awake()
     {
+        player.transform.position = spawnPos;
         player.gameObject.SetActive(false);
         startButton.interactable = false;
         startPanel.SetActive(true);
@@ -98,8 +102,27 @@ public class AcheronManager : MonoBehaviour
     public void RetryButton()
     {
         AudioManager.instance.PlayButtonClick();
-        sceneToGoTo = "Acheron";
-        FadeManager.StartFade(false, LoadScene, Color.black);
+
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        deathScreen.SetActive(false);
+        player.ResetCam();
+        player.gameObject.SetActive(false);
+
+        foreach (Image heart in hearts)
+        {
+            heart.sprite = heartImage;
+            heartCount++;
+
+            yield return waitTimeBetweenHearts;
+        }
+
+        player.transform.position = spawnPos;
+
+        player.Load();
     }
 
     public void Quit()

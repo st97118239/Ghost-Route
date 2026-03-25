@@ -62,18 +62,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghosts:
   - {fileID: 11400000, guid: 562c268f126bb6d44879b2ca569f512a, type: 2}
-  - {fileID: 11400000, guid: cc961bc53ed6bea45b98aba1a753abfd, type: 2}
-  - {fileID: 11400000, guid: 3371c7dd0d47d0643b1da676f69b3b38, type: 2}
+  - {fileID: 11400000, guid: e9d11fcc7946e94429e023761a7b8064, type: 2}
+  - {fileID: 11400000, guid: 1de475bfda0246b4eb5632a9aa9e1c47, type: 2}
+  - {fileID: 11400000, guid: 8d785a1253062c348a60265394d05a8c, type: 2}
+  - {fileID: 11400000, guid: 744984f1353de1945bd7c68bd47bebfb, type: 2}
+  - {fileID: 11400000, guid: fb37841924491d443bb18335b3e104c5, type: 2}
+  - {fileID: 11400000, guid: be02e4dfdb4d3004593c31a7e5020c9c, type: 2}
+  - {fileID: 11400000, guid: f9bbe735bc234fc48b5cc4301f15894d, type: 2}
+  - {fileID: 11400000, guid: a5458374de561c24cadd2251ea921091, type: 2}
+  - {fileID: 11400000, guid: 57946452b557bd240a7fa5306ef18099, type: 2}
+  - {fileID: 11400000, guid: f96739420c98bdd4696de4e4f2067e49, type: 2}
+  - {fileID: 11400000, guid: dd35ef73afe40814591c2cddfbf90777, type: 2}
+  - {fileID: 11400000, guid: 94f6c84cfa8ae8945849a056e2fe66c2, type: 2}
+  - {fileID: 11400000, guid: 4dcdc89293b32d74c81847d9c788470b, type: 2}
+  - {fileID: 11400000, guid: c447da84bdca4ef4aba10a5d05de61a4, type: 2}
+  - {fileID: 11400000, guid: e703d03d457daf241a98a682cf5c1625, type: 2}
+  - {fileID: 11400000, guid: 8ad5583600d4b224db56691e7293ba43, type: 2}
+  - {fileID: 11400000, guid: 689dc63d0dcad114d9c83779957f95d3, type: 2}
+  - {fileID: 11400000, guid: 885d5388a3c768c4c95344e64473fc94, type: 2}
+  - {fileID: 11400000, guid: 95b2d1e387770894497975062c894678, type: 2}
+  - {fileID: 11400000, guid: cf8cfc441f623e44b9f5a0611e8882d4, type: 2}
+  - {fileID: 11400000, guid: c2156e2b17c2a7e45a919b10a4b460d8, type: 2}
+  - {fileID: 11400000, guid: 296a1b6901795b241bd8e966a78ada28, type: 2}
+  - {fileID: 11400000, guid: 239a343a07f26d241a63c9db13cdd01b, type: 2}
+  - {fileID: 11400000, guid: 9f4164583703e8541ad7be4bff8b787c, type: 2}
+  - {fileID: 11400000, guid: 416f14a35e5ca3f4380e5a9896bc2cf1, type: 2}
+  - {fileID: 11400000, guid: c2b8299ee1250ec4eb20295844646e85, type: 2}
   ghostChance: 60
   bunnies:
   - {fileID: 11400000, guid: 812a3be4f9ff34d48abdb4587dcf677f, type: 2}
   - {fileID: 11400000, guid: b2dd81b95adb50a4ca4e188d791f7605, type: 2}
   - {fileID: 11400000, guid: 92dd5f3ecd46f2a46b5fce0fcfcf7e28, type: 2}
+  - {fileID: 11400000, guid: 7737d7e60fd96f047ae5f18a5ecc38ae, type: 2}
   bunnyChance: 30
   deers:
   - {fileID: 11400000, guid: 93cf9ca3fc7b4a04682888577b9faeed, type: 2}
-  - {fileID: 11400000, guid: 85815deb2fc53964c829079c497d821e, type: 2}
-  - {fileID: 11400000, guid: 74485cf738e94f44bb88c96e3a28889b, type: 2}
+  - {fileID: 11400000, guid: be74e4ba552737a4eb50374e3349bdcc, type: 2}
+  - {fileID: 11400000, guid: 109a1eee8d4f33a4c864bc9c10f04fc0, type: 2}
+  - {fileID: 11400000, guid: 4663f46947b5dce42973e0802024513c, type: 2}
   deerChance: 10
   image: {fileID: 7101603400718163324}
   button: {fileID: 1593264474906569437}

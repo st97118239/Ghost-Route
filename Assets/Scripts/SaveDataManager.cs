@@ -37,12 +37,16 @@ public static class SaveDataManager
             CreateSave();
             return;
         }
+
         saveData.endings = new();
-        for (int i = 0; i < MainMenuManager.endings.Length; i++)
+        if (MainMenuManager.endings != null && MainMenuManager.endings.Length > 0)
         {
-            Ending ending = MainMenuManager.endings[i];
-            saveData.endings.Add(ending.endingID, ending);
-            ending.isUnlocked = saveData.endingUnlocked[i];
+            for (int i = 0; i < MainMenuManager.endings.Length; i++)
+            {
+                Ending ending = MainMenuManager.endings[i];
+                saveData.endings.Add(ending.endingID, ending);
+                ending.isUnlocked = saveData.endingUnlocked[i];
+            }
         }
 
         Debug.Log("Save loaded");
