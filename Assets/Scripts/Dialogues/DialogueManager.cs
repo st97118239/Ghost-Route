@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using NewGraph;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,10 +18,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image charImage;
     [SerializeField] private Image backgroundImage;
 
-    [SerializeField] private int answerCount;
-    [SerializeField] private Transform answerButtonParent;
-    [SerializeField] private GameObject answerButtonPrefab;
+    [SerializeField] private Animator backgroundAnimator;
+    [SerializeField] private float charDisappearTime;
+
     [SerializeField] private AnswerButton[] answerButtons;
+
+    [SerializeField] private AcheronManager acheronManager;
 
     [SerializeField] private Canvas endingCanvas;
     [SerializeField] private CanvasGroup endingCanvasGroup;
@@ -32,13 +33,14 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private string mainMenuSceneName;
 
-    private static Dialogue currentDialogue;
+    [SerializeField] private bool autoContinue;
+    [SerializeField] private bool shouldUseSave;
+
+    private Dialogue currentDialogue;
 
     [SerializeField] private DialogueHolder dialogueHolder;
     private Dictionary<string, Dialogue> dialogues;
     private Dictionary<string, Answer> answers;
-
-    [SerializeField] private ScriptableGraphModel graph;
 
     [SerializeField] private float timeAfterDialogue;
     private WaitForSeconds timeAfterDialogueWait;
@@ -47,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float fastTypingSpeed;
     private WaitForSeconds fastTypingSpeedWait;
 
+    [SerializeField] private bool enableDevInput;
     [SerializeField] private InputActionAsset inputActionAsset;
     private InputAction devInputAction;
     [SerializeField] private TMP_InputField dialogueInputField;
@@ -58,6 +61,9 @@ public class DialogueManager : MonoBehaviour
 
     private Coroutine dialogueCoroutine;
     private Coroutine startDelayCoroutine;
+
+    private Sounds playingSound;
+    private bool isPlayingSound;
 
     private bool canClick;
     private bool isTyping;
@@ -72,10 +78,6 @@ public class DialogueManager : MonoBehaviour
     {
         FadeManager.Show();
 
-#if UNITY_EDITOR
-        dialogueHolder.CheckDialogues();
-#endif
-
         if (SaveDataManager.saveData == null)
         {
             Debug.LogError("No game save was loaded");
@@ -83,25 +85,23 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogues = new Dictionary<string, Dialogue>();
-        foreach (Dialogue dialogue in dialogueHolder.dialogues)
-        {
+        foreach (Dialogue dialogue in dialogueHolder.dialogues) 
             dialogues.Add(dialogue.name, dialogue);
-        }
 
         answers = new Dictionary<string, Answer>();
-        foreach (Answer answer in dialogueHolder.answers)
-        {
+        foreach (Answer answer in dialogueHolder.answers) 
             answers.Add(answer.name, answer);
-        }
 
         startingDialogue = dialogueHolder.startingDialogueID;
 
-        string foundName = SaveDataManager.saveData.currentDialogueID;
+        if (shouldUseSave)
+        {
+            string foundName = SaveDataManager.saveData.currentDialogueID;
 
-        if (foundName != string.Empty)
-            startingDialogue = foundName;
+            if (foundName != string.Empty)
+                startingDialogue = foundName;
+        }
 
-        answerCount = answerButtons.Length;
         foreach (AnswerButton button in answerButtons) 
             button.Setup(this);
 
@@ -111,11 +111,16 @@ public class DialogueManager : MonoBehaviour
         timeAfterDialogueWait = new WaitForSeconds(timeAfterDialogue);
         wait1Second = new WaitForSeconds(1);
 
-        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
-        devInputAction.performed += DevDialogueField;
+        if (enableDevInput)
+        {
+            devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+            devInputAction.performed += DevDialogueField;
+        }
 
-        textBox.text = string.Empty;
-        nameBox.text = string.Empty;
+        if (textBox != null)
+            textBox.text = string.Empty;
+        if (nameBox != null)
+            nameBox.text = string.Empty;
         dialogueBox.SetActive(false);
     }
 
@@ -150,9 +155,18 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        AudioManager.PlaySound(Sounds.Music);
-        FadeManager.StartFade(true, Load);
-        devInputAction.Enable();
+        if (backgroundImage != null && dialogue.background != null)
+            backgroundImage.sprite = dialogue.background;
+        if (charImage != null)
+        {
+            charImage.sprite = dialogue.sprite;
+            charImage.color = dialogue.sprite == null ? Color.clear : Color.white;
+        }
+
+        AudioManager.PlaySound(Sounds.Music, false);
+        FadeManager.StartFade(true, Load, Color.black);
+        if (enableDevInput)
+            devInputAction.Enable();
     }
 
     private void Load()
@@ -181,17 +195,21 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator StartDelay()
     {
         canClick = false;
-        AudioManager.PlaySound(Sounds.Dialogue);
+        AudioManager.PlaySound(Sounds.Dialogue, false);
 
         if (currentDialogue.delay > 0)
         {
-            bool shouldHide = currentDialogue.answersID != null && currentDialogue.answersID.Length > 0;
+            bool shouldHide = (currentDialogue.answersID != null && currentDialogue.answersID.Length > 0) || autoContinue;
 
             if (!shouldHide)
                 dialogueBox.SetActive(false);
 
             yield return new WaitForSeconds(currentDialogue.delay);
         }
+
+        playingSound = currentDialogue.soundToPlay;
+        if (currentDialogue.soundToPlay != Sounds.None && !isPlayingSound) 
+            StartCoroutine(PlaySound());
 
         switch (currentDialogue.eventToPlay)
         {
@@ -202,6 +220,30 @@ public class DialogueManager : MonoBehaviour
                 ghostAnimator.SetTrigger(Move);
                 yield return wait1Second;
                 break;
+            case Events.FadeBlack:
+                FadeManager.StartFade(false, FadeBetweenDialoguesBlack, Color.black);
+                yield break;
+            case Events.FadeWhite:
+                FadeManager.StartFade(false, FadeBetweenDialoguesWhite, Color.white);
+                yield break;
+            case Events.CameraLookAround:
+                StartCoroutine(EventLookAround());
+                yield break;
+            case Events.ZoomArcadeMachine:
+                backgroundAnimator.SetBool("ZoomArcade", !backgroundAnimator.GetBool("ZoomArcade"));
+                yield return wait1Second;
+                break;
+            case Events.ZoomDoor:
+                backgroundAnimator.SetBool("ZoomDoor", !backgroundAnimator.GetBool("ZoomDoor"));
+                yield return wait1Second;
+                break;
+            case Events.ZoomTable:
+                backgroundAnimator.SetBool("ZoomTable", !backgroundAnimator.GetBool("ZoomTable"));
+                yield return wait1Second;
+                break;
+            case Events.StartAcheron:
+                StartAcheron();
+                yield break;
         }
 
         DelayFinished();
@@ -234,6 +276,7 @@ public class DialogueManager : MonoBehaviour
                 return;
         }
 
+        //if (textBox.text != string.Empty && textBox.text != "")
         dialogueBox.SetActive(true);
 
         if (currentDialogue.answersID != null && currentDialogue.answersID.Length > 0)
@@ -250,55 +293,97 @@ public class DialogueManager : MonoBehaviour
     private void LoadNewDialogue(string dialogueID)
     {
         currentDialogue = FindDialogue(dialogueID);
-        if (currentDialogue.charName != string.Empty)
-            nameBox.text = currentDialogue.charName;
-        dialogueBox.SetActive(true);
-
-        if (currentDialogue.goreSprite != null && SaveDataManager.saveData.showGore)
-            charImage.sprite = currentDialogue.goreSprite;
-        else if (currentDialogue.sprite != null)
-            charImage.sprite = currentDialogue.sprite;
-
-        if (currentDialogue.goreBackground != null && SaveDataManager.saveData.showGore)
-            backgroundImage.sprite = currentDialogue.goreBackground;
-        else if (currentDialogue.background != null)
-            backgroundImage.sprite = currentDialogue.background;
-
-        if (currentDialogue.voiceline != null)
-            AudioManager.PlayVoiceline(currentDialogue.voiceline);
 
         dialogueCoroutine = StartCoroutine(ShowDialogue());
     }
 
     private IEnumerator ShowDialogue()
     {
+        if (nameBox != null)
+            nameBox.text = currentDialogue.charName;
+        if (currentDialogue.text == string.Empty)
+        {
+            textBox.text = string.Empty;
+            dialogueBox.SetActive(false);
+        }
+        else
+            dialogueBox.SetActive(true);
+
+        if (charImage != null)
+        {
+            charImage.sprite = currentDialogue.sprite;
+            charImage.color = currentDialogue.sprite == null ? Color.clear : Color.white;
+        }
+        if (backgroundImage != null && currentDialogue.background != null) 
+            backgroundImage.sprite = currentDialogue.background;
+        float voiceLineLength = 0f;
+        if (currentDialogue.voiceline != null)
+            voiceLineLength = AudioManager.PlayVoiceline(currentDialogue.voiceline);
+
         isTyping = true;
         canClick = true;
-        nextButton.interactable = true;
+        if (nextButton != null)
+            nextButton.interactable = true;
         string fullText = currentDialogue.text;
 
         fullText = fullText.Replace("{name}", SaveDataManager.saveData.name);
         fullText = fullText.Replace("{pronoun}", SaveDataManager.saveData.pronouns);
 
-        for (int i = 0; i < fullText.Length + 1; i++)
+        int forLoopMax = fullText.Length + 1;
+        for (int i = 1; i < forLoopMax; i++)
         {
-            textBox.text = fullText[..i];
+            string text = fullText[..i];
+            if (i < fullText.Length)
+            {
+                if (fullText[i - 1].ToString() == "<")
+                {
+                    int charsTillEnd = 0;
+                    while (true)
+                    {
+                        charsTillEnd++;
+                        if (fullText[i - 1 + charsTillEnd].ToString() == ">")
+                            break;
+                    }
+
+                    i += charsTillEnd;
+                    text = fullText[..i];
+                }
+            }
+            textBox.text = text;
             if (isFast)
+            {
                 yield return fastTypingSpeedWait;
+                voiceLineLength -= fastTypingSpeed;
+            }
             else
+            {
                 yield return typingSpeedWait;
+                voiceLineLength -= typingSpeed;
+            }
         }
 
         if (isFast)
         {
             isWaiting = true;
             yield return timeAfterDialogueWait;
+            voiceLineLength -= timeAfterDialogue;
             isFast = false;
             isWaiting = false;
         }
 
         isTyping = false;
         dialogueCoroutine = null;
+
+        if (!autoContinue && textBox.text != string.Empty && textBox.text != "") yield break;
+
+        if (!autoContinue)
+        {
+            yield return wait1Second;
+            if (voiceLineLength > 0)
+                yield return new WaitForSeconds(voiceLineLength);
+        }
+
+        startDelayCoroutine = StartCoroutine(StartDelay());
     }
 
     private void SkipDialogue()
@@ -319,8 +404,6 @@ public class DialogueManager : MonoBehaviour
     {
         nextButton.interactable = false;
 
-        //answerButtonParent.gameObject.SetActive(true);
-
         int max = currentDialogue.answersID.Length;
 
         if (max > answerButtons.Length) max = answerButtons.Length;
@@ -328,22 +411,97 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < max; i++)
         {
             AnswerButton button = answerButtons[i];
-            button.Load(FindAnswer(currentDialogue.answersID[i]));
+            Answer answer = FindAnswer(currentDialogue.answersID[i]);
+            button.Load(answer);
         }
     }
 
     public void AnswerPressed(Answer answer)
     {
-        foreach (AnswerButton t in answerButtons)
-        {
+        foreach (AnswerButton t in answerButtons) 
             t.gameObject.SetActive(false);
-        }
-
-        //answerButtonParent.gameObject.SetActive(false);
 
         LoadNewDialogue(answer.dialogueID);
     }
 
+    private void FadeBetweenDialoguesBlack()
+    {
+        FadeManager.StartFade(true, DelayFinished, Color.black);
+    }
+
+    private void FadeBetweenDialoguesWhite()
+    {
+        StartCoroutine(WaitBetweenWhiteFade());
+    }
+
+    private IEnumerator WaitBetweenWhiteFade()
+    {
+        yield return wait1Second;
+
+        FadeManager.StartFade(true, DelayFinished, Color.white);
+    }
+
+    private IEnumerator EventLookAround()
+    {
+        dialogueBox.SetActive(false);
+
+        yield return null;
+
+        for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
+        {
+            if (i > charDisappearTime) i = charDisappearTime;
+
+            float alphaAmount = i / charDisappearTime;
+            charImage.color = new Color(255, 255, 255, Mathf.Lerp(1, 0, alphaAmount));
+
+            yield return null;
+        }
+
+        charImage.color = Color.clear;
+
+        backgroundAnimator.SetTrigger("LookAround");
+    }
+
+    public IEnumerator EventLookAroundFinished()
+    {
+        yield return null;
+
+        for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
+        {
+            if (i > charDisappearTime) i = charDisappearTime;
+
+            float alphaAmount = i / charDisappearTime;
+            charImage.color = new Color(255, 255, 255, Mathf.Lerp(0, 1, alphaAmount));
+
+            yield return null;
+        }
+
+        charImage.color = Color.white;
+
+        DelayFinished();
+    }
+
+    private IEnumerator PlaySound()
+    {
+        isPlayingSound = true;
+
+        WaitForSeconds wait = null;
+        while (playingSound != Sounds.None)
+        {
+            if (wait == null)
+            {
+                float delay = AudioManager.PlaySound(playingSound, true);
+                wait = new WaitForSeconds(delay);
+            }
+            else
+                AudioManager.PlaySound(playingSound, true);
+
+            yield return wait;
+        }
+
+        isPlayingSound = false;
+    }
+    
     private void GetEnding()
     {
         currentEnding = currentDialogue.ending;
@@ -387,24 +545,38 @@ public class DialogueManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SaveDataManager.saveData.textSpeed = typingSpeed;
-        SaveDataManager.saveData.currentDialogueID = currentDialogue.name;
-        SaveDataManager.Save();
+        if (shouldUseSave) 
+            Save();
         StartLoadScene(mainMenuSceneName);
     }
 
     public void LeaveAfterEnding()
     {
-        SaveDataManager.saveData.endings[currentEnding.endingID].isUnlocked = true;
-        SaveDataManager.Save();
-        SaveDataManager.ResetGameData();
+        if (shouldUseSave)
+        {
+            SaveDataManager.saveData.endings[currentEnding.endingID].isUnlocked = true;
+            SaveDataManager.Save();
+            SaveDataManager.ResetGameData();
+        }
         StartLoadScene(mainMenuSceneName);
     }
 
-    private static void Save()
+    private void Save()
     {
+        if (!shouldUseSave) return;
         SaveDataManager.saveData.currentDialogueID = currentDialogue.name;
         SaveDataManager.Save();
+    }
+
+    private void StartAcheron()
+    {
+        if (acheronManager == null) return;
+
+        dialogueBox.SetActive(false);
+
+        acheronManager.UnlockButton();
+
+        gameObject.SetActive(false);
     }
 
     private void DevDialogueField(InputAction.CallbackContext context)
@@ -429,16 +601,22 @@ public class DialogueManager : MonoBehaviour
         if (startDelayCoroutine != null) StopCoroutine(startDelayCoroutine);
         if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
 
+        foreach (AnswerButton t in answerButtons)
+            t.gameObject.SetActive(false);
+
         dialogueInputField.gameObject.SetActive(false);
         LoadNewDialogue(dialogueID);
     }
 
     private void StartLoadScene(string sceneName)
     {
-        devInputAction.performed -= DevDialogueField;
-        devInputAction.Disable();
+        if (enableDevInput)
+        {
+            devInputAction.performed -= DevDialogueField;
+            devInputAction.Disable();
+        }
         sceneToGoTo = sceneName;
-        FadeManager.StartFade(false, LoadScene);
+        FadeManager.StartFade(false, LoadScene, Color.black);
     }
 
     private void LoadScene()

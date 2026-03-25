@@ -17,8 +17,6 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private int windowTypeIdx;
     [SerializeField] private Image[] windowTypeCheckmarks;
 
-    [SerializeField] private Toggle showGoreToggle;
-
     [SerializeField] private GameObject bgmVolumePanel;
     [SerializeField] private Slider bgmVolumeSlider;
 
@@ -35,7 +33,6 @@ public class SettingsManager : MonoBehaviour
         bgmVolumeSlider.value = SaveDataManager.saveData.bgmVolume;
         sfxVolumeSlider.value = SaveDataManager.saveData.sfxVolume;
         voicelineVolumeSlider.value = SaveDataManager.saveData.voicelinesVolume;
-        showGoreToggle.isOn = SaveDataManager.saveData.showGore;
         SetWindowType();
     }
 
@@ -104,11 +101,6 @@ public class SettingsManager : MonoBehaviour
             windowTypeCheckmarks[i].gameObject.SetActive(i == windowTypeIdx);
     }
 
-    public void ShowGoreToggle()
-    {
-        SaveDataManager.saveData.showGore = showGoreToggle.isOn;
-    }
-
     public void BGMButton()
     {
         if (bgmVolumePanel.activeSelf)
@@ -153,7 +145,7 @@ public class SettingsManager : MonoBehaviour
     public void ConfirmResetButton()
     {
         SaveDataManager.ResetData();
-        FadeManager.StartFade(false, ReloadScene);
+        FadeManager.StartFade(false, ReloadScene, Color.black);
     }
 
     private void ReloadScene()

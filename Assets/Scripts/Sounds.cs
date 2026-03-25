@@ -14,5 +14,11 @@ public enum Sounds
     SpawnDeer,
     Jump,
     Damage,
-    Fall
+    Fall,
+    Footsteps,
+    FootstepsFadeOut,
+    FootstepsFadeIn,
+    KeyJingle,
+    DoorUnlocking,
+    CarCrash
 }

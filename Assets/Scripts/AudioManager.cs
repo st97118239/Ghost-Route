@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource voicelineSource;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource dialogueSfxSource;
 
     [SerializeField] private AudioClip musicClip;
     [SerializeField] private AudioClip clickClip;
@@ -23,6 +24,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip damageClip;
     [SerializeField] private AudioClip fallClip;
 
+    [SerializeField] private AudioClip footstepClip;
+    [SerializeField] private AudioClip footstepFadeOutClip;
+    [SerializeField] private AudioClip footstepFadeInClip;
+    [SerializeField] private AudioClip keyJingleClip;
+    [SerializeField] private AudioClip doorUnlockingClip;
+    [SerializeField] private AudioClip carCrashClip;
+
     private void Awake()
     {
         instance = this;
@@ -30,9 +38,9 @@ public class AudioManager : MonoBehaviour
         SetVolumes();
     }
 
-    public void PlayButtonClick() => PlaySound(Sounds.Click);
+    public void PlayButtonClick() => PlaySound(Sounds.Click, false);
 
-    public static void PlayVoiceline(AudioClip audioClip)
+    public static float PlayVoiceline(AudioClip audioClip)
     {
         if (instance.voicelineSource.isPlaying)
             instance.voicelineSource.Stop();
@@ -40,22 +48,24 @@ public class AudioManager : MonoBehaviour
         if (audioClip == null)
         {
             Debug.LogError("AudioClip is null.");
-            return;
+            return -1f;
         }
 
         instance.voicelineSource.clip = audioClip;
         instance.voicelineSource.Play();
         Debug.Log("Playing voice line " + audioClip.name);
+        return audioClip.length;
     }
 
-    public static void PlaySound(Sounds sound)
+    public static float PlaySound(Sounds sound, bool isOneShot)
     {
         AudioClip clipToPlay;
+        AudioSource source;
         switch (sound)
         {
             default:
             case Sounds.None:
-                return;
+                return -1f;
             case Sounds.Music:
                 clipToPlay = instance.musicClip;
                 break;
@@ -98,23 +108,52 @@ public class AudioManager : MonoBehaviour
             case Sounds.Fall:
                 clipToPlay = instance.fallClip;
                 break;
+            case Sounds.Footsteps:
+                clipToPlay = instance.footstepClip;
+                break;
+            case Sounds.FootstepsFadeOut:
+                clipToPlay = instance.footstepFadeOutClip;
+                break;
+            case Sounds.FootstepsFadeIn:
+                clipToPlay = instance.footstepFadeInClip;
+                break;
+            case Sounds.KeyJingle:
+                clipToPlay = instance.keyJingleClip;
+                break;
+            case Sounds.DoorUnlocking:
+                clipToPlay = instance.doorUnlockingClip;
+                break;
+            case Sounds.CarCrash:
+                clipToPlay = instance.carCrashClip;
+                break;
         }
 
         if (clipToPlay == null)
         {
             Debug.LogWarning("Audio clip for " + sound + " is null");
-            return;
+            return -1f;
         }
 
-        AudioSource source = sound == Sounds.Music ? instance.musicSource : instance.sfxSource;
+        source = isOneShot ? instance.dialogueSfxSource : instance.sfxSource;
 
         if (source == null)
         {
             Debug.LogError("AudioSource does not exist");
-            return;
+            return -1f;
         }
 
-        source.PlayOneShot(clipToPlay);
+        if (isOneShot)
+        {
+            if (source.isPlaying)
+                source.Stop();
+
+            source.clip = clipToPlay;
+            source.Play();
+        }
+        else
+            source.PlayOneShot(clipToPlay);
+
+        return clipToPlay.length;
     }
 
     public static void SetVolumes()
@@ -125,6 +164,8 @@ public class AudioManager : MonoBehaviour
             instance.voicelineSource.volume = SaveDataManager.saveData.voicelinesVolume;
         if (instance.sfxSource)
             instance.sfxSource.volume = SaveDataManager.saveData.sfxVolume;
+        if (instance.dialogueSfxSource)
+            instance.dialogueSfxSource.volume = SaveDataManager.saveData.sfxVolume;
         if (instance.musicSource)
             instance.musicSource.volume = SaveDataManager.saveData.bgmVolume;
     }

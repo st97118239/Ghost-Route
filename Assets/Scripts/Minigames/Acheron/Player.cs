@@ -44,8 +44,11 @@ public class Player : MonoBehaviour
 
     private bool hasFinished;
 
-    private void Awake()
+    public void Load()
     {
+        gameObject.SetActive(true);
+        isFalling = true;
+
         jump = inputActionAsset.FindAction("Main/Move Up");
         walkLeft = inputActionAsset.FindAction("Main/Move Left");
         walkRight = inputActionAsset.FindAction("Main/Move Right");
@@ -66,11 +69,6 @@ public class Player : MonoBehaviour
         walkRight.Enable();
         quit.Enable();
         devInputFieldAction.Enable();
-    }
-
-    private void Start()
-    {
-        isFalling = true;
     }
 
     private void FixedUpdate()
@@ -158,7 +156,7 @@ public class Player : MonoBehaviour
 
     private void StartJump()
     {
-        AudioManager.PlaySound(Sounds.Jump);
+        AudioManager.PlaySound(Sounds.Jump, false);
         rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 
         isOnGround = false;
@@ -202,7 +200,7 @@ public class Player : MonoBehaviour
     {
         if (!isInvincible)
             acheronManager.Hit();
-        AudioManager.PlaySound(Sounds.Damage);
+        AudioManager.PlaySound(Sounds.Damage, false);
     }
 
     public void End(bool dead, bool finish)

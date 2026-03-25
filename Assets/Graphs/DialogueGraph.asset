@@ -96,11 +96,38 @@ MonoBehaviour:
     - rid: 7815180684838568185
     - rid: 7815180684838568187
     - rid: 7815180684838568192
+    - rid: 7815180767088083035
+    - rid: 7815180789176336545
+    - rid: 7815180793305104570
+    - rid: 7815180793305104572
+    - rid: 7815180793305104574
+    - rid: 7815180793305104576
+    - rid: 7815180793305104580
+    - rid: 7815180793305104582
+    - rid: 7815180793305104584
+    - rid: 7815180793305104586
+    - rid: 7815180793305104588
+    - rid: 7815180793305104590
+    - rid: 7815180793305104592
+    - rid: 7815180793305104594
+    - rid: 7815180793305104596
+    - rid: 7815180793305104598
+    - rid: 7815180793305104600
+    - rid: 7815180793305104604
+    - rid: 7815180793305104606
+    - rid: 7815180793305104608
+    - rid: 7815180793305104610
+    - rid: 7815180793305104612
+    - rid: 7815180793305104618
+    - rid: 7815180793305104620
+    - rid: 7815180793305104622
+    - rid: 7815180793305104624
+    - rid: 7815180793305104626
     utilityNodes: []
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -508.59875, y: -101.669495, z: 0}
-    viewScale: {x: 0.375937, y: 0.375937, z: 1}
+    viewPosition: {x: -11267.283, y: -458.77228, z: 0}
+    viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
@@ -111,15 +138,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567937
-        nodeX: 110.41907
-        nodeY: 1041.537
+        nodeX: -102.93096
+        nodeY: 1030.687
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567937
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 27cab8be85bc9dc4f946062c2a9b35db, type: 2}
+        dialogue: {fileID: 11400000, guid: a1709a826d81a824884f7a66a1d52731, type: 2}
         charName: ???
         text: Oh dear, you look like you've seen a ghost.
         voiceline: {fileID: 0}
@@ -129,6 +156,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838567939
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -137,24 +165,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 21300000, guid: 23ece00da9d8bfb45942737ce41c5bee, type: 3}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 1
     - rid: 7815180684838567938
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838567939
-        nodeX: 340.52863
-        nodeY: 1119.6323
+        nodeX: 123.17874
+        nodeY: 1120.7823
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567939
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 176b58c42a2a73b4eb89f08f90e867aa, type: 2}
+        answer: {fileID: 11400000, guid: 52ed220018c1eb34383dbb1d105cfabc, type: 2}
         text: Who are you?
         dialogue:
           rid: 7815180684838567941
@@ -163,16 +188,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567941
-        nodeX: 584.5286
-        nodeY: 1039.6323
+        nodeX: 367.17868
+        nodeY: 1040.7823
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567941
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: de40922f8f9b12b44ad842c73088552b, type: 2}
-        charName: Lethia
+        dialogue: {fileID: 11400000, guid: fc5db5bbd211d0a4d88a0d55b67534f7, type: 2}
+        charName: ???
         text: How rude of me, my name's Lethia
         voiceline: {fileID: 0}
         nextDialogue:
@@ -180,6 +205,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -188,24 +214,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838567942
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838567943
-        nodeX: 811.5286
-        nodeY: 1039.6323
+        nodeX: 594.17847
+        nodeY: 1040.7823
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567943
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 91e763a0c47cfd44f9748fcc11216965, type: 2}
+        dialogue: {fileID: 11400000, guid: 2f1b95500e2d2224a9567f3a1aceb38b, type: 2}
         charName: Lethia
         text: What's your name?
         voiceline: {fileID: 0}
@@ -215,6 +238,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838567945
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -223,24 +247,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838567944
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838567945
-        nodeX: 1039.5286
-        nodeY: 1115.6323
+        nodeX: 822.17847
+        nodeY: 1116.7823
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567945
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 97daeee8ce009db4f98dbf390cdff1ad, type: 2}
+        answer: {fileID: 11400000, guid: 87c2139b5a8befa4cbebd7578a83441f, type: 2}
         text: '{name}'
         dialogue:
           rid: 7815180684838567947
@@ -249,15 +270,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567947
-        nodeX: 1270.5286
-        nodeY: 1044.6323
+        nodeX: 1053.1785
+        nodeY: 1045.7823
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567947
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 51d4b6cb164a8bc4a8efa4b79874b99f, type: 2}
+        dialogue: {fileID: 11400000, guid: 8565c7b6a3baa28459a2387eefce3fa3, type: 2}
         charName: Lethia
         text: Nice to meet you, {name}!
         voiceline: {fileID: 0}
@@ -267,6 +288,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838567949
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -275,24 +297,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838567948
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838567949
-        nodeX: 1509.5876
-        nodeY: 1117.105
+        nodeX: 1292.2375
+        nodeY: 1118.255
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567949
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: d365f1f74b7aba4499a70d8e476b7091, type: 2}
+        answer: {fileID: 11400000, guid: 0f27c2ce35e41d44ca3be9d545812899, type: 2}
         text: ...
         dialogue:
           rid: 7815180684838567951
@@ -301,15 +320,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567951
-        nodeX: 1741.4695
-        nodeY: 1034.6914
+        nodeX: 1524.1194
+        nodeY: 1035.8414
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567951
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: c7472a79f3c1609439d5c568c3d08b09, type: 2}
+        dialogue: {fileID: 11400000, guid: 7f3a186bcfafa1a48afbb338de25dbff, type: 2}
         charName: Lethia
         text: You look a bit lost.
         voiceline: {fileID: 0}
@@ -319,6 +338,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838567953
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -327,24 +347,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838567952
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838567953
-        nodeX: 1979.5876
-        nodeY: 1097.1638
+        nodeX: 1762.2375
+        nodeY: 1098.3138
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567953
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 070b37421d8d6fc4e844a8fff30baee3, type: 2}
+        answer: {fileID: 11400000, guid: 470cb182ba2b9954880304cf284f8c56, type: 2}
         text: Where am I?
         dialogue:
           rid: 7815180684838567955
@@ -353,15 +370,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838567955
-        nodeX: 2208.5286
-        nodeY: 1029.6323
+        nodeX: 1991.1781
+        nodeY: 1030.7823
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838567955
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 9b8292274617d484a8261e1958a7b188, type: 2}
+        dialogue: {fileID: 11400000, guid: 8f3b78b403211554786fb3b9c4fa844f, type: 2}
         charName: Lethia
         text: You haven't realised yet?
         voiceline: {fileID: 0}
@@ -370,6 +387,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -378,24 +396,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568032
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568033
-        nodeX: 2438.1614
-        nodeY: 1029.1904
+        nodeX: 2220.812
+        nodeY: 1030.3405
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568033
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 99a160bccce153c4a857a5e6d7475c6d, type: 2}
+        dialogue: {fileID: 11400000, guid: e8391951dcd37214f8cb57d89ba6b931, type: 2}
         charName: Lethia
         text: Oh my, this can be a problem...
         voiceline: {fileID: 0}
@@ -404,6 +419,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -412,24 +428,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568034
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568035
-        nodeX: 2666.1614
-        nodeY: 1031.1904
+        nodeX: 2448.812
+        nodeY: 1032.3405
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568035
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: b04eb61dfb888254bbc09842aa0ad391, type: 2}
+        dialogue: {fileID: 11400000, guid: 02dadcd75736f8d45a5dbd7c691f1aac, type: 2}
         charName: Lethia
         text: Don't worry about it... How am I gonna exlain this.
         voiceline: {fileID: 0}
@@ -438,6 +451,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -446,24 +460,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568038
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568039
-        nodeX: 2893.1614
-        nodeY: 1031.1904
+        nodeX: 2675.812
+        nodeY: 1032.3405
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568039
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 5131861cd29ea1f4cac98e1fbd04e87a, type: 2}
+        dialogue: {fileID: 11400000, guid: 7d7d2ca8550077b4598bcb99a61441df, type: 2}
         charName: Lethia
         text: You got in an accident and it ended quite unfortunate.
         voiceline: {fileID: 0}
@@ -473,6 +484,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568041
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -481,24 +493,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568040
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568041
-        nodeX: 3118.1614
-        nodeY: 1083.1904
+        nodeX: 2900.812
+        nodeY: 1084.3405
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568041
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 7e2453a4e5a61df4898bfcc61c7b1f32, type: 2}
+        answer: {fileID: 11400000, guid: f9f590a38cd071c47859b92416d02756, type: 2}
         text: ...
         dialogue:
           rid: 7815180684838568043
@@ -507,16 +516,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568043
-        nodeX: 3356.1257
-        nodeY: 1036.6582
+        nodeX: 3138.7764
+        nodeY: 1037.8082
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568043
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 0d5b5cc4e05c8ce4f8593fcc16650e05, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 7f7825715c2b05d418b71bbb279d6eae, type: 2}
+        charName: Lethia
         text: You really don't remember?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -524,6 +533,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -532,25 +542,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568044
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568045
-        nodeX: 3576.1257
-        nodeY: 1035.6582
+        nodeX: 3358.7764
+        nodeY: 1036.8082
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568045
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 906e0a7e0d422004fb4691765ee86699, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: ed55afcf0ed95a1488e5d5a32b3c1930, type: 2}
+        charName: Lethia
         text: You were just driving and a deer just crossed the road.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -558,6 +565,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -566,25 +574,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568046
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568047
-        nodeX: 3796.1257
-        nodeY: 1035.6582
+        nodeX: 3575.328
+        nodeY: 1036.8082
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568047
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 4de6fe4b3090825499b3f5e92671d753, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 6044812441d19734895df92768eee000, type: 2}
+        charName: Lethia
         text: You had to avoid it and ended up crashing your car really bad.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -592,6 +597,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -600,25 +606,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568053
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568054
-        nodeX: 4018.1416
-        nodeY: 1035.093
+        nodeX: 3797.3438
+        nodeY: 1036.243
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568054
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: f2bdec17caa4faf4f9013bd3cb8d9af3, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: c953b4cfb93fb414cb3e07053c441b52, type: 2}
+        charName: Lethia
         text: You died.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -628,6 +631,7 @@ MonoBehaviour:
         - rid: 7815180684838568058
         - rid: 7815180684838568060
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -636,24 +640,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568057
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568058
-        nodeX: 4252.1416
-        nodeY: 1043.093
+        nodeX: 4031.3464
+        nodeY: 1044.243
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568058
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: fdba6afa9597ad245b678165c05c2bb7, type: 2}
+        answer: {fileID: 11400000, guid: 25c7f20d5e5d8b5408581e955acbdd9d, type: 2}
         text: I DIED?!
         dialogue:
           rid: 7815180684838568062
@@ -662,15 +663,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568060
-        nodeX: 4256.1416
-        nodeY: 1180.093
+        nodeX: 4035.3462
+        nodeY: 1181.243
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568060
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: bd93095b0f0dff14c9ebe48ee3a3b8e1, type: 2}
+        answer: {fileID: 11400000, guid: 8c6395090c297df4489492418e70f201, type: 2}
         text: Is this some sort of joke?
         dialogue:
           rid: 7815180684838568062
@@ -679,16 +680,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568062
-        nodeX: 4504.842
-        nodeY: 1035.6926
+        nodeX: 4284.049
+        nodeY: 1036.8427
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568062
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 3de276ed067216f408f7e9cd350cb083, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 368736600d9b9ca45a3de14a079eea58, type: 2}
+        charName: Lethia
         text: I know, it is a lot to take.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -696,6 +697,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -704,25 +706,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568063
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568064
-        nodeX: 4747.1416
-        nodeY: 1032.6423
+        nodeX: 4526.3486
+        nodeY: 1033.7924
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568064
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: f60f1b94112b1f04081727914d0a9688, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: ff259fc341d72d041819bac84f6d9779, type: 2}
+        charName: Lethia
         text: But, can you tell me something about yourself?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -731,6 +730,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568066
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -739,24 +739,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568065
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568066
-        nodeX: 4978.6426
-        nodeY: 1090.3923
+        nodeX: 4757.8496
+        nodeY: 1091.5424
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568066
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: bf8f401ce12d88845971bec72962ac52, type: 2}
+        answer: {fileID: 11400000, guid: 686fd784d97b43c4a858e0628cf8fe72, type: 2}
         text: ...
         dialogue:
           rid: 7815180684838568068
@@ -765,16 +762,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568068
-        nodeX: 5213.242
-        nodeY: 1034.2928
+        nodeX: 4992.449
+        nodeY: 1035.4429
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568068
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 024b953230992614b873940a6a137f31, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: fb4bab391c4d63444a3d09db38fc27e0, type: 2}
+        charName: Lethia
         text: Anything?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -782,6 +779,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -790,25 +788,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568069
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568070
-        nodeX: 5438.2764
-        nodeY: 1038.8358
+        nodeX: 5217.4834
+        nodeY: 1039.9858
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568070
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 18dbcf79837918e4293c1126ce9f56de, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 98386d7b7013c3049ad0f93ecd496f6b, type: 2}
+        charName: Lethia
         text: A favourite colour? Siblings? Pets?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -817,6 +812,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568072
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -825,24 +821,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568071
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568072
-        nodeX: 5672.2764
-        nodeY: 1084.8358
+        nodeX: 5451.4834
+        nodeY: 1085.9858
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568072
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 9f7c03a2943a8b44f9ffb1b3543451b0, type: 2}
+        answer: {fileID: 11400000, guid: 89f8db3908ed6a14e989b6bd3c2cc4bb, type: 2}
         text: I don't remember anything.
         dialogue:
           rid: 7815180684838568074
@@ -851,16 +844,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568074
-        nodeX: 5915.2764
-        nodeY: 1038.8358
+        nodeX: 5694.4834
+        nodeY: 1039.9858
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568074
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: c37d0fd06fa5dd348bb43daaa39d8e0c, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 5f5512444972ad24ea8f17202a336156, type: 2}
+        charName: Lethia
         text: Oh...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -868,6 +861,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -876,25 +870,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568075
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568076
-        nodeX: 6142.2764
-        nodeY: 1039.8358
+        nodeX: 5921.4834
+        nodeY: 1040.9858
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568076
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: f41f4a1fdbe324f42b47df140170e676, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: a28a97d96d0aadf4986ac322967fc240, type: 2}
+        charName: Lethia
         text: This makes it a lot more difficult...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -903,6 +894,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568078
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -911,24 +903,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568077
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568078
-        nodeX: 6374.2764
-        nodeY: 1093.8358
+        nodeX: 6153.4834
+        nodeY: 1094.9858
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568078
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: cf20361f50dbc624fb67db8727df109c, type: 2}
+        answer: {fileID: 11400000, guid: 08c3a04ff422e664881bfa2aa747b7d1, type: 2}
         text: Makes what difficult?
         dialogue:
           rid: 7815180684838568080
@@ -937,16 +926,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568080
-        nodeX: 6609.2764
-        nodeY: 1047.8358
+        nodeX: 6390.4834
+        nodeY: 1037.9858
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568080
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 1b228317cee38d243a9b62e79454a284, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: f3ff25cdb00c8f944bc07a98348e798e, type: 2}
+        charName: Lethia
         text: You see, I will help you through this world...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -956,6 +945,7 @@ MonoBehaviour:
         - rid: 7815180684838568082
         - rid: 7815180684838568084
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -964,24 +954,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568081
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568082
-        nodeX: 6845.2764
-        nodeY: 1054.8358
+        nodeX: 6624.4834
+        nodeY: 1055.9858
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568082
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: b23f9f063959e2642a0e9d9329be8ead, type: 2}
+        answer: {fileID: 11400000, guid: 0bc93027d976e4d4da5568b0fa9763ee, type: 2}
         text: But, isn't that good?
         dialogue:
           rid: 7815180684838568086
@@ -990,15 +977,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568084
-        nodeX: 6845.2764
-        nodeY: 1202.8358
+        nodeX: 6639.4834
+        nodeY: 1330.9858
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568084
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 35f039c7d7f0bef4a90892401b9185c8, type: 2}
+        answer: {fileID: 11400000, guid: 75db9c7e02a09004387fc629419e8860, type: 2}
         text: That's kind!
         dialogue:
           rid: 7815180684838568088
@@ -1007,16 +994,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568086
-        nodeX: 7095.2764
-        nodeY: 946.8358
+        nodeX: 6857.4834
+        nodeY: 1024.9857
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568086
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: dc0617f63eb7187458339a8aa65a5bb2, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: f27ac78b3cde0ce4f8eb4548d396d2f6, type: 2}
+        charName: Lethia
         text: It is, but...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1024,6 +1011,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1032,25 +1020,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568087
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568088
-        nodeX: 7097.2764
-        nodeY: 1200.8358
+        nodeX: 6856.4834
+        nodeY: 1327.9858
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568088
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 7253b18eae0c8eb4196292331dbc5c4a, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 6cace7fbb607d954b90c8d3f4958e3b8, type: 2}
+        charName: Lethia
         text: Thank you, but...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1058,6 +1043,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1066,25 +1052,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568089
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568090
-        nodeX: 7375.2764
-        nodeY: 1058.8358
+        nodeX: 7111.2764
+        nodeY: 1036.8358
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568090
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 16ae8aaf293f0f44c94f93f78ac529c9, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 73b46203f059822469d466e07fb79dec, type: 2}
+        charName: Lethia
         text: You can't remember anything.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1092,6 +1075,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1100,25 +1084,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568091
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568092
-        nodeX: 7608.9697
-        nodeY: 1058.6221
+        nodeX: 7344.9697
+        nodeY: 1036.6221
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568092
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: a5ce74346484e9f438406805f27d87be, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: d6607d5f1f2a16a41ab3cba758ab49d6, type: 2}
+        charName: Lethia
         text: Not a thing.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1126,6 +1107,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1134,25 +1116,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568093
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568094
-        nodeX: 7834.9697
-        nodeY: 1057.6221
+        nodeX: 7570.9697
+        nodeY: 1035.6221
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568094
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 663f5a170ddf54d47bdfe358189ded2d, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: f32c417e2ce4fa44eac5c0b277bedeae, type: 2}
+        charName: Lethia
         text: Which means our journey will be a bit... more difficult.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1161,6 +1140,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568096
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1169,24 +1149,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568095
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568096
-        nodeX: 8070.9697
-        nodeY: 1128.6221
+        nodeX: 7806.9697
+        nodeY: 1106.6221
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568096
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 7f46c934c9fe4fd4ab1876460463a4aa, type: 2}
+        answer: {fileID: 11400000, guid: a450fbfcfc1644c4680ffa0564ee8a0a, type: 2}
         text: Why?
         dialogue:
           rid: 7815180684838568098
@@ -1195,16 +1172,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568098
-        nodeX: 8302.472
-        nodeY: 1030.6377
+        nodeX: 8038.4717
+        nodeY: 1008.6377
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568098
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: f80310a06ec6bf248b25700da5237208, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: fe38fbea2ff139e4f8332ae3f557abec, type: 2}
+        charName: Lethia
         text: You need to remember to move on.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1212,6 +1189,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1220,25 +1198,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568099
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568100
-        nodeX: 8527.472
-        nodeY: 1032.6377
+        nodeX: 8263.472
+        nodeY: 1010.6377
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568100
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 14226f2d9c60ba84f9af5d4c992edc1f, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: c6b3f4556fb3bd449bcd7846fbb096d5, type: 2}
+        charName: Lethia
         text: Now all you remember is your name and the fact you died.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1246,6 +1221,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1254,25 +1230,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568101
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568102
-        nodeX: 8750.472
-        nodeY: 1031.6377
+        nodeX: 8486.472
+        nodeY: 1009.6377
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568102
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: ebb3e118b880e1744a107996408b3951, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 60ade2b1663abee4ead67afea5e9b01b, type: 2}
+        charName: Lethia
         text: If you don't remember your life, the good, the bad, the things that
           made you, you...
         voiceline: {fileID: 0}
@@ -1281,6 +1254,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1289,25 +1263,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568103
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568104
-        nodeX: 8974.472
-        nodeY: 1032.6377
+        nodeX: 8710.472
+        nodeY: 1010.6377
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568104
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 7401db8ed210d6c408af7f021bd0c8de, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: f46c59b138ac91142917d7512c264db3, type: 2}
+        charName: Lethia
         text: You will get stuck here and never be able to move on.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1315,6 +1286,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1323,25 +1295,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568105
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568106
-        nodeX: 9206.947
-        nodeY: 1026.0251
+        nodeX: 8942.947
+        nodeY: 1004.02515
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568106
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: be42d827940ac06469759e5d3cab92f6, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: c0456bbd87b743e41af119b8ba3e8059, type: 2}
+        charName: Lethia
         text: So, before we can give you a new life, let's help you remember your
           old life first.
         voiceline: {fileID: 0}
@@ -1353,6 +1322,7 @@ MonoBehaviour:
         - rid: 7815180684838568110
         - rid: 7815180684838568112
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1361,24 +1331,21 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568107
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568108
-        nodeX: 9443.496
-        nodeY: 822.7479
+        nodeX: 9179.496
+        nodeY: 800.7479
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568108
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: bde2fa324a41fc44daad89b91f621055, type: 2}
+        answer: {fileID: 11400000, guid: fab3dc0a6393dda47a1dbfe15a613e5a, type: 2}
         text: But how?
         dialogue:
           rid: 7815180684838568114
@@ -1387,15 +1354,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568110
-        nodeX: 9455.97
-        nodeY: 1113.6221
+        nodeX: 9191.97
+        nodeY: 1091.6221
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568110
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 9d25ee0ee2e4a0d4ba579401e85c61d6, type: 2}
+        answer: {fileID: 11400000, guid: 276b5451624ec804f90ece5fa3378b4c, type: 2}
         text: Can't I just stay here?
         dialogue:
           rid: 7815180684838568118
@@ -1404,15 +1371,15 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568112
-        nodeX: 9456.97
-        nodeY: 1358.6221
+        nodeX: 9192.97
+        nodeY: 1336.6221
         name: AnswerNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568112
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: f19a7f3824ef6514db549bf6b48968a5, type: 2}
+        answer: {fileID: 11400000, guid: be83a767dee9a044e9a9ee8f33b0a779, type: 2}
         text: Womp womp, I'm not going.
         dialogue:
           rid: 7815180684838568128
@@ -1421,16 +1388,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568114
-        nodeX: 10375.173
-        nodeY: 757.50446
+        nodeX: 10124.075
+        nodeY: 720.2543
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568114
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: eec7148ec65084048862d82817d3d367, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 71a8ce8875a097b4b82684ad2b8af491, type: 2}
+        charName: Lethia
         text: Hmmm, if I remember correctly...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1438,6 +1405,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1446,35 +1414,30 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568115
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568116
-        nodeX: 10603.173
-        nodeY: 758.50446
+        nodeX: 10342.872
+        nodeY: 720.1041
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568116
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 2fd18060b2b542b4780de6a6563c37d7, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 7a592ce5c5e456645bd02fb373b3861d, type: 2}
+        charName: Lethia
         text: Yes, just follow me.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: -2
+          rid: 7815180767088083036
         delay: 0
-        answers:
-        - rid: 7815180684838568134
-        - rid: 7815180684838568136
-        - rid: 7815180684838568138
+        answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1483,25 +1446,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568117
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568118
-        nodeX: 9707.12
-        nodeY: 1041.6208
+        nodeX: 9452.12
+        nodeY: 1023.62085
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568118
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 5d34874ca80e7ac4b9c326d03569657b, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: aa213b7751fc73f49b4ee9a26e88bcb2, type: 2}
+        charName: Lethia
         text: Did you listen to anything I just said?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1509,6 +1469,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1517,25 +1478,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568119
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568120
-        nodeX: 9931.041
-        nodeY: 1041.6208
+        nodeX: 9673.041
+        nodeY: 1021.62085
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568120
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: d58996c29332f6c4b8a96c4744fd377d, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 1f91a5aad914b9242ba88fe1c2b89034, type: 2}
+        charName: Lethia
         text: <i>Sigh</i> If you don't move on, you do realise you're STUCK here?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1543,6 +1501,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1551,25 +1510,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568121
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568122
-        nodeX: 10157.041
-        nodeY: 1041.6208
+        nodeX: 9899.041
+        nodeY: 1021.62085
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568122
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 11989372e82d32347abc41b929d654c3, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 1660128282a01b74db6f639e9e8d155f, type: 2}
+        charName: Lethia
         text: No memories, no personality, nothing else but this forest.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1577,6 +1533,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1585,25 +1542,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568123
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568124
-        nodeX: 10380.041
-        nodeY: 1042.6208
+        nodeX: 10123.191
+        nodeY: 1018.02075
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568124
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: d75ba7ea98d50cb4fa8777bf60f4f702, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 1d4dd5dcd39caae418df5aa135a731d9, type: 2}
+        charName: Lethia
         text: You won't even be you, because you don't know what you like.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1611,6 +1565,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1619,35 +1574,30 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568125
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568126
-        nodeX: 10601.041
-        nodeY: 1038.6208
+        nodeX: 10343.041
+        nodeY: 1018.62085
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568126
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 570be29dd55077441aa5cacc05d93c3c, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 9a8e577fa1065244e94f7d468ad2470a, type: 2}
+        charName: Lethia
         text: Now just follow me, I'm not letting you sulk here for all eternity.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: -2
+          rid: 7815180767088083036
         delay: 0
-        answers:
-        - rid: 7815180684838568134
-        - rid: 7815180684838568136
-        - rid: 7815180684838568138
+        answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1656,25 +1606,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568127
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568128
-        nodeX: 10149.225
-        nodeY: 1301.4333
+        nodeX: 9900.428
+        nodeY: 1318.2333
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568128
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 92c74efd68023f346afac15604bf8a9d, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 5430c580e982f59479cea7b7fea879a9, type: 2}
+        charName: Lethia
         text: ...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1682,6 +1629,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1690,25 +1638,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568129
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568130
-        nodeX: 10374.225
-        nodeY: 1301.4333
+        nodeX: 10121.977
+        nodeY: 1317.0836
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568130
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: b41bf305d427638489f620a4d2b10c97, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 8f47ac57bf7730c41954dfc446a3b582, type: 2}
+        charName: Lethia
         text: <i>This is going to be a long journey...</i>
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1716,6 +1661,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1724,35 +1670,30 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568131
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568132
-        nodeX: 10598.769
-        nodeY: 1302.1072
+        nodeX: 10344.217
+        nodeY: 1315.4574
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568132
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 586b4481cdd9d8b4fb2718fcf9a348f2, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: acdb9927d5068894aae928e33b7b490d, type: 2}
+        charName: Lethia
         text: I'm not doing this, just follow me.
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: -2
+          rid: 7815180767088083036
         delay: 0
-        answers:
-        - rid: 7815180684838568134
-        - rid: 7815180684838568136
-        - rid: 7815180684838568138
+        answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1761,10 +1702,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568133
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1778,7 +1716,7 @@ MonoBehaviour:
     - rid: 7815180684838568134
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 12b4c1b419040f04faa27b6bdb4f9582, type: 2}
+        answer: {fileID: 11400000, guid: 19879bf66952fae459c5c035f45444b6, type: 2}
         text: Why are you here?
         dialogue:
           rid: 7815180684838568140
@@ -1795,7 +1733,7 @@ MonoBehaviour:
     - rid: 7815180684838568136
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 1023d7cd4102e1c45beb4aca4b07b4c5, type: 2}
+        answer: {fileID: 11400000, guid: 95a7a80739058374192f78c3f6d72539, type: 2}
         text: What are you?
         dialogue:
           rid: 7815180684838568142
@@ -1812,7 +1750,7 @@ MonoBehaviour:
     - rid: 7815180684838568138
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 0178a0b883a9b3d468282bf6afe790ed, type: 2}
+        answer: {fileID: 11400000, guid: 47e49c40caa57f14dbe2882b85988f95, type: 2}
         text: How long have you been here?
         dialogue:
           rid: 7815180684838568150
@@ -1821,16 +1759,16 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568140
-        nodeX: 11706.581
-        nodeY: 776.96625
+        nodeX: 11711.581
+        nodeY: 743.96625
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568140
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 42c6a5fecb671794abbc7b39735a8565, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: a98e72bce65437c49ac19e5f7e7bfe0a, type: 2}
+        charName: Lethia
         text: To help people accept they died, to help them move on and find their
           next life.
         voiceline: {fileID: 0}
@@ -1840,6 +1778,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1848,10 +1787,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568141
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1865,8 +1801,8 @@ MonoBehaviour:
     - rid: 7815180684838568142
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: c7b4258b43229a042ba586e484a4d0e9, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: d3bb49a5af4a1544f8ff754abae3f7fc, type: 2}
+        charName: Lethia
         text: What am I? Such an odd question...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1874,6 +1810,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1882,25 +1819,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568143
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568144
-        nodeX: 11483.186
-        nodeY: 1034.749
+        nodeX: 11484.186
+        nodeY: 1033.749
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568144
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 9f778e3e40abf4d43913fcb6192f0aed, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: d48f5569da6f6a74e96181c6ad75c7bf, type: 2}
+        charName: Lethia
         text: Does it really matter WHAT I am?
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1908,6 +1842,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1916,10 +1851,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568145
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -1933,8 +1865,8 @@ MonoBehaviour:
     - rid: 7815180684838568146
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 825e4dfcf38026947b31e40d2d98e895, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 934e72a6f8e6b24488955bdf89ef3f12, type: 2}
+        charName: Lethia
         text: A ghost, a reaper, a guide, a friend, just give it a name you like.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1943,6 +1875,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1951,25 +1884,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568149
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568150
-        nodeX: 11473.881
-        nodeY: 1285.97
+        nodeX: 11481.881
+        nodeY: 1329.97
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568150
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 20ba71d51583bea44a479c4955ee75c0, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 42565cd132b4d6748afc7e2879df5c96, type: 2}
+        charName: Lethia
         text: Time isn't really a thing here...
         voiceline: {fileID: 0}
         nextDialogue:
@@ -1977,6 +1907,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1985,25 +1916,22 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568151
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568152
-        nodeX: 11703.276
-        nodeY: 1286.2349
+        nodeX: 11714.276
+        nodeY: 1327.2349
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
     - rid: 7815180684838568152
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 273e30c2c29e29d42b56aca3bb3ae7d9, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 55e498a6be23efd4b90077d7b538ba52, type: 2}
+        charName: Lethia
         text: But it has been quite a while.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2012,6 +1940,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2020,10 +1949,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568153
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2037,7 +1963,7 @@ MonoBehaviour:
     - rid: 7815180684838568154
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: 694885fa6dec01d48bc36f7491e933a8, type: 2}
+        answer: {fileID: 11400000, guid: 88a51075a375762489892ac5389e4f38, type: 2}
         text: What is this for a place?
         dialogue:
           rid: 7815180684838568156
@@ -2054,8 +1980,8 @@ MonoBehaviour:
     - rid: 7815180684838568156
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 837262be21abba3429e0c3573a837b06, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: f089342a0e6f94d40aaa815a55d268e7, type: 2}
+        charName: Lethia
         text: This place... for me it is home.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2063,6 +1989,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2071,10 +1998,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568157
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2088,8 +2012,8 @@ MonoBehaviour:
     - rid: 7815180684838568158
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: bdd61da47ac6daa4f865d02d1c26475d, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 563ebea84c2236541855be2d9766b924, type: 2}
+        charName: Lethia
         text: Some think it is the afterlife, but there is no such thing.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2097,6 +2021,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2105,10 +2030,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568159
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2122,8 +2044,8 @@ MonoBehaviour:
     - rid: 7815180684838568160
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 8232a96cc8dd0384083bf7c8a0d0f459, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: a4ec6dd344ea7e5408a296308eddebbe, type: 2}
+        charName: Lethia
         text: Well, not really.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2131,6 +2053,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2139,10 +2062,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568161
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2156,8 +2076,8 @@ MonoBehaviour:
     - rid: 7815180684838568162
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: a16edd4310240704bae1fef0a7d097db, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: a976a68701e9f3f429c0f31ba6d66889, type: 2}
+        charName: Lethia
         text: <i>Sigh</i> It is an inbetween of life and death.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2165,6 +2085,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2173,10 +2094,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568163
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2190,8 +2108,8 @@ MonoBehaviour:
     - rid: 7815180684838568164
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 17a0b63848a204e4198cbdd56f9cb3d5, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: c1527f1309cfc9f4aa5dade2e8921561, type: 2}
+        charName: Lethia
         text: I'm pretty sure you people call it "purgatory", "a third state", "the
           Grey Zone".
         voiceline: {fileID: 0}
@@ -2200,6 +2118,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2208,10 +2127,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568165
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2225,8 +2141,8 @@ MonoBehaviour:
     - rid: 7815180684838568166
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 3e5d927c2cdfca44e8176b970e4c8081, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 6b1fa63f0ab9d5a4f92dfb355bce63d7, type: 2}
+        charName: Lethia
         text: You can call it whatever you want, but in the end it is just a place.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2234,6 +2150,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2242,10 +2159,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568167
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2259,8 +2173,8 @@ MonoBehaviour:
     - rid: 7815180684838568168
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 9d697bb9340a5cd41ac4b6db5bfa4144, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 5953d2920af2c764581a7b64b14a4f9a, type: 2}
+        charName: Lethia
         text: This place is different for everyone since this place is built on your
           life.
         voiceline: {fileID: 0}
@@ -2269,6 +2183,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2277,10 +2192,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568169
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2294,8 +2206,8 @@ MonoBehaviour:
     - rid: 7815180684838568170
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: ea6e1130e83824844a1600eda5ad2ccb, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 9b64a18b7fa383a4cb4202ef6e0f97e4, type: 2}
+        charName: Lethia
         text: And everyone has lived a different life.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2303,6 +2215,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2311,10 +2224,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568171
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2328,8 +2238,8 @@ MonoBehaviour:
     - rid: 7815180684838568172
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 52dedcdd2ce985c41a768a0dd683f2d2, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 65ea5820f4241fa4fae70278a95b972f, type: 2}
+        charName: Lethia
         text: And since you don't remember anything, we need to walk a different
           route.
         voiceline: {fileID: 0}
@@ -2338,6 +2248,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2346,10 +2257,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568173
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2363,8 +2271,8 @@ MonoBehaviour:
     - rid: 7815180684838568174
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 4bfd7c166b202bf4db8fb494cda76253, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 110b9aa6a93c06f48b78a6e7309d09ef, type: 2}
+        charName: Lethia
         text: But focus, we need to find a way out of this forest.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2372,6 +2280,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2380,16 +2289,13 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568175
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180684838568176
-        nodeX: 14446.382
+        nodeX: 14445.382
         nodeY: 1038.74
         name: DialogueNode
         isUtilityNode: 0
@@ -2397,8 +2303,8 @@ MonoBehaviour:
     - rid: 7815180684838568176
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 25a2b9459ccfcf54f903675e877483fb, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 3a9ad64e16ca75144a20f84308fa4d47, type: 2}
+        charName: Lethia
         text: If I'm correct, it should be right... there!
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2406,6 +2312,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2414,10 +2321,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568177
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2431,8 +2335,8 @@ MonoBehaviour:
     - rid: 7815180684838568178
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 2f26eb4f25c52964992e2043e1ed5c3d, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: 26d0b0b009d1de44a9b8c42d0ce0b82a, type: 2}
+        charName: Lethia
         text: Watch your step, you never know what could happen-
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2440,6 +2344,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2448,10 +2353,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568179
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2465,7 +2367,7 @@ MonoBehaviour:
     - rid: 7815180684838568180
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: d6565076a362e674683f91975574727a, type: 2}
+        dialogue: {fileID: 11400000, guid: ffd91bb8cd91c0241bb8cd9699270af9, type: 2}
         charName: 
         text: 
         voiceline: {fileID: 0}
@@ -2475,6 +2377,7 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568186
         eventToPlay: 1
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2483,10 +2386,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568185
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2500,7 +2400,7 @@ MonoBehaviour:
     - rid: 7815180684838568186
       type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        answer: {fileID: 11400000, guid: c230266ed96e54d4b9d2679091ef1f2c, type: 2}
+        answer: {fileID: 11400000, guid: 104ee65b48fda9c41beab22b0aaf1ee0, type: 2}
         text: What's that?
         dialogue:
           rid: 7815180684838568188
@@ -2517,8 +2417,8 @@ MonoBehaviour:
     - rid: 7815180684838568188
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 2aae0881612fd06488c0fefe75bfbc96, type: 2}
-        charName: 
+        dialogue: {fileID: 11400000, guid: e8625b8e133111c43826f03402276926, type: 2}
+        charName: Lethia
         text: Ghosts.
         voiceline: {fileID: 0}
         nextDialogue:
@@ -2526,6 +2426,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 1
         scoreToWin: 0
         wonDialogue:
@@ -2534,10 +2435,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
     - rid: 7815180684838568192
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -2551,15 +2449,18 @@ MonoBehaviour:
     - rid: 7815180684838568193
       type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
       data:
-        dialogue: {fileID: 11400000, guid: 53b0d4283ad5cc44cb55fecc5a0772e6, type: 2}
-        charName: 
-        text: Bleh.
+        dialogue: {fileID: 11400000, guid: d0b6a0e17fb02854db5a010324637c5b, type: 2}
+        charName: Lethia
+        text: Are you okay?
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
         delay: 0
-        answers: []
+        answers:
+        - rid: 7815180793305104571
+        - rid: 7815180793305104573
         eventToPlay: 0
+        soundToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2568,7 +2469,729 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        goreSprite: {fileID: 0}
         background: {fileID: 0}
-        goreBackground: {fileID: 0}
-        isDefault: 0
+    - rid: 7815180767088083035
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180767088083036
+        nodeX: 10617.983
+        nodeY: 1023.23535
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180767088083036
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 3f76c4e15b775fc439d7398671f7d97e, type: 2}
+        charName: 
+        text: 
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180684838568134
+        - rid: 7815180684838568136
+        - rid: 7815180684838568138
+        eventToPlay: 2
+        soundToPlay: 15
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180789176336545
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180789176336546
+        nodeX: -405.1022
+        nodeY: 1051.7307
+        name: DialogueHolderNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180789176336546
+      type: {class: DialogueHolderNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        graphName: MainDialogue
+        dialogueHolder: {fileID: 11400000, guid: b76027e85b77c27459306d2684292f75, type: 2}
+        startingDialogue:
+          rid: 7815180684838567937
+    - rid: 7815180793305104570
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104571
+        nodeX: 15812.316
+        nodeY: 1080.13
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104571
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 67d34f7782d6c3843a7aaac70f614048, type: 2}
+        text: Yeah.
+        dialogue:
+          rid: 7815180793305104575
+    - rid: 7815180793305104572
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104573
+        nodeX: 15811.316
+        nodeY: 1382.13
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104573
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 3592007598b43f94a9678e8193cf2485, type: 2}
+        text: No.
+        dialogue:
+          rid: 7815180793305104577
+    - rid: 7815180793305104574
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104575
+        nodeX: 16044.316
+        nodeY: 1032.13
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104575
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 60e3cad9072b12b4685773c3f207d638, type: 2}
+        charName: Lethia.
+        text: That's good.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104613
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104576
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104577
+        nodeX: 16045.316
+        nodeY: 1339.13
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104577
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 513ef3037f97c20458b7120be15da4ec, type: 2}
+        charName: Lethia.
+        text: Are you hurt? Where are you hurt, on your arm? Your leg? Your shoulder?
+          Your head?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180793305104581
+        - rid: 7815180793305104583
+        - rid: 7815180793305104585
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104580
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104581
+        nodeX: 16298.316
+        nodeY: 1383.13
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104581
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 443b04b8b29e2f24789f20a243eca81c, type: 2}
+        text: I was joking.
+        dialogue:
+          rid: 7815180793305104587
+    - rid: 7815180793305104582
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104583
+        nodeX: 16306.397
+        nodeY: 1647.9835
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104583
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: ffde2233dbdbaf34b982402a9345fd2f, type: 2}
+        text: My arm hurts.
+        dialogue:
+          rid: 7815180793305104589
+    - rid: 7815180793305104584
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104585
+        nodeX: 16308.397
+        nodeY: 1998.3365
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104585
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 8a75730ee55ba154a94f7d2c5a05588b, type: 2}
+        text: My shoulder hurts.
+        dialogue:
+          rid: 7815180793305104591
+    - rid: 7815180793305104586
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104587
+        nodeX: 16540.398
+        nodeY: 1344.3365
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104587
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 24b5b14624425ce49940b4b05f174371, type: 2}
+        charName: Lethia.
+        text: Don't ever joke about something like that again!
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104593
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104588
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104589
+        nodeX: 16541.398
+        nodeY: 1645.3365
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104589
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 48846e7c8d8b972459ab14f13eef4dcf, type: 2}
+        charName: Lethia.
+        text: Let me take a look...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104595
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104590
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104591
+        nodeX: 16541.398
+        nodeY: 1952.3365
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104591
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 24abe3de467d8ef4aa9678af8ee92d32, type: 2}
+        charName: Lethia.
+        text: Let me take a look...
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104597
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104592
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104593
+        nodeX: 16761.867
+        nodeY: 1345.0684
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104593
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: e69f1945f70304d49bd5aaebd0780f09, type: 2}
+        charName: Lethia.
+        text: You really made me worry.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104613
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104594
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104595
+        nodeX: 16763.867
+        nodeY: 1647.0684
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104595
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 164d02a012550e540b787ac417af79c4, type: 2}
+        charName: Lethia.
+        text: I see, you have a small scrape.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104611
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104596
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104597
+        nodeX: 16764.867
+        nodeY: 1951.0684
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104597
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 5168fd0a28f74ea449f9719d1c5467d9, type: 2}
+        charName: Lethia.
+        text: You got a small bruise.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104609
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104598
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104599
+        nodeX: 17326.852
+        nodeY: 1649.3307
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104599
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 92cc492ccc04aa94180e69ffa283a47a, type: 2}
+        charName: Lethia.
+        text: Hold still.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104601
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104600
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104601
+        nodeX: 17546.852
+        nodeY: 1651.3307
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104601
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 44d3249f87d445d428ec460592c31cd7, type: 2}
+        charName: Lethia.
+        text: And there we go, all better.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180793305104605
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104604
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104605
+        nodeX: 17770.852
+        nodeY: 1726.3307
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104605
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 452b2d118bb715745b0bed65d68205a4, type: 2}
+        text: Thank you.
+        dialogue:
+          rid: 7815180793305104607
+    - rid: 7815180793305104606
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104607
+        nodeX: 18000.852
+        nodeY: 1655.3307
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104607
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f7b626a709d58d143b82f43b07dd61fc, type: 2}
+        charName: Lethia.
+        text: No problem my dear.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104613
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104608
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104609
+        nodeX: 16988.035
+        nodeY: 1949.6434
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104609
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f8a2676e0a6134646a8acb3868ce51fe, type: 2}
+        charName: Lethia.
+        text: Don't worry, I have bandaids with me.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104599
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104610
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104611
+        nodeX: 16988.088
+        nodeY: 1648.1613
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104611
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: b6a1ab80b170bd644bbb4953a21e71de, type: 2}
+        charName: Lethia.
+        text: Luckily I have bandaids with me.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104599
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104612
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104613
+        nodeX: 17339.139
+        nodeY: 1036.685
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104613
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: c4e06105170e4064f95823b07e63e361, type: 2}
+        charName: 
+        text: 
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180793305104619
+        - rid: 7815180793305104621
+        eventToPlay: 2
+        soundToPlay: 15
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104618
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104619
+        nodeX: 17593.95
+        nodeY: 1065.1029
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104619
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: a46ec710d696df14085f90b4573d820c, type: 2}
+        text: I still don't remember anything.
+        dialogue:
+          rid: 7815180793305104623
+    - rid: 7815180793305104620
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104621
+        nodeX: 17596.95
+        nodeY: 1229.1029
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104621
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: 1e13859a3f26d7c4493ea92bc73b2141, type: 2}
+        text: Am I supposed to remember things yet?
+        dialogue:
+          rid: 7815180793305104623
+    - rid: 7815180793305104622
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104623
+        nodeX: 17879.95
+        nodeY: 1035.1029
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104623
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: c5ed42e805633684bb110543b763b5c5, type: 2}
+        charName: Lethia
+        text: Patience my dear, Rome was't built in one day.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers:
+        - rid: 7815180793305104625
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104624
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104625
+        nodeX: 18109.404
+        nodeY: 1093.1368
+        name: AnswerNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104625
+      type: {class: AnswerNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        answer: {fileID: 11400000, guid: a85eb084191ea05458f239e6f5f05888, type: 2}
+        text: Where are we going?
+        dialogue:
+          rid: 7815180793305104627
+    - rid: 7815180793305104626
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104627
+        nodeX: 18349.404
+        nodeY: 1040.1368
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104627
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 10c46ce2db7a7084ca5d19eac9a7325d, type: 2}
+        charName: Lethia
+        text: Depends.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 0
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}

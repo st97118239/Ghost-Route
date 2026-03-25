@@ -1,5 +1,12 @@
 public enum Events
 {
     None,
-    GhostZoom
+    GhostZoom,
+    FadeBlack,
+    FadeWhite,
+    CameraLookAround,
+    ZoomArcadeMachine,
+    ZoomDoor,
+    ZoomTable,
+    StartAcheron
 }

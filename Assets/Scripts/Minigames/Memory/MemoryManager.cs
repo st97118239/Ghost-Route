@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -38,6 +37,11 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private InputActionAsset inputActionAsset;
     private InputAction devInputAction;
 
+    [SerializeField] private AudioClip[] beginVoicelines;
+
+    [SerializeField] private float timeBetweenCardPopup;
+    private WaitForSeconds timeBetweenCardPopupWait;
+
     private readonly Random rng = new();
 
     private int[] cardsIdx;
@@ -50,6 +54,7 @@ public class MemoryManager : MonoBehaviour
         FadeManager.Show();
         turn = -1;
         timeTillCheck = new WaitForSeconds(_timeTillCheck);
+        timeBetweenCardPopupWait = new WaitForSeconds(timeBetweenCardPopup);
         cardsIdx = new[] { -1, -1 };
         cardsId = new[] { string.Empty, string.Empty };
         GenerateCardsArray();
@@ -57,7 +62,30 @@ public class MemoryManager : MonoBehaviour
         StartCoroutine(SpawnCards());
     }
 
-    private void Start() => FadeManager.StartFade(true, StartGame);
+    private void Start() => FadeManager.StartFade(true, StartVoicelines, Color.black);
+
+    private void StartVoicelines()
+    {
+        AudioManager.PlaySound(Sounds.Music, false);
+        StartCoroutine(PlayVoicelines());
+    }
+
+    private IEnumerator PlayVoicelines()
+    {
+        yield return new WaitForSeconds(1);
+
+        if (beginVoicelines != null && beginVoicelines.Length > 0)
+        {
+            foreach (AudioClip voiceline in beginVoicelines)
+            {
+                float delay = AudioManager.PlayVoiceline(voiceline);
+
+                yield return new WaitForSeconds(delay);
+            }
+        }
+
+        StartCoroutine(EnableCards());
+    }
 
     private void StartGame()
     {
@@ -68,7 +96,6 @@ public class MemoryManager : MonoBehaviour
         devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
         devInputAction.performed += DevShowCards;
         devInputAction.Enable();
-        AudioManager.PlaySound(Sounds.Music);
     }
 
     private void GenerateCardsArray()
@@ -104,6 +131,17 @@ public class MemoryManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         cardsParent.enabled = false;
     }
+
+    private IEnumerator EnableCards()
+    {
+        foreach (CardObj card in cardsObj)
+        {
+            card.Show();
+            yield return timeBetweenCardPopupWait;
+        }
+
+        StartGame();
+    }
     
     public void OnCardClicked(CardObj clickedCard, int clickedCardIdx)
     {
@@ -121,7 +159,7 @@ public class MemoryManager : MonoBehaviour
             StartCoroutine(CheckCards());
         }
 
-        AudioManager.PlaySound(Sounds.Click);
+        AudioManager.PlaySound(Sounds.Click, false);
     }
 
     private IEnumerator CheckCards()
@@ -164,7 +202,7 @@ public class MemoryManager : MonoBehaviour
                 card0.PlayVoiceline(true);
             }
 
-            AudioManager.PlaySound(Sounds.MemoryPoint);
+            AudioManager.PlaySound(Sounds.MemoryPoint, false);
 
             while (card0Rect.position != targetPos || card1Rect.position != targetPos)
             {
@@ -185,7 +223,6 @@ public class MemoryManager : MonoBehaviour
             turn = turn == 0 ? 1 : 0;
         }
 
-        //yield return new WaitForSeconds(0.1f);
         cardsId[0] = string.Empty;
         cardsId[1] = string.Empty;
         cardsIdx[0] = -1;
@@ -218,10 +255,10 @@ public class MemoryManager : MonoBehaviour
     {
         devInputAction.Disable();
         devInputAction.performed -= DevShowCards;
-        AudioManager.PlaySound(Sounds.Ending);
+        AudioManager.PlaySound(Sounds.Ending, false);
         SaveDataManager.saveData.hasPlayedMemory = true;
         SaveDataManager.saveData.memoryScore = playerPoints;
-        FadeManager.StartFade(false, ExitGame);
+        FadeManager.StartFade(false, ExitGame, Color.black);
     }
 
     private static void ExitGame() => SceneManager.LoadScene("Dialogue");

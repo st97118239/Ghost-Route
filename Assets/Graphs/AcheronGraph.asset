@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2cc3c9f77a9d7439a5d56bd830aa92, type: 3}
+  m_Name: AcheronGraph
+  m_EditorClassIdentifier: 
+  baseModel:
+    nodes:
+    - rid: 7815180791172038748
+    - rid: 7815180791172038750
+    - rid: 7815180793305104488
+    utilityNodes: []
+    tmpName: AcheronGraph
+    viewportInitiallySet: 1
+    viewPosition: {x: 517.32074, y: -274.45563, z: 0}
+    viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7815180791172038748
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180791172038749
+        nodeX: -405.1444
+        nodeY: 986.9444
+        name: DialogueHolderNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180791172038749
+      type: {class: DialogueHolderNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        graphName: Acheron Dialogue
+        dialogueHolder: {fileID: 11400000, guid: 865183cabd601ab4aa6c820b54bc8bad, type: 2}
+        startingDialogue:
+          rid: 7815180791172038751
+    - rid: 7815180791172038750
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180791172038751
+        nodeX: -159.14441
+        nodeY: 984.9444
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180791172038751
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: b5518597cf632234d83d47aa96499318, type: 2}
+        charName: 
+        text: Sample text voor Acheron
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180793305104489
+        delay: 2
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180793305104488
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180793305104489
+        nodeX: 73.4817
+        nodeY: 989.1885
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180793305104489
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 2379d6dbfb7764041ae64913c48ba1f8, type: 2}
+        charName: 
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: -2
+        delay: 3
+        answers: []
+        eventToPlay: 8
+        soundToPlay: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}

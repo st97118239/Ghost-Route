@@ -27,6 +27,12 @@ public class CardObj : MonoBehaviour
         isShowing = false;
         frontSprite = card.sprite;
         image.sprite = backSprite;
+        image.color = Color.clear;
+    }
+
+    public void Show()
+    {
+        image.color = Color.white;
         isActive = true;
     }
 

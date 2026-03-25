@@ -52,8 +52,6 @@ public class FadeManager : MonoBehaviour
         canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         canvasScaler.referenceResolution = new Vector2(1920, 1080);
 
-        GraphicRaycaster graphicRaycaster = gameObject.AddComponent<GraphicRaycaster>();
-
         GameObject panelObj = new("FadePanel");
         panelObj.transform.SetParent(transform);
         fadeImage = panelObj.AddComponent<Image>();
@@ -72,7 +70,7 @@ public class FadeManager : MonoBehaviour
         fadeTime = 1.5f;
     }
 
-    public static void StartFade(bool fadeIn, Action callback) => instance.StartFadeCoroutine(fadeIn, callback);
+    public static void StartFade(bool fadeIn, Action callback, Color fadeColor) => instance.StartFadeCoroutine(fadeIn, callback, fadeColor);
 
     public static void Show()
     {
@@ -81,16 +79,16 @@ public class FadeManager : MonoBehaviour
         instance.fadeImage.gameObject.SetActive(true);
     }
 
-    private void StartFadeCoroutine(bool fadeIn, Action callback)
+    private void StartFadeCoroutine(bool fadeIn, Action callback, Color fadeColor)
     {
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(Fade(fadeIn, callback));
+        fadeCoroutine = StartCoroutine(Fade(fadeIn, callback, fadeColor));
     }
 
-    private IEnumerator Fade(bool fadeIn, Action callback)
+    private IEnumerator Fade(bool fadeIn, Action callback, Color fadeColor)
     {
-        Color startColor = fadeIn ? Color.black : Color.clear;
-        Color endColor = fadeIn ? Color.clear : Color.black;
+        Color startColor = fadeIn ? fadeColor : Color.clear;
+        Color endColor = fadeIn ? Color.clear : fadeColor;
         fadeImage.color = startColor;
 
         fadeImage.gameObject.SetActive(true);

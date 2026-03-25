@@ -1,8 +1,6 @@
-#if UNITY_EDITOR
-using System.Linq; // LINQ IS ONLY IN EDITOR
-#endif
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -38,20 +36,13 @@ public class GhostHuntManager : MonoBehaviour
 
     [SerializeField] private Transform cursor;
 
+    [SerializeField] private AudioClip[] beginVoicelines;
+
     private bool isPlaying;
 
     private void Start()
     {
         FadeManager.Show();
-#if UNITY_EDITOR
-        TargetObj[] objs = FindObjectsByType<TargetObj>(FindObjectsSortMode.None);
-        foreach (TargetObj obj in objs)
-        {
-            if (targetObjs.Contains(obj)) continue;
-            
-            Debug.LogWarning(obj.gameObject.name + " is not in targetObjs");
-        }
-#endif
 
         for (int i = 0; i < targetObjs.Length; i++) 
             targetObjs[i].Setup(this, i);
@@ -59,13 +50,35 @@ public class GhostHuntManager : MonoBehaviour
         if (startingMinAmt > targetObjs.Length) startingMinAmt = targetObjs.Length;
         if (startingMinAmt > maxTargetsOntAtOnce) startingMinAmt = maxTargetsOntAtOnce;
 
-        FadeManager.StartFade(true, StartGame);
+        FadeManager.StartFade(true, LoadGame, Color.black);
+    }
+
+    private void LoadGame()
+    {
+        AudioManager.PlaySound(Sounds.Music, false);
+        StartCoroutine(PlayVoicelines());
+    }
+
+    private IEnumerator PlayVoicelines()
+    {
+        yield return new WaitForSeconds(1);
+
+        if (beginVoicelines != null && beginVoicelines.Length > 0)
+        {
+            foreach (AudioClip voiceline in beginVoicelines)
+            {
+                float delay = AudioManager.PlayVoiceline(voiceline);
+
+                yield return new WaitForSeconds(delay);
+            }
+        }
+
+        StartGame();
     }
 
     private void StartGame()
     {
         StartCoroutine(SpawnLoop());
-        AudioManager.PlaySound(Sounds.Music);
 
         devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
         devInputAction.performed += DevCheat;
@@ -74,7 +87,7 @@ public class GhostHuntManager : MonoBehaviour
 
     public void Shoot(int amt)
     {
-        AudioManager.PlaySound(Sounds.Shoot);
+        AudioManager.PlaySound(Sounds.Shoot, false);
         points += amt;
         pointText.text = points.ToString();
         if (points >= maxPoints) 
@@ -175,15 +188,28 @@ public class GhostHuntManager : MonoBehaviour
     {
         devInputAction.Disable();
         devInputAction.performed -= DevCheat;
-        AudioManager.PlaySound(Sounds.Ending);
-        SaveDataManager.saveData.hasPlayedGhostHunt = true;
-        SaveDataManager.saveData.ghostHuntScore = points;
-        FadeManager.StartFade(false, ExitGame);
+        AudioManager.PlaySound(Sounds.Ending, false);
+
+        if (points >= maxPoints)
+        {
+            SaveDataManager.saveData.hasPlayedGhostHunt = true;
+            SaveDataManager.saveData.ghostHuntScore = points;
+            FadeManager.StartFade(false, ExitGame, Color.black);
+        }
+        else
+        {
+            FadeManager.StartFade(false, RestartGame, Color.black);
+        }
     }
 
     private static void ExitGame()
     {
         SceneManager.LoadScene("Dialogue");
+    }
+
+    private static void RestartGame()
+    {
+        SceneManager.LoadScene("Ghost Hunt");
     }
 
     private void DevCheat(InputAction.CallbackContext context)

@@ -1,12 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using NewGraph;
 
 using UnityEngine;
-using NewGraph;
 using UnityEditor;
-using System.Linq;
+using UnityEngine.WSA;
+using Application = UnityEngine.Application;
 
 /// <summary>
 /// Example to create a custom context menu.
@@ -16,6 +16,16 @@ using System.Linq;
 [CustomContextMenu]
 public class CustomMenu : NewGraph.ContextMenu
 {
+    static CustomMenu()
+    {
+        field = typeof(NewGraph.GraphWindow).GetField("window", BindingFlags.NonPublic | BindingFlags.Static);
+    }
+
+    private static GraphWindow window;
+    private static readonly FieldInfo field;
+
+    private static GraphWindow Window => window ??= (GraphWindow)field!.GetValue(null);
+
     protected override void AddNodeEntries()
     {
         base.AddNodeEntries();
@@ -26,8 +36,8 @@ public class CustomMenu : NewGraph.ContextMenu
 
     private static void CreateMissingSO()
     {
-        ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
-        List<NodeModel> nodes = graph.Nodes;
+        DialogueHolderNode dialogueHolderNode = null;
+        List<NodeModel> nodes = Window.graphController.graphData.Nodes;
 
         List<NodeModel> dialogueNodes = new();
         List<NodeModel> answerNodes = new();
@@ -38,7 +48,21 @@ public class CustomMenu : NewGraph.ContextMenu
                 dialogueNodes.Add(node);
             else if (node.GetName() == "AnswerNode")
                 answerNodes.Add(node);
+            else if (node.GetName() == "DialogueHolderNode")
+            {
+                DialogueHolderNode nodeData = (DialogueHolderNode)node.nodeData;
+                dialogueHolderNode = nodeData;
+            }
         }
+
+        if (dialogueHolderNode == null)
+        {
+            Debug.LogError("No DialogueHolderNode found");
+            return;
+        }
+
+        Directory.CreateDirectory("Assets/ScriptableObjects/Dialogues/" + dialogueHolderNode.graphName);
+        Directory.CreateDirectory("Assets/ScriptableObjects/Answers/" + dialogueHolderNode.graphName);
 
         foreach (NodeModel node in dialogueNodes)
         {
@@ -47,7 +71,7 @@ public class CustomMenu : NewGraph.ContextMenu
             if (nodeData.dialogue != null) continue;
             Dialogue dialogue = CreateInstance<Dialogue>();
             nodeData.dialogue = dialogue;
-            AssetDatabase.CreateAsset(dialogue, "Assets/ScriptableObjects/Dialogues/" + node.GetHashCode() + ".asset");
+            AssetDatabase.CreateAsset(dialogue, "Assets/ScriptableObjects/Dialogues/" + dialogueHolderNode.graphName + "/" + node.GetHashCode() + ".asset");
             EditorUtility.SetDirty(dialogue);
         }
 
@@ -58,7 +82,7 @@ public class CustomMenu : NewGraph.ContextMenu
             if (nodeData.answer != null) continue;
             Answer answer = CreateInstance<Answer>();
             nodeData.answer = answer;
-            AssetDatabase.CreateAsset(answer, "Assets/ScriptableObjects/Answers/" + node.GetHashCode() + ".asset");
+            AssetDatabase.CreateAsset(answer, "Assets/ScriptableObjects/Answers/" + dialogueHolderNode.graphName + "/" + node.GetHashCode() + ".asset");
             EditorUtility.SetDirty(answer);
         }
 
@@ -67,10 +91,10 @@ public class CustomMenu : NewGraph.ContextMenu
 
     private static void RefreshSO()
     {
-        ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
-        DialogueHolder dialogueHolder = AssetDatabase.LoadAssetAtPath<DialogueHolder>("Assets/ScriptableObjects/DialogueHolder.asset");
+        DialogueHolderNode dialogueHolderNode = null;
+        DialogueHolder dialogueHolder = null;
 
-        List<NodeModel> nodes = graph.Nodes;
+        List<NodeModel> nodes = Window.graphController.graphData.Nodes;
 
         List<NodeModel> dialogueNodes = new();
         List<NodeModel> answerNodes = new();
@@ -79,8 +103,21 @@ public class CustomMenu : NewGraph.ContextMenu
         {
             if (node.GetName() == "DialogueNode")
                 dialogueNodes.Add(node);
-            else if (node.GetName() == "AnswerNode") 
+            else if (node.GetName() == "AnswerNode")
                 answerNodes.Add(node);
+            else if (node.GetName() == "DialogueHolderNode")
+            {
+                DialogueHolderNode nodeData = (DialogueHolderNode)node.nodeData;
+                dialogueHolder = nodeData.dialogueHolder;
+
+                dialogueHolderNode = nodeData;
+            }
+        }
+
+        if (dialogueHolder == null)
+        {
+            Debug.LogError("No DialogueHolderNode found");
+            return;
         }
 
         dialogueHolder.dialogues = new Dialogue[dialogueNodes.Count];
@@ -113,13 +150,9 @@ public class CustomMenu : NewGraph.ContextMenu
             dialogue.loseDialogueID = nodeData.loseDialogue != null ? nodeData.loseDialogue.dialogue.name : string.Empty;
             dialogue.ending = nodeData.ending;
             dialogue.sprite = nodeData.sprite;
-            dialogue.goreSprite = nodeData.goreSprite;
-            dialogue.goreBackground = nodeData.goreBackground;
+            dialogue.background = nodeData.background;
 
             dialogueHolder.dialogues[i] = dialogue;
-
-            if (nodeData.isDefault)
-                dialogueHolder.startingDialogueID = dialogue.name;
 
             EditorUtility.SetDirty(dialogue);
         }
@@ -139,13 +172,19 @@ public class CustomMenu : NewGraph.ContextMenu
             EditorUtility.SetDirty(answer);
         }
 
+        if (dialogueHolderNode.startingDialogue != null) 
+            dialogueHolder.startingDialogueID = dialogueHolderNode.startingDialogue.dialogue.name;
+
         EditorUtility.SetDirty(dialogueHolder);
+
+        Debug.Log("Saved dialogues");
     }
 
     private static void RemoveUnusedSO()
     {
-        ScriptableGraphModel graph = AssetDatabase.LoadAssetAtPath<ScriptableGraphModel>("Assets/Graphs/DialogueGraph.asset");
-        List<NodeModel> nodes = graph.Nodes;
+        DialogueHolderNode dialogueHolderNode = null;
+
+        List<NodeModel> nodes = Window.graphController.graphData.Nodes;
         string[] nodeNames = new string[nodes.Count];
 
         for (int i = 0; i < nodeNames.Length; i++)
@@ -165,12 +204,23 @@ public class CustomMenu : NewGraph.ContextMenu
 
                 nodeName = nodeData.answer == null ? string.Empty : nodeData.answer.name;
             }
+            else if (node.GetName() == "DialogueHolderNode")
+            {
+                DialogueHolderNode nodeData = (DialogueHolderNode)node.nodeData;
+                dialogueHolderNode = nodeData;
+            }
 
             nodeNames[i] = nodeName;
         }
 
-        string[] dialogueFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues");
-        string[] answerFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Answers");
+        if (dialogueHolderNode == null)
+        {
+            Debug.LogError("No DialogueHolderNode found");
+            return;
+        }
+
+        string[] dialogueFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Dialogues/" + dialogueHolderNode.graphName);
+        string[] answerFiles = Directory.GetFiles(Application.dataPath + "/ScriptableObjects/Answers/" + dialogueHolderNode.graphName);
         string[] files = new string[dialogueFiles.Length + answerFiles.Length];
 
         for (int i = 0; i < dialogueFiles.Length; i++) 
@@ -206,6 +256,7 @@ public class CustomMenu : NewGraph.ContextMenu
 
             if (foundName) continue;
             string assetPath = isAnswer ? "Answers/" : "Dialogues/";
+            assetPath = assetPath + dialogueHolderNode.graphName + "/";
             AssetDatabase.DeleteAsset("Assets/ScriptableObjects/" + assetPath + fileName + ".asset");
         }
     }

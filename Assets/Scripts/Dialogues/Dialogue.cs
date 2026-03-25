@@ -10,13 +10,12 @@ public class Dialogue : ScriptableObject
     public float delay;
     public string[] answersID;
     public Events eventToPlay;
+    public Sounds soundToPlay;
     public Minigames minigame;
     public int scoreToWin;
     public string wonDialogueID;
     public string loseDialogueID;
     public Ending ending;
     public Sprite sprite;
-    public Sprite goreSprite;
     public Sprite background;
-    public Sprite goreBackground;
 }

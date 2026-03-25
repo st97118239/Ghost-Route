@@ -503,6 +503,7 @@ RectTransform:
   - {fileID: 967216629}
   - {fileID: 506905422}
   - {fileID: 1856836616}
+  - {fileID: 1268037131}
   - {fileID: 909016085}
   - {fileID: 378755667}
   - {fileID: 463285192}
@@ -1905,7 +1906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 23ece00da9d8bfb45942737ce41c5bee, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2232,11 +2233,11 @@ RectTransform:
   - {fileID: 1849064506}
   - {fileID: 1811664404}
   - {fileID: 1593715597}
-  m_Father: {fileID: 1856836616}
+  m_Father: {fileID: 355393254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1500, y: 10}
+  m_AnchoredPosition: {x: 1040, y: -820}
   m_SizeDelta: {x: 145.82, y: 164.07}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1268037132
@@ -2352,24 +2353,26 @@ MonoBehaviour:
   nameBox: {fileID: 1536483903}
   charImage: {fileID: 967216630}
   backgroundImage: {fileID: 1744748362}
-  answerCount: 3
-  answerButtonParent: {fileID: 1268037131}
-  answerButtonPrefab: {fileID: 6445693212569809157, guid: 8ff360098a67017438f1b7107b1f8e53, type: 3}
+  backgroundAnimator: {fileID: 1744748363}
+  charDisappearTime: 1
   answerButtons:
   - {fileID: 1242205298}
   - {fileID: 1179848372}
   - {fileID: 325384073}
+  acheronManager: {fileID: 0}
   endingCanvas: {fileID: 598858236}
   endingCanvasGroup: {fileID: 598858238}
   endingBadgeImage: {fileID: 333709750}
   endingText: {fileID: 2140221979}
   endingFadeTime: 1
   mainMenuSceneName: Main Menu
+  autoContinue: 0
+  shouldUseSave: 1
   dialogueHolder: {fileID: 11400000, guid: b76027e85b77c27459306d2684292f75, type: 2}
-  graph: {fileID: 11400000, guid: 078f9b414457c3e4895bfbf195ea5c54, type: 2}
   timeAfterDialogue: 0.5
   typingSpeed: 0.075
   fastTypingSpeed: 0.01
+  enableDevInput: 1
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
   dialogueInputField: {fileID: 463285193}
   ghostAnimator: {fileID: 378755664}
@@ -2957,6 +2960,8 @@ GameObject:
   - component: {fileID: 1744748360}
   - component: {fileID: 1744748361}
   - component: {fileID: 1744748362}
+  - component: {fileID: 1744748363}
+  - component: {fileID: 1744748364}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2974,14 +2979,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 355393254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1744748361
 CanvasRenderer:
@@ -3012,7 +3017,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3021,6 +3026,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1744748363
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744748359}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4bfa1bae32a7e8b4196fb856dd379f36, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1744748364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744748359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c4b43f1686c2f4f95604dc73fa4087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1320757394}
 --- !u!1 &1767331043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3299,6 @@ RectTransform:
   - {fileID: 2040590046}
   - {fileID: 1536483905}
   - {fileID: 1366641231}
-  - {fileID: 1268037131}
   m_Father: {fileID: 355393254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}

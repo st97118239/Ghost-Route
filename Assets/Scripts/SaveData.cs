@@ -9,7 +9,6 @@ public class SaveData
     public float bgmVolume;
     public float sfxVolume;
     public float voicelinesVolume;
-    public bool showGore;
 
     public string name;
     public string pronouns;
@@ -34,7 +33,6 @@ public class SaveData
         bgmVolume = 1;
         sfxVolume = 1;
         voicelinesVolume = 1;
-        showGore = true;
 
         endings = new();
         foreach (Ending ending in givenEndings)

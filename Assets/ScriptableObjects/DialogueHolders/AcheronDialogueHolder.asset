@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5931cf3d4c5e1bf4d858f027fd4b6ff9, type: 3}
+  m_Name: AcheronDialogueHolder
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000, guid: 9da678cb997496e488436c49049f351c, type: 2}
+  startingDialogueID: -1205768560
+  dialogues:
+  - {fileID: 11400000, guid: b5518597cf632234d83d47aa96499318, type: 2}
+  - {fileID: 11400000, guid: 2379d6dbfb7764041ae64913c48ba1f8, type: 2}
+  answers: []
