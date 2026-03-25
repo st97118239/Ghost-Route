@@ -16,12 +16,11 @@ MonoBehaviour:
     nodes:
     - rid: 7815180791172038748
     - rid: 7815180791172038750
-    - rid: 7815180793305104488
     utilityNodes: []
     tmpName: AcheronGraph
     viewportInitiallySet: 1
-    viewPosition: {x: 517.32074, y: -274.45563, z: 0}
-    viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
+    viewPosition: {x: 454.90967, y: -834.2653, z: 0}
+    viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -62,45 +61,8 @@ MonoBehaviour:
         text: Sample text voor Acheron
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180793305104489
-        delay: 2
-        answers: []
-        eventToPlay: 0
-        soundToPlay: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
           rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 0}
-    - rid: 7815180793305104488
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180793305104489
-        nodeX: 73.4817
-        nodeY: 989.1885
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180793305104489
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 2379d6dbfb7764041ae64913c48ba1f8, type: 2}
-        charName: 
-        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: -2
-        delay: 3
+        delay: 0
         answers: []
         eventToPlay: 8
         soundToPlay: 0

@@ -90,11 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7b879c7e7f55c468d7d9c88a8a64c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 765fd5ba4f7e86a4c951e6e0306295e6, type: 2}
   animator: {fileID: 2695295829743147616}
   image: {fileID: 8194035909320104670}
-  backSprite: {fileID: 21300000, guid: b0380641e785b9a43b882b21c3085831, type: 3}
+  backSprite: {fileID: 21300000, guid: 2767a12443ac02d43a774ebf11c3dac2, type: 3}
   frontSprite: {fileID: 0}
+  isActive: 0
 --- !u!114 &102990630808948644
 MonoBehaviour:
   m_ObjectHideFlags: 0

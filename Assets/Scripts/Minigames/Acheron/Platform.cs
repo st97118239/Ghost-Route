@@ -22,7 +22,7 @@ public class Platform : MonoBehaviour
     private void SpawnEnemy()
     {
         phantom = Instantiate(acheronManager.GetPhantomPrefab(), enemySpawnLocation.position, Quaternion.identity, transform).GetComponent<Phantom>();
-        phantom.Load(this);
+        phantom.Load(this, acheronManager.player);
     }
 
     public void HitPlatform(bool toggle)

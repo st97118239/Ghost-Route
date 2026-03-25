@@ -40,7 +40,7 @@ public class Ferryman : Enemy
     {
         while (true)
         {
-            Vector3 targetPos = borderLocations[borderIdx].position;
+            Vector3 targetPos = new(borderLocations[borderIdx].position.x, transform.position.y, transform.position.z);
 
             while (!Mathf.Approximately(transform.position.x, targetPos.x))
             {

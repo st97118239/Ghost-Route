@@ -15,10 +15,10 @@ MonoBehaviour:
   charName: 
   text: Sample text voor Acheron
   voiceline: {fileID: 0}
-  nextDialogueID: 1457907408
-  delay: 2
+  nextDialogueID: 
+  delay: 0
   answersID: []
-  eventToPlay: 0
+  eventToPlay: 8
   soundToPlay: 0
   minigame: 0
   scoreToWin: 0
