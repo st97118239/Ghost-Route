@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rebirth
   m_EditorClassIdentifier: 
   endingName: Rebirth
-  description: Rebornth
+  description: 'A new life, a new start, a new you. Have a good life, take good care
+    of yourself and don''t forget to enjoy it. '
   badgeSprite: {fileID: 21300000, guid: c93cf40dfa4302f41be4ef679ac4a153, type: 3}
   endingID: Rebirth
   isUnlocked: 0

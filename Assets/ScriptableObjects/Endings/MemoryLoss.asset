@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: MemoryLoss
   m_EditorClassIdentifier: 
   endingName: Memory Loss
-  description: Loss of Memory
+  description: 'Guess you will never remember your past life, or be able to move
+    on. How is it to be stuck in Tartarus? must be lonely. And frustrating. And...
+    you get the point, it sucks. '
   badgeSprite: {fileID: 21300000, guid: e052270096eb5c645a8d442223b3defe, type: 3}
   endingID: MemoryLoss
   isUnlocked: 0

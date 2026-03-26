@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: NeverAloneAgain
   m_EditorClassIdentifier: 
   endingName: Never Alone Again
-  description: I amn't lonely
+  description: You truly have a heart of gold. Now neither you or Lethia will have
+    to be alone again. No more facing things on your own, you will always have someone
+    there to support you.
   badgeSprite: {fileID: 21300000, guid: d18b69607e305404a8f9def94f5afb4e, type: 3}
   endingID: NeverAloneAgain
   isUnlocked: 0
