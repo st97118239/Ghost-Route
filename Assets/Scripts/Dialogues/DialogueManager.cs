@@ -445,6 +445,13 @@ public class DialogueManager : MonoBehaviour
 
     private void FadeBetweenDialoguesBlack()
     {
+        StartCoroutine(WaitBetweenBlackFade());
+    }
+
+    private IEnumerator WaitBetweenBlackFade()
+    {
+        yield return wait1Second;
+
         FadeManager.StartFade(true, DelayFinished, Color.black);
     }
 

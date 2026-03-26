@@ -12,6 +12,8 @@ public class AnswerButton : MonoBehaviour
     [SerializeField] private RectTransform rectTrans;
     [SerializeField] private VerticalLayoutGroup layoutGroup;
 
+    [SerializeField] private float spawnOffset = 1311.065f;
+
     private Answer answer;
 
     public void Setup(DialogueManager givenManager)
@@ -44,7 +46,7 @@ public class AnswerButton : MonoBehaviour
         layoutGroup.enabled = false;
         yield return null;
 
-        Vector2 targetPos = new(rectTrans.anchoredPosition.x - 1500, rectTrans.anchoredPosition.y);
+        Vector2 targetPos = new(rectTrans.anchoredPosition.x - spawnOffset, rectTrans.anchoredPosition.y);
         yield return null;
 
         while (rectTrans.anchoredPosition != targetPos)

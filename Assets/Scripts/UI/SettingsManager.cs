@@ -28,7 +28,9 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-        textSpeedSlider.value = SaveDataManager.saveData.textSpeed;
+        float textSpeedValue = textSpeedSlider.maxValue - SaveDataManager.saveData.textSpeed;
+        Debug.Log(textSpeedValue);
+        textSpeedSlider.value = textSpeedValue;
         windowTypeIdx = SaveDataManager.saveData.windowType;
         bgmVolumeSlider.value = SaveDataManager.saveData.bgmVolume;
         sfxVolumeSlider.value = SaveDataManager.saveData.sfxVolume;
@@ -60,7 +62,9 @@ public class SettingsManager : MonoBehaviour
         if (textSpeedPanel.activeSelf)
         {
             textSpeedPanel.SetActive(false);
-            SaveDataManager.saveData.textSpeed = textSpeedSlider.value;
+            float textSpeedValue = textSpeedSlider.maxValue - textSpeedSlider.value;
+            Debug.Log(textSpeedValue);
+            SaveDataManager.saveData.textSpeed = textSpeedValue;
         }
         else
             textSpeedPanel.SetActive(true);
