@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: -1205768560
   m_EditorClassIdentifier: 
   charName: 
-  text: Sample text voor Acheron
+  text: Since your memory is so shaken, let's refresh your memory.
   voiceline: {fileID: 0}
-  nextDialogueID: 
-  delay: 0
+  nextDialogueID: 1913832768
+  delay: 2
   answersID: []
-  eventToPlay: 8
+  eventToPlay: 0
   soundToPlay: 0
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

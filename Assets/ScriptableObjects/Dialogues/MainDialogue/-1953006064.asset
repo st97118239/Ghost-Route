@@ -22,7 +22,8 @@ MonoBehaviour:
   - 743644192
   - 1222344976
   eventToPlay: 2
-  soundToPlay: 0
+  soundToPlay: 15
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

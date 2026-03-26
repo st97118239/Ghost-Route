@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
   m_Name: 1402463152
   m_EditorClassIdentifier: 
-  charName: Lethia.
+  charName: Lethia
   text: Are you hurt? Where are you hurt, on your arm? Your leg? Your shoulder? Your
     head?
   voiceline: {fileID: 0}
@@ -24,10 +24,11 @@ MonoBehaviour:
   - -265006848
   eventToPlay: 0
   soundToPlay: 0
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 0}
-  sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+  sprite: {fileID: 21300000, guid: c22259a4720fd894b9c6bb3fb3a756ff, type: 3}
   background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}

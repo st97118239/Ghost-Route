@@ -21,10 +21,11 @@ MonoBehaviour:
   - -849395024
   eventToPlay: 0
   soundToPlay: 0
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 0}
-  sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+  sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
   background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
   m_Name: 431721824
   m_EditorClassIdentifier: 
-  charName: Lethia.
+  charName: Lethia
   text: That's good.
   voiceline: {fileID: 0}
   nextDialogueID: -226518144
@@ -20,6 +20,7 @@ MonoBehaviour:
   answersID: []
   eventToPlay: 0
   soundToPlay: 0
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

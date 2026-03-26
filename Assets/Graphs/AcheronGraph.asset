@@ -16,10 +16,14 @@ MonoBehaviour:
     nodes:
     - rid: 7815180791172038748
     - rid: 7815180791172038750
+    - rid: 7815180819647955034
+    - rid: 7815180819647955036
+    - rid: 7815180819647955038
+    - rid: 7815180819647955040
     utilityNodes: []
     tmpName: AcheronGraph
     viewportInitiallySet: 1
-    viewPosition: {x: 561.3596, y: -721.28265, z: 0}
+    viewPosition: {x: -392.68292, y: -705.7017, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -58,14 +62,148 @@ MonoBehaviour:
       data:
         dialogue: {fileID: 11400000, guid: b5518597cf632234d83d47aa96499318, type: 2}
         charName: 
-        text: Sample text voor Acheron
+        text: Since your memory is so shaken, let's refresh your memory.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180819647955035
+        delay: 2
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        loopSound: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180819647955034
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180819647955035
+        nodeX: 57.64038
+        nodeY: 986.28265
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180819647955035
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f4eb6fd57bd00e34cbe019e0b2eb5cbf, type: 2}
+        charName: 
+        text: All you have to do is get to the end of the platformer.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180819647955037
+        delay: 2
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        loopSound: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180819647955036
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180819647955037
+        nodeX: 276.64038
+        nodeY: 986.28265
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180819647955037
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 1897044530af9c94bb2846e10176f8d6, type: 2}
+        charName: 
+        text: Avoid getting hit by the ferryman's spear or getting grabbed by the
+          woeful ghosts.
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180819647955039
+        delay: 2
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        loopSound: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180819647955038
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180819647955039
+        nodeX: 495.13037
+        nodeY: 984.9074
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180819647955039
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: a12165f448a39724aa5f03b84682cf25, type: 2}
+        charName: 
+        text: Easy enough, right?
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180819647955041
+        delay: 2
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        loopSound: 0
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 0}
+        background: {fileID: 0}
+    - rid: 7815180819647955040
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180819647955041
+        nodeX: 714.1304
+        nodeY: 986.9074
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180819647955041
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: f5d925caec05f1648972e160e305e17b, type: 2}
+        charName: 
+        text: Goodluck.
         voiceline: {fileID: 0}
         nextDialogue:
           rid: -2
-        delay: 0
+        delay: 2
         answers: []
         eventToPlay: 8
         soundToPlay: 0
+        loopSound: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:

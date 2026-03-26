@@ -139,12 +139,32 @@ public class CustomMenu : NewGraph.ContextMenu
                 dialogue.answersID = new string[nodeData.answers.Count];
                 for (int j = 0; j < nodeData.answers.Count; j++)
                 {
+                    if (nodeData.answers[j] == null)
+                    {
+                        Debug.LogError("Empty answer found on " + dialogue.name);
+                        continue;
+                    }
+
+                    if (nodeData.answers[j].answer == null)
+                    {
+                        AnswerNode answerNodeData = nodeData.answers[j];
+                        Answer answer = answerNodeData.answer;
+
+                        answer.text = answerNodeData.text;
+                        answer.dialogueID = answerNodeData.dialogue != null ? answerNodeData.dialogue.dialogue.name : string.Empty;
+
+                        dialogueHolder.answers[i] = answer;
+                        EditorUtility.SetDirty(answer);
+                    }
+
                     dialogue.answersID[j] = nodeData.answers[j].answer.name;
                 }
             }
             else
                 dialogue.answersID = null;
             dialogue.eventToPlay = nodeData.eventToPlay;
+            dialogue.soundToPlay = nodeData.soundToPlay;
+            dialogue.loopSound = nodeData.loopSound;
             dialogue.minigame = nodeData.minigame;
             dialogue.scoreToWin = nodeData.scoreToWin;
             dialogue.wonDialogueID = nodeData.wonDialogue != null ? nodeData.wonDialogue.dialogue.name : string.Empty;
@@ -301,6 +321,8 @@ public class CustomMenu : NewGraph.ContextMenu
             nodeData.voiceline = dialogue.voiceline;
             nodeData.delay = dialogue.delay;
             nodeData.eventToPlay = dialogue.eventToPlay;
+            nodeData.soundToPlay = dialogue.soundToPlay;
+            nodeData.loopSound = dialogue.loopSound;
             nodeData.minigame = dialogue.minigame;
             nodeData.scoreToWin = dialogue.scoreToWin;
             nodeData.ending = dialogue.ending;

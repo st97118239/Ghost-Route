@@ -60,7 +60,6 @@ public class AudioManager : MonoBehaviour
     public static float PlaySound(Sounds sound, bool isOneShot)
     {
         AudioClip clipToPlay;
-        AudioSource source;
         switch (sound)
         {
             default:
@@ -134,7 +133,7 @@ public class AudioManager : MonoBehaviour
             return -1f;
         }
 
-        source = isOneShot ? instance.dialogueSfxSource : instance.sfxSource;
+        AudioSource source = isOneShot ? instance.dialogueSfxSource : instance.sfxSource;
 
         if (source == null)
         {
@@ -142,7 +141,7 @@ public class AudioManager : MonoBehaviour
             return -1f;
         }
 
-        if (isOneShot)
+        if (!isOneShot)
         {
             if (source.isPlaying)
                 source.Stop();
@@ -154,6 +153,11 @@ public class AudioManager : MonoBehaviour
             source.PlayOneShot(clipToPlay);
 
         return clipToPlay.length;
+    }
+
+    public static void StopLoopingSFX()
+    {
+        instance.dialogueSfxSource.Stop();
     }
 
     public static void SetVolumes()

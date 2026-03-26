@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image backgroundImage;
 
     [SerializeField] private Animator backgroundAnimator;
+    [SerializeField] private Animator animatorBackgroundAnimator;
     [SerializeField] private float charDisappearTime;
 
     [SerializeField] private AnswerButton[] answerButtons;
@@ -70,6 +71,7 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private bool isFast;
     private bool isWaiting;
+    private bool hasBlackScreen;
 
     private Ending currentEnding;
 
@@ -176,7 +178,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         AudioManager.PlaySound(Sounds.Music, false);
-        FadeManager.StartFade(true, Load, Color.black);
+        if (FindDialogue(startingDialogue).eventToPlay != Events.BlackScreen)
+            FadeManager.StartFade(true, Load, Color.black);
+        else
+            Load();
         if (enableDevInput)
             devInputAction.Enable();
     }
@@ -219,9 +224,13 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(currentDialogue.delay);
         }
 
-        playingSound = currentDialogue.soundToPlay;
-        if (currentDialogue.soundToPlay != Sounds.None && !isPlayingSound) 
-            StartCoroutine(PlaySound());
+        StartCoroutine(PlaySound());
+
+        if (hasBlackScreen && currentDialogue.eventToPlay != Events.BlackScreen)
+        {
+            hasBlackScreen = false;
+            FadeManager.StartFade(true, null, Color.black);
+        }
 
         switch (currentDialogue.eventToPlay)
         {
@@ -244,18 +253,30 @@ public class DialogueManager : MonoBehaviour
             case Events.ZoomArcadeMachine:
                 backgroundAnimator.SetBool("ZoomArcade", !backgroundAnimator.GetBool("ZoomArcade"));
                 yield return wait1Second;
+                yield return wait1Second;
                 break;
             case Events.ZoomDoor:
                 backgroundAnimator.SetBool("ZoomDoor", !backgroundAnimator.GetBool("ZoomDoor"));
+                yield return wait1Second;
                 yield return wait1Second;
                 break;
             case Events.ZoomTable:
                 backgroundAnimator.SetBool("ZoomTable", !backgroundAnimator.GetBool("ZoomTable"));
                 yield return wait1Second;
+                yield return wait1Second;
                 break;
             case Events.StartAcheron:
                 StartAcheron();
                 yield break;
+            case Events.BlackScreen:
+                hasBlackScreen = true;
+                FadeManager.Show();
+                break;
+            case Events.AcheronMachine:
+                animatorBackgroundAnimator.gameObject.SetActive(true);
+                animatorBackgroundAnimator.SetTrigger("AcheronStartup");
+                yield return wait1Second;
+                break;
         }
 
         DelayFinished();
@@ -333,7 +354,7 @@ public class DialogueManager : MonoBehaviour
             charImage.sprite = currentDialogue.sprite;
             charImage.color = currentDialogue.sprite == null ? Color.clear : Color.white;
         }
-        if (backgroundImage != null && currentDialogue.background != null) 
+        if (backgroundImage != null && currentDialogue.background != null)
             backgroundImage.sprite = currentDialogue.background;
         float voiceLineLength = 0f;
         if (currentDialogue.voiceline != null)
@@ -450,9 +471,27 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator WaitBetweenBlackFade()
     {
+        if (backgroundAnimator.GetBool("ZoomArcade"))
+        {
+            backgroundAnimator.SetBool("ZoomArcade", false);
+            yield return wait1Second;
+        }
+        else if (backgroundAnimator.GetBool("ZoomDoor"))
+        {
+            backgroundAnimator.SetBool("ZoomDoor", false);
+            yield return wait1Second;
+        }
+        else if (backgroundAnimator.GetBool("ZoomTable"))
+        {
+            backgroundAnimator.SetBool("ZoomTable", false);
+            yield return wait1Second;
+        }
+
         yield return wait1Second;
 
-        FadeManager.StartFade(true, DelayFinished, Color.black);
+        DelayFinished();
+        if (currentDialogue.minigame == Minigames.None)
+            FadeManager.StartFade(true, null, Color.black);
     }
 
     private void FadeBetweenDialoguesWhite()
@@ -464,7 +503,9 @@ public class DialogueManager : MonoBehaviour
     {
         yield return wait1Second;
 
-        FadeManager.StartFade(true, DelayFinished, Color.white);
+        DelayFinished();
+        if (currentDialogue.minigame == Minigames.None)
+            FadeManager.StartFade(true, null, Color.white);
     }
 
     private IEnumerator EventLookAround()
@@ -509,23 +550,24 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator PlaySound()
     {
-        isPlayingSound = true;
-
-        WaitForSeconds wait = null;
-        while (playingSound != Sounds.None)
+        if (isPlayingSound)
         {
-            if (wait == null)
-            {
-                float delay = AudioManager.PlaySound(playingSound, true);
-                wait = new WaitForSeconds(delay);
-            }
-            else
-                AudioManager.PlaySound(playingSound, true);
+            if (playingSound == currentDialogue.soundToPlay)
+                yield break;
 
-            yield return wait;
+            AudioManager.StopLoopingSFX();
         }
 
-        isPlayingSound = false;
+        if (currentDialogue.soundToPlay == Sounds.None)
+            yield break;
+
+        isPlayingSound = true;
+        playingSound = currentDialogue.soundToPlay;
+
+        AudioManager.PlaySound(playingSound, currentDialogue.loopSound);
+
+        if (!currentDialogue.loopSound)
+            isPlayingSound = false;
     }
     
     private void GetEnding()

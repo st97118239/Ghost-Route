@@ -15,11 +15,13 @@ MonoBehaviour:
   charName: Lethia
   text: Watch your step, you never know what could happen-
   voiceline: {fileID: 0}
-  nextDialogueID: 421471216
+  nextDialogueID: 
   delay: 0
-  answersID: []
-  eventToPlay: 0
+  answersID:
+  - -522590592
+  eventToPlay: 1
   soundToPlay: 0
+  loopSound: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

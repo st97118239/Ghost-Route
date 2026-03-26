@@ -27,6 +27,7 @@ public class DialogueNode : INode
     public Events eventToPlay;
     [GraphDisplay(DisplayType.BothViews)] 
     public Sounds soundToPlay;
+    public bool loopSound;
     [GraphDisplay(DisplayType.BothViews)]
     public Minigames minigame;
     public int scoreToWin;

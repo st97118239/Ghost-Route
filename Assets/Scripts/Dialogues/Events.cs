@@ -8,5 +8,7 @@ public enum Events
     ZoomArcadeMachine,
     ZoomDoor,
     ZoomTable,
-    StartAcheron
+    StartAcheron,
+    BlackScreen,
+    AcheronMachine
 }

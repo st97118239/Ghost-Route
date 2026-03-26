@@ -13,6 +13,8 @@ public class FadeManager : MonoBehaviour
 
     private Coroutine fadeCoroutine;
 
+    [SerializeField] private bool startOn = true;
+
     private void Reset()
     {
         ResetPanel();
@@ -25,6 +27,8 @@ public class FadeManager : MonoBehaviour
         fadeImage = transform.Find("FadePanel").GetComponent<Image>();
         canvas = GetComponent<Canvas>();
         canvas.enabled = true;
+        if (startOn)
+            Show();
     }
 
     private void ResetPanel()
@@ -68,6 +72,7 @@ public class FadeManager : MonoBehaviour
         canvas.enabled = false;
 
         fadeTime = 1.5f;
+        startOn = true;
     }
 
     public static void StartFade(bool fadeIn, Action callback, Color fadeColor) => instance.StartFadeCoroutine(fadeIn, callback, fadeColor);

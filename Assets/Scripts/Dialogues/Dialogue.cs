@@ -11,6 +11,7 @@ public class Dialogue : ScriptableObject
     public string[] answersID;
     public Events eventToPlay;
     public Sounds soundToPlay;
+    public bool loopSound;
     public Minigames minigame;
     public int scoreToWin;
     public string wonDialogueID;

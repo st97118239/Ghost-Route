@@ -31,6 +31,7 @@ public class AnswerButton : MonoBehaviour
         fullText = fullText.Replace("{pronoun}", SaveDataManager.saveData.pronouns);
 
         text.text = fullText;
+        rectTrans.anchoredPosition = new Vector2(spawnOffset, rectTrans.anchoredPosition.y);
         gameObject.SetActive(true);
         StartCoroutine(ButtonAnimation());
     }
