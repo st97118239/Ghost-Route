@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Which means our journey will be a bit... more difficult.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 10effb39bce0e244c819c9c03daf60fe, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

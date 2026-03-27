@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You will get stuck here and never be able to move on.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 3ae9794667cc8d94db72728c25b6d0a1, type: 3}
   nextDialogueID: 484303936
   delay: 0
   answersID: []

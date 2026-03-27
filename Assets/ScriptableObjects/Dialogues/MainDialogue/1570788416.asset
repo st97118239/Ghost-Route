@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You had to avoid it and ended up crashing your car really bad.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 9d24ee40477f5da45b2098ae6f6d7107, type: 3}
   nextDialogueID: -209521968
   delay: 0
   answersID: []

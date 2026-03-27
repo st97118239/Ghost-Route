@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: ???
   text: Oh dear, you look like you've seen a ghost.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 2238427e18b012c428a1c055fda30236, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

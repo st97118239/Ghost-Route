@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Now just follow me, I'm not letting you sulk here for all eternity.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b03d9345ae03db441a6b915ef28707db, type: 3}
   nextDialogueID: -1953006064
   delay: 0
   answersID: []

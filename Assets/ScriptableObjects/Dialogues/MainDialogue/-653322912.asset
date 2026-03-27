@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Did you listen to anything I just said?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 4c617eba43194204a8aa6d68be24a760, type: 3}
   nextDialogueID: -639983152
   delay: 0
   answersID: []

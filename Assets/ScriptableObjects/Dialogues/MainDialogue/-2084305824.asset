@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But, can you tell me something about yourself?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b534073570d837640b92a160d911f4a8, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

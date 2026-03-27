@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You see, I will help you through this world...
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d6377a89ebf0ffc4f8fc82622ced258b, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: So, before we can give you a new life, let's help you remember your old life
     first.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: cb5717f28685ef345ac6e97fa9d381a6, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: A ghost, a reaper, a guide, a friend, just give it a name you like.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: e7c131ba877d2a243b8b0cbaa8272027, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

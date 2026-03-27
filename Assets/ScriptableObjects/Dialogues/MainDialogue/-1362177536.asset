@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You haven't realised yet?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: fdfa478b3e88b6a48a2385ba5dfb366a, type: 3}
   nextDialogueID: 2133934736
   delay: 0
   answersID: []

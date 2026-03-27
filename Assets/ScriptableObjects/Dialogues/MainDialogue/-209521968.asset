@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You died.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: ea7cd2851e4fabe40bfee4d312569489, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

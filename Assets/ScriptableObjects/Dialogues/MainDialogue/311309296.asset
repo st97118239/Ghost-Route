@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Does it really matter WHAT I am?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 5448cf356450a6544ab893c627c7b774, type: 3}
   nextDialogueID: -1590154080
   delay: 0
   answersID: []

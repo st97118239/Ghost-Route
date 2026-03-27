@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: If you don't remember your life, the good, the bad, the things that made
     you, you...
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 544fc0c5c57074d4ab0724129c43d14b, type: 3}
   nextDialogueID: 949664960
   delay: 0
   answersID: []

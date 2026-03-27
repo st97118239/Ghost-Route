@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You can't remember anything.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: caab421fa3fefb040982435d9bc1953d, type: 3}
   nextDialogueID: -1662962000
   delay: 0
   answersID: []

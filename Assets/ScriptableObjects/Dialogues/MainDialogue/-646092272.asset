@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: What am I? Such an odd question...
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: c8bea85c0c637c24e93fdd4d00bf2eb2, type: 3}
   nextDialogueID: 311309296
   delay: 0
   answersID: []

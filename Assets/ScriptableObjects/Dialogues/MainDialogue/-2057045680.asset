@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: This place... for me it is home.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 3dcb156f33628cf4dabd1710c4429a25, type: 3}
   nextDialogueID: 763739616
   delay: 0
   answersID: []

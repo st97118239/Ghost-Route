@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: No memories, no personality, nothing else but this forest.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 419280064cf6eb7419b364d20701f82b, type: 3}
   nextDialogueID: -2105166448
   delay: 0
   answersID: []

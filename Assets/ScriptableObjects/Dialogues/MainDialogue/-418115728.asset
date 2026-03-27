@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You look a bit lost.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 2ab81dd71566720458c2b1e75d59068e, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: A favourite colour? Siblings? Pets?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b7b8eb84c80cf5a47b0d747f739ace92, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

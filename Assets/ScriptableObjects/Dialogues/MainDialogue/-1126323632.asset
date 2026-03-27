@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But it has been quite a while.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d5aec85e2d5d8964fb58f90a3ae0240e, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

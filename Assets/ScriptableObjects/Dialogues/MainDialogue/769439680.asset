@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Yes, just follow me.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: f821895c70fefc446aa6c2c3b58376c6, type: 3}
   nextDialogueID: -1953006064
   delay: 0
   answersID: []

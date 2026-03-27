@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: <i>Sigh</i> If you don't move on, you do realise you're STUCK here?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 46b6191bef90d54459ff12cf03d72724, type: 3}
   nextDialogueID: -2118506208
   delay: 0
   answersID: []

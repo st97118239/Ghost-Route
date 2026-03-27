@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Time isn't really a thing here...
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: bf9d18afdea9bdd45872ab7518154c03, type: 3}
   nextDialogueID: -1126323632
   delay: 0
   answersID: []

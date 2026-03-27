@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Now all you remember is your name and the fact you died.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: a8296dda37f4d3d429a2a54fd99e90bc, type: 3}
   nextDialogueID: -499777152
   delay: 0
   answersID: []

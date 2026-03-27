@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You got in an accident and it ended quite unfortunate.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: ce09ee8cb3bf4284a8ed5a42ad0a9577, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

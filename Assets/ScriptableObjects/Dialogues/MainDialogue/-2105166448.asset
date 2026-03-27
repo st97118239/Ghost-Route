@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You won't even be you, because you don't know what you like.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 112d5d64dd81ab74d91adadd3baa89a5, type: 3}
   nextDialogueID: -941981600
   delay: 0
   answersID: []
