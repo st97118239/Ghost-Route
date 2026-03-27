@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: -1060531936
+  m_Name: Ghost Hunt Start
   m_EditorClassIdentifier: 
-  charName: 
-  text: 
+  charName: Lethia
+  text: Ghosts.
   voiceline: {fileID: 0}
-  nextDialogueID: 375570416
+  nextDialogueID: -1008944256
   delay: 0
   answersID: []
-  eventToPlay: 2
+  eventToPlay: 0
   soundToPlay: 0
   loopSound: 0
-  minigame: 0
+  minigame: 1
   scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 0}
-  sprite: {fileID: 21300000, guid: c22259a4720fd894b9c6bb3fb3a756ff, type: 3}
-  background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
+  sprite: {fileID: 21300000, guid: d3b0a1e2b55356d47837c25064061263, type: 3}
+  background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}

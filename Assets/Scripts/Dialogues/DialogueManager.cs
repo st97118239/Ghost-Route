@@ -282,6 +282,8 @@ public class DialogueManager : MonoBehaviour
                 animatorBackgroundAnimator.gameObject.SetActive(true);
                 animatorBackgroundAnimator.SetTrigger("AcheronStartup");
                 yield return wait1Second;
+                yield return wait1Second;
+                yield return wait1Second;
                 break;
         }
 
