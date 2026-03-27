@@ -166,8 +166,11 @@ public class DialogueManager : MonoBehaviour
 
                 if (startingDialogue == string.Empty)
                     startingDialogue = dialogue.nextDialogueID;
+
+                dialogue = FindDialogue(startingDialogue);
             }
         }
+
 
         if (backgroundImage != null && dialogue.background != null)
             backgroundImage.sprite = dialogue.background;

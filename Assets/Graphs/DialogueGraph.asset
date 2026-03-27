@@ -295,7 +295,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -32264.967, y: -865.7584, z: 0}
+    viewPosition: {x: -14754.652, y: -898.36066, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -2553,7 +2553,7 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568178
-        nodeX: 14665.382
+        nodeX: 14667.382
         nodeY: 1040.74
         name: DialogueNode
         isUtilityNode: 0

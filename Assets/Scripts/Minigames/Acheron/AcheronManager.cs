@@ -119,6 +119,7 @@ public class AcheronManager : MonoBehaviour
 
         foreach (Image heart in hearts)
         {
+            heart.color = Color.white;
             heart.sprite = heartImage;
             heartCount++;
 

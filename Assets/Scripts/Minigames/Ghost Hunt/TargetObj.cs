@@ -67,12 +67,12 @@ public class TargetObj : MonoBehaviour
     public void Show()
     {
         int chance = Random.Range(0, totalChance);
-        if (chance <= ghostChance)
+        if (chance < ghostChance)
         {
             currentTarget = ghosts[Random.Range(0, ghosts.Length)];
             AudioManager.PlaySound(Sounds.SpawnGhost, false);
         }
-        else if (chance > ghostChance && chance <= ghostChance + bunnyChance)
+        else if (chance > ghostChance && chance < ghostChance + bunnyChance)
         {
             currentTarget = bunnies[Random.Range(0, bunnies.Length)];
             AudioManager.PlaySound(Sounds.SpawnBunny, false);
