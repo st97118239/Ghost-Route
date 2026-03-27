@@ -295,7 +295,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -39339.645, y: -964.6496, z: 0}
+    viewPosition: {x: -43084.56, y: -318.04175, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -4219,8 +4219,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813695
-        nodeX: 23102.793
-        nodeY: 1031.5874
+        nodeX: 23101.793
+        nodeY: 1032.5874
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4252,8 +4252,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813697
-        nodeX: 23319.793
-        nodeY: 1032.5874
+        nodeX: 23320.793
+        nodeY: 1033.5874
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
