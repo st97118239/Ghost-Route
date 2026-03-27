@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: -1314756048
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: You were just driving and a deer just crossed the road.
+  text: You were driving and a deer just crossed the road.
   voiceline: {fileID: 8300000, guid: 1ab17a640a09ec348a418050d644e896, type: 3}
   nextDialogueID: 1570788416
   delay: 0
