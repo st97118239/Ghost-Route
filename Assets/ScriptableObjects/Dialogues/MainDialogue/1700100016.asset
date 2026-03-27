@@ -18,7 +18,7 @@ MonoBehaviour:
   nextDialogueID: -1637465712
   delay: 0
   answersID: []
-  eventToPlay: 0
+  eventToPlay: 2
   soundToPlay: 0
   loopSound: 0
   minigame: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
   loseDialogueID: 
   ending: {fileID: 0}
   sprite: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: bad297fda9d5ff346af2abc85544b5db, type: 3}

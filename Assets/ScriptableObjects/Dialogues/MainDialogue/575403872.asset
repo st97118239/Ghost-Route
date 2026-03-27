@@ -18,7 +18,7 @@ MonoBehaviour:
   nextDialogueID: -355318176
   delay: 0
   answersID: []
-  eventToPlay: 0
+  eventToPlay: 2
   soundToPlay: 0
   loopSound: 0
   minigame: 0

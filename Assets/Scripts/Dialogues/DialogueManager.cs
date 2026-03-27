@@ -251,17 +251,20 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(EventLookAround());
                 yield break;
             case Events.ZoomArcadeMachine:
-                backgroundAnimator.SetBool("ZoomArcade", !backgroundAnimator.GetBool("ZoomArcade"));
+                StartCoroutine(EventPlayAnim("ZoomArcade"));
+                yield return wait1Second;
                 yield return wait1Second;
                 yield return wait1Second;
                 break;
             case Events.ZoomDoor:
-                backgroundAnimator.SetBool("ZoomDoor", !backgroundAnimator.GetBool("ZoomDoor"));
+                StartCoroutine(EventPlayAnim("ZoomDoor"));
+                yield return wait1Second;
                 yield return wait1Second;
                 yield return wait1Second;
                 break;
             case Events.ZoomTable:
-                backgroundAnimator.SetBool("ZoomTable", !backgroundAnimator.GetBool("ZoomTable"));
+                StartCoroutine(EventPlayAnim("ZoomTable"));
+                yield return wait1Second;
                 yield return wait1Second;
                 yield return wait1Second;
                 break;
@@ -352,7 +355,10 @@ public class DialogueManager : MonoBehaviour
         if (charImage != null)
         {
             charImage.sprite = currentDialogue.sprite;
-            charImage.color = currentDialogue.sprite == null ? Color.clear : Color.white;
+            if ((charImage.sprite == null || charImage.color == Color.clear) && currentDialogue.sprite != null)
+                StartCoroutine(ShowCharacter());
+            else
+                charImage.color = currentDialogue.sprite == null ? Color.clear : Color.white;
         }
         if (backgroundImage != null && currentDialogue.background != null)
             backgroundImage.sprite = currentDialogue.background;
@@ -499,39 +505,9 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(WaitBetweenWhiteFade());
     }
 
-    private IEnumerator WaitBetweenWhiteFade()
+    private IEnumerator ShowCharacter()
     {
-        yield return wait1Second;
-
-        DelayFinished();
-        if (currentDialogue.minigame == Minigames.None)
-            FadeManager.StartFade(true, null, Color.white);
-    }
-
-    private IEnumerator EventLookAround()
-    {
-        dialogueBox.SetActive(false);
-
-        yield return null;
-
-        for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
-        {
-            if (i > charDisappearTime) i = charDisappearTime;
-
-            float alphaAmount = i / charDisappearTime;
-            charImage.color = new Color(255, 255, 255, Mathf.Lerp(1, 0, alphaAmount));
-
-            yield return null;
-        }
-
-        charImage.color = Color.clear;
-
-        backgroundAnimator.SetTrigger("LookAround");
-    }
-
-    public IEnumerator EventLookAroundFinished()
-    {
-        yield return null;
+        if (currentDialogue.sprite == null) yield break;
 
         for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
         {
@@ -544,6 +520,88 @@ public class DialogueManager : MonoBehaviour
         }
 
         charImage.color = Color.white;
+    }
+
+    private IEnumerator WaitBetweenWhiteFade()
+    {
+        yield return wait1Second;
+
+        DelayFinished();
+        if (currentDialogue.minigame == Minigames.None)
+            FadeManager.StartFade(true, null, Color.white);
+    }
+
+    private IEnumerator EventPlayAnim(string boolID)
+    {
+        bool boolState = backgroundAnimator.GetBool(boolID);
+
+        dialogueBox.SetActive(false);
+
+        yield return null;
+
+        if (currentDialogue.sprite != null)
+        {
+            int start = boolState ? 0 : 1;
+            int end = boolState ? 1 : 0;
+
+            for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
+            {
+                if (i > charDisappearTime) i = charDisappearTime;
+
+                float alphaAmount = i / charDisappearTime;
+                charImage.color = new Color(255, 255, 255, Mathf.Lerp(start, end, alphaAmount));
+
+                yield return null;
+            }
+        }
+
+        charImage.color = boolState ? Color.white : Color.clear;
+
+        backgroundAnimator.SetBool(boolID, !boolState);
+    }
+
+    private IEnumerator EventLookAround()
+    {
+        dialogueBox.SetActive(false);
+
+        yield return null;
+
+        if (currentDialogue.sprite != null)
+        {
+            for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
+            {
+                if (i > charDisappearTime) i = charDisappearTime;
+
+                float alphaAmount = i / charDisappearTime;
+                charImage.color = new Color(255, 255, 255, Mathf.Lerp(1, 0, alphaAmount));
+
+                yield return null;
+            }
+
+            charImage.color = Color.clear;
+        }
+
+        backgroundAnimator.SetTrigger("LookAround");
+    }
+
+    public IEnumerator EventLookAroundFinished()
+    {
+        yield return null;
+
+        if (FindDialogue(currentDialogue.nextDialogueID).sprite != null)
+        {
+            for (float i = 0; i < charDisappearTime + Time.deltaTime; i += Time.deltaTime)
+            {
+                if (i > charDisappearTime) i = charDisappearTime;
+
+                float alphaAmount = i / charDisappearTime;
+                charImage.color = new Color(255, 255, 255, Mathf.Lerp(0, 1, alphaAmount));
+
+                yield return null;
+            }
+
+            charImage.color = Color.white;
+        }
 
         DelayFinished();
     }

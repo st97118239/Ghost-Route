@@ -26,5 +26,5 @@ MonoBehaviour:
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 0}
-  sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+  sprite: {fileID: 0}
   background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}

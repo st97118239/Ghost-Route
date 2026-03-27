@@ -295,7 +295,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -27352.412, y: -1285.3076, z: 0}
+    viewPosition: {x: -32264.967, y: -865.7584, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -4344,7 +4344,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180815996813702
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -5487,7 +5487,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180819647955110
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -5520,7 +5520,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180819647955112
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -5553,7 +5553,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180819647955114
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -5586,7 +5586,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180819647955116
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -5744,7 +5744,7 @@ MonoBehaviour:
           rid: 7815180819647955129
         delay: 0
         answers: []
-        eventToPlay: 0
+        eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
         minigame: 0
@@ -5910,7 +5910,7 @@ MonoBehaviour:
           rid: 7815180819647955139
         delay: 0
         answers: []
-        eventToPlay: 0
+        eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
         minigame: 0
@@ -5921,7 +5921,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        background: {fileID: 0}
+        background: {fileID: 21300000, guid: bad297fda9d5ff346af2abc85544b5db, type: 3}
     - rid: 7815180819647955138
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
