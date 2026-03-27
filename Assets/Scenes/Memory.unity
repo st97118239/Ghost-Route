@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1.5
+  startOn: 1
 --- !u!224 &166902344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -513,10 +514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryManager: {fileID: 2068348468}
   cardMemoryAmt: 0200000006000000
-  forgetCardChance: 70
-  chanceToForgetDouble: 30
-  newCardChance: 50
-  chanceToScore: 65
+  forgetCardChance: 45
+  chanceToForgetDouble: 20
+  newCardChance: 70
+  chanceToScore: 68
   thresholdToNotPlayPrevTurn: 3
   _timeBetweenCards: 1
   _timeBeforeStart: 0.5
@@ -1255,7 +1256,7 @@ MonoBehaviour:
   opponentText: {fileID: 44808542}
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
   beginVoicelines: []
-  timeBetweenCardPopup: 0.3
+  timeBetweenCardPopup: 0.25
 --- !u!4 &2068348469
 Transform:
   m_ObjectHideFlags: 0

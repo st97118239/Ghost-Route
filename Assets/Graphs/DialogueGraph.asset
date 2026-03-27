@@ -295,8 +295,8 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -11962.226, y: -855.6401, z: 0}
-    viewScale: {x: 1, y: 1, z: 1}
+    viewPosition: {x: -5556.4136, y: -335.88165, z: 0}
+    viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:

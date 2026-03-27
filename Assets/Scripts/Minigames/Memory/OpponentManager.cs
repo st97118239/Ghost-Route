@@ -20,7 +20,7 @@ public class OpponentManager : MonoBehaviour
     private WaitForSeconds timeBetweenCards;
 
     [SerializeField] private float _timeBeforeStart;
-    [SerializeField] private WaitForSeconds timeBeforeStart;
+    private WaitForSeconds timeBeforeStart;
 
     private int idx0;
     private int idx1;
@@ -37,10 +37,8 @@ public class OpponentManager : MonoBehaviour
         }
         seenCards = new CardObj[cardAmt];
         seenCardsMemory = new int[cardAmt];
-        for (int i = 0; i < seenCardsMemory.Length; i++)
-        {
+        for (int i = 0; i < seenCardsMemory.Length; i++) 
             seenCardsMemory[i] = -1;
-        }
         timeBetweenCards = new WaitForSeconds(_timeBetweenCards);
         timeBeforeStart = new WaitForSeconds(_timeBeforeStart);
     }
