@@ -8,6 +8,8 @@ public class AcheronManager : MonoBehaviour
 {
     public Player player;
 
+    [SerializeField] private DialogueManager dialogueManager;
+
     [SerializeField] private GameObject phantomPrefab;
 
     [SerializeField] private EventSystem eventSystem;
@@ -46,6 +48,9 @@ public class AcheronManager : MonoBehaviour
     {
         AudioManager.PlaySound(Sounds.Music, false);
         FadeManager.StartFade(true, null, Color.black);
+
+        if (!dialogueManager.isActiveAndEnabled)
+            UnlockButton();
     }
 
     public void UnlockButton()
