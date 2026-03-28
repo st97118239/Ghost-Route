@@ -53,11 +53,7 @@ public class AcheronManager : MonoBehaviour
             UnlockButton();
     }
 
-    public void UnlockButton()
-    {
-        startButton.interactable = true;
-        eventSystem.SetSelectedGameObject(retryButton);
-    }
+    public void UnlockButton() => startButton.interactable = true;
 
     public void StartGame()
     {
@@ -78,10 +74,7 @@ public class AcheronManager : MonoBehaviour
         SpawnPlayer();
     }
 
-    private void SpawnPlayer()
-    {
-        player.Load();
-    }
+    private void SpawnPlayer() => player.Load();
 
     public void Instakill()
     {
@@ -149,9 +142,7 @@ public class AcheronManager : MonoBehaviour
 
     public void DevInvincible()
     {
-        for (int i = 0; i < heartCount; i++)
-        {
+        for (int i = 0; i < heartCount; i++) 
             hearts[i].color = Color.grey;
-        }
     }
 }

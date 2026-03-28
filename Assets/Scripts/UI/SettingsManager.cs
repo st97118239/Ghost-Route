@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -78,7 +79,20 @@ public class SettingsManager : MonoBehaviour
             SaveDataManager.saveData.windowType = windowTypeIdx;
         }
         else
+        {
+            windowTypeIdx = Screen.fullScreenMode switch
+            {
+                FullScreenMode.ExclusiveFullScreen => 0,
+                FullScreenMode.FullScreenWindow => 1,
+                FullScreenMode.MaximizedWindow => 2,
+                FullScreenMode.Windowed => 3,
+                _ => 1
+            };
+
+            SetWindowType();
+
             windowTypePanel.SetActive(true);
+        }
     }
 
     public void WindowTypeButton(int idx)

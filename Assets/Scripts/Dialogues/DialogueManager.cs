@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private CanvasGroup endingCanvasGroup;
     [SerializeField] private Image endingBadgeImage;
     [SerializeField] private TMP_Text endingText;
+    [SerializeField] private TMP_Text endingDescriptionText;
     [SerializeField] private float endingFadeTime;
 
     [SerializeField] private string mainMenuSceneName;
@@ -652,6 +653,7 @@ public class DialogueManager : MonoBehaviour
     {
         endingBadgeImage.sprite = currentEnding.badgeSprite;
         endingText.text = currentEnding.endingName;
+        endingDescriptionText.text = currentEnding.description;
         StartCoroutine(EndingFade());
     }
 
