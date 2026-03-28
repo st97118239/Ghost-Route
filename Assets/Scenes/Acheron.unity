@@ -3905,6 +3905,7 @@ MonoBehaviour:
   endingCanvasGroup: {fileID: 0}
   endingBadgeImage: {fileID: 0}
   endingText: {fileID: 0}
+  endingDescriptionText: {fileID: 0}
   endingFadeTime: 0
   mainMenuSceneName: 
   autoContinue: 1
