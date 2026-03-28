@@ -9,6 +9,11 @@ public class Ferryman : Enemy
     [SerializeField] private Transform spear;
     [SerializeField] private SpriteRenderer spearRenderer;
     [SerializeField] private BoxCollider2D spearCollider;
+
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite stabSprite;
+
+    [SerializeField] private float distanceUnderPlayer;
     [SerializeField] private float distanceAbovePlatform;
     [SerializeField] private float spearSpeed;
     [SerializeField] private float _spearSpeedTimer;
@@ -57,7 +62,16 @@ public class Ferryman : Enemy
             if (borderIdx > borderLocations.Length - 1)
                 borderIdx = 0;
 
-            spriteRenderer.flipX = borderIdx != 0;
+            if (borderIdx != 0 && !spriteRenderer.flipX)
+            {
+                spriteRenderer.flipX = true;
+                spear.transform.localPosition = new Vector3(-0.06f, spear.transform.localPosition.y, spear.transform.localPosition.z);
+            }
+            else if (spriteRenderer.flipX)
+            {
+                spriteRenderer.flipX = false;
+                spear.transform.localPosition = new Vector3(0.06f, spear.transform.localPosition.y, spear.transform.localPosition.z);
+            }
 
             yield return null;
         }
@@ -70,10 +84,14 @@ public class Ferryman : Enemy
         if (ray.collider != null)
             playerPos = new Vector3(playerPos.x, ray.collider.transform.position.y + distanceAbovePlatform, playerPos.z);
         else
-            playerPos += Vector3.down;
+            playerPos += Vector3.down * distanceUnderPlayer;
+
+        Debug.Log(playerPos.y);
 
         float totalHeight = playerPos.y;
         float currentHeight = spear.position.y;
+
+        spriteRenderer.sprite = stabSprite;
 
         float speed = spearSpeed;
         while (currentHeight < totalHeight)
@@ -105,6 +123,8 @@ public class Ferryman : Enemy
 
             yield return spearSpeedTimer;
         }
+
+        spriteRenderer.sprite = defaultSprite;
 
         yield return spearDelay;
 

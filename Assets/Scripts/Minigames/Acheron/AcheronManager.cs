@@ -56,6 +56,7 @@ public class AcheronManager : MonoBehaviour
     public void UnlockButton()
     {
         startButton.interactable = true;
+        eventSystem.SetSelectedGameObject(retryButton);
     }
 
     public void StartGame()

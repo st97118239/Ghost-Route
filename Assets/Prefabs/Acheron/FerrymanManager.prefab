@@ -158,9 +158,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.016632527, y: 0.5457395}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0.25}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.75757575, y: 3.7878788}
+    oldSize: {x: 0.28030303, y: 3.4924242}
     newSize: {x: 0.28, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
@@ -312,7 +312,10 @@ MonoBehaviour:
   spear: {fileID: 3690419896276097480}
   spearRenderer: {fileID: 1395538050595237024}
   spearCollider: {fileID: 2014158269365533865}
-  distanceAbovePlatform: 0.2
+  defaultSprite: {fileID: 21300000, guid: fe1c3bcffbe32b5469fcb8d73858e546, type: 3}
+  stabSprite: {fileID: 21300000, guid: a4b3bc155b2d8a2449a3250cfe3805f0, type: 3}
+  distanceUnderPlayer: 1.5
+  distanceAbovePlatform: -0.5
   spearSpeed: 0.8
   _spearSpeedTimer: 0.03
   _timeUntilSpearDown: 0.1

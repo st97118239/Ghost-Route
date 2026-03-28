@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField] private InputActionAsset inputActionAsset;
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+
+    [SerializeField] private Sprite defaultSprite;
 
     [SerializeField] private Transform[] raycastPos;
 
@@ -30,7 +33,7 @@ public class Player : MonoBehaviour
     private InputAction walkLeft;
     private InputAction walkRight;
     private InputAction quit;
-    private InputAction devInputFieldAction;
+    private InputAction devInputAction;
 
     private Platform currentPlatform;
 
@@ -39,6 +42,8 @@ public class Player : MonoBehaviour
     private bool isMoving;
     private bool isGoingLeft;
     private bool isInvincible;
+
+    private bool startFall;
 
     private Coroutine moveCoroutine;
 
@@ -60,12 +65,16 @@ public class Player : MonoBehaviour
         isInvincible = false;
         isGoingLeft = false;
         spriteRenderer.flipX = false;
+        spriteRenderer.sprite = defaultSprite;
+        startFall = true;
+        animator.SetBool("Jump", false);
+        animator.SetBool("Walk", false);
 
         jump = inputActionAsset.FindAction("Main/Move Up");
         walkLeft = inputActionAsset.FindAction("Main/Move Left");
         walkRight = inputActionAsset.FindAction("Main/Move Right");
         quit = inputActionAsset.FindAction("Main/Quit");
-        devInputFieldAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
 
         jump.performed += OnMoveUp;
         walkLeft.started += OnMoveLeft;
@@ -73,20 +82,26 @@ public class Player : MonoBehaviour
         walkRight.started += OnMoveRight;
         walkRight.canceled += OnMoveRightCancel;
         quit.performed += Quit;
-        devInputFieldAction.performed += DevInvincible;
+        devInputAction.performed += DevInvincible;
 
-
-        jump.Enable();
-        walkLeft.Enable();
-        walkRight.Enable();
         quit.Enable();
-        devInputFieldAction.Enable();
+        devInputAction.Enable();
     }
 
     private void FixedUpdate()
     {
         if (isFalling) Fall();
         if (isMoving) Move();
+    }
+
+    private void UnlockMovement()
+    {
+        animator.SetBool("Jump", false);
+        animator.SetBool("Walk", false);
+        spriteRenderer.sprite = defaultSprite;
+        jump.Enable();
+        walkLeft.Enable();
+        walkRight.Enable();
     }
 
     private void Fall()
@@ -96,6 +111,10 @@ public class Player : MonoBehaviour
         if (isOnGround)
         {
             isFalling = false;
+            animator.SetBool("Jump", false);
+
+            if (!isMoving)
+                spriteRenderer.sprite = defaultSprite;
             return;
         }
 
@@ -107,6 +126,17 @@ public class Player : MonoBehaviour
     {
         isFalling = false;
         isOnGround = true;
+        animator.SetBool("Jump", false);
+
+        if (startFall)
+        {
+            startFall = false;
+            animator.SetTrigger("Fall");
+            return;
+        }
+
+        if (!isMoving)
+            spriteRenderer.sprite = defaultSprite;
     }
 
     public void OnMoveUp(InputAction.CallbackContext context)
@@ -125,12 +155,16 @@ public class Player : MonoBehaviour
         isGoingLeft = true;
         isMoving = true;
         spriteRenderer.flipX = true;
+        animator.SetBool("Walk", true);
     }
 
     private void OnMoveLeftCancel(InputAction.CallbackContext context)
     {
-        if (isGoingLeft)
-            isMoving = false;
+        if (!isGoingLeft) return;
+        
+        isMoving = false;
+        animator.SetBool("Walk", false);
+        spriteRenderer.sprite = defaultSprite;
     }
 
     public void OnMoveRight(InputAction.CallbackContext context)
@@ -138,12 +172,16 @@ public class Player : MonoBehaviour
         isGoingLeft = false;
         isMoving = true;
         spriteRenderer.flipX = false;
+        animator.SetBool("Walk", true);
     }
 
     private void OnMoveRightCancel(InputAction.CallbackContext context)
     {
-        if (!isGoingLeft)
-            isMoving = false;
+        if (isGoingLeft) return;
+
+        isMoving = false;
+        animator.SetBool("Walk", false);
+        spriteRenderer.sprite = defaultSprite;
     }
     
     private void Move()
@@ -168,12 +206,14 @@ public class Player : MonoBehaviour
 
     private void StartJump()
     {
+        animator.SetBool("Walk", false);
         AudioManager.PlaySound(Sounds.Jump, false);
         rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 
         isOnGround = false;
         isFalling = true;
         isOnGround = false;
+        animator.SetBool("Jump", true);
     }
 
     private void Quit(InputAction.CallbackContext context)
@@ -219,6 +259,10 @@ public class Player : MonoBehaviour
     {
         if (hasFinished) return;
         hasFinished = true;
+        isFalling = false;
+        animator.SetBool("Jump", false);
+        animator.SetBool("Walk", false);
+        spriteRenderer.sprite = defaultSprite;
         jump.performed -= OnMoveUp;
         jump.Disable();
         walkLeft.started -= OnMoveLeft;
@@ -229,10 +273,10 @@ public class Player : MonoBehaviour
         walkRight.Disable();
         quit.performed -= Quit;
         quit.Disable();
-        devInputFieldAction.performed -= DevInvincible;
-        devInputFieldAction.Disable();
+        devInputAction.performed -= DevInvincible;
+        devInputAction.Disable();
 
-        StopAllCoroutines();
+        //StopAllCoroutines();
         
         if (dead)
         {
