@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -27,16 +26,18 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private GameObject voicelineVolumePanel;
     [SerializeField] private Slider voicelineVolumeSlider;
 
+    private bool isSettingUp;
+
     private void Start()
     {
-        float textSpeedValue = textSpeedSlider.maxValue - SaveDataManager.saveData.textSpeed;
-        Debug.Log(textSpeedValue);
-        textSpeedSlider.value = textSpeedValue;
+        isSettingUp = true;
+        textSpeedSlider.value = textSpeedSlider.maxValue - SaveDataManager.saveData.textSpeed;
         windowTypeIdx = SaveDataManager.saveData.windowType;
         bgmVolumeSlider.value = SaveDataManager.saveData.bgmVolume;
         sfxVolumeSlider.value = SaveDataManager.saveData.sfxVolume;
         voicelineVolumeSlider.value = SaveDataManager.saveData.voicelinesVolume;
         SetWindowType();
+        isSettingUp = false;
     }
 
     public void Show()
@@ -121,38 +122,26 @@ public class SettingsManager : MonoBehaviour
 
     public void BGMButton()
     {
-        if (bgmVolumePanel.activeSelf)
-        {
-            bgmVolumePanel.SetActive(false);
-            SaveDataManager.saveData.bgmVolume = bgmVolumeSlider.value;
-            AudioManager.SetVolumes();
-        }
-        else
-            bgmVolumePanel.SetActive(true);
+        bgmVolumePanel.SetActive(!bgmVolumePanel.activeSelf);
     }
 
     public void SFXButton()
     {
-        if (sfxVolumePanel.activeSelf)
-        {
-            sfxVolumePanel.SetActive(false);
-            SaveDataManager.saveData.sfxVolume = sfxVolumeSlider.value;
-            AudioManager.SetVolumes();
-        }
-        else
-            sfxVolumePanel.SetActive(true);
+        sfxVolumePanel.SetActive(!sfxVolumePanel.activeSelf);
     }
 
     public void VoicelinesButton()
     {
-        if (voicelineVolumePanel.activeSelf)
-        {
-            voicelineVolumePanel.SetActive(false);
-            SaveDataManager.saveData.voicelinesVolume = voicelineVolumeSlider.value;
-            AudioManager.SetVolumes();
-        }
-        else
-            voicelineVolumePanel.SetActive(true);
+        voicelineVolumePanel.SetActive(!voicelineVolumePanel.activeSelf);
+    }
+
+    public void UpdateAudio()
+    {
+        if (isSettingUp) return;
+        SaveDataManager.saveData.bgmVolume = bgmVolumeSlider.value;
+        SaveDataManager.saveData.sfxVolume = sfxVolumeSlider.value;
+        SaveDataManager.saveData.voicelinesVolume = voicelineVolumeSlider.value;
+        AudioManager.SetVolumes();
     }
 
     public void ResetDataButton()

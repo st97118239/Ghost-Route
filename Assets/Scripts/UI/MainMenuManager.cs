@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;

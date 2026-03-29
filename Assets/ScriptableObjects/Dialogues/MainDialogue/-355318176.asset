@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: -355318176
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: That is Tartarus.
+  text: That is Phlegeton.
   voiceline: {fileID: 0}
   nextDialogueID: 602083392
   delay: 0

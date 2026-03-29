@@ -295,8 +295,8 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -6153.455, y: 289.86728, z: 0}
-    viewScale: {x: 0.25, y: 0.25, z: 1}
+    viewPosition: {x: -32097.934, y: -646.63525, z: 0}
+    viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -5873,7 +5873,7 @@ MonoBehaviour:
       data:
         dialogue: {fileID: 11400000, guid: dc398934098afbc4093e1d1bf83a7e8c, type: 2}
         charName: Lethia
-        text: That is Tartarus.
+        text: That is Phlegeton.
         voiceline: {fileID: 0}
         nextDialogue:
           rid: 7815180819647955131

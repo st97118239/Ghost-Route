@@ -40,6 +40,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip memoryLossMusicClip;
 
     private Coroutine fadeCoroutine;
+    private bool isFadingOut;
+    private float fadeVolumeToAdd;
+    private const int fadeInStepAmt = 20;
+    private const int fadeOutStepAmt = 10;
     private Sounds musicPlaying;
 
     private void Awake()
@@ -135,12 +139,6 @@ public class AudioManager : MonoBehaviour
         switch (sound)
         {
             default:
-            case Sounds.None:
-            case Sounds.MainMusic:
-            case Sounds.ArcadeMusic:
-            case Sounds.CocytusMusic:
-            case Sounds.MemoryLossMusic:
-            case Sounds.Ending:
                 return null;
             case Sounds.Click:
                 return instance.clickClip;
@@ -193,15 +191,14 @@ public class AudioManager : MonoBehaviour
 
         instance.musicPlaying = music;
 
-        float musicVolume = SaveDataManager.saveData.bgmVolume;
-
         if (instance.fadeCoroutine != null)
             instance.StopCoroutine(instance.fadeCoroutine);
-        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicInCoroutine(musicVolume, music));
+        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicInCoroutine(music));
     }
 
-    private IEnumerator FadeMusicInCoroutine(float musicVolume, Sounds music)
+    private IEnumerator FadeMusicInCoroutine(Sounds music)
     {
+        isFadingOut = false;
         musicSource.volume = 0;
 
         switch (music)
@@ -227,18 +224,21 @@ public class AudioManager : MonoBehaviour
 
         musicSource.Play();
 
-        const float addTimes = 20;
-        float musicAmtToAdd = musicVolume / addTimes;
+        fadeVolumeToAdd = SaveDataManager.saveData.bgmVolume / fadeInStepAmt;
         WaitForSeconds delay = new(0.3f);
 
-        for (int i = 0; i < addTimes; i++)
+        for (int i = 0; i < fadeInStepAmt; i++)
         {
             yield return delay;
 
-            musicSource.volume += musicAmtToAdd;
+            musicSource.volume += fadeVolumeToAdd;
+
+            if (!(musicSource.volume > SaveDataManager.saveData.bgmVolume)) continue;
+            musicSource.volume = SaveDataManager.saveData.bgmVolume;
+            yield break;
         }
 
-        musicSource.volume = musicVolume;
+        musicSource.volume = SaveDataManager.saveData.bgmVolume;
     }
 
     public static void FadeMusicOut()
@@ -246,25 +246,22 @@ public class AudioManager : MonoBehaviour
         if (instance.musicPlaying == Sounds.None)
             return;
 
-        float musicVolume = SaveDataManager.saveData.bgmVolume;
-
         if (instance.fadeCoroutine != null)
             instance.StopCoroutine(instance.fadeCoroutine);
-        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicOutCoroutine(musicVolume));
+        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicOutCoroutine());
     }
 
-    private IEnumerator FadeMusicOutCoroutine(float musicVolume)
+    private IEnumerator FadeMusicOutCoroutine()
     {
-        musicSource.volume = musicVolume;
-        const float addTimes = 10;
-        float musicAmtToAdd = musicVolume / addTimes;
+        isFadingOut = true;
+        fadeVolumeToAdd = musicSource.volume / fadeOutStepAmt;
         WaitForSeconds delay = new(0.1f);
 
-        for (int i = 0; i < addTimes; i++)
+        for (int i = 0; i < fadeOutStepAmt; i++)
         {
             yield return delay;
 
-            musicSource.volume -= musicAmtToAdd;
+            musicSource.volume -= fadeVolumeToAdd;
         }
 
         musicSource.volume = 0;
@@ -283,7 +280,15 @@ public class AudioManager : MonoBehaviour
             instance.sfxSource.volume = SaveDataManager.saveData.sfxVolume;
         if (instance.loopingSfxSource)
             instance.loopingSfxSource.volume = SaveDataManager.saveData.sfxVolume;
-        if (instance.musicSource)
-            instance.musicSource.volume = SaveDataManager.saveData.bgmVolume;
+        if (!instance.musicSource) return;
+        instance.musicSource.volume = SaveDataManager.saveData.bgmVolume;
+
+        if (instance.fadeCoroutine == null) return;
+        if (SaveDataManager.saveData.bgmVolume == 0)
+            instance.StopCoroutine(instance.fadeCoroutine);
+        else if (instance.isFadingOut)
+            instance.fadeVolumeToAdd = instance.musicSource.volume / fadeOutStepAmt;
+        else
+            instance.fadeVolumeToAdd = instance.musicSource.volume / fadeInStepAmt;
     }
 }
