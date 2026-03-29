@@ -189,7 +189,6 @@ public class GhostHuntManager : MonoBehaviour
     {
         devInputAction.Disable();
         devInputAction.performed -= DevCheat;
-        AudioManager.PlaySound(Sounds.Ending, false);
 
         if (points >= maxPoints)
         {

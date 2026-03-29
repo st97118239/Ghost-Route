@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 2573775588998944977}
   - component: {fileID: 5501767695821107055}
   m_Layer: 0
-  m_Name: DialogueSFXPlayer
+  m_Name: LoopingSFXPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +305,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -438,11 +438,9 @@ MonoBehaviour:
   voicelineSource: {fileID: 3412626051368426092}
   musicSource: {fileID: 4928356615373641341}
   sfxSource: {fileID: 6404029893244683338}
-  dialogueSfxSource: {fileID: 5501767695821107055}
-  musicClip: {fileID: 0}
+  loopingSfxSource: {fileID: 5501767695821107055}
   clickClip: {fileID: 0}
   dialogueClip: {fileID: 0}
-  endingClip: {fileID: 0}
   memoryPointClip: {fileID: 0}
   shootClip: {fileID: 0}
   hitClip: {fileID: 0}
@@ -459,6 +457,11 @@ MonoBehaviour:
   keyJingleClip: {fileID: 0}
   doorUnlockingClip: {fileID: 0}
   carCrashClip: {fileID: 0}
+  mainMusicClip: {fileID: 0}
+  arcadeMusicClip: {fileID: 0}
+  cocytusMusicClip: {fileID: 0}
+  endingMusicClip: {fileID: 0}
+  memoryLossMusicClip: {fileID: 0}
 --- !u!1 &8399650990616620685
 GameObject:
   m_ObjectHideFlags: 0

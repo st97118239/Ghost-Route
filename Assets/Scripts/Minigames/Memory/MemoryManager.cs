@@ -206,7 +206,7 @@ public class MemoryManager : MonoBehaviour
                 card0.PlayVoiceline(true);
             }
 
-            AudioManager.PlaySound(Sounds.MemoryPoint, false);
+            AudioManager.PlaySound(Sounds.MemoryPoint, true);
 
             while (card0Rect.position != targetPos || card1Rect.position != targetPos)
             {

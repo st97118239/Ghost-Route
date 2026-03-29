@@ -21,7 +21,7 @@ MonoBehaviour:
   - -1697449936
   eventToPlay: 2
   soundToPlay: 15
-  loopSound: 0
+  loopSound: 1
   musicToPlay: 1
   minigame: 0
   scoreToWin: 0

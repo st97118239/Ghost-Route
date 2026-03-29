@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Unity.VisualScripting.Member;
 
@@ -10,7 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource voicelineSource;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
-    [SerializeField] private AudioSource dialogueSfxSource;
+    [SerializeField] private AudioSource loopingSfxSource;
 
     [SerializeField] private AudioClip clickClip;
     [SerializeField] private AudioClip dialogueClip;
@@ -50,6 +51,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButtonClick() => PlaySound(Sounds.Click, false);
 
+    public void PlayShoot() => PlaySound(Sounds.Click, true);
+
+
     public static float PlayVoiceline(AudioClip audioClip)
     {
         if (instance.voicelineSource.isPlaying)
@@ -69,71 +73,7 @@ public class AudioManager : MonoBehaviour
 
     public static float PlaySound(Sounds sound, bool isOneShot)
     {
-        AudioClip clipToPlay;
-        switch (sound)
-        {
-            default:
-            case Sounds.None:
-            case Sounds.MainMusic:
-            case Sounds.ArcadeMusic:
-            case Sounds.CocytusMusic:
-            case Sounds.Ending:
-                return -1f;
-            case Sounds.Click:
-                clipToPlay = instance.clickClip;
-                break;
-            case Sounds.Dialogue:
-                clipToPlay = instance.dialogueClip;
-                break;
-            case Sounds.MemoryPoint:
-                clipToPlay = instance.memoryPointClip;
-                break;
-            case Sounds.Shoot:
-                clipToPlay = instance.shootClip;
-                break;
-            case Sounds.Hit:
-                clipToPlay = instance.hitClip;
-                break;
-            case Sounds.Wrong:
-                clipToPlay = instance.wrongClip;
-                break;
-            case Sounds.SpawnGhost:
-                clipToPlay = instance.spawnGhostClip;
-                break;
-            case Sounds.SpawnBunny:
-                clipToPlay = instance.spawnBunnyClip;
-                break;
-            case Sounds.SpawnDeer:
-                clipToPlay = instance.spawnDeerClip;
-                break;
-            case Sounds.Jump:
-                clipToPlay = instance.jumpClip;
-                break;
-            case Sounds.Damage:
-                clipToPlay = instance.damageClip;
-                break;
-            case Sounds.Fall:
-                clipToPlay = instance.fallClip;
-                break;
-            case Sounds.Footsteps:
-                clipToPlay = instance.footstepClip;
-                break;
-            case Sounds.FootstepsFadeOut:
-                clipToPlay = instance.footstepFadeOutClip;
-                break;
-            case Sounds.FootstepsFadeIn:
-                clipToPlay = instance.footstepFadeInClip;
-                break;
-            case Sounds.KeyJingle:
-                clipToPlay = instance.keyJingleClip;
-                break;
-            case Sounds.DoorUnlocking:
-                clipToPlay = instance.doorUnlockingClip;
-                break;
-            case Sounds.CarCrash:
-                clipToPlay = instance.carCrashClip;
-                break;
-        }
+        AudioClip clipToPlay = GetSoundClip(sound);
 
         if (clipToPlay == null)
         {
@@ -141,7 +81,7 @@ public class AudioManager : MonoBehaviour
             return -1f;
         }
 
-        AudioSource source = isOneShot ? instance.dialogueSfxSource : instance.sfxSource;
+        AudioSource source = instance.sfxSource;
 
         if (source == null)
         {
@@ -163,9 +103,87 @@ public class AudioManager : MonoBehaviour
         return clipToPlay.length;
     }
 
+    public static float PlayLoopingSound(Sounds sound)
+    {
+        AudioClip clipToPlay = GetSoundClip(sound);
+
+        if (clipToPlay == null)
+        {
+            Debug.LogWarning("Audio clip for " + sound + " is null");
+            return -1f;
+        }
+
+        AudioSource source = instance.loopingSfxSource;
+
+        if (source == null)
+        {
+            Debug.LogError("AudioSource does not exist");
+            return -1f;
+        }
+
+        if (source.isPlaying)
+            source.Stop();
+
+        source.clip = clipToPlay;
+        source.Play();
+
+        return clipToPlay.length;
+    }
+
+    private static AudioClip GetSoundClip(Sounds sound)
+    {
+        switch (sound)
+        {
+            default:
+            case Sounds.None:
+            case Sounds.MainMusic:
+            case Sounds.ArcadeMusic:
+            case Sounds.CocytusMusic:
+            case Sounds.MemoryLossMusic:
+            case Sounds.Ending:
+                return null;
+            case Sounds.Click:
+                return instance.clickClip;
+            case Sounds.Dialogue:
+                return instance.dialogueClip;
+            case Sounds.MemoryPoint:
+                return instance.memoryPointClip;
+            case Sounds.Shoot:
+                return instance.shootClip;
+            case Sounds.Hit:
+                return instance.hitClip;
+            case Sounds.Wrong:
+                return instance.wrongClip;
+            case Sounds.SpawnGhost:
+                return instance.spawnGhostClip;
+            case Sounds.SpawnBunny:
+                return instance.spawnBunnyClip;
+            case Sounds.SpawnDeer:
+                return instance.spawnDeerClip;
+            case Sounds.Jump:
+                return instance.jumpClip;
+            case Sounds.Damage:
+                return instance.damageClip;
+            case Sounds.Fall:
+                return instance.fallClip;
+            case Sounds.Footsteps:
+                return instance.footstepClip;
+            case Sounds.FootstepsFadeOut:
+                return instance.footstepFadeOutClip;
+            case Sounds.FootstepsFadeIn:
+                return instance.footstepFadeInClip;
+            case Sounds.KeyJingle:
+                return instance.keyJingleClip;
+            case Sounds.DoorUnlocking:
+                return instance.doorUnlockingClip;
+            case Sounds.CarCrash:
+                return instance.carCrashClip;
+        }
+    }
+
     public static void StopLoopingSFX()
     {
-        instance.dialogueSfxSource.Stop();
+        instance.loopingSfxSource.Stop();
     }
 
     public static void FadeMusicIn(Sounds music)
@@ -263,8 +281,8 @@ public class AudioManager : MonoBehaviour
             instance.voicelineSource.volume = SaveDataManager.saveData.voicelinesVolume;
         if (instance.sfxSource)
             instance.sfxSource.volume = SaveDataManager.saveData.sfxVolume;
-        if (instance.dialogueSfxSource)
-            instance.dialogueSfxSource.volume = SaveDataManager.saveData.sfxVolume;
+        if (instance.loopingSfxSource)
+            instance.loopingSfxSource.volume = SaveDataManager.saveData.sfxVolume;
         if (instance.musicSource)
             instance.musicSource.volume = SaveDataManager.saveData.bgmVolume;
     }

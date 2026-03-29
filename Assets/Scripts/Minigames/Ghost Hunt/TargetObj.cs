@@ -70,17 +70,17 @@ public class TargetObj : MonoBehaviour
         if (chance < ghostChance)
         {
             currentTarget = ghosts[Random.Range(0, ghosts.Length)];
-            AudioManager.PlaySound(Sounds.SpawnGhost, false);
+            AudioManager.PlaySound(Sounds.SpawnGhost, true);
         }
         else if (chance > ghostChance && chance < ghostChance + bunnyChance)
         {
             currentTarget = bunnies[Random.Range(0, bunnies.Length)];
-            AudioManager.PlaySound(Sounds.SpawnBunny, false);
+            AudioManager.PlaySound(Sounds.SpawnBunny, true);
         }
         else if (chance > ghostChance + bunnyChance)
         {
             currentTarget = deers[Random.Range(0, deers.Length)];
-            AudioManager.PlaySound(Sounds.SpawnDeer, false);
+            AudioManager.PlaySound(Sounds.SpawnDeer, true);
         }
 
         image.sprite = currentTarget.sprite;
@@ -93,7 +93,8 @@ public class TargetObj : MonoBehaviour
 
     public void Shoot()
     {
-        AudioManager.PlaySound(Sounds.Hit, false);
+        AudioManager.instance.PlayShoot();
+        AudioManager.PlaySound(currentTarget.type == TargetType.Ghost ? Sounds.Hit : Sounds.Wrong, true);
         if (disappearCoroutine != null)
             StopCoroutine(disappearCoroutine);
         image.enabled = false;

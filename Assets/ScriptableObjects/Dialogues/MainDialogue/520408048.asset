@@ -15,11 +15,11 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: -572423728
-  delay: 3
+  nextDialogueID: 447000736
+  delay: 30
   answersID: []
-  eventToPlay: 0
-  soundToPlay: 0
+  eventToPlay: 9
+  soundToPlay: 20
   loopSound: 0
   musicToPlay: 0
   minigame: 0

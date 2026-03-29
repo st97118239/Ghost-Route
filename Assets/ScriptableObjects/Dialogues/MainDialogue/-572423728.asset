@@ -16,7 +16,7 @@ MonoBehaviour:
   text: 
   voiceline: {fileID: 0}
   nextDialogueID: -1916325152
-  delay: 0
+  delay: 2
   answersID: []
   eventToPlay: 0
   soundToPlay: 0

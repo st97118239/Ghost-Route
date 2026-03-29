@@ -35,7 +35,10 @@ public class Phantom : Enemy
                     spriteRenderer.flipX = playerPos.x > transform.position.x;
                 }
                 else
+                {
                     transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * moveSpeed);
+                    spriteRenderer.flipX = borderIdx != 1;
+                }
                 yield return null;
             }
 

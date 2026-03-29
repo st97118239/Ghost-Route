@@ -57,7 +57,6 @@ public class AcheronManager : MonoBehaviour
 
     public void StartGame()
     {
-        AudioManager.instance.PlayButtonClick();
         startPanel.SetActive(false);
         StartCoroutine(SpawnHearts());
     }
@@ -79,13 +78,13 @@ public class AcheronManager : MonoBehaviour
 
     public void Instakill()
     {
-        AudioManager.PlaySound(Sounds.Fall, false);
         for (int i = 0; i < heartCount; i++) 
             Hit();
     }
 
     public void Hit()
     {
+        AudioManager.PlaySound(Sounds.Damage, true);
         heartCount--;
         hearts[heartCount].sprite = emptyHeartImage;
 
@@ -99,12 +98,7 @@ public class AcheronManager : MonoBehaviour
         eventSystem.SetSelectedGameObject(retryButton);
     }
 
-    public void RetryButton()
-    {
-        AudioManager.instance.PlayButtonClick();
-
-        StartCoroutine(Respawn());
-    }
+    public void RetryButton() => StartCoroutine(Respawn());
 
     private IEnumerator Respawn()
     {
@@ -135,6 +129,7 @@ public class AcheronManager : MonoBehaviour
 
     public void Finish()
     {
+        AudioManager.PlaySound(Sounds.KeyJingle, true);
         SaveDataManager.saveData.hasPlayedAcheron = true;
         sceneToGoTo = "Dialogue";
         FadeManager.StartFade(false, LoadScene, Color.black);

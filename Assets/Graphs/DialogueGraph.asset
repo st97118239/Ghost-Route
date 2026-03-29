@@ -285,6 +285,7 @@ MonoBehaviour:
     - rid: 7815180819647955326
     - rid: 7815180819647955328
     - rid: 7815180819647955330
+    - rid: 7815180883322470506
     utilityNodes:
     - rid: 7815180819647955050
     - rid: 7815180819647955052
@@ -294,8 +295,8 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -45798.617, y: -433.51636, z: 0}
-    viewScale: {x: 1, y: 1, z: 1}
+    viewPosition: {x: -10400.834, y: 229.42047, z: 0}
+    viewScale: {x: 0.25, y: 0.25, z: 1}
   references:
     version: 2
     RefIds:
@@ -2026,8 +2027,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2060,8 +2061,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2094,8 +2095,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2129,8 +2130,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2146,7 +2147,7 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568150
-        nodeX: 11481.881
+        nodeX: 11480.881
         nodeY: 1329.97
         name: DialogueNode
         isUtilityNode: 0
@@ -2163,8 +2164,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2198,8 +2199,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180684838568154
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2249,8 +2250,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2283,8 +2284,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2317,8 +2318,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2351,8 +2352,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2386,8 +2387,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2420,8 +2421,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2455,8 +2456,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2489,8 +2490,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2524,8 +2525,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2558,8 +2559,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2752,7 +2753,7 @@ MonoBehaviour:
         - rid: 7815180684838568138
         eventToPlay: 2
         soundToPlay: 15
-        loopSound: 0
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -2768,8 +2769,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180789176336546
-        nodeX: -997.7571
-        nodeY: 1039.4795
+        nodeX: -1222.0289
+        nodeY: 1040.4681
         name: DialogueHolderNode
         isUtilityNode: 0
         foldouts: []
@@ -3422,8 +3423,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180793305104625
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3476,8 +3477,8 @@ MonoBehaviour:
         - rid: 7815180815996813633
         - rid: 7815180815996813635
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3493,8 +3494,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813411
-        nodeX: -755.2635
-        nodeY: 1033.0491
+        nodeX: -980.53534
+        nodeY: 1031.0377
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3510,7 +3511,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 9
-        soundToPlay: 20
+        soundToPlay: 0
         loopSound: 0
         musicToPlay: 0
         minigame: 0
@@ -3527,8 +3528,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813426
-        nodeX: -537.4485
-        nodeY: 1031.548
+        nodeX: -762.72034
+        nodeY: 1031.5366
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3540,11 +3541,11 @@ MonoBehaviour:
         text: 
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180815996813432
-        delay: 3
+          rid: 7815180883322470507
+        delay: 30
         answers: []
-        eventToPlay: 0
-        soundToPlay: 0
+        eventToPlay: 9
+        soundToPlay: 20
         loopSound: 0
         musicToPlay: 0
         minigame: 0
@@ -3575,7 +3576,7 @@ MonoBehaviour:
         voiceline: {fileID: 0}
         nextDialogue:
           rid: 7815180684838567937
-        delay: 0
+        delay: 2
         answers: []
         eventToPlay: 0
         soundToPlay: 0
@@ -3646,8 +3647,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813637
-        nodeX: 18660.81
-        nodeY: 735.06854
+        nodeX: 18661.81
+        nodeY: 733.06854
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -3663,8 +3664,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3697,8 +3698,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3731,8 +3732,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3765,8 +3766,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3799,8 +3800,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3833,8 +3834,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3867,8 +3868,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3902,8 +3903,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3936,8 +3937,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -3970,8 +3971,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -4004,8 +4005,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -4040,7 +4041,7 @@ MonoBehaviour:
         - rid: 7815180815996813664
         eventToPlay: 2
         soundToPlay: 15
-        loopSound: 0
+        loopSound: 1
         musicToPlay: 1
         minigame: 0
         scoreToWin: 0
@@ -4785,8 +4786,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180819647955055
-        nodeX: -754.0735
-        nodeY: 956.4232
+        nodeX: -979.34534
+        nodeY: 954.41187
         name: Scene 1
         isUtilityNode: 1
         foldouts: []
@@ -5674,7 +5675,7 @@ MonoBehaviour:
         answers: []
         eventToPlay: 2
         soundToPlay: 15
-        loopSound: 0
+        loopSound: 1
         musicToPlay: 0
         minigame: 0
         scoreToWin: 0
@@ -5708,8 +5709,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955119
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -5759,8 +5760,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -5794,8 +5795,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955125
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6016,8 +6017,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 2
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6051,8 +6052,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955143
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6103,8 +6104,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955149
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6154,8 +6155,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6188,8 +6189,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6222,8 +6223,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6257,8 +6258,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955161
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6291,7 +6292,7 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180819647955163
-        nodeX: 35781.22
+        nodeX: 35782.22
         nodeY: 1026.5459
         name: DialogueNode
         isUtilityNode: 0
@@ -6308,8 +6309,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6342,8 +6343,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6377,8 +6378,8 @@ MonoBehaviour:
         answers:
         - rid: 7815180819647955169
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6428,8 +6429,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6462,8 +6463,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6496,8 +6497,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6530,8 +6531,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6566,8 +6567,8 @@ MonoBehaviour:
         - rid: 7815180819647955185
         - rid: 7815180819647955187
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6600,8 +6601,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6668,7 +6669,7 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
+        soundToPlay: 15
         loopSound: 0
         musicToPlay: 22
         minigame: 0
@@ -6702,8 +6703,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6736,8 +6737,8 @@ MonoBehaviour:
         delay: 0
         answers: []
         eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
+        soundToPlay: 15
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -6771,7 +6772,7 @@ MonoBehaviour:
         answers: []
         eventToPlay: 2
         soundToPlay: 15
-        loopSound: 0
+        loopSound: 1
         musicToPlay: 22
         minigame: 0
         scoreToWin: 0
@@ -8419,3 +8420,37 @@ MonoBehaviour:
     - rid: 7815180819647955362
       type: {class: CommentNode, ns: NewGraph, asm: NewGraph.Editor}
       data: 
+    - rid: 7815180883322470506
+      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
+      data:
+        nodeData:
+          rid: 7815180883322470507
+        nodeX: -543.9247
+        nodeY: 1029.1155
+        name: DialogueNode
+        isUtilityNode: 0
+        foldouts: []
+    - rid: 7815180883322470507
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
+      data:
+        dialogue: {fileID: 11400000, guid: 960ee8bd18fd0094391503cc7c76c0b3, type: 2}
+        charName: 
+        text: 
+        voiceline: {fileID: 0}
+        nextDialogue:
+          rid: 7815180815996813432
+        delay: 3
+        answers: []
+        eventToPlay: 0
+        soundToPlay: 0
+        loopSound: 0
+        musicToPlay: 1
+        minigame: 0
+        scoreToWin: 0
+        wonDialogue:
+          rid: -2
+        loseDialogue:
+          rid: -2
+        ending: {fileID: 0}
+        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
+        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}

@@ -45,8 +45,6 @@ public class Player : MonoBehaviour
 
     private bool startFall;
 
-    private Coroutine moveCoroutine;
-
     private bool hasFinished;
 
     public void ResetCam()
@@ -86,6 +84,8 @@ public class Player : MonoBehaviour
 
         quit.Enable();
         devInputAction.Enable();
+
+        AudioManager.PlaySound(Sounds.Fall, true);
     }
 
     private void FixedUpdate()
@@ -207,7 +207,7 @@ public class Player : MonoBehaviour
     private void StartJump()
     {
         animator.SetBool("Walk", false);
-        AudioManager.PlaySound(Sounds.Jump, false);
+        AudioManager.PlaySound(Sounds.Jump, true);
         rb2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 
         isOnGround = false;
@@ -252,7 +252,7 @@ public class Player : MonoBehaviour
     {
         if (!isInvincible)
             acheronManager.Hit();
-        AudioManager.PlaySound(Sounds.Damage, false);
+        AudioManager.PlaySound(Sounds.Damage, true);
     }
 
     public void End(bool dead, bool finish)

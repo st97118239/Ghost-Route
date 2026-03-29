@@ -56,7 +56,6 @@ public class EndingsManager : MonoBehaviour
     public void Show()
     {
         endingsCanvas.gameObject.SetActive(true);
-        AudioManager.PlaySound(Sounds.Ending, false);
         devInputAction.performed += DevUnlockAllEndings;
         devInputAction.Enable();
     }

@@ -218,7 +218,8 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator StartDelay()
     {
         canClick = false;
-        AudioManager.PlaySound(Sounds.Dialogue, false);
+        if (textBox.text != string.Empty)
+            AudioManager.PlaySound(Sounds.Dialogue, false);
 
         if (currentDialogue.delay > 0)
         {
@@ -642,7 +643,10 @@ public class DialogueManager : MonoBehaviour
         isPlayingSound = true;
         playingSound = currentDialogue.soundToPlay;
 
-        AudioManager.PlaySound(playingSound, currentDialogue.loopSound);
+        if (currentDialogue.loopSound)
+            AudioManager.PlayLoopingSound(playingSound);
+        else
+            AudioManager.PlaySound(playingSound, true);
 
         if (!currentDialogue.loopSound)
             isPlayingSound = false;

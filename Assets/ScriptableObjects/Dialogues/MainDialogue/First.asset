@@ -19,7 +19,7 @@ MonoBehaviour:
   delay: 0
   answersID: []
   eventToPlay: 9
-  soundToPlay: 20
+  soundToPlay: 0
   loopSound: 0
   musicToPlay: 0
   minigame: 0
