@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Animator backgroundAnimator;
     [SerializeField] private Animator animatorBackgroundAnimator;
+    private static readonly int AcheronStartup = Animator.StringToHash("AcheronStartup");
     [SerializeField] private float charDisappearTime;
 
     [SerializeField] private AnswerButton[] answerButtons;
@@ -61,6 +62,9 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private Animator ghostAnimator;
     private static readonly int Move = Animator.StringToHash("Move");
+
+    [SerializeField] private Animator vignetteAnimator;
+    private static readonly int Vignette = Animator.StringToHash("Vignette");
 
     private Coroutine dialogueCoroutine;
     private Coroutine startDelayCoroutine;
@@ -282,11 +286,13 @@ public class DialogueManager : MonoBehaviour
                 yield break;
             case Events.BlackScreen:
                 hasBlackScreen = true;
+                vignetteAnimator.gameObject.SetActive(true);
+                vignetteAnimator.SetTrigger(Vignette);
                 FadeManager.Show();
                 break;
             case Events.AcheronMachine:
                 animatorBackgroundAnimator.gameObject.SetActive(true);
-                animatorBackgroundAnimator.SetTrigger("AcheronStartup");
+                animatorBackgroundAnimator.SetTrigger(AcheronStartup);
                 yield return wait1Second;
                 yield return wait1Second;
                 yield return wait1Second;
