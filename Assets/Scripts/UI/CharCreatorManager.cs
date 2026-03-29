@@ -62,6 +62,22 @@ public class CharCreatorManager : MonoBehaviour
         namePanel.SetActive(!namePanel.activeSelf);
     }
 
+    public void SelectNameField()
+    {
+        if (dialogueInputField.gameObject.activeSelf) return;
+
+        devInputAction.Disable();
+        devInputAction.performed -= DevShowInputField;
+    }
+
+    public void DeselectNameField()
+    {
+        if (dialogueInputField.gameObject.activeSelf) return;
+
+        devInputAction.performed += DevShowInputField;
+        devInputAction.Enable();
+    }
+
     public void UpdateName()
     {
         if (nameInput.text == string.Empty || nameInput.text.StartsWith(" ") || invalidDialogueID)
@@ -102,7 +118,7 @@ public class CharCreatorManager : MonoBehaviour
 
     public void BackButton()
     {
-        mainMenu.Show();
+        mainMenu.Show(false);
         charCreatorCanvas.gameObject.SetActive(false);
         devInputAction.Disable();
         devInputAction.performed -= DevShowInputField;

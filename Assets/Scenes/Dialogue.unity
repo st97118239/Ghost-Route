@@ -2816,6 +2816,8 @@ MonoBehaviour:
   enableDevInput: 1
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
   dialogueInputField: {fileID: 463285193}
+  targetsHolder: {fileID: 11400000, guid: dabc374f905b5d64f947ec42710cb757, type: 2}
+  ghostImage: {fileID: 378755665}
   ghostAnimator: {fileID: 378755664}
   vignetteAnimator: {fileID: 1148495150}
 --- !u!4 &1320757395

@@ -175,7 +175,7 @@ public class SettingsManager : MonoBehaviour
     public void BackButton()
     {
         SaveDataManager.Save();
-        mainMenu.Show();
+        mainMenu.Show(false);
         settingsCanvas.gameObject.SetActive(false);
     }
 }

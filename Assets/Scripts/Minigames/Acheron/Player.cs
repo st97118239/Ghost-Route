@@ -225,8 +225,6 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spear"))
             Hit();
-        else if (other.gameObject.CompareTag("Finish"))
-            End(false, true);
         else if (other.gameObject.CompareTag("Platform") && isFalling)
         {
             if (!CheckIfOnGround()) return;
@@ -237,6 +235,12 @@ public class Player : MonoBehaviour
             currentPlatform = other.gameObject.GetComponent<Platform>();
             currentPlatform.HitPlatform(true);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Finish"))
+            End(false, true);
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -276,8 +280,6 @@ public class Player : MonoBehaviour
         devInputAction.performed -= DevInvincible;
         devInputAction.Disable();
 
-        //StopAllCoroutines();
-        
         if (dead)
         {
             acheronManager.ShowDeathScreen();

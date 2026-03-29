@@ -60,6 +60,8 @@ public class DialogueManager : MonoBehaviour
 
     private WaitForSeconds wait1Second;
 
+    [SerializeField] private TargetsHolder targetsHolder;
+    [SerializeField] private Image ghostImage;
     [SerializeField] private Animator ghostAnimator;
     private static readonly int Move = Animator.StringToHash("Move");
 
@@ -248,6 +250,7 @@ public class DialogueManager : MonoBehaviour
             case Events.None:
                 break;
             case Events.GhostZoom:
+                ghostImage.sprite = targetsHolder.ghosts[Random.Range(0, targetsHolder.ghosts.Length)].sprite;
                 ghostAnimator.SetTrigger(Move);
                 yield return wait1Second;
                 break;

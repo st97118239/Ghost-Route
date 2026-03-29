@@ -238,7 +238,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -775,6 +775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FerrymanManager (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4533988288881651378, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 479890784}
     - target: {fileID: 6251597800805705458, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.36
@@ -1817,6 +1821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FerrymanManager (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4533988288881651378, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 479890784}
     - target: {fileID: 6251597800805705458, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.55
@@ -3201,6 +3209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FerrymanManager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4533988288881651378, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 479890784}
     - target: {fileID: 6339850916981872039, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.94
@@ -3818,6 +3830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FerrymanManager (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4533988288881651378, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 479890784}
     - target: {fileID: 6251597800805705458, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.78
@@ -3929,7 +3945,10 @@ MonoBehaviour:
   enableDevInput: 0
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
   dialogueInputField: {fileID: 0}
+  targetsHolder: {fileID: 0}
+  ghostImage: {fileID: 0}
   ghostAnimator: {fileID: 0}
+  vignetteAnimator: {fileID: 0}
 --- !u!4 &1242667073
 Transform:
   m_ObjectHideFlags: 0
@@ -4061,6 +4080,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.06
       objectReference: {fileID: 0}
+    - target: {fileID: 4533988288881651378, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 479890784}
     - target: {fileID: 6251597800805705458, guid: 98ad5632e496e14449736da6acc1cd39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.5

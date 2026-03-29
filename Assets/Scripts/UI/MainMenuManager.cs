@@ -33,7 +33,7 @@ public class MainMenuManager : MonoBehaviour
     {
         FadeManager.Show();
         endings = _endings;
-        Show();
+        Show(true);
 
         if (SaveDataManager.saveData == null)
             SaveDataManager.LookForSave();
@@ -43,9 +43,11 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        FadeManager.StartFade(true, null, Color.black);
+        FadeManager.StartFade(true, ShowMoon, Color.black);
         AudioManager.FadeMusicIn(Sounds.MainMusic);
     }
+
+    private void ShowMoon() => backgroundChanger.ChangeBackground(true);
 
     private IEnumerator MoveEyeLoop()
     {
@@ -86,10 +88,11 @@ public class MainMenuManager : MonoBehaviour
         eyeTrans.localPosition = Vector3.zero;
     }
 
-    public void Show()
+    public void Show(bool isFromStart)
     {
         mainMenuCanvas.gameObject.SetActive(true);
-        backgroundChanger.ChangeBackground(true);
+        if (!isFromStart)
+            backgroundChanger.ChangeBackground(true);
         StartCoroutine(MoveEyeLoop());
     }
 

@@ -7,11 +7,9 @@ public class TargetObj : MonoBehaviour
 {
     private GhostHuntManager manager;
 
-    [SerializeField] private Target[] ghosts;
+    [SerializeField] private TargetsHolder targetsHolder;
     [SerializeField] private int ghostChance;
-    [SerializeField] private Target[] bunnies;
     [SerializeField] private int bunnyChance;
-    [SerializeField] private Target[] deers;
     [SerializeField] private int deerChance;
     private Target currentTarget;
     private int totalChance;
@@ -32,26 +30,6 @@ public class TargetObj : MonoBehaviour
 
     private void Awake()
     {
-        if (ghosts == null || ghosts.Length == 0)
-        {
-            Debug.LogError(name + " is missing ghosts");
-            return;
-        }
-        if (image == null)
-        {
-            image = GetComponent<Image>();
-            Debug.LogWarning(name + " is missing the reference to its image");
-        }
-        if (button == null)
-        {
-            button = GetComponent<Button>();
-            Debug.LogWarning(name + " is missing the reference to its button");
-        }
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-            Debug.LogWarning(name + " is missing the reference to its animator");
-        }
         image.enabled = false;
         button.enabled = false;
         timeToDisappear = new WaitForSeconds(_timeToDisappear);
@@ -69,17 +47,17 @@ public class TargetObj : MonoBehaviour
         int chance = Random.Range(0, totalChance);
         if (chance < ghostChance)
         {
-            currentTarget = ghosts[Random.Range(0, ghosts.Length)];
+            currentTarget = targetsHolder.ghosts[Random.Range(0, targetsHolder.ghosts.Length)];
             AudioManager.PlaySound(Sounds.SpawnGhost, true);
         }
         else if (chance > ghostChance && chance < ghostChance + bunnyChance)
         {
-            currentTarget = bunnies[Random.Range(0, bunnies.Length)];
+            currentTarget = targetsHolder.bunnies[Random.Range(0, targetsHolder.bunnies.Length)];
             AudioManager.PlaySound(Sounds.SpawnBunny, true);
         }
         else if (chance > ghostChance + bunnyChance)
         {
-            currentTarget = deers[Random.Range(0, deers.Length)];
+            currentTarget = targetsHolder.deer[Random.Range(0, targetsHolder.deer.Length)];
             AudioManager.PlaySound(Sounds.SpawnDeer, true);
         }
 

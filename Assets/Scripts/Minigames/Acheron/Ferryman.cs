@@ -86,8 +86,6 @@ public class Ferryman : Enemy
         else
             playerPos += Vector3.down * distanceUnderPlayer;
 
-        Debug.Log(playerPos.y);
-
         float totalHeight = playerPos.y;
         float currentHeight = spear.position.y;
 

@@ -80,7 +80,7 @@ public class EndingsManager : MonoBehaviour
 
     public void BackButton()
     {
-        mainMenu.Show();
+        mainMenu.Show(false);
         endingsCanvas.gameObject.SetActive(false);
         devInputAction.Disable();
         devInputAction.performed -= DevUnlockAllEndings;
