@@ -3,10 +3,15 @@ using TMPro;
 using UnityEditor;
 #endif
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text startButtonText;
+    [SerializeField] private Transform eyeTrans;
+    [SerializeField] private Vector3 eyeClampLeftTop;
+    [SerializeField] private Vector3 eyeClampRightBottom;
 
     [SerializeField] private Canvas mainMenuCanvas;
     [SerializeField] private CharCreatorManager charCreatorManager;
@@ -19,10 +24,15 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private Ending[] _endings;
 
+    [SerializeField] private Camera mainCamera;
+
+    private Coroutine eyeCoroutine;
+
     private void Awake()
     {
         FadeManager.Show();
         endings = _endings;
+        Show();
 
         if (SaveDataManager.saveData == null)
             SaveDataManager.LookForSave();
@@ -36,9 +46,48 @@ public class MainMenuManager : MonoBehaviour
         AudioManager.FadeMusicIn(Sounds.MainMusic);
     }
 
+    private IEnumerator MoveEyeLoop()
+    {
+        eyeTrans.localPosition = Vector3.zero;
+
+        while (true)
+        {
+            Vector3 mousePos = mainCamera.ScreenToViewportPoint(Input.mousePosition);
+            Vector3 centeredMousePos = new(mousePos.x + 0.08f, mousePos.y - 0.22f);
+
+            float x = Mathf.Lerp(eyeClampLeftTop.x, eyeClampRightBottom.x, centeredMousePos.x);
+            float y = Mathf.Lerp(eyeClampLeftTop.y, eyeClampRightBottom.y, centeredMousePos.y);
+            float z = centeredMousePos.z;
+
+            eyeTrans.localPosition = new(x, y, z);
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator MoveEyeToMiddle()
+    {
+        StopCoroutine(eyeCoroutine);
+
+        Vector2 eyePos = new(eyeTrans.localPosition.x, eyeTrans.localPosition.y);
+
+        for (float i = 0; i < 1 + Time.deltaTime; i += Time.deltaTime)
+        {
+            float x = Mathf.Lerp(eyePos.x, 0, i);
+            float y = Mathf.Lerp(eyePos.y, 0, i);
+            const float z = 0;
+
+            eyeTrans.localPosition = new(x, y, z);
+            yield return Time.deltaTime;
+        }
+
+        eyeTrans.localPosition = Vector3.zero;
+    }
+
     public void Show()
     {
         mainMenuCanvas.gameObject.SetActive(true);
+        eyeCoroutine = StartCoroutine(MoveEyeLoop());
     }
 
     public void StartButton()
@@ -55,23 +104,27 @@ public class MainMenuManager : MonoBehaviour
     public void ShowCharCreator()
     {
         charCreatorManager.Show();
+        StopCoroutine(eyeCoroutine);
         mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void EndingsButton()
     {
         endingsManager.Show();
+        StopCoroutine(eyeCoroutine);
         mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void SettingsButton()
     {
         settingsManager.Show();
+        StopCoroutine(eyeCoroutine);
         mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void QuitButton()
     {
+        StartCoroutine(MoveEyeToMiddle());
         SaveDataManager.Save();
         AudioManager.FadeMusicOut();
         FadeManager.StartFade(false, Quit, Color.black);
