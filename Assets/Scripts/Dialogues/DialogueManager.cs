@@ -214,6 +214,7 @@ public class DialogueManager : MonoBehaviour
                 SkipWaitDialogue();
                 break;
             case false:
+                canClick = false;
                 startDelayCoroutine = StartCoroutine(StartDelay());
                 break;
         }
@@ -396,8 +397,16 @@ public class DialogueManager : MonoBehaviour
         if (currentDialogue.voiceline != null)
             voiceLineLength = AudioManager.PlayVoiceline(currentDialogue.voiceline);
 
-        isTyping = true;
-        canClick = true;
+        if (currentDialogue.text != string.Empty)
+        {
+            isTyping = true;
+            canClick = true;
+        }
+        else
+        {
+            isTyping = false;
+            canClick = false;
+        }
         if (nextButton != null)
             nextButton.interactable = true;
         string fullText = currentDialogue.text;

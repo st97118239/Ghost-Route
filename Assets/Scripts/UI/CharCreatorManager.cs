@@ -88,6 +88,11 @@ public class CharCreatorManager : MonoBehaviour
         SaveDataManager.saveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
         if (dialogueInputField.gameObject.activeSelf)
             SaveDataManager.saveData.currentDialogueID = dialogueInputField.text;
+        else
+        {
+            devInputAction.Disable();
+            devInputAction.performed -= DevShowInputField;
+        }
         FadeManager.StartFade(false, LoadGame, Color.black);
         AudioManager.FadeMusicOut();
     }
