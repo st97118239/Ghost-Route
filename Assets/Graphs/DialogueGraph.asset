@@ -295,7 +295,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -37588.426, y: -690.2356, z: 0}
+    viewPosition: {x: -22935.242, y: -687.796, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -4419,7 +4419,7 @@ MonoBehaviour:
         nodeData:
           rid: 7815180815996813701
         nodeX: 23754.512
-        nodeY: 1029.6018
+        nodeY: 1028.6018
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4531,7 +4531,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: c22259a4720fd894b9c6bb3fb3a756ff, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180815996813712
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}

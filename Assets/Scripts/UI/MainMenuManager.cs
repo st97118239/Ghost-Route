@@ -26,7 +26,7 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private Camera mainCamera;
 
-    private Coroutine eyeCoroutine;
+    private bool shouldMoveEye;
 
     private void Awake()
     {
@@ -48,9 +48,10 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator MoveEyeLoop()
     {
+        shouldMoveEye = true;
         eyeTrans.localPosition = Vector3.zero;
 
-        while (true)
+        while (shouldMoveEye)
         {
             Vector3 mousePos = mainCamera.ScreenToViewportPoint(Input.mousePosition);
             Vector3 centeredMousePos = new(mousePos.x + 0.08f, mousePos.y - 0.22f);
@@ -67,7 +68,7 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator MoveEyeToMiddle()
     {
-        StopCoroutine(eyeCoroutine);
+        shouldMoveEye = false;
 
         Vector2 eyePos = new(eyeTrans.localPosition.x, eyeTrans.localPosition.y);
 
@@ -87,7 +88,7 @@ public class MainMenuManager : MonoBehaviour
     public void Show()
     {
         mainMenuCanvas.gameObject.SetActive(true);
-        eyeCoroutine = StartCoroutine(MoveEyeLoop());
+        StartCoroutine(MoveEyeLoop());
     }
 
     public void StartButton()
@@ -104,21 +105,21 @@ public class MainMenuManager : MonoBehaviour
     public void ShowCharCreator()
     {
         charCreatorManager.Show();
-        StopCoroutine(eyeCoroutine);
+        shouldMoveEye = false;
         mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void EndingsButton()
     {
         endingsManager.Show();
-        StopCoroutine(eyeCoroutine);
+        shouldMoveEye = false;
         mainMenuCanvas.gameObject.SetActive(false);
     }
 
     public void SettingsButton()
     {
         settingsManager.Show();
-        StopCoroutine(eyeCoroutine);
+        shouldMoveEye = false;
         mainMenuCanvas.gameObject.SetActive(false);
     }
 

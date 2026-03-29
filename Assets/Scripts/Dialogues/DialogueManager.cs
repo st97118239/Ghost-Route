@@ -285,10 +285,13 @@ public class DialogueManager : MonoBehaviour
                 StartAcheron();
                 yield break;
             case Events.BlackScreen:
-                hasBlackScreen = true;
-                vignetteAnimator.gameObject.SetActive(true);
-                vignetteAnimator.SetTrigger(Vignette);
-                FadeManager.Show();
+                if (!hasBlackScreen)
+                {
+                    hasBlackScreen = true;
+                    vignetteAnimator.gameObject.SetActive(true);
+                    vignetteAnimator.SetTrigger(Vignette);
+                    FadeManager.Show();
+                }
                 break;
             case Events.AcheronMachine:
                 animatorBackgroundAnimator.gameObject.SetActive(true);
