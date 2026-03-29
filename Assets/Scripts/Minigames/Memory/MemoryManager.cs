@@ -62,17 +62,19 @@ public class MemoryManager : MonoBehaviour
         StartCoroutine(SpawnCards());
     }
 
-    private void Start() => FadeManager.StartFade(true, StartVoicelines, Color.black);
+    private void Start()
+    {
+        FadeManager.StartFade(true, StartVoicelines, Color.black);
+    }
 
     private void StartVoicelines()
     {
-        AudioManager.PlaySound(Sounds.Music, false);
         StartCoroutine(PlayVoicelines());
     }
 
     private IEnumerator PlayVoicelines()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
 
         if (beginVoicelines != null && beginVoicelines.Length > 0)
         {
@@ -84,6 +86,8 @@ public class MemoryManager : MonoBehaviour
             }
         }
 
+        AudioManager.FadeMusicIn(Sounds.MainMusic);
+        yield return new WaitForSeconds(0.3f);
         StartCoroutine(EnableCards());
     }
 
@@ -255,10 +259,10 @@ public class MemoryManager : MonoBehaviour
     {
         devInputAction.Disable();
         devInputAction.performed -= DevShowCards;
-        AudioManager.PlaySound(Sounds.Ending, false);
         SaveDataManager.saveData.hasPlayedMemory = true;
         SaveDataManager.saveData.memoryScore = playerPoints;
         FadeManager.StartFade(false, ExitGame, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     private static void ExitGame() => SceneManager.LoadScene("Dialogue");

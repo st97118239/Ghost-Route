@@ -15,12 +15,13 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 156236624
+  nextDialogueID: -515593088
   delay: 0
   answersID: []
   eventToPlay: 10
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 21
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

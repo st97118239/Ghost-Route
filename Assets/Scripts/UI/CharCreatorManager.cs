@@ -72,6 +72,7 @@ public class CharCreatorManager : MonoBehaviour
         SaveDataManager.saveData.name = nameInput.text;
         SaveDataManager.saveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
         FadeManager.StartFade(false, LoadGame, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     public void BackButton()

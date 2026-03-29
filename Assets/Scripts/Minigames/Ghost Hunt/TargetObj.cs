@@ -131,7 +131,8 @@ public class TargetObj : MonoBehaviour
 
     public void DevCheat()
     {
-        ghostChance = 100;
+        if (ghostChance > 0)
+            ghostChance = 100;
         deerChance = 0;
         bunnyChance = 0;
     }

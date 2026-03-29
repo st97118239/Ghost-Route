@@ -167,11 +167,10 @@ public class DialogueManager : MonoBehaviour
 
                 if (startingDialogue == string.Empty)
                     startingDialogue = dialogue.nextDialogueID;
-
-                dialogue = FindDialogue(startingDialogue);
             }
         }
 
+        dialogue = FindDialogue(startingDialogue);
 
         if (backgroundImage != null && dialogue.background != null)
             backgroundImage.sprite = dialogue.background;
@@ -181,9 +180,12 @@ public class DialogueManager : MonoBehaviour
             charImage.color = dialogue.sprite == null ? Color.clear : Color.white;
         }
 
-        AudioManager.PlaySound(Sounds.Music, false);
-        if (FindDialogue(startingDialogue).eventToPlay != Events.BlackScreen)
+        if (dialogue.eventToPlay != Events.BlackScreen)
+        {
             FadeManager.StartFade(true, Load, Color.black);
+            if (dialogue.musicToPlay != Sounds.None)
+                AudioManager.FadeMusicIn(dialogue.musicToPlay);
+        }
         else
             Load();
         if (enableDevInput)
@@ -228,8 +230,6 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(currentDialogue.delay);
         }
 
-        StartCoroutine(PlaySound());
-
         if (hasBlackScreen && currentDialogue.eventToPlay != Events.BlackScreen)
         {
             hasBlackScreen = false;
@@ -247,9 +247,13 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Events.FadeBlack:
                 FadeManager.StartFade(false, FadeBetweenDialoguesBlack, Color.black);
+                if (currentDialogue.nextDialogueID != string.Empty && FindDialogue(currentDialogue.nextDialogueID).musicToPlay != currentDialogue.musicToPlay)
+                    AudioManager.FadeMusicOut();
                 yield break;
             case Events.FadeWhite:
                 FadeManager.StartFade(false, FadeBetweenDialoguesWhite, Color.white);
+                if (FindDialogue(currentDialogue.nextDialogueID).musicToPlay != currentDialogue.musicToPlay)
+                    AudioManager.FadeMusicOut();
                 yield break;
             case Events.CameraLookAround:
                 StartCoroutine(EventLookAround());
@@ -340,6 +344,16 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ShowDialogue()
     {
+        StartCoroutine(PlaySound());
+
+        if (acheronManager == null)
+        {
+            if (currentDialogue.musicToPlay != Sounds.None)
+                AudioManager.FadeMusicIn(currentDialogue.musicToPlay);
+            else
+                AudioManager.FadeMusicOut();
+        }
+
         if (nameText != null)
         {
             nameText.text = currentDialogue.charName;
@@ -674,6 +688,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         endingCanvasGroup.alpha = 1;
+        if (currentDialogue.musicToPlay == Sounds.None)
+            AudioManager.FadeMusicIn(Sounds.Ending);
     }
 
     public void MainMenuButton()
@@ -750,6 +766,7 @@ public class DialogueManager : MonoBehaviour
         }
         sceneToGoTo = sceneName;
         FadeManager.StartFade(false, LoadScene, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     private void LoadScene()

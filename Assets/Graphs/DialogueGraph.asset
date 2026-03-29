@@ -160,7 +160,6 @@ MonoBehaviour:
     - rid: 7815180815996813712
     - rid: 7815180815996813715
     - rid: 7815180815996813717
-    - rid: 7815180815996813719
     - rid: 7815180815996813721
     - rid: 7815180815996813723
     - rid: 7815180815996813725
@@ -295,8 +294,8 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -13132.436, y: -54.69928, z: 0}
-    viewScale: {x: 0.32690176, y: 0.32690176, z: 1}
+    viewPosition: {x: -45798.617, y: -433.51636, z: 0}
+    viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -327,6 +326,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -377,6 +377,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -411,6 +412,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -462,6 +464,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -513,6 +516,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -563,6 +567,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -596,6 +601,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -629,6 +635,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -663,6 +670,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -713,6 +721,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -746,6 +755,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -779,6 +789,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -814,6 +825,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -881,6 +893,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -915,6 +928,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -965,6 +979,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -999,6 +1014,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1049,6 +1065,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1083,6 +1100,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1135,6 +1153,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1202,6 +1221,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1235,6 +1255,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1268,6 +1289,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1301,6 +1323,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1335,6 +1358,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1385,6 +1409,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1418,6 +1443,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1452,6 +1478,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1485,6 +1512,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1522,6 +1550,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1606,6 +1635,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1639,6 +1669,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1672,6 +1703,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1705,6 +1737,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1738,6 +1771,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1771,6 +1805,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1804,6 +1839,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1837,6 +1873,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1870,6 +1907,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1903,6 +1941,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -1989,6 +2028,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2022,6 +2062,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2055,6 +2096,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2089,6 +2131,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2122,6 +2165,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2156,6 +2200,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2206,6 +2251,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2239,6 +2285,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2272,6 +2319,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2305,6 +2353,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2339,6 +2388,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2372,6 +2422,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2406,6 +2457,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2439,6 +2491,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2473,6 +2526,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2506,6 +2560,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2539,6 +2594,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2573,6 +2629,7 @@ MonoBehaviour:
         eventToPlay: 1
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2623,6 +2680,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 1
         scoreToWin: 0
         wonDialogue:
@@ -2658,6 +2716,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2694,6 +2753,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 15
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2778,6 +2838,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2815,6 +2876,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2899,6 +2961,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2932,6 +2995,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2965,6 +3029,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -2998,6 +3063,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3031,6 +3097,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3064,6 +3131,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3097,6 +3165,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3131,6 +3200,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3181,6 +3251,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3214,6 +3285,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3247,6 +3319,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3282,6 +3355,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 15
         loopSound: 1
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3350,6 +3424,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3403,6 +3478,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3436,6 +3512,7 @@ MonoBehaviour:
         eventToPlay: 9
         soundToPlay: 20
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3469,6 +3546,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3502,6 +3580,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3586,6 +3665,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3619,6 +3699,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3652,6 +3733,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3685,6 +3767,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3718,6 +3801,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3751,6 +3835,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3784,6 +3869,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3818,6 +3904,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3851,6 +3938,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3884,6 +3972,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3917,6 +4006,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -3951,6 +4041,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 15
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4001,6 +4092,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 1
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4034,6 +4126,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4069,6 +4162,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4137,6 +4231,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4188,6 +4283,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 15
         loopSound: 1
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4238,6 +4334,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4271,6 +4368,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 15
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4304,6 +4402,7 @@ MonoBehaviour:
         eventToPlay: 4
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4337,6 +4436,7 @@ MonoBehaviour:
         eventToPlay: 5
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4371,6 +4471,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4378,7 +4479,7 @@ MonoBehaviour:
         loseDialogue:
           rid: -2
         ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: c22259a4720fd894b9c6bb3fb3a756ff, type: 3}
+        sprite: {fileID: 0}
         background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180815996813708
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
@@ -4396,14 +4497,14 @@ MonoBehaviour:
         answer: {fileID: 11400000, guid: b08834920ddb8174d98f1641616f795e, type: 2}
         text: I think I recognise that game.
         dialogue:
-          rid: 7815180815996813711
+          rid: 7815180815996813716
     - rid: 7815180815996813710
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180815996813711
-        nodeX: 24423.229
-        nodeY: 1028.5859
+        nodeX: 24975.918
+        nodeY: 1029.841
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4421,6 +4522,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4435,8 +4537,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813713
-        nodeX: 24643.229
-        nodeY: 1027.5859
+        nodeX: 25248.383
+        nodeY: 1027.0919
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4448,12 +4550,13 @@ MonoBehaviour:
         text: 
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180815996813716
+          rid: 7815180815996813722
         delay: 0
         answers: []
         eventToPlay: 10
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4468,8 +4571,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180815996813716
-        nodeX: 24863.229
-        nodeY: 1027.5859
+        nodeX: 24452.22
+        nodeY: 1029.0919
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4487,6 +4590,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4495,14 +4599,14 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        background: {fileID: 21300000, guid: ce3229b8fd1dd8d4292fed46b6d93bab, type: 3}
+        background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180815996813717
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
         nodeData:
           rid: 7815180815996813718
-        nodeX: 25081.229
-        nodeY: 1029.5859
+        nodeX: 24700.947
+        nodeY: 1029.3428
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -4514,12 +4618,13 @@ MonoBehaviour:
         text: Let's have a look...
         voiceline: {fileID: 0}
         nextDialogue:
-          rid: 7815180815996813720
+          rid: 7815180815996813711
         delay: 0
         answers: []
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4528,40 +4633,7 @@ MonoBehaviour:
           rid: -2
         ending: {fileID: 0}
         sprite: {fileID: 0}
-        background: {fileID: 21300000, guid: ce3229b8fd1dd8d4292fed46b6d93bab, type: 3}
-    - rid: 7815180815996813719
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180815996813720
-        nodeX: 25298.229
-        nodeY: 1029.5859
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180815996813720
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 1f3d6f621a46ce5449fde0b3d42c9a7f, type: 2}
-        charName: 
-        text: 
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180815996813722
-        delay: 2
-        answers: []
-        eventToPlay: 0
-        soundToPlay: 0
-        loopSound: 0
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 0}
-        background: {fileID: 21300000, guid: ce3229b8fd1dd8d4292fed46b6d93bab, type: 3}
+        background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}
     - rid: 7815180815996813721
       type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
       data:
@@ -4587,6 +4659,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4637,6 +4710,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 2
         scoreToWin: 0
         wonDialogue:
@@ -4670,6 +4744,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4745,6 +4820,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4829,6 +4905,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4862,6 +4939,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4895,6 +4973,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4928,6 +5007,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4961,6 +5041,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -4995,6 +5076,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5048,6 +5130,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5132,6 +5215,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5165,6 +5249,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5198,6 +5283,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5231,6 +5317,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5264,6 +5351,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5278,8 +5366,8 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180819647955097
-        nodeX: 28933.086
-        nodeY: 1333.0088
+        nodeX: 28937.086
+        nodeY: 1344.0088
         name: DialogueNode
         isUtilityNode: 0
         foldouts: []
@@ -5297,6 +5385,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5330,6 +5419,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5364,6 +5454,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5414,6 +5505,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 18
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5447,6 +5539,7 @@ MonoBehaviour:
         eventToPlay: 6
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5480,6 +5573,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 19
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5513,6 +5607,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5546,6 +5641,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 21
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5579,6 +5675,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 15
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5613,6 +5710,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5663,6 +5761,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5697,6 +5796,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5747,6 +5847,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5780,6 +5881,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5813,6 +5915,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5847,6 +5950,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5880,6 +5984,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5913,6 +6018,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5947,6 +6053,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -5998,6 +6105,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6048,6 +6156,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6081,6 +6190,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6114,6 +6224,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6148,6 +6259,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6198,6 +6310,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6231,6 +6344,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6265,6 +6379,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6315,6 +6430,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6348,6 +6464,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6381,6 +6498,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6414,6 +6532,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6449,6 +6568,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6482,6 +6602,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6549,6 +6670,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6582,6 +6704,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6615,6 +6738,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6648,6 +6772,7 @@ MonoBehaviour:
         eventToPlay: 2
         soundToPlay: 15
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6682,6 +6807,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6732,6 +6858,7 @@ MonoBehaviour:
         eventToPlay: 7
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6765,6 +6892,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 3
         scoreToWin: 5
         wonDialogue:
@@ -6799,6 +6927,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6863,6 +6992,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6914,6 +7044,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6964,6 +7095,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -6997,6 +7129,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7031,6 +7164,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7081,6 +7215,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7114,6 +7249,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7147,6 +7283,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7180,6 +7317,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7213,6 +7351,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 23
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7246,6 +7385,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7280,6 +7420,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7313,6 +7454,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7363,6 +7505,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7396,6 +7539,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7429,6 +7573,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7463,6 +7608,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7498,6 +7644,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7582,6 +7729,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7615,6 +7763,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7648,6 +7797,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7683,6 +7833,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7750,6 +7901,7 @@ MonoBehaviour:
         eventToPlay: 3
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7784,6 +7936,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7834,6 +7987,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 4
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7868,6 +8022,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7919,6 +8074,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -7970,6 +8126,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8021,6 +8178,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8071,6 +8229,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8105,6 +8264,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8155,6 +8315,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 22
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8188,6 +8349,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -8221,6 +8383,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 16
         loopSound: 0
+        musicToPlay: 4
         minigame: 0
         scoreToWin: 0
         wonDialogue:

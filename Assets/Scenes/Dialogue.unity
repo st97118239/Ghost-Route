@@ -1414,6 +1414,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dcf788bb82134f459a86d325d5934ab, type: 3}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: mainMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dcf788bb82134f459a86d325d5934ab, type: 3}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: arcadeMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d41ecb083da3f84d9d7054e80148099, type: 3}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: endingMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 966f0a1d1ac3e1246ab4f8d398b364c7, type: 3}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: cocytusMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e0151822f4dbdaa499a98955590bb702, type: 3}
+    - target: {fileID: 6815492496305042878, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
+      propertyPath: memoryLossMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fe9fbfcfa7cf32b4389b988ab3027675, type: 3}
     - target: {fileID: 7055694241648478726, guid: d80117d06dc0dab4ca0c52bac0514a81, type: 3}
       propertyPath: m_Name
       value: AudioManager

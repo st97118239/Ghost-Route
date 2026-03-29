@@ -29,6 +29,8 @@ public class DialogueNode : INode
     public Sounds soundToPlay;
     public bool loopSound;
     [GraphDisplay(DisplayType.BothViews)]
+    public Sounds musicToPlay;
+    [GraphDisplay(DisplayType.BothViews)]
     public Minigames minigame;
     public int scoreToWin;
     [Port, SerializeReference]

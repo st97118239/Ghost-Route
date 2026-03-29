@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,10 +12,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource dialogueSfxSource;
 
-    [SerializeField] private AudioClip musicClip;
     [SerializeField] private AudioClip clickClip;
     [SerializeField] private AudioClip dialogueClip;
-    [SerializeField] private AudioClip endingClip;
     [SerializeField] private AudioClip memoryPointClip;
     [SerializeField] private AudioClip shootClip;
     [SerializeField] private AudioClip hitClip;
@@ -30,6 +31,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip keyJingleClip;
     [SerializeField] private AudioClip doorUnlockingClip;
     [SerializeField] private AudioClip carCrashClip;
+
+    [SerializeField] private AudioClip mainMusicClip;
+    [SerializeField] private AudioClip arcadeMusicClip;
+    [SerializeField] private AudioClip cocytusMusicClip;
+    [SerializeField] private AudioClip endingMusicClip;
+    [SerializeField] private AudioClip memoryLossMusicClip;
+
+    private Coroutine fadeCoroutine;
+    private Sounds musicPlaying;
 
     private void Awake()
     {
@@ -64,18 +74,16 @@ public class AudioManager : MonoBehaviour
         {
             default:
             case Sounds.None:
+            case Sounds.MainMusic:
+            case Sounds.ArcadeMusic:
+            case Sounds.CocytusMusic:
+            case Sounds.Ending:
                 return -1f;
-            case Sounds.Music:
-                clipToPlay = instance.musicClip;
-                break;
             case Sounds.Click:
                 clipToPlay = instance.clickClip;
                 break;
             case Sounds.Dialogue:
                 clipToPlay = instance.dialogueClip;
-                break;
-            case Sounds.Ending:
-                clipToPlay = instance.endingClip;
                 break;
             case Sounds.MemoryPoint:
                 clipToPlay = instance.memoryPointClip;
@@ -158,6 +166,93 @@ public class AudioManager : MonoBehaviour
     public static void StopLoopingSFX()
     {
         instance.dialogueSfxSource.Stop();
+    }
+
+    public static void FadeMusicIn(Sounds music)
+    {
+        if (instance.musicPlaying == music)
+            return;
+
+        instance.musicPlaying = music;
+
+        float musicVolume = SaveDataManager.saveData.bgmVolume;
+
+        if (instance.fadeCoroutine != null)
+            instance.StopCoroutine(instance.fadeCoroutine);
+        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicInCoroutine(musicVolume, music));
+    }
+
+    private IEnumerator FadeMusicInCoroutine(float musicVolume, Sounds music)
+    {
+        musicSource.volume = 0;
+
+        switch (music)
+        {
+            default:
+                yield break;
+            case Sounds.MainMusic:
+                musicSource.clip = mainMusicClip;
+                break;
+            case Sounds.ArcadeMusic:
+                musicSource.clip = arcadeMusicClip;
+                break;
+            case Sounds.CocytusMusic:
+                musicSource.clip = cocytusMusicClip;
+                break;
+            case Sounds.Ending:
+                musicSource.clip = endingMusicClip;
+                break;
+            case Sounds.MemoryLossMusic:
+                musicSource.clip = memoryLossMusicClip;
+                break;
+        }
+
+        musicSource.Play();
+
+        const float addTimes = 20;
+        float musicAmtToAdd = musicVolume / addTimes;
+        WaitForSeconds delay = new(0.3f);
+
+        for (int i = 0; i < addTimes; i++)
+        {
+            yield return delay;
+
+            musicSource.volume += musicAmtToAdd;
+        }
+
+        musicSource.volume = musicVolume;
+    }
+
+    public static void FadeMusicOut()
+    {
+        if (instance.musicPlaying == Sounds.None)
+            return;
+
+        float musicVolume = SaveDataManager.saveData.bgmVolume;
+
+        if (instance.fadeCoroutine != null)
+            instance.StopCoroutine(instance.fadeCoroutine);
+        instance.fadeCoroutine = instance.StartCoroutine(instance.FadeMusicOutCoroutine(musicVolume));
+    }
+
+    private IEnumerator FadeMusicOutCoroutine(float musicVolume)
+    {
+        musicSource.volume = musicVolume;
+        const float addTimes = 10;
+        float musicAmtToAdd = musicVolume / addTimes;
+        WaitForSeconds delay = new(0.1f);
+
+        for (int i = 0; i < addTimes; i++)
+        {
+            yield return delay;
+
+            musicSource.volume -= musicAmtToAdd;
+        }
+
+        musicSource.volume = 0;
+        musicSource.Stop();
+
+        musicPlaying = Sounds.None;
     }
 
     public static void SetVolumes()

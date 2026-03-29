@@ -32,8 +32,8 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.PlaySound(Sounds.Music, false);
         FadeManager.StartFade(true, null, Color.black);
+        AudioManager.FadeMusicIn(Sounds.MainMusic);
     }
 
     public void Show()
@@ -46,7 +46,10 @@ public class MainMenuManager : MonoBehaviour
         if (SaveDataManager.saveData.currentDialogueID == string.Empty)
             ShowCharCreator();
         else
+        {
             FadeManager.StartFade(false, charCreatorManager.LoadGame, Color.black);
+            AudioManager.FadeMusicOut();
+        }
     }
 
     public void ShowCharCreator()
@@ -70,6 +73,7 @@ public class MainMenuManager : MonoBehaviour
     public void QuitButton()
     {
         SaveDataManager.Save();
+        AudioManager.FadeMusicOut();
         FadeManager.StartFade(false, Quit, Color.black);
     }
 

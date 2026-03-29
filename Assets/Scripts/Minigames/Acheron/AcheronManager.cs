@@ -46,8 +46,8 @@ public class AcheronManager : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.PlaySound(Sounds.Music, false);
         FadeManager.StartFade(true, null, Color.black);
+        AudioManager.FadeMusicIn(Sounds.MainMusic);
 
         if (!dialogueManager.isActiveAndEnabled)
             UnlockButton();
@@ -57,6 +57,7 @@ public class AcheronManager : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.instance.PlayButtonClick();
         startPanel.SetActive(false);
         StartCoroutine(SpawnHearts());
     }
@@ -129,6 +130,7 @@ public class AcheronManager : MonoBehaviour
     {
         sceneToGoTo = "Main Menu";
         FadeManager.StartFade(false, LoadScene, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     public void Finish()
@@ -136,6 +138,7 @@ public class AcheronManager : MonoBehaviour
         SaveDataManager.saveData.hasPlayedAcheron = true;
         sceneToGoTo = "Dialogue";
         FadeManager.StartFade(false, LoadScene, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     private void LoadScene() => SceneManager.LoadScene(sceneToGoTo);

@@ -1,7 +1,7 @@
 public enum Sounds
 {
     None,
-    Music,
+    MainMusic,
     Click,
     Dialogue,
     Ending,
@@ -20,5 +20,8 @@ public enum Sounds
     FootstepsFadeIn,
     KeyJingle,
     DoorUnlocking,
-    CarCrash
+    CarCrash,
+    ArcadeMusic,
+    CocytusMusic,
+    MemoryLossMusic
 }

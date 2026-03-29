@@ -21,6 +21,7 @@ MonoBehaviour:
   eventToPlay: 0
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 22
   minigame: 3
   scoreToWin: 5
   wonDialogueID: -1300510640

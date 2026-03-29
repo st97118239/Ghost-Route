@@ -164,6 +164,7 @@ public class SettingsManager : MonoBehaviour
     {
         SaveDataManager.ResetData();
         FadeManager.StartFade(false, ReloadScene, Color.black);
+        AudioManager.FadeMusicOut();
     }
 
     private void ReloadScene()

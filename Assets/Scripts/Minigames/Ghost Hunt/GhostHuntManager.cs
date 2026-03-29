@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
-using UnityEngine.EventSystems;
 
 public class GhostHuntManager : MonoBehaviour
 {
@@ -53,11 +52,11 @@ public class GhostHuntManager : MonoBehaviour
         if (startingMinAmt > maxTargetsOntAtOnce) startingMinAmt = maxTargetsOntAtOnce;
 
         FadeManager.StartFade(true, LoadGame, Color.black);
+        AudioManager.FadeMusicIn(Sounds.MainMusic);
     }
 
     private void LoadGame()
     {
-        AudioManager.PlaySound(Sounds.Music, false);
         StartCoroutine(PlayVoicelines());
     }
 
@@ -199,9 +198,9 @@ public class GhostHuntManager : MonoBehaviour
             FadeManager.StartFade(false, ExitGame, Color.black);
         }
         else
-        {
             FadeManager.StartFade(false, RestartGame, Color.black);
-        }
+
+        AudioManager.FadeMusicOut();
     }
 
     private static void ExitGame()
@@ -216,10 +215,8 @@ public class GhostHuntManager : MonoBehaviour
 
     private void DevCheat(InputAction.CallbackContext context)
     {
-        foreach (TargetObj target in targetObjs)
-        {
+        foreach (TargetObj target in targetObjs) 
             target.DevCheat();
-        }
 
         minSecondsBetweenSpawns = devMinSecondsBetweenSpawns;
         spawnChance = 100;
