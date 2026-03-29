@@ -22,6 +22,8 @@ public class EndingsManager : MonoBehaviour
 
     private int endingIdx;
 
+    [SerializeField] private MainMenuBackground backgroundChanger;
+
     private void Start()
     {
         endingIdx = -1;
@@ -56,6 +58,7 @@ public class EndingsManager : MonoBehaviour
     public void Show()
     {
         endingsCanvas.gameObject.SetActive(true);
+        backgroundChanger.ChangeBackground(false);
         devInputAction.performed += DevUnlockAllEndings;
         devInputAction.Enable();
     }

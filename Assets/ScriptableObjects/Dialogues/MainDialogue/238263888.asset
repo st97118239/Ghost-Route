@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 238263888
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: <i>This is going to be a long journey...</i>
+  text: <i>Sigh</i> This is going to be a long journey...
   voiceline: {fileID: 8300000, guid: 148044f6a33d893479069ee513560edc, type: 3}
   nextDialogueID: 1195665456
   delay: 0

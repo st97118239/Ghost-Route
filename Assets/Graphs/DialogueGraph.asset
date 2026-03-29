@@ -295,7 +295,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -32097.934, y: -646.63525, z: 0}
+    viewPosition: {x: -9661.219, y: -934.6183, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -1899,7 +1899,7 @@ MonoBehaviour:
       data:
         dialogue: {fileID: 11400000, guid: 8f47ac57bf7730c41954dfc446a3b582, type: 2}
         charName: Lethia
-        text: <i>This is going to be a long journey...</i>
+        text: <i>Sigh</i> This is going to be a long journey...
         voiceline: {fileID: 8300000, guid: 148044f6a33d893479069ee513560edc, type: 3}
         nextDialogue:
           rid: 7815180684838568132

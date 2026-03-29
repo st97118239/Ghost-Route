@@ -213,7 +213,7 @@ public class MemoryManager : MonoBehaviour
                 card0Rect.position = Vector2.MoveTowards(card0Rect.position, targetPos, moveAnimSpeed);
                 card1Rect.position = Vector2.MoveTowards(card1Rect.position, targetPos, moveAnimSpeed);
 
-                yield return Time.deltaTime;
+                yield return Time.fixedDeltaTime;
             }
 
             opponentManager.ForgetCard(cardsIdx[0]);

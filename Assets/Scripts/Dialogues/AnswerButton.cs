@@ -13,6 +13,7 @@ public class AnswerButton : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup layoutGroup;
 
     [SerializeField] private float spawnOffset = 1311.065f;
+    [SerializeField] private float moveSpeed = 10;
 
     private Answer answer;
 
@@ -52,9 +53,9 @@ public class AnswerButton : MonoBehaviour
 
         while (rectTrans.anchoredPosition != targetPos)
         {
-            rectTrans.anchoredPosition = Vector2.MoveTowards(rectTrans.anchoredPosition, targetPos, 10);
+            rectTrans.anchoredPosition = Vector2.MoveTowards(rectTrans.anchoredPosition, targetPos, moveSpeed);
 
-            yield return Time.deltaTime;
+            yield return Time.fixedDeltaTime;
         }
     }
 

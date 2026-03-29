@@ -7,6 +7,8 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private MainMenuManager mainMenu;
     [SerializeField] private Canvas settingsCanvas;
 
+    [SerializeField] private MainMenuBackground backgroundChanger;
+
     [SerializeField] private GameObject resetConfirmPanel;
     [SerializeField] private string mainMenuSceneName;
 
@@ -43,6 +45,7 @@ public class SettingsManager : MonoBehaviour
     public void Show()
     {
         settingsCanvas.gameObject.SetActive(true);
+        backgroundChanger.ChangeBackground(false);
     }
 
     public void CloseAllButtons(int idxToKeep)
@@ -147,12 +150,14 @@ public class SettingsManager : MonoBehaviour
     public void ResetDataButton()
     {
         resetConfirmPanel.SetActive(true);
+        backgroundChanger.ChangeBackground(true);
     }
 
     public void ConfirmResetButton()
     {
         SaveDataManager.ResetData();
         FadeManager.StartFade(false, ReloadScene, Color.black);
+        backgroundChanger.ChangeBackground(false);
         AudioManager.FadeMusicOut();
     }
 
@@ -164,6 +169,7 @@ public class SettingsManager : MonoBehaviour
     public void CancelResetButton()
     {
         resetConfirmPanel.SetActive(false);
+        backgroundChanger.ChangeBackground(false);
     }
 
     public void BackButton()

@@ -1,11 +1,9 @@
-using System;
 using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -26,6 +24,8 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Ending[] _endings;
 
     [SerializeField] private Camera mainCamera;
+
+    [SerializeField] private MainMenuBackground backgroundChanger;
 
     private bool shouldMoveEye;
 
@@ -89,6 +89,7 @@ public class MainMenuManager : MonoBehaviour
     public void Show()
     {
         mainMenuCanvas.gameObject.SetActive(true);
+        backgroundChanger.ChangeBackground(true);
         StartCoroutine(MoveEyeLoop());
     }
 
@@ -100,6 +101,7 @@ public class MainMenuManager : MonoBehaviour
         {
             FadeManager.StartFade(false, charCreatorManager.LoadGame, Color.black);
             AudioManager.FadeMusicOut();
+            StartCoroutine(MoveEyeToMiddle());
         }
     }
 
@@ -127,6 +129,7 @@ public class MainMenuManager : MonoBehaviour
     public void QuitButton()
     {
         StartCoroutine(MoveEyeToMiddle());
+        backgroundChanger.ChangeBackground(false);
         SaveDataManager.Save();
         AudioManager.FadeMusicOut();
         FadeManager.StartFade(false, Quit, Color.black);

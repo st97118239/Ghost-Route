@@ -26,6 +26,8 @@ public class CharCreatorManager : MonoBehaviour
     [SerializeField] private DialogueHolder dialogueHolder;
     private bool invalidDialogueID;
 
+    [SerializeField] private MainMenuBackground backgroundChanger;
+
     private void Awake()
     {
         pronounsIdx = 1;
@@ -35,6 +37,7 @@ public class CharCreatorManager : MonoBehaviour
     public void Show()
     {
         charCreatorCanvas.gameObject.SetActive(true);
+        backgroundChanger.ChangeBackground(false);
 
         for (int i = 0; i < pronounsCheckmarks.Length; i++)
             pronounsCheckmarks[i].gameObject.SetActive(i == pronounsIdx);
