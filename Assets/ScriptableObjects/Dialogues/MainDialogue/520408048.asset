@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 447000736
+  nextDialogueID: After Crash
   delay: 30
   answersID: []
   eventToPlay: 9

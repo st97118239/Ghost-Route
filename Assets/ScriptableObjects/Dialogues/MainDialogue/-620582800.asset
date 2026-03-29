@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 1772921120
+  nextDialogueID: Cocytus
   delay: 0
   answersID: []
   eventToPlay: 2

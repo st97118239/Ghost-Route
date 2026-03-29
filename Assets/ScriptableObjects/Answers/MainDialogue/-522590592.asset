@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: What's that?
   dialogue: {fileID: 0}
-  dialogueID: Ghost Hunt Start
+  dialogueID: Ghost Hunt

@@ -432,7 +432,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 183599c7f0542cb46a989f5d04518643, type: 2}
-  m_sharedMaterial: {fileID: 7511605995524247764, guid: 44d717ecd23c10b4bb7c110f23a39796, type: 2}
+  m_sharedMaterial: {fileID: 8349172906518950385, guid: 183599c7f0542cb46a989f5d04518643, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 0
-  m_GlobalFontAsset: {fileID: 11400000, guid: 44d717ecd23c10b4bb7c110f23a39796, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 183599c7f0542cb46a989f5d04518643, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_KeepTextSelectionVisible: 0
@@ -3441,8 +3441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter dialogue ID...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 44d717ecd23c10b4bb7c110f23a39796, type: 2}
-  m_sharedMaterial: {fileID: 7511605995524247764, guid: 44d717ecd23c10b4bb7c110f23a39796, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 183599c7f0542cb46a989f5d04518643, type: 2}
+  m_sharedMaterial: {fileID: 8349172906518950385, guid: 183599c7f0542cb46a989f5d04518643, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: You are strong.
   voiceline: {fileID: 0}
-  nextDialogueID: 1547464656
+  nextDialogueID: Memory Loss
   delay: 0
   answersID: []
   eventToPlay: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 375570416
+  nextDialogueID: Acheron Machine
   delay: 0
   answersID: []
   eventToPlay: 2

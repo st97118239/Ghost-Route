@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: -495677648
+  m_Name: Before Looking Around
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: An arcade, huh?
+  text: Something that feels nostalgic.
   voiceline: {fileID: 0}
-  nextDialogueID: 1175956016
+  nextDialogueID: -1552572480
   delay: 0
   answersID: []
   eventToPlay: 0
-  soundToPlay: 0
+  soundToPlay: 15
   loopSound: 0
   musicToPlay: 21
   minigame: 0

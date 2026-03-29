@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: -1008944256
+  m_Name: After Crash
   m_EditorClassIdentifier: 
-  charName: Lethia
-  text: Are you okay?
+  charName: 
+  text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 
-  delay: 0
-  answersID:
-  - -777604608
-  - 418382064
+  nextDialogueID: -572423728
+  delay: 3
+  answersID: []
   eventToPlay: 0
   soundToPlay: 0
   loopSound: 0

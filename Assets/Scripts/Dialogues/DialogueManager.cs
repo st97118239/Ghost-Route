@@ -789,15 +789,21 @@ public class DialogueManager : MonoBehaviour
 
     private Dialogue FindDialogue(string id)
     {
-        if (!string.IsNullOrEmpty(id)) return dialogues[id];
-        Debug.LogWarning("Empty id given");
+        Dialogue dialogue = dialogues[id];
+        if (!string.IsNullOrEmpty(id) && dialogue != null) return dialogue;
+        Debug.LogWarning("Empty id given or is invalid");
+        sceneToGoTo = mainMenuSceneName;
+        LoadScene();
         return null;
     }
 
     private Answer FindAnswer(string id)
     {
-        if (!string.IsNullOrEmpty(id)) return answers[id];
-        Debug.LogWarning("Empty id given");
+        Answer answer = answers[id];
+        if (!string.IsNullOrEmpty(id) && answer != null) return answer;
+        Debug.LogWarning("Empty id given or is invalid");
+        sceneToGoTo = mainMenuSceneName;
+        LoadScene();
         return null;
     }
 }

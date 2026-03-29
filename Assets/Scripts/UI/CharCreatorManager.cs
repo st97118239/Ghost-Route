@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,9 +20,16 @@ public class CharCreatorManager : MonoBehaviour
     [SerializeField] private Button confirmButton;
     [SerializeField] private string gameSceneName;
 
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction devInputAction;
+    [SerializeField] private TMP_InputField dialogueInputField;
+    [SerializeField] private DialogueHolder dialogueHolder;
+    private bool invalidDialogueID;
+
     private void Awake()
     {
         pronounsIdx = 1;
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
     }
 
     public void Show()
@@ -32,6 +40,10 @@ public class CharCreatorManager : MonoBehaviour
             pronounsCheckmarks[i].gameObject.SetActive(i == pronounsIdx);
 
         confirmButton.interactable = nameInput.text != string.Empty;
+
+        dialogueInputField.gameObject.SetActive(false);
+        devInputAction.performed += DevShowInputField;
+        devInputAction.Enable();
     }
 
     public void CloseAllButtons(int idxToKeep)
@@ -49,7 +61,10 @@ public class CharCreatorManager : MonoBehaviour
 
     public void UpdateName()
     {
-        confirmButton.interactable = nameInput.text != string.Empty;
+        if (nameInput.text == string.Empty || nameInput.text.StartsWith(" ") || invalidDialogueID)
+            confirmButton.interactable = false;
+        else
+            confirmButton.interactable = true;
     }
 
     public void PronounsButton()
@@ -71,6 +86,8 @@ public class CharCreatorManager : MonoBehaviour
     {
         SaveDataManager.saveData.name = nameInput.text;
         SaveDataManager.saveData.pronouns = pronouns[pronounsIdx].pronounInDialogue;
+        if (dialogueInputField.gameObject.activeSelf)
+            SaveDataManager.saveData.currentDialogueID = dialogueInputField.text;
         FadeManager.StartFade(false, LoadGame, Color.black);
         AudioManager.FadeMusicOut();
     }
@@ -79,7 +96,29 @@ public class CharCreatorManager : MonoBehaviour
     {
         mainMenu.Show();
         charCreatorCanvas.gameObject.SetActive(false);
+        devInputAction.Disable();
+        devInputAction.performed -= DevShowInputField;
     }
 
     public void LoadGame() => SceneManager.LoadScene(gameSceneName);
+
+    private void DevShowInputField(InputAction.CallbackContext context)
+    {
+        devInputAction.Disable();
+        devInputAction.performed -= DevShowInputField;
+        dialogueInputField.text = string.Empty;
+        dialogueInputField.gameObject.SetActive(true);
+    }
+
+    public void DevInputFieldEnter()
+    {
+        invalidDialogueID = true;
+        foreach (Dialogue dialogue in dialogueHolder.dialogues)
+        {
+            if (dialogue.name != dialogueInputField.text) continue;
+            invalidDialogueID = false;
+            break;
+        }
+        UpdateName();
+    }
 }

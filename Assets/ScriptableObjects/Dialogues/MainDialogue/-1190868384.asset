@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: We are looking for something you recognise.
   voiceline: {fileID: 0}
-  nextDialogueID: 1306292464
+  nextDialogueID: Before Looking Around
   delay: 0
   answersID: []
   eventToPlay: 0

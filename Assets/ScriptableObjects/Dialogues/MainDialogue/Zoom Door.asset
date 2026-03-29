@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa18fe57c0307224087a282bbab17f10, type: 3}
-  m_Name: 1547464656
+  m_Name: Zoom Door
   m_EditorClassIdentifier: 
-  charName: Lethia
-  text: You are so incredibly strong. <i>snick</i>
+  charName: 
+  text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 
+  nextDialogueID: Unlock Door
   delay: 0
   answersID: []
-  eventToPlay: 0
+  eventToPlay: 6
   soundToPlay: 0
   loopSound: 0
-  musicToPlay: 23
+  musicToPlay: 21
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
-  ending: {fileID: 11400000, guid: 4aac6eb7bff4840479de55616034cfca, type: 2}
-  sprite: {fileID: 21300000, guid: 663be86f7130555418a8a70ffdc51547, type: 3}
-  background: {fileID: 21300000, guid: 706975faeca15ca4f99bb61fb146eaed, type: 3}
+  ending: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 55a5501d20e729940a52603ef9d45cae, type: 3}
+  background: {fileID: 21300000, guid: 5be2529e3a120d743967eddec36b0dac, type: 3}

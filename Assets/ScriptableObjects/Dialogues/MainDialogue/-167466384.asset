@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: 
   text: 
   voiceline: {fileID: 0}
-  nextDialogueID: 1760676512
+  nextDialogueID: Before Zoom Table
   delay: 0
   answersID: []
   eventToPlay: 2

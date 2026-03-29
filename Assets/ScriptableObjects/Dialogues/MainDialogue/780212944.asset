@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: Well then, we have souls to guide.
   voiceline: {fileID: 0}
-  nextDialogueID: 928692352
+  nextDialogueID: Never Alone Again
   delay: 0
   answersID: []
   eventToPlay: 0
