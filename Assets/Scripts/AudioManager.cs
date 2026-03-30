@@ -55,9 +55,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButtonClick() => PlaySound(Sounds.Click, false);
 
-    public void PlayShoot() => PlaySound(Sounds.Click, true);
-
-
     public static float PlayVoiceline(AudioClip audioClip)
     {
         if (instance.voicelineSource.isPlaying)
@@ -136,47 +133,28 @@ public class AudioManager : MonoBehaviour
 
     private static AudioClip GetSoundClip(Sounds sound)
     {
-        switch (sound)
+        return sound switch
         {
-            default:
-                return null;
-            case Sounds.Click:
-                return instance.clickClip;
-            case Sounds.Dialogue:
-                return instance.dialogueClip;
-            case Sounds.MemoryPoint:
-                return instance.memoryPointClip;
-            case Sounds.Shoot:
-                return instance.shootClip;
-            case Sounds.Hit:
-                return instance.hitClip;
-            case Sounds.Wrong:
-                return instance.wrongClip;
-            case Sounds.SpawnGhost:
-                return instance.spawnGhostClip;
-            case Sounds.SpawnBunny:
-                return instance.spawnBunnyClip;
-            case Sounds.SpawnDeer:
-                return instance.spawnDeerClip;
-            case Sounds.Jump:
-                return instance.jumpClip;
-            case Sounds.Damage:
-                return instance.damageClip;
-            case Sounds.Fall:
-                return instance.fallClip;
-            case Sounds.Footsteps:
-                return instance.footstepClip;
-            case Sounds.FootstepsFadeOut:
-                return instance.footstepFadeOutClip;
-            case Sounds.FootstepsFadeIn:
-                return instance.footstepFadeInClip;
-            case Sounds.KeyJingle:
-                return instance.keyJingleClip;
-            case Sounds.DoorUnlocking:
-                return instance.doorUnlockingClip;
-            case Sounds.CarCrash:
-                return instance.carCrashClip;
-        }
+            Sounds.Click => instance.clickClip,
+            Sounds.Dialogue => instance.dialogueClip,
+            Sounds.MemoryPoint => instance.memoryPointClip,
+            Sounds.Shoot => instance.shootClip,
+            Sounds.Hit => instance.hitClip,
+            Sounds.Wrong => instance.wrongClip,
+            Sounds.SpawnGhost => instance.spawnGhostClip,
+            Sounds.SpawnBunny => instance.spawnBunnyClip,
+            Sounds.SpawnDeer => instance.spawnDeerClip,
+            Sounds.Jump => instance.jumpClip,
+            Sounds.Damage => instance.damageClip,
+            Sounds.Fall => instance.fallClip,
+            Sounds.Footsteps => instance.footstepClip,
+            Sounds.FootstepsFadeOut => instance.footstepFadeOutClip,
+            Sounds.FootstepsFadeIn => instance.footstepFadeInClip,
+            Sounds.KeyJingle => instance.keyJingleClip,
+            Sounds.DoorUnlocking => instance.doorUnlockingClip,
+            Sounds.CarCrash => instance.carCrashClip,
+            _ => null
+        };
     }
 
     public static void StopLoopingSFX()
@@ -273,6 +251,16 @@ public class AudioManager : MonoBehaviour
     public static void SetVolumes()
     {
         if (instance == null) return;
+
+#if UNITY_EDITOR
+        if (SaveDataManager.saveData == null)
+        {
+            instance.voicelineSource.volume = 0;
+            instance.sfxSource.volume = 0;
+            instance.musicSource.volume = 0;
+            return;
+        }
+#endif
 
         if (instance.voicelineSource)
             instance.voicelineSource.volume = SaveDataManager.saveData.voicelinesVolume;

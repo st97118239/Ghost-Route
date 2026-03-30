@@ -8,11 +8,8 @@ public class TargetObj : MonoBehaviour
     private GhostHuntManager manager;
 
     [SerializeField] private TargetsHolder targetsHolder;
-    [SerializeField] private int ghostChance;
-    [SerializeField] private int bunnyChance;
-    [SerializeField] private int deerChance;
+    [SerializeField] private TargetType target;
     private Target currentTarget;
-    private int totalChance;
 
     [SerializeField] private Image image;
     [SerializeField] private Button button;
@@ -20,8 +17,11 @@ public class TargetObj : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private int animIdx;
 
-    [SerializeField] private float _timeToDisappear;
-    private WaitForSeconds timeToDisappear;
+    [SerializeField] private float timeToDisappear = 3;
+    private WaitForSeconds timeToDisappearWait;
+    [SerializeField] private float animationTime = 0.5f;
+    private WaitForSeconds animationTimeWait;
+    [SerializeField] private bool shouldReturn = true;
     private Coroutine disappearCoroutine;
 
     private int idx;
@@ -32,8 +32,9 @@ public class TargetObj : MonoBehaviour
     {
         image.enabled = false;
         button.enabled = false;
-        timeToDisappear = new WaitForSeconds(_timeToDisappear);
-        totalChance = ghostChance + bunnyChance + deerChance;
+        animationTimeWait = new WaitForSeconds(animationTime);
+        if (shouldReturn)
+            timeToDisappearWait = new WaitForSeconds(timeToDisappear);
     }
 
     public void Setup(GhostHuntManager givenManager, int givenIdx)
@@ -44,21 +45,23 @@ public class TargetObj : MonoBehaviour
 
     public void Show()
     {
-        int chance = Random.Range(0, totalChance);
-        if (chance < ghostChance)
+        switch (target)
         {
-            currentTarget = targetsHolder.ghosts[Random.Range(0, targetsHolder.ghosts.Length)];
-            AudioManager.PlaySound(Sounds.SpawnGhost, true);
-        }
-        else if (chance > ghostChance && chance < ghostChance + bunnyChance)
-        {
-            currentTarget = targetsHolder.bunnies[Random.Range(0, targetsHolder.bunnies.Length)];
-            AudioManager.PlaySound(Sounds.SpawnBunny, true);
-        }
-        else if (chance > ghostChance + bunnyChance)
-        {
-            currentTarget = targetsHolder.deer[Random.Range(0, targetsHolder.deer.Length)];
-            AudioManager.PlaySound(Sounds.SpawnDeer, true);
+            default:
+            case TargetType.None:
+                return;
+            case TargetType.Ghost:
+                currentTarget = targetsHolder.ghosts[Random.Range(0, targetsHolder.ghosts.Length)];
+                AudioManager.PlaySound(Sounds.SpawnGhost, true);
+                break;
+            case TargetType.Bunny:
+                currentTarget = targetsHolder.bunnies[Random.Range(0, targetsHolder.bunnies.Length)];
+                AudioManager.PlaySound(Sounds.SpawnBunny, true);
+                break;
+            case TargetType.Deer:
+                currentTarget = targetsHolder.deer[Random.Range(0, targetsHolder.deer.Length)];
+                AudioManager.PlaySound(Sounds.SpawnDeer, true);
+                break;
         }
 
         image.sprite = currentTarget.sprite;
@@ -71,7 +74,6 @@ public class TargetObj : MonoBehaviour
 
     public void Shoot()
     {
-        AudioManager.instance.PlayShoot();
         AudioManager.PlaySound(currentTarget.type == TargetType.Ghost ? Sounds.Hit : Sounds.Wrong, true);
         if (disappearCoroutine != null)
             StopCoroutine(disappearCoroutine);
@@ -89,12 +91,25 @@ public class TargetObj : MonoBehaviour
 
     private IEnumerator Disappear(bool extraWait)
     {
-        if (extraWait)
-            yield return timeToDisappear;
+        if (shouldReturn)
+        {
+            if (extraWait)
+            {
+                yield return animationTimeWait;
+                yield return timeToDisappearWait;
+            }
 
-        Hide();
+            Hide();
 
-        yield return new WaitForSeconds(0.5f);
+            yield return animationTimeWait;
+        }
+        else
+        {
+            if (extraWait)
+                yield return animationTimeWait;
+
+            Hide();
+        }
 
         isActive = false;
         image.enabled = false;
@@ -108,11 +123,5 @@ public class TargetObj : MonoBehaviour
         disappearCoroutine = StartCoroutine(Disappear(false));
     }
 
-    public void DevCheat()
-    {
-        if (ghostChance > 0)
-            ghostChance = 100;
-        deerChance = 0;
-        bunnyChance = 0;
-    }
+    public void DevCheat() => target = TargetType.Ghost;
 }

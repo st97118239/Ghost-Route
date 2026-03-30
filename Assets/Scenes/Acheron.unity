@@ -2947,8 +2947,9 @@ MonoBehaviour:
   heartPos: {fileID: 4630472684390013297}
   heartSpacing: 132
   heartCount: 3
-  heartImage: {fileID: 21300000, guid: 57757acac041b8141a412a21080c6cda, type: 3}
-  emptyHeartImage: {fileID: 21300000, guid: ecf560bcb0c75f24fa982144708ad0eb, type: 3}
+  heartImage: {fileID: 21300000, guid: 608694c7ec113d54a93117bff281bed4, type: 3}
+  invincibleHeartImage: {fileID: 21300000, guid: 6301abba48e22b640be496aff3b5c092, type: 3}
+  emptyHeartImage: {fileID: 21300000, guid: f36520b6fa056c446954aa535e6f37cb, type: 3}
   timeBetweenHearts: 0.5
   startPanel: {fileID: 607766357}
   startButton: {fileID: 598010492}

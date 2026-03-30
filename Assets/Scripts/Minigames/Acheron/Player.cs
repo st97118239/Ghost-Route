@@ -254,8 +254,9 @@ public class Player : MonoBehaviour
 
     public void Hit()
     {
-        if (!isInvincible)
-            acheronManager.Hit();
+        if (isInvincible) return;
+            
+        acheronManager.Hit();
         AudioManager.PlaySound(Sounds.Damage, true);
     }
 

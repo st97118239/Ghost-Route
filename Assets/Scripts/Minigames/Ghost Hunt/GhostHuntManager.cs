@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,11 +6,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GhostHuntManager : MonoBehaviour
 {
-    [SerializeField] private TargetObj[] targetObjs;
+    [SerializeField] private Transform targetParent;
+    private TargetObj[] targetObjs;
     private List<TargetObj> disabledTargets;
     private int targetsActive;
 
@@ -36,15 +39,31 @@ public class GhostHuntManager : MonoBehaviour
     private int timeSinceLastSpawn;
 
     [SerializeField] private Transform cursor;
+    [SerializeField] private Image cursorImage;
+    [SerializeField] private Color baseCursorColor;
+    [SerializeField] private Color shootCursorColor;
+    [SerializeField] private float shootCursorTime;
+    private WaitForSeconds shootCursorTimeWait;
+    private Coroutine shootCursorCoroutine;
 
     [SerializeField] private AudioClip[] beginVoicelines;
 
     private bool isPlaying;
 
-    private void Start()
+    private void Awake()
     {
         FadeManager.Show();
 
+        targetObjs = new TargetObj[targetParent.childCount];
+        for (int i = 0; i < targetParent.childCount; i++)
+            targetObjs[i] = targetParent.GetChild(i).GetComponent<TargetObj>();
+
+        shootCursorTimeWait = new WaitForSeconds(shootCursorTime);
+        cursorImage.color = baseCursorColor;
+    }
+
+    private void Start()
+    {
         for (int i = 0; i < targetObjs.Length; i++) 
             targetObjs[i].Setup(this, i);
 
@@ -88,11 +107,30 @@ public class GhostHuntManager : MonoBehaviour
 
     public void Shoot(int amt)
     {
-        AudioManager.PlaySound(Sounds.Shoot, false);
         points += amt;
+        if (points < 0)
+            points = 0;
         pointText.text = points.ToString();
-        if (points >= maxPoints) 
-            timeLeft = 0;
+        ShootEffect();
+    }
+
+    public void ShootEffect()
+    {
+        AudioManager.PlaySound(Sounds.Shoot, false);
+        if (shootCursorCoroutine != null)
+            StopCoroutine(shootCursorCoroutine);
+        shootCursorCoroutine = StartCoroutine(CursorShootEvent());
+    }
+
+    private IEnumerator CursorShootEvent()
+    {
+        cursorImage.color = baseCursorColor;
+        yield return null;
+        cursorImage.color = shootCursorColor;
+
+        yield return shootCursorTimeWait;
+
+        cursorImage.color = baseCursorColor;
     }
 
     public void Hide(int idx)
@@ -141,11 +179,14 @@ public class GhostHuntManager : MonoBehaviour
 
             if (timeLeft > canSpawnUntil && targetsActive < maxTargetsOntAtOnce && (Random.Range(0, 100) <= spawnChance || timeSinceLastSpawn >= minSecondsBetweenSpawns))
             {
-                int i = Random.Range(0, disabledTargets.Count);
-                disabledTargets[i].Show();
-                disabledTargets.RemoveAt(i);
-                targetsActive++;
-                timeSinceLastSpawn = 0;
+                if (disabledTargets.Count > 0)
+                {
+                    int i = Random.Range(0, disabledTargets.Count);
+                    disabledTargets[i].Show();
+                    disabledTargets.RemoveAt(i);
+                    targetsActive++;
+                    timeSinceLastSpawn = 0;
+                }
             }
 
             yield return wait1Sec;

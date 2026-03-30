@@ -22,6 +22,7 @@ public class AcheronManager : MonoBehaviour
     [SerializeField] private int heartCount;
     private Image[] hearts;
     [SerializeField] private Sprite heartImage;
+    [SerializeField] private Sprite invincibleHeartImage;
     [SerializeField] private Sprite emptyHeartImage;
     [SerializeField] private float timeBetweenHearts;
     private WaitForSeconds waitTimeBetweenHearts;
@@ -140,7 +141,7 @@ public class AcheronManager : MonoBehaviour
 
     public void DevInvincible()
     {
-        for (int i = 0; i < heartCount; i++) 
-            hearts[i].color = Color.grey;
+        for (int i = 0; i < heartCount; i++)
+            hearts[i].sprite = invincibleHeartImage;
     }
 }

@@ -137,7 +137,6 @@ MonoBehaviour:
     - rid: 7815180815996813649
     - rid: 7815180815996813651
     - rid: 7815180815996813653
-    - rid: 7815180815996813655
     - rid: 7815180815996813657
     - rid: 7815180815996813661
     - rid: 7815180815996813663
@@ -295,7 +294,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -9661.219, y: -934.6183, z: 0}
+    viewPosition: {x: -19703.32, y: -914.51697, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -3930,41 +3929,8 @@ MonoBehaviour:
       data:
         dialogue: {fileID: 11400000, guid: 7956cde7d9c21974fa2468a157ad18ae, type: 2}
         charName: Lethia
-        text: Sometimes it isn't even a place, it can be a person too.
-        voiceline: {fileID: 0}
-        nextDialogue:
-          rid: 7815180815996813656
-        delay: 0
-        answers: []
-        eventToPlay: 0
-        soundToPlay: 15
-        loopSound: 1
-        musicToPlay: 1
-        minigame: 0
-        scoreToWin: 0
-        wonDialogue:
-          rid: -2
-        loseDialogue:
-          rid: -2
-        ending: {fileID: 0}
-        sprite: {fileID: 21300000, guid: fa9ec9ea5e34bc44ea7e28a74f6b12a3, type: 3}
-        background: {fileID: 21300000, guid: 7100607b69b6f984bb32c568c1908f86, type: 3}
-    - rid: 7815180815996813655
-      type: {class: NodeModel, ns: NewGraph, asm: NewGraph}
-      data:
-        nodeData:
-          rid: 7815180815996813656
-        nodeX: 20288.121
-        nodeY: 1029.0688
-        name: DialogueNode
-        isUtilityNode: 0
-        foldouts: []
-    - rid: 7815180815996813656
-      type: {class: DialogueNode, ns: , asm: Assembly-CSharp-Editor}
-      data:
-        dialogue: {fileID: 11400000, guid: 986a55c4077ab054c90ed522c71abca8, type: 2}
-        charName: Lethia
-        text: A lover, a parent, a good friend.
+        text: Sometimes it isn't even a place, it can be a person too. A lover, a
+          parent, a good friend.
         voiceline: {fileID: 0}
         nextDialogue:
           rid: 7815180815996813658

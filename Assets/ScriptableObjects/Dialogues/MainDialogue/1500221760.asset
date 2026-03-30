@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 1500221760
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: Sometimes it isn't even a place, it can be a person too.
+  text: Sometimes it isn't even a place, it can be a person too. A lover, a parent,
+    a good friend.
   voiceline: {fileID: 0}
-  nextDialogueID: -944656752
+  nextDialogueID: 402163648
   delay: 0
   answersID: []
   eventToPlay: 0
