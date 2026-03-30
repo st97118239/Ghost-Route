@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Come with me.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b0200aa80adab594f8937ef7700ea5ae, type: 3}
   nextDialogueID: 
   delay: 0
   answersID: []

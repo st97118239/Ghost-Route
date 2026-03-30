@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Something that feels nostalgic.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 2e9be1d07c256a94683c6c6ef54db38f, type: 3}
   nextDialogueID: -1552572480
   delay: 0
   answersID: []

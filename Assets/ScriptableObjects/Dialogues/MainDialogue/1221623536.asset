@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Everything will... <i>Snick</i> ...be fine.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: a1aa169ab2b4371449bf8fe525083154, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

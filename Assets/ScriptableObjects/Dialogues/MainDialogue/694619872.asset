@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Your new start.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: eb949b529f76e1f44883be8bd7dc19cc, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

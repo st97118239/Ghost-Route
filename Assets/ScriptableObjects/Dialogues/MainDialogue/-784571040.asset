@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Patience my dear, Rome was't built in one day.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: a905aaf98fa5cb74081455ef32d04db3, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

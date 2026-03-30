@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You are so incredibly strong. <i>snick</i>
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: e84eacd35f841b94a9ab9789dd8d5fef, type: 3}
   nextDialogueID: 
   delay: 0
   answersID: []

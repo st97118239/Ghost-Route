@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Go on my dear, have a good life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 4230959aedae9634c91447b428628ee4, type: 3}
   nextDialogueID: 
   delay: 0
   answersID: []

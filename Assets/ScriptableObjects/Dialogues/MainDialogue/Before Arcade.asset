@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: <i>sigh</i> Almost, it is just behind here...
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 8232ab57a8fe7f647969453d0affd8dc, type: 3}
   nextDialogueID: Arcade Start
   delay: 0
   answersID: []

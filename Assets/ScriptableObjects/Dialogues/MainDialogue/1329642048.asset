@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Hold still.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 3c4e049390816a64293e175797010484, type: 3}
   nextDialogueID: -2007923680
   delay: 0
   answersID: []

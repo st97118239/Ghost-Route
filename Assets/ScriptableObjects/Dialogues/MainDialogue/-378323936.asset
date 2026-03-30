@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: The next place should help you remember a big part of your life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 48d4bb70d21d8f247bde04b50d6c864e, type: 3}
   nextDialogueID: -1220860176
   delay: 0
   answersID: []

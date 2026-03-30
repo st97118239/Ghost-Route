@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: I see, you have a small scrape.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: c975e4a8c1821ba4b8ad79956bebce46, type: 3}
   nextDialogueID: -1183919712
   delay: 0
   answersID: []

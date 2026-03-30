@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Quit the sarcasm.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 215001e8d893c724391de89cb80787d5, type: 3}
   nextDialogueID: -1800162592
   delay: 0
   answersID: []

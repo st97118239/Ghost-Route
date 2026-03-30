@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Now all you have to do is walk straight ahead.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: be525d7a8226ae845bf0b3d32400a3de, type: 3}
   nextDialogueID: 501514336
   delay: 0
   answersID: []

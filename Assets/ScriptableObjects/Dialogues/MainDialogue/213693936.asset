@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Don't ever joke about something like that again!
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 72edf1f44ffe95748a31c597778dc8d1, type: 3}
   nextDialogueID: -1209068656
   delay: 0
   answersID: []

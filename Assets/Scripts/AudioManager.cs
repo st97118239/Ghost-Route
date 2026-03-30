@@ -68,7 +68,9 @@ public class AudioManager : MonoBehaviour
 
         instance.voicelineSource.clip = audioClip;
         instance.voicelineSource.Play();
+#if UNITY_EDITOR
         Debug.Log("Playing voice line " + audioClip.name);
+#endif
         return audioClip.length;
     }
 

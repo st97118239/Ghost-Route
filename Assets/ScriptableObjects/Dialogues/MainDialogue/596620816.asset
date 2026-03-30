@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Sweet soul. <i>Sniffle</i>
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: c66f22a076cfa74439e587fddab76861, type: 3}
   nextDialogueID: -405391760
   delay: 0
   answersID: []

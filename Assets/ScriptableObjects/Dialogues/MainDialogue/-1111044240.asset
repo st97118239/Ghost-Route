@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: <i>Sigh</i> It is an inbetween of life and death.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 0c4a8f9b625f45e4aacd76f17a30f96a, type: 3}
   nextDialogueID: 1282459680
   delay: 0
   answersID: []

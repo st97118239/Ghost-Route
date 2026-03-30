@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You are strong.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: de5d2e5b1c6967644a7f58af2f5495b1, type: 3}
   nextDialogueID: Memory Loss
   delay: 0
   answersID: []

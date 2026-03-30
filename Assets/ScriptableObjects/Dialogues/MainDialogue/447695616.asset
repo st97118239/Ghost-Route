@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: I will miss you too.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b0a080e7de96b3a47a446d82b1511e8a, type: 3}
   nextDialogueID: 1206361024
   delay: 0
   answersID: []

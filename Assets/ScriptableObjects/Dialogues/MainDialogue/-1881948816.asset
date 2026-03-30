@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You're on your own. <i>Snick</i>
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 940d9908e22bfea44b70aca9829f037e, type: 3}
   nextDialogueID: 351477984
   delay: 0
   answersID: []

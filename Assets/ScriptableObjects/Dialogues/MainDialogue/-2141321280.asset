@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Don't worry, I have bandaids with me.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 4fd2ac66ec683a247acdf315fa0a68ae, type: 3}
   nextDialogueID: 1329642048
   delay: 0
   answersID: []

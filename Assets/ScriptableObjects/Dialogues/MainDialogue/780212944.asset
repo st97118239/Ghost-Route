@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Well then, we have souls to guide.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 56fd59a6680048445b616835bd8e26b0, type: 3}
   nextDialogueID: Never Alone Again
   delay: 0
   answersID: []

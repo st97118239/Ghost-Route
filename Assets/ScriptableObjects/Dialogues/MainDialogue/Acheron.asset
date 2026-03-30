@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You are quite the enthousiast.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: f00354760e95cff4eae1e22e2e047498, type: 3}
   nextDialogueID: After Acheron
   delay: 0
   answersID: []

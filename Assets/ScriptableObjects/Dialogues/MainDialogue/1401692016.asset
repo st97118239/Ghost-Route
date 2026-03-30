@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But you have a whole new life ahead of you.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: e509396d88e9ef147ab741a68cc1dab0, type: 3}
   nextDialogueID: 805612032
   delay: 0
   answersID: []

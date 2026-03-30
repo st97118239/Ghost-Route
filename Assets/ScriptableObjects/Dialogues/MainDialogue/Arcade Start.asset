@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: An arcade, huh?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 5428e19b8069f5e428786beaf265a0cd, type: 3}
   nextDialogueID: 1175956016
   delay: 0
   answersID: []

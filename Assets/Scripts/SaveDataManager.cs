@@ -49,12 +49,16 @@ public static class SaveDataManager
             }
         }
 
+#if UNITY_EDITOR
         Debug.Log("Save loaded");
+#endif
     }
 
     private static void CreateSave()
     {
+#if UNITY_EDITOR
         Debug.Log("Creating new save data");
+#endif
         saveData = new SaveData();
         saveData.Reset(MainMenuManager.endings);
         Save();
@@ -81,7 +85,9 @@ public static class SaveDataManager
             Debug.LogError("Save data could not be saved");
             return;
         }
+#if UNITY_EDITOR
         Debug.Log("Successfully saved data");
+#endif
     }
 
     public static void ResetData()

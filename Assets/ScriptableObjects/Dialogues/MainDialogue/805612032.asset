@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Why waste that for me?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 8bfffeb650a6c5f4492345d31fc06196, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Don't be scared. <i>Sob</i>
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: daff18c32044d1f469ed43f7430455a8, type: 3}
   nextDialogueID: 1221623536
   delay: 0
   answersID: []

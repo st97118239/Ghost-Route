@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Your new life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: cabbc537b8ed31a43beb086556173484, type: 3}
   nextDialogueID: 694619872
   delay: 0
   answersID: []

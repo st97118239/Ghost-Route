@@ -67,9 +67,7 @@ public class SettingsManager : MonoBehaviour
         if (textSpeedPanel.activeSelf)
         {
             textSpeedPanel.SetActive(false);
-            float textSpeedValue = textSpeedSlider.maxValue - textSpeedSlider.value;
-            Debug.Log(textSpeedValue);
-            SaveDataManager.saveData.textSpeed = textSpeedValue;
+            SaveDataManager.saveData.textSpeed = textSpeedSlider.maxValue - textSpeedSlider.value;
         }
         else
             textSpeedPanel.SetActive(true);

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Hmmm... I think you need to play the game.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 24f5739a7c0341742bb4fb944d013ca6, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

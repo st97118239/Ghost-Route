@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Into the light.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: fa39bd850bb31da439eaae149fa6b38d, type: 3}
   nextDialogueID: -2093088144
   delay: 0
   answersID: []

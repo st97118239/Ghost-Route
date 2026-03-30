@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: For some people it is their childhood home, a room, sometimes even a city
     or country.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 746f974f9ec70004a8c9bf08a150a850, type: 3}
   nextDialogueID: 1500221760
   delay: 0
   answersID: []

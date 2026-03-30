@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: <i>Sigh</i> How can I say no to that?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 03543f1bafc29eb4482da1af405c3032, type: 3}
   nextDialogueID: 780212944
   delay: 0
   answersID: []

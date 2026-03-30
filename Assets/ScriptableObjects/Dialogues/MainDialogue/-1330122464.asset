@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Why?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 1c5eae23810bdc5448590a8fbb1bca80, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

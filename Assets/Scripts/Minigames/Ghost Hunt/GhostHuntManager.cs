@@ -231,6 +231,15 @@ public class GhostHuntManager : MonoBehaviour
         devInputAction.Disable();
         devInputAction.performed -= DevCheat;
 
+#if UNITY_EDITOR
+        if (SaveDataManager.saveData == null)
+        {
+            FadeManager.StartFade(false, null, Color.black);
+            AudioManager.FadeMusicOut();
+            return;
+        }
+#endif
+
         if (points >= maxPoints)
         {
             SaveDataManager.saveData.hasPlayedGhostHunt = true;

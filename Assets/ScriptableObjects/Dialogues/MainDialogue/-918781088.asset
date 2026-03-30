@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You want to stay with me?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 63acf4c8cd2eff444ae1ae30edd55fd1, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

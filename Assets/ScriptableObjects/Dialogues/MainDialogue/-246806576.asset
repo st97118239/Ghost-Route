@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Do you know why this arcade was important for you?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 39c003a843bcf6444b1f8fa8c39f0bb1, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

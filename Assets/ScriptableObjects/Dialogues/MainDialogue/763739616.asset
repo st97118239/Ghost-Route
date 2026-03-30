@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Some think it is the afterlife, but there is no such thing.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d49b6129febbe8741b4e488d478c132d, type: 3}
   nextDialogueID: -166982432
   delay: 0
   answersID: []

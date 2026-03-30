@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: As I said before, this place is different for everyone.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 5edd62f5ed3351f43a311637cb571f61, type: 3}
   nextDialogueID: -378323936
   delay: 0
   answersID: []

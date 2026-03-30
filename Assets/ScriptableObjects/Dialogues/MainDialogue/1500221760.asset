@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: Sometimes it isn't even a place, it can be a person too. A lover, a parent,
     a good friend.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: bbcf649d085b02c4588f55b1fc54cd7d, type: 3}
   nextDialogueID: 402163648
   delay: 0
   answersID: []

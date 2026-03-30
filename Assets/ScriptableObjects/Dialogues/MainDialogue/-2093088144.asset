@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: It will bring you to a new life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d1607cfdbcb6b4d41ad03dbb06fd7b43, type: 3}
   nextDialogueID: -1848459136
   delay: 0
   answersID: []

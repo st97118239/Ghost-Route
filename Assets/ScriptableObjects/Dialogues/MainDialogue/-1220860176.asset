@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: It is a place that meant a lot to you when you were alive.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 1d0c8bff85e59264396c7efd8976ca83, type: 3}
   nextDialogueID: -2072512656
   delay: 0
   answersID: []

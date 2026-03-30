@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Are you okay?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 208fafcd9f0b36c4ca180d01e120d5e9, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

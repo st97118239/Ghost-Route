@@ -15,7 +15,7 @@ MonoBehaviour:
   charName: Lethia
   text: I'm pretty sure you people call it "purgatory", "a third state", "the Grey
     Zone".
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 979915b5595758045bb487264125b644, type: 3}
   nextDialogueID: 1986590560
   delay: 0
   answersID: []

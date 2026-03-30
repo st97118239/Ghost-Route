@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: We are looking for something you recognise.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 953d6c68a3f08a945805cd2a72305336, type: 3}
   nextDialogueID: Before Looking Around
   delay: 0
   answersID: []
