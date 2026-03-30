@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Here, I will walk with you.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d385a0a0e270095408da62b302d66bd0, type: 3}
   nextDialogueID: 1206361024
   delay: 0
   answersID: []

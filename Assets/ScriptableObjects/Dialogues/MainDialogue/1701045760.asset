@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1701045760
   m_EditorClassIdentifier: 
   charName: Lethia
-  text: To help people accept they died, to help them move on and find their next
+  text: To help people accept they died, to help them move on and find their new
     life.
   voiceline: {fileID: 8300000, guid: ed8cb3cecd3ff8a429dc45513fe5ff32, type: 3}
   nextDialogueID: 

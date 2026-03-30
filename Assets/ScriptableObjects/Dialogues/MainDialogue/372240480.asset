@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You got a small bruise.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 9ea84d2b80a36984ba0a9fcf98d2487b, type: 3}
   nextDialogueID: -2141321280
   delay: 0
   answersID: []
