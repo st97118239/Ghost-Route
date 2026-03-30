@@ -239,8 +239,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Finish"))
-            End(false, true);
+        if (!other.gameObject.CompareTag("Finish")) return;
+
+        End(false, true);
+        other.gameObject.SetActive(false);
     }
 
     private void OnCollisionExit2D(Collision2D other)
