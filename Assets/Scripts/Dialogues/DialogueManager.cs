@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -55,6 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private bool enableDevInput;
     [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction quit;
     private InputAction devInputAction;
     [SerializeField] private TMP_InputField dialogueInputField;
 
@@ -120,8 +122,10 @@ public class DialogueManager : MonoBehaviour
                 startingDialogue = foundName;
         }
 
-        foreach (AnswerButton button in answerButtons) 
-            button.Setup(this);
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            answerButtons[i].Setup(this, i);
+        }
 
         typingSpeed = SaveDataManager.saveData != null ? SaveDataManager.saveData.textSpeed : 0f;
         typingSpeedWait = new WaitForSeconds(typingSpeed);
@@ -134,6 +138,9 @@ public class DialogueManager : MonoBehaviour
             devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
             devInputAction.performed += DevDialogueField;
         }
+
+        quit = inputActionAsset.FindAction("Main/Quit");
+        quit.performed += EscapeButton;
 
         if (textBox != null)
             textBox.text = string.Empty;
@@ -196,6 +203,7 @@ public class DialogueManager : MonoBehaviour
             Load();
         if (enableDevInput)
             devInputAction.Enable();
+        quit.Enable();
     }
 
     private void Load()
@@ -404,6 +412,7 @@ public class DialogueManager : MonoBehaviour
         {
             isTyping = true;
             canClick = true;
+            EventSystem.current.SetSelectedGameObject(nextButton.gameObject);
         }
         else
         {
@@ -474,10 +483,7 @@ public class DialogueManager : MonoBehaviour
         startDelayCoroutine = StartCoroutine(StartDelay());
     }
 
-    private void SkipDialogue()
-    {
-        isFast = true;
-    }
+    private void SkipDialogue() => isFast = true;
 
     private void SkipWaitDialogue()
     {
@@ -493,7 +499,6 @@ public class DialogueManager : MonoBehaviour
         nextButton.interactable = false;
 
         int max = currentDialogue.answersID.Length;
-
         if (max > answerButtons.Length) max = answerButtons.Length;
 
         for (int i = 0; i < max; i++)
@@ -506,16 +511,14 @@ public class DialogueManager : MonoBehaviour
 
     public void AnswerPressed(Answer answer)
     {
+        EventSystem.current.SetSelectedGameObject(null);
         foreach (AnswerButton t in answerButtons) 
             t.gameObject.SetActive(false);
 
         LoadNewDialogue(answer.dialogueID);
     }
 
-    private void FadeBetweenDialoguesBlack()
-    {
-        StartCoroutine(WaitBetweenBlackFade());
-    }
+    private void FadeBetweenDialoguesBlack() => StartCoroutine(WaitBetweenBlackFade());
 
     private IEnumerator WaitBetweenBlackFade()
     {
@@ -542,10 +545,7 @@ public class DialogueManager : MonoBehaviour
             FadeManager.StartFade(true, null, Color.black);
     }
 
-    private void FadeBetweenDialoguesWhite()
-    {
-        StartCoroutine(WaitBetweenWhiteFade());
-    }
+    private void FadeBetweenDialoguesWhite() => StartCoroutine(WaitBetweenWhiteFade());
 
     private IEnumerator ShowCharacter()
     {
@@ -717,6 +717,8 @@ public class DialogueManager : MonoBehaviour
             AudioManager.FadeMusicIn(Sounds.Ending);
     }
 
+    private void EscapeButton(InputAction.CallbackContext context) => MainMenuButton();
+
     public void MainMenuButton()
     {
         if (shouldUseSave) 
@@ -789,15 +791,14 @@ public class DialogueManager : MonoBehaviour
             devInputAction.performed -= DevDialogueField;
             devInputAction.Disable();
         }
+        quit.performed -= EscapeButton;
+        quit.Disable();
         sceneToGoTo = sceneName;
         FadeManager.StartFade(false, LoadScene, Color.black);
         AudioManager.FadeMusicOut();
     }
 
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(sceneToGoTo);
-    }
+    private void LoadScene() => SceneManager.LoadScene(sceneToGoTo);
 
     private Dialogue FindDialogue(string id)
     {

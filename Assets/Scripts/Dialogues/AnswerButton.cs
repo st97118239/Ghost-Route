@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class AnswerButton : MonoBehaviour
@@ -17,10 +18,13 @@ public class AnswerButton : MonoBehaviour
 
     private Answer answer;
 
-    public void Setup(DialogueManager givenManager)
+    private int idx;
+
+    public void Setup(DialogueManager givenManager, int givenIdx)
     {
         dialogueManager = givenManager;
         gameObject.SetActive(false);
+        idx = givenIdx;
     }
 
     public void Load(Answer givenAnswer)
@@ -57,6 +61,9 @@ public class AnswerButton : MonoBehaviour
 
             yield return Time.fixedDeltaTime;
         }
+
+        if (idx == 0)
+            EventSystem.current.SetSelectedGameObject(gameObject);
     }
 
     public void Press()
