@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: If we can't get your memory back, you will fall down and get stuck there.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: d5b31176b2ede904c8bac1ec9226fca9, type: 3}
   nextDialogueID: 627232336
   delay: 0
   answersID: []

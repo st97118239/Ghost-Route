@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Come, take my hand and let's go get those memories back.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b4fbd82f2cb6a474faea33543f8792a3, type: 3}
   nextDialogueID: -167466384
   delay: 0
   answersID: []

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +45,7 @@ public class GhostHuntManager : MonoBehaviour
     private WaitForSeconds shootCursorTimeWait;
     private Coroutine shootCursorCoroutine;
 
-    [SerializeField] private AudioClip[] beginVoicelines;
+    [SerializeField] private AudioClip beginVoiceline;
 
     private bool isPlaying;
 
@@ -83,15 +82,8 @@ public class GhostHuntManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if (beginVoicelines != null && beginVoicelines.Length > 0)
-        {
-            foreach (AudioClip voiceline in beginVoicelines)
-            {
-                float delay = AudioManager.PlayVoiceline(voiceline);
-
-                yield return new WaitForSeconds(delay);
-            }
-        }
+        float delay = AudioManager.PlayVoiceline(beginVoiceline);
+        yield return new WaitForSeconds(delay);
 
         StartGame();
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: It feels more personal and like a great first date.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: cc2b58bb997101c438492cdac0bbc106, type: 3}
   nextDialogueID: -719648000
   delay: 0
   answersID: []

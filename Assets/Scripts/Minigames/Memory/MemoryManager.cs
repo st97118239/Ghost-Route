@@ -37,7 +37,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private InputActionAsset inputActionAsset;
     private InputAction devInputAction;
 
-    [SerializeField] private AudioClip[] beginVoicelines;
+    [SerializeField] private AudioClip beginVoiceline;
 
     [SerializeField] private float timeBetweenCardPopup;
     private WaitForSeconds timeBetweenCardPopupWait;
@@ -62,29 +62,16 @@ public class MemoryManager : MonoBehaviour
         StartCoroutine(SpawnCards());
     }
 
-    private void Start()
-    {
-        FadeManager.StartFade(true, StartVoicelines, Color.black);
-    }
+    private void Start() => FadeManager.StartFade(true, StartVoicelines, Color.black);
 
-    private void StartVoicelines()
-    {
-        StartCoroutine(PlayVoicelines());
-    }
+    private void StartVoicelines() => StartCoroutine(PlayVoicelines());
 
     private IEnumerator PlayVoicelines()
     {
         yield return new WaitForSeconds(0.7f);
 
-        if (beginVoicelines != null && beginVoicelines.Length > 0)
-        {
-            foreach (AudioClip voiceline in beginVoicelines)
-            {
-                float delay = AudioManager.PlayVoiceline(voiceline);
-
-                yield return new WaitForSeconds(delay);
-            }
-        }
+        float delay = AudioManager.PlayVoiceline(beginVoiceline);
+        yield return new WaitForSeconds(delay);
 
         AudioManager.FadeMusicIn(Sounds.MainMusic);
         yield return new WaitForSeconds(0.3f);
@@ -191,19 +178,20 @@ public class MemoryManager : MonoBehaviour
             RectTransform card0Rect = cardsObj[cardsIdx[0]].GetComponent<RectTransform>();
             RectTransform card1Rect = cardsObj[cardsIdx[1]].GetComponent<RectTransform>();
             Vector3 targetPos;
+            float voicelineTime;
             if (turn == 0)
             {
                 targetPos = moveAnimPosPlayer.position;
                 card0.transform.SetParent(moveAnimPosPlayer);
                 card1.transform.SetParent(moveAnimPosPlayer);
-                card0.PlayVoiceline(false);
+                voicelineTime = card0.PlayVoiceline(false);
             }
             else
             {
                 targetPos = moveAnimPosOpponent.position;
                 card0.transform.SetParent(moveAnimPosOpponent);
                 card1.transform.SetParent(moveAnimPosOpponent);
-                card0.PlayVoiceline(true);
+                voicelineTime = card0.PlayVoiceline(true);
             }
 
             AudioManager.PlaySound(Sounds.MemoryPoint, true);
@@ -213,12 +201,15 @@ public class MemoryManager : MonoBehaviour
                 card0Rect.position = Vector2.MoveTowards(card0Rect.position, targetPos, moveAnimSpeed);
                 card1Rect.position = Vector2.MoveTowards(card1Rect.position, targetPos, moveAnimSpeed);
 
+                //voicelineTime -= Time.fixedDeltaTime;
                 yield return Time.fixedDeltaTime;
             }
 
             opponentManager.ForgetCard(cardsIdx[0]);
             opponentManager.ForgetCard(cardsIdx[1]);
             cardsLeft -= 2;
+
+            yield return new WaitForSeconds(voicelineTime);
         }
         else
         {

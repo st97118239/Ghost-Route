@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: 
   text: Goodluck.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: e4e58ebf916b1e746b9f8fb2db5932a5, type: 3}
   nextDialogueID: 
   delay: 2
   answersID: []
   eventToPlay: 8
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

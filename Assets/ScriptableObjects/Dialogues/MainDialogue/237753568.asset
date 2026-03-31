@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Didn't you get a key with the game you played?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: f11d5388ffd2ca24d9b0fd03b1536de3, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: We don't want that.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 79accde119d043f41b5fff8ad67188a6, type: 3}
   nextDialogueID: 1700100016
   delay: 0
   answersID: []

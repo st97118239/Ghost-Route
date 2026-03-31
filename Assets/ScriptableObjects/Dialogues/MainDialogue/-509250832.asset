@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: And everyone has lived a different life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: fea876f527dc6a942bfc5723cb929ee4, type: 3}
   nextDialogueID: -1453312640
   delay: 0
   answersID: []

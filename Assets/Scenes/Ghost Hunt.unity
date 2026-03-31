@@ -3232,7 +3232,7 @@ MonoBehaviour:
   baseCursorColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   shootCursorColor: {r: 0.8490566, g: 0.35644355, b: 0.35644355, a: 1}
   shootCursorTime: 0.2
-  beginVoicelines: []
+  beginVoiceline: {fileID: 8300000, guid: c55f8bfc58a227348850fe69b3b7b678, type: 3}
 --- !u!4 &1560070464
 Transform:
   m_ObjectHideFlags: 0

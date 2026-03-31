@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Why don't we try it on the door over there?
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: bf3319f1ad0ac074692ae2e0a1e24f37, type: 3}
   nextDialogueID: Zoom Door
   delay: 0
   answersID: []

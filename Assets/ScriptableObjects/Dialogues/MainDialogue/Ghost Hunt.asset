@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Ghosts.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 9d2efd217908379419a8841c04ec731d, type: 3}
   nextDialogueID: After Ghost Hunt
   delay: 0
   answersID: []

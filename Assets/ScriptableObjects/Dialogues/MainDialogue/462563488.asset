@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: I know, it sounds scary.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 812c221082369ee41a4cf17bb34bc179, type: 3}
   nextDialogueID: 954604032
   delay: 0
   answersID: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Nothing beats a good time with friends.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: acb4ffbbc863e22498d08c0f46838dcd, type: 3}
   nextDialogueID: -719648000
   delay: 0
   answersID: []

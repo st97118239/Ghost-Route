@@ -77,8 +77,8 @@ public class CardObj : MonoBehaviour
         image.color = isShowing ? Color.white : Color.grey;
     }
 
-    public void PlayVoiceline(bool isOpponent)
+    public float PlayVoiceline(bool isOpponent)
     {
-        AudioManager.PlayVoiceline(isOpponent ? card.opponentScoreVoiceline : card.playerScoreVoiceline);
+        return AudioManager.PlayVoiceline(isOpponent ? card.opponentScoreVoiceline : card.playerScoreVoiceline);
     }
 }

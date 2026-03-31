@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: That is Phlegeton.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: c08373bf969a31347ad6e65d41bc023c, type: 3}
   nextDialogueID: 602083392
   delay: 0
   answersID: []

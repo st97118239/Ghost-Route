@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: No need to get cocky now.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 83da3764ed7d57e4586c445bcbf5aaee, type: 3}
   nextDialogueID: -1423594128
   delay: 0
   answersID: []

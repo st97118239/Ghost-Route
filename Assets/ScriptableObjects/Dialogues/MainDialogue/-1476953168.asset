@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Such a nice spot for a birthday party.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 6ad9f5f151276074eb0d314f3022a068, type: 3}
   nextDialogueID: 1181815376
   delay: 0
   answersID: []

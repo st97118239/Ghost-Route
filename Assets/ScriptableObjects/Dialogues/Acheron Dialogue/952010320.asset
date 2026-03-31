@@ -15,13 +15,14 @@ MonoBehaviour:
   charName: 
   text: Avoid getting hit by the ferryman's spear or getting grabbed by the woeful
     ghosts.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: a6bf0826b0d8d77438589722d9da8696, type: 3}
   nextDialogueID: 450931712
   delay: 2
   answersID: []
   eventToPlay: 0
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

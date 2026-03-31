@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Look over there.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 734c34b49dcd6814eb6b541e20515174, type: 3}
   nextDialogueID: -355318176
   delay: 0
   answersID: []

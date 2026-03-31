@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: My thank you, I feel flattered.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 2d4d1becd6ddb4248b8ec3868a5933b9, type: 3}
   nextDialogueID: 491209008
   delay: 0
   answersID: []

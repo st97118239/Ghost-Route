@@ -23,7 +23,7 @@ MonoBehaviour:
     utilityNodes: []
     tmpName: AcheronGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -392.68292, y: -705.7017, z: 0}
+    viewPosition: {x: 492.31708, y: -887.7017, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -63,7 +63,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: b5518597cf632234d83d47aa96499318, type: 2}
         charName: 
         text: Since your memory is so shaken, let's refresh your memory.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 1005739339fa4d64da9a22d97b934a57, type: 3}
         nextDialogue:
           rid: 7815180819647955035
         delay: 2
@@ -71,6 +71,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -96,7 +97,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: f4eb6fd57bd00e34cbe019e0b2eb5cbf, type: 2}
         charName: 
         text: All you have to do is get to the end of the platformer.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: fe110c77b2c111146b9cc194e1d97c23, type: 3}
         nextDialogue:
           rid: 7815180819647955037
         delay: 2
@@ -104,6 +105,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -130,7 +132,7 @@ MonoBehaviour:
         charName: 
         text: Avoid getting hit by the ferryman's spear or getting grabbed by the
           woeful ghosts.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: a6bf0826b0d8d77438589722d9da8696, type: 3}
         nextDialogue:
           rid: 7815180819647955039
         delay: 2
@@ -138,6 +140,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -163,7 +166,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: a12165f448a39724aa5f03b84682cf25, type: 2}
         charName: 
         text: Easy enough, right?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 5fe68b39b8844294e88a8f4ccb4feb08, type: 3}
         nextDialogue:
           rid: 7815180819647955041
         delay: 2
@@ -171,6 +174,7 @@ MonoBehaviour:
         eventToPlay: 0
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:
@@ -196,7 +200,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: f5d925caec05f1648972e160e305e17b, type: 2}
         charName: 
         text: Goodluck.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: e4e58ebf916b1e746b9f8fb2db5932a5, type: 3}
         nextDialogue:
           rid: -2
         delay: 2
@@ -204,6 +208,7 @@ MonoBehaviour:
         eventToPlay: 8
         soundToPlay: 0
         loopSound: 0
+        musicToPlay: 0
         minigame: 0
         scoreToWin: 0
         wonDialogue:

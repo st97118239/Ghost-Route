@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Now take my hand and let's move on.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 95bf853dd7b52084bbb3fbd00f466337, type: 3}
   nextDialogueID: -167466384
   delay: 0
   answersID: []

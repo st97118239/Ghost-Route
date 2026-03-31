@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Arcade dates are always fun.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: f4dc1f3c311ad3142934982b9a356965, type: 3}
   nextDialogueID: -1677049568
   delay: 0
   answersID: []

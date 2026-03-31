@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: It is where lost souls end up.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 1cf09adf8beb9ab4eb52c00e18afba78, type: 3}
   nextDialogueID: 1092593360
   delay: 0
   answersID: []

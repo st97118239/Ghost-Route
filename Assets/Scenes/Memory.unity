@@ -1255,7 +1255,7 @@ MonoBehaviour:
   playerText: {fileID: 1403626504}
   opponentText: {fileID: 44808542}
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
-  beginVoicelines: []
+  beginVoiceline: {fileID: 8300000, guid: c5ed77e9b7b34d44aa74981aeb2880cf, type: 3}
   timeBetweenCardPopup: 0.25
 --- !u!4 &2068348469
 Transform:

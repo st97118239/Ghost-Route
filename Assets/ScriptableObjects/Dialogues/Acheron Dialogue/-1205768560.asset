@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: 
   text: Since your memory is so shaken, let's refresh your memory.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 1005739339fa4d64da9a22d97b934a57, type: 3}
   nextDialogueID: 1913832768
   delay: 2
   answersID: []
   eventToPlay: 0
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 

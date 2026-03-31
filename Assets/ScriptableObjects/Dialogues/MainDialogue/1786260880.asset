@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: This place is called Cocytus.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 51ed01ceb4d5dcb498dddbaf63def2ca, type: 3}
   nextDialogueID: 1998166464
   delay: 0
   answersID: []

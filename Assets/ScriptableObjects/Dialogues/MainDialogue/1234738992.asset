@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: You will get reborn.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 433291ab8d04007449ed2d2ecd65b072, type: 3}
   nextDialogueID: -1624125952
   delay: 0
   answersID: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: So let's see how we can get you your memory back.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: b262d94baff678e4099e50e742139926, type: 3}
   nextDialogueID: -1637465712
   delay: 0
   answersID: []

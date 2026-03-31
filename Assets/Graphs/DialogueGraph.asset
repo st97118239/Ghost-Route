@@ -294,7 +294,7 @@ MonoBehaviour:
     - rid: 7815180819647955361
     tmpName: DialogueGraph
     viewportInitiallySet: 1
-    viewPosition: {x: -44129.74, y: -504.72168, z: 0}
+    viewPosition: {x: -25577.127, y: -875.04956, z: 0}
     viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -2368,7 +2368,7 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180684838568164
-        nodeX: 13133.824
+        nodeX: 13132.824
         nodeY: 1031.74
         name: DialogueNode
         isUtilityNode: 0
@@ -2449,7 +2449,7 @@ MonoBehaviour:
         charName: Lethia
         text: This place is different for everyone since this place is built on your
           life.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 04e02c0c096c5fb4caf69f9e56c874f6, type: 3}
         nextDialogue:
           rid: 7815180684838568170
         delay: 0
@@ -2483,7 +2483,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 9b64a18b7fa383a4cb4202ef6e0f97e4, type: 2}
         charName: Lethia
         text: And everyone has lived a different life.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: fea876f527dc6a942bfc5723cb929ee4, type: 3}
         nextDialogue:
           rid: 7815180684838568172
         delay: 0
@@ -2518,7 +2518,7 @@ MonoBehaviour:
         charName: Lethia
         text: And since you don't remember anything, we need to walk a different
           route.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 0c3f04d020748b74f871f10cf70d193d, type: 3}
         nextDialogue:
           rid: 7815180684838568174
         delay: 0
@@ -2552,7 +2552,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 110b9aa6a93c06f48b78a6e7309d09ef, type: 2}
         charName: Lethia
         text: But focus, we need to find a way out of this forest.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 99c653b9afa8cc94f8413d9dca3c28cb, type: 3}
         nextDialogue:
           rid: 7815180684838568176
         delay: 0
@@ -2586,7 +2586,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 3a9ad64e16ca75144a20f84308fa4d47, type: 2}
         charName: Lethia
         text: If I'm correct, it should be right... there!
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: c6549a25c8b59614ca27ac68ebab52bb, type: 3}
         nextDialogue:
           rid: 7815180684838568178
         delay: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 26d0b0b009d1de44a9b8c42d0ce0b82a, type: 2}
         charName: Lethia
         text: Watch your step, you never know what could happen-
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 7c93296cb3a386c4db81597e95b35df9, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -2672,7 +2672,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: e8625b8e133111c43826f03402276926, type: 2}
         charName: Lethia
         text: Ghosts.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 9d2efd217908379419a8841c04ec731d, type: 3}
         nextDialogue:
           rid: 7815180684838568193
         delay: 0
@@ -4703,7 +4703,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 6ec3db877104fa647ae79f9f6bf1f6b3, type: 2}
         charName: Lethia
         text: I see why the arcade is such an important place for you.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 708621e210f2820458f2fa471da7d30f, type: 3}
         nextDialogue:
           rid: 7815180819647955057
         delay: 0
@@ -4776,7 +4776,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 87ecbbd5966558a4ebb4d7e3c2ae3c11, type: 2}
         charName: Lethia
         text: You are quite the gamer.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: ec37a6dcf415ad54c958af9f4c3804f5, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -4864,7 +4864,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 1d5cb05b7b1c28d45ba8a4d1531d0dc1, type: 2}
         charName: Lethia
         text: My thank you, I feel flattered.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 2d4d1becd6ddb4248b8ec3868a5933b9, type: 3}
         nextDialogue:
           rid: 7815180819647955075
         delay: 0
@@ -4898,7 +4898,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 7e6ab30ddc16de547b24f89fbde497fb, type: 2}
         charName: Lethia
         text: You're welcome.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 02455f16e3717824d8698ac7a0061bdc, type: 3}
         nextDialogue:
           rid: 7815180819647955075
         delay: 0
@@ -4932,7 +4932,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 62c2f0a3e13327a4393c7fea3f7d2a68, type: 2}
         charName: Lethia
         text: No need to get cocky now.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 83da3764ed7d57e4586c445bcbf5aaee, type: 3}
         nextDialogue:
           rid: 7815180819647955071
         delay: 0
@@ -4966,7 +4966,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: f467e339e4ada214a88073526ad3b8a5, type: 2}
         charName: Lethia
         text: You are...
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 5df31a76cd016c946a13d84994748297, type: 3}
         nextDialogue:
           rid: 7815180819647955073
         delay: 0
@@ -5000,7 +5000,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 088acabdebb31014d987b08f6b582532, type: 2}
         charName: Lethia
         text: decent.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: f51f46c4f28d7aa4a9f709e201cb569f, type: 3}
         nextDialogue:
           rid: 7815180819647955075
         delay: 0
@@ -5034,7 +5034,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 235b1fa7b8b8a554a84fe85c0c30d3ff, type: 2}
         charName: Lethia
         text: Do you remember anything now?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: bd7607825a05da74cae1704ae6febe3c, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -5086,7 +5086,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: c1bfed8058b7c8b42bd02c43d16f9001, type: 2}
         charName: Lethia
         text: Tell me.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 01a4a9115668f1c408adde5bdfc88e45, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -5174,7 +5174,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: a8d0086aa51ad4f4b922399ee68aef66, type: 2}
         charName: Lethia
         text: Such a nice spot for a birthday party.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 6ad9f5f151276074eb0d314f3022a068, type: 3}
         nextDialogue:
           rid: 7815180819647955095
         delay: 0
@@ -5208,7 +5208,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 82b66e24be007014a97ad587a48dcd19, type: 2}
         charName: Lethia
         text: How nice.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 27998143219ffaa4680dcdbcf240169e, type: 3}
         nextDialogue:
           rid: 7815180819647955093
         delay: 0
@@ -5242,7 +5242,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: f4263e86868a42142b1635e046f6b3b3, type: 2}
         charName: Lethia
         text: Arcade dates are always fun.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: f4dc1f3c311ad3142934982b9a356965, type: 3}
         nextDialogue:
           rid: 7815180819647955097
         delay: 0
@@ -5276,7 +5276,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 18bc647202aba2944ab56cf938bf3826, type: 2}
         charName: Lethia
         text: Nothing beats a good time with friends.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: acb4ffbbc863e22498d08c0f46838dcd, type: 3}
         nextDialogue:
           rid: 7815180819647955099
         delay: 0
@@ -5310,7 +5310,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 1a2196fbe5ed6b548a743d3f2d29d6ca, type: 2}
         charName: Lethia
         text: I get why you would come here every year.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: acb4ffbbc863e22498d08c0f46838dcd, type: 3}
         nextDialogue:
           rid: 7815180819647955099
         delay: 0
@@ -5344,7 +5344,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: ce2a2057e3f32754dbd962149acf39b7, type: 2}
         charName: Lethia
         text: It feels more personal and like a great first date.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: cc2b58bb997101c438492cdac0bbc106, type: 3}
         nextDialogue:
           rid: 7815180819647955099
         delay: 0
@@ -5378,7 +5378,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: b0efb1757f8d32f4b98abb719a05888d, type: 2}
         charName: Lethia
         text: Seems like we are another step closer to our goal.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 6f52fa67952fc9a4684078d102b755fc, type: 3}
         nextDialogue:
           rid: 7815180819647955101
         delay: 0
@@ -5412,7 +5412,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 409005ff886914f419bdc2e3e07e2863, type: 2}
         charName: Lethia
         text: Didn't you get a key with the game you played?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: f11d5388ffd2ca24d9b0fd03b1536de3, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -5464,7 +5464,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 91353a9e668c64a479360ea70cc34e2b, type: 2}
         charName: Lethia
         text: Why don't we try it on the door over there?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: bf3319f1ad0ac074692ae2e0a1e24f37, type: 3}
         nextDialogue:
           rid: 7815180819647955107
         delay: 0
@@ -5566,7 +5566,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: cd4cd433710a3df49bf7852d540f7b5f, type: 2}
         charName: Lethia
         text: It worked!
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 113351b4806192747a4ae57e78cb68ea, type: 3}
         nextDialogue:
           rid: 7815180819647955113
         delay: 0
@@ -5600,7 +5600,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 1973e21096587db4bb96711cec718607, type: 2}
         charName: Lethia
         text: Let's go, we are almost there.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 232440d807d838741bb3875e09cfab11, type: 3}
         nextDialogue:
           rid: 7815180819647955115
         delay: 0
@@ -5720,7 +5720,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 5093974376def274894d00568faaa64c, type: 2}
         charName: Lethia
         text: This place is called Cocytus.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 51ed01ceb4d5dcb498dddbaf63def2ca, type: 3}
         nextDialogue:
           rid: 7815180819647955123
         delay: 0
@@ -5754,7 +5754,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 8079da8c2ac7828468b23d8ed280639b, type: 2}
         charName: Lethia
         text: Watch your step, you don't want to fall down.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 950f362a4ed48ad40beb07c4bf2ac19f, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -5806,7 +5806,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 05c592a11f4775d44b231467458eda87, type: 2}
         charName: Lethia
         text: Look over there.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 734c34b49dcd6814eb6b541e20515174, type: 3}
         nextDialogue:
           rid: 7815180819647955129
         delay: 0
@@ -5840,7 +5840,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: dc398934098afbc4093e1d1bf83a7e8c, type: 2}
         charName: Lethia
         text: That is Phlegeton.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: c08373bf969a31347ad6e65d41bc023c, type: 3}
         nextDialogue:
           rid: 7815180819647955131
         delay: 0
@@ -5874,7 +5874,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 550f7580cc4758d4d8395acc882c562a, type: 2}
         charName: Lethia
         text: It is where lost souls end up.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 1cf09adf8beb9ab4eb52c00e18afba78, type: 3}
         nextDialogue:
           rid: 7815180819647955133
         delay: 0
@@ -5909,7 +5909,7 @@ MonoBehaviour:
         charName: Lethia
         text: If we can't get your memory back, you will fall down and get stuck
           there.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: d5b31176b2ede904c8bac1ec9226fca9, type: 3}
         nextDialogue:
           rid: 7815180819647955135
         delay: 0
@@ -5943,7 +5943,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: a1b61396c0434424face079354e4a519, type: 2}
         charName: Lethia
         text: We don't want that.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 79accde119d043f41b5fff8ad67188a6, type: 3}
         nextDialogue:
           rid: 7815180819647955137
         delay: 0
@@ -5977,7 +5977,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 0281256b6f28d2e41b6be1288d8e73bd, type: 2}
         charName: Lethia
         text: So let's see how we can get you your memory back.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: b262d94baff678e4099e50e742139926, type: 3}
         nextDialogue:
           rid: 7815180819647955139
         delay: 0
@@ -6063,7 +6063,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: ac8938ee163be704a9b2776cff30e497, type: 2}
         charName: Lethia
         text: Is something wrong?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 0730950136ab192429d9978278b88fe1, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -6115,7 +6115,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 3c009146769244c48baa280a7d9a7074, type: 2}
         charName: Lethia
         text: You will get reborn.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 433291ab8d04007449ed2d2ecd65b072, type: 3}
         nextDialogue:
           rid: 7815180819647955153
         delay: 0
@@ -6149,7 +6149,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: ff2874ad23bc36d449998ce1a4eec9be, type: 2}
         charName: Lethia
         text: A new life.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 17b8c20260e66c84d8166610e2526414, type: 3}
         nextDialogue:
           rid: 7815180819647955157
         delay: 0
@@ -6172,7 +6172,7 @@ MonoBehaviour:
       data:
         nodeData:
           rid: 7815180819647955157
-        nodeX: 35116.254
+        nodeX: 35115.254
         nodeY: 1034.7738
         name: DialogueNode
         isUtilityNode: 0
@@ -6183,7 +6183,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 812eadc1af305df41b2ea4f46f045f91, type: 2}
         charName: Lethia
         text: A new start.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: cb42ef41d7abe1049a8109975fc2bd36, type: 3}
         nextDialogue:
           rid: 7815180819647955159
         delay: 0
@@ -6217,7 +6217,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 8ae9b565d000d144f82b753d43d31d06, type: 2}
         charName: Lethia
         text: A new you.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 0ca4c26de79653e4f8fe3f7e4220ccad, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -6269,7 +6269,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 127a6b4d27821cd43a4d933683e9d64d, type: 2}
         charName: Lethia
         text: I know, it sounds scary.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 812c221082369ee41a4cf17bb34bc179, type: 3}
         nextDialogue:
           rid: 7815180819647955165
         delay: 0
@@ -6303,7 +6303,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: dbced2b1682362547a2619ba8e85596e, type: 2}
         charName: Lethia
         text: But it is so much less scary than it sounds.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: f6df93f1954422b4db30b048cefb5a9e, type: 3}
         nextDialogue:
           rid: 7815180819647955167
         delay: 0
@@ -6337,7 +6337,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 89f0b7bb4723bc54784d8a64043bcf70, type: 2}
         charName: Lethia
         text: It is also a lot better than getting stuck down there.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 1711808a264deb147abde72bf96e7251, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -6389,7 +6389,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: eb2957cb5a556994c85ea05749ca260a, type: 2}
         charName: Lethia
         text: No need to think about that, it won't happen.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 160e6dd2c7e52f942b54df2fb2da989d, type: 3}
         nextDialogue:
           rid: 7815180819647955175
         delay: 0
@@ -6423,7 +6423,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 535ffe4a4f52401469a66901b28d1920, type: 2}
         charName: Lethia
         text: Okay, dear?
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 2a32cd70e4c914542a9c64fdc05f2f39, type: 3}
         nextDialogue:
           rid: 7815180819647955177
         delay: 0
@@ -6457,7 +6457,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 7393d7319363af34f83bb99767822798, type: 2}
         charName: Lethia
         text: No need to be scared.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: b7dafb27796649f4a811a7ca79ed4a5b, type: 3}
         nextDialogue:
           rid: 7815180819647955181
         delay: 0
@@ -6491,7 +6491,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 82bf706d71d909e4eac98f65eae07158, type: 2}
         charName: Lethia
         text: Good.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 26f291610a0c254469d39ff390e7c3b2, type: 3}
         nextDialogue:
           rid: 7815180819647955183
         delay: 0
@@ -6525,7 +6525,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 05c80216b00ec614eba4b0dc2c738d19, type: 2}
         charName: Lethia
         text: We will get through this.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: f180b6e9098581f4ab0091676279c1e1, type: 3}
         nextDialogue:
           rid: -2
         delay: 0
@@ -6561,7 +6561,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 99340a3f146e09a4fad920a908819e7d, type: 2}
         charName: Lethia
         text: Now take my hand and let's move on.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 95bf853dd7b52084bbb3fbd00f466337, type: 3}
         nextDialogue:
           rid: 7815180819647955195
         delay: 0
@@ -6629,7 +6629,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 41a36df033e8a0445a16a3d9721af94d, type: 2}
         charName: Lethia
         text: I understand.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 8f529b39b496f1845bf3d2db09abb313, type: 3}
         nextDialogue:
           rid: 7815180819647955191
         delay: 0
@@ -6663,7 +6663,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 54da4b3691d06c24aa7a7bad175da010, type: 2}
         charName: Lethia
         text: But I won't let anything bad happen to you.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: 88c58fd7ee5b2074088e231a0e78e15f, type: 3}
         nextDialogue:
           rid: 7815180819647955193
         delay: 0
@@ -6697,7 +6697,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 55ecb5b719777cc498a1d286bc629f8c, type: 2}
         charName: Lethia
         text: Come, take my hand and let's go get those memories back.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: b4fbd82f2cb6a474faea33543f8792a3, type: 3}
         nextDialogue:
           rid: 7815180819647955195
         delay: 0
@@ -6817,7 +6817,7 @@ MonoBehaviour:
         dialogue: {fileID: 11400000, guid: 4fb8de4727f3e084bb95f08c7d4a991d, type: 2}
         charName: Lethia
         text: I think I know what we need to do.
-        voiceline: {fileID: 0}
+        voiceline: {fileID: 8300000, guid: c3a9755371bab9f44a34c44c893ad774, type: 3}
         nextDialogue:
           rid: 7815180819647955203
         delay: 0

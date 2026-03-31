@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: card6
   sprite: {fileID: 21300000, guid: cecd8c4c90f434d448952b13aceaff99, type: 3}
-  playerScoreVoiceline: {fileID: 0}
-  opponentScoreVoiceline: {fileID: 0}
+  playerScoreVoiceline: {fileID: 8300000, guid: ea6bb71c026ffc946a07dd21239fc96e, type: 3}
+  opponentScoreVoiceline: {fileID: 8300000, guid: 0a4bd32761ab55d4ca9b188e894fd0f4, type: 3}

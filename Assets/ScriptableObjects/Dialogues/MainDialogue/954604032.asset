@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But it is so much less scary than it sounds.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: f6df93f1954422b4db30b048cefb5a9e, type: 3}
   nextDialogueID: 1339926496
   delay: 0
   answersID: []

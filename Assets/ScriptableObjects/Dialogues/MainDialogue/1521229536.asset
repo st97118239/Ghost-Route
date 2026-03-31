@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: This place is different for everyone since this place is built on your life.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 04e02c0c096c5fb4caf69f9e56c874f6, type: 3}
   nextDialogueID: -509250832
   delay: 0
   answersID: []

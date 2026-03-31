@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But I won't let anything bad happen to you.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 88c58fd7ee5b2074088e231a0e78e15f, type: 3}
   nextDialogueID: -326012928
   delay: 0
   answersID: []

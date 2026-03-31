@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: But focus, we need to find a way out of this forest.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 99c653b9afa8cc94f8413d9dca3c28cb, type: 3}
   nextDialogueID: Before Ghost Zoom
   delay: 0
   answersID: []

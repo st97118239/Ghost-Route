@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Lethia
   text: Watch your step, you never know what could happen-
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: 7c93296cb3a386c4db81597e95b35df9, type: 3}
   nextDialogueID: 
   delay: 0
   answersID:

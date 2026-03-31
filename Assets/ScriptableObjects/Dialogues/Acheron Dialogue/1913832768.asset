@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: 
   text: All you have to do is get to the end of the platformer.
-  voiceline: {fileID: 0}
+  voiceline: {fileID: 8300000, guid: fe110c77b2c111146b9cc194e1d97c23, type: 3}
   nextDialogueID: 952010320
   delay: 2
   answersID: []
   eventToPlay: 0
   soundToPlay: 0
   loopSound: 0
+  musicToPlay: 0
   minigame: 0
   scoreToWin: 0
   wonDialogueID: 
