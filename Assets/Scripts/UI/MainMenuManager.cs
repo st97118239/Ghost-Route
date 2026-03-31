@@ -4,13 +4,23 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text startButtonText;
-    [SerializeField] private Transform eyeTrans;
-    [SerializeField] private Vector3 eyeClampLeftTop;
-    [SerializeField] private Vector3 eyeClampRightBottom;
+
+    [SerializeField] private Transform eye0Trans;
+    [SerializeField] private Transform eye1Trans;
+    [SerializeField] private Transform eye2Trans;
+    [SerializeField] private Vector3 eye0ClampLeftTop;
+    [SerializeField] private Vector3 eye0ClampRightBottom;
+    [SerializeField] private Vector3 eye1ClampLeftTop;
+    [SerializeField] private Vector3 eye1ClampRightBottom;
+    [SerializeField] private Vector3 eye2ClampLeftTop;
+    [SerializeField] private Vector3 eye2ClampRightBottom;
+    private List<Vector3> cursorPositions;
+    [SerializeField] private int savedCursorPositionsAmt;
 
     [SerializeField] private Canvas mainMenuCanvas;
     [SerializeField] private CharCreatorManager charCreatorManager;
@@ -52,18 +62,45 @@ public class MainMenuManager : MonoBehaviour
     private IEnumerator MoveEyeLoop()
     {
         shouldMoveEye = true;
-        eyeTrans.localPosition = Vector3.zero;
+        eye0Trans.localPosition = Vector3.zero;
+        eye1Trans.localPosition = Vector3.zero;
+        eye2Trans.localPosition = Vector3.zero;
+
+        cursorPositions = new List<Vector3>();
+        for (int i = 0; i < savedCursorPositionsAmt; i++)
+        {
+            Vector3 mousePos = mainCamera.ScreenToViewportPoint(Input.mousePosition);
+            Vector3 centeredMousePos = new(mousePos.x + 0.08f, mousePos.y - 0.22f);
+            cursorPositions.Add(centeredMousePos);
+            yield return null;
+        }
 
         while (shouldMoveEye)
         {
             Vector3 mousePos = mainCamera.ScreenToViewportPoint(Input.mousePosition);
             Vector3 centeredMousePos = new(mousePos.x + 0.08f, mousePos.y - 0.22f);
 
-            float x = Mathf.Lerp(eyeClampLeftTop.x, eyeClampRightBottom.x, centeredMousePos.x);
-            float y = Mathf.Lerp(eyeClampLeftTop.y, eyeClampRightBottom.y, centeredMousePos.y);
+            cursorPositions.Add(centeredMousePos);
+
+            centeredMousePos = cursorPositions[0];
+
+            float x = Mathf.Lerp(eye0ClampLeftTop.x, eye0ClampRightBottom.x, centeredMousePos.x);
+            float y = Mathf.Lerp(eye0ClampLeftTop.y, eye0ClampRightBottom.y, centeredMousePos.y);
             float z = centeredMousePos.z;
 
-            eyeTrans.localPosition = new(x, y, z);
+            eye0Trans.localPosition = new(x, y, z);
+
+            x = Mathf.Lerp(eye1ClampLeftTop.x, eye1ClampRightBottom.x, centeredMousePos.x);
+            y = Mathf.Lerp(eye1ClampLeftTop.y, eye1ClampRightBottom.y, centeredMousePos.y);
+
+            eye1Trans.localPosition = new(x, y, z);
+
+            x = Mathf.Lerp(eye2ClampLeftTop.x, eye2ClampRightBottom.x, centeredMousePos.x);
+            y = Mathf.Lerp(eye2ClampLeftTop.y, eye2ClampRightBottom.y, centeredMousePos.y);
+
+            eye2Trans.localPosition = new(x, y, z);
+
+            cursorPositions.RemoveAt(0);
 
             yield return null;
         }
@@ -73,19 +110,34 @@ public class MainMenuManager : MonoBehaviour
     {
         shouldMoveEye = false;
 
-        Vector2 eyePos = new(eyeTrans.localPosition.x, eyeTrans.localPosition.y);
+        Vector2 eye0Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
+        Vector2 eye1Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
+        Vector2 eye2Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
 
         for (float i = 0; i < 1 + Time.deltaTime; i += Time.deltaTime)
         {
-            float x = Mathf.Lerp(eyePos.x, 0, i);
-            float y = Mathf.Lerp(eyePos.y, 0, i);
+            float x = Mathf.Lerp(eye0Pos.x, 0, i);
+            float y = Mathf.Lerp(eye0Pos.y, 0, i);
             const float z = 0;
 
-            eyeTrans.localPosition = new(x, y, z);
+            eye0Trans.localPosition = new(x, y, z);
+
+            x = Mathf.Lerp(eye1Pos.x, 0, i);
+            y = Mathf.Lerp(eye1Pos.y, 0, i);
+
+            eye1Trans.localPosition = new(x, y, z);
+
+            x = Mathf.Lerp(eye2Pos.x, 0, i);
+            y = Mathf.Lerp(eye2Pos.y, 0, i);
+
+            eye2Trans.localPosition = new(x, y, z);
+
             yield return Time.deltaTime;
         }
 
-        eyeTrans.localPosition = Vector3.zero;
+        eye0Trans.localPosition = Vector3.zero;
+        eye1Trans.localPosition = Vector3.zero;
+        eye2Trans.localPosition = Vector3.zero;
     }
 
     public void Show(bool isFromStart)
