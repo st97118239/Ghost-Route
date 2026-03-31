@@ -49,6 +49,10 @@ public class MainMenuManager : MonoBehaviour
             SaveDataManager.LookForSave();
 
         startButtonText.text = SaveDataManager.saveData.currentDialogueID == string.Empty ? "Start" : "Continue";
+
+        eye0Trans.localPosition = Vector3.zero;
+        eye1Trans.localPosition = Vector3.zero;
+        eye2Trans.localPosition = Vector3.zero;
     }
 
     private void Start()
@@ -62,9 +66,6 @@ public class MainMenuManager : MonoBehaviour
     private IEnumerator MoveEyeLoop()
     {
         shouldMoveEye = true;
-        eye0Trans.localPosition = Vector3.zero;
-        eye1Trans.localPosition = Vector3.zero;
-        eye2Trans.localPosition = Vector3.zero;
 
         cursorPositions = new List<Vector3>();
         for (int i = 0; i < savedCursorPositionsAmt; i++)
@@ -111,8 +112,8 @@ public class MainMenuManager : MonoBehaviour
         shouldMoveEye = false;
 
         Vector2 eye0Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
-        Vector2 eye1Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
-        Vector2 eye2Pos = new(eye0Trans.localPosition.x, eye0Trans.localPosition.y);
+        Vector2 eye1Pos = new(eye1Trans.localPosition.x, eye1Trans.localPosition.y);
+        Vector2 eye2Pos = new(eye2Trans.localPosition.x, eye2Trans.localPosition.y);
 
         for (float i = 0; i < 1 + Time.deltaTime; i += Time.deltaTime)
         {
