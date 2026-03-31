@@ -3226,7 +3226,7 @@ MonoBehaviour:
   minSecondsBetweenSpawns: 2
   devMinSecondsBetweenSpawns: 0
   inputActionAsset: {fileID: -944628639613478452, guid: 2e351b350c701294199b522ce4b708b7, type: 3}
-  maxPoints: 150
+  maxPoints: 100
   cursor: {fileID: 1363347958}
   cursorImage: {fileID: 1363347959}
   baseCursorColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}

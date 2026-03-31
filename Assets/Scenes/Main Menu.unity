@@ -9589,7 +9589,7 @@ MonoBehaviour:
   eye1ClampRightBottom: {x: 4, y: 3, z: 0}
   eye2ClampLeftTop: {x: -1, y: -1, z: 0}
   eye2ClampRightBottom: {x: 1, y: 1, z: 0}
-  savedCursorPositionsAmt: 40
+  savedCursorPositionsAmt: 30
   mainMenuCanvas: {fileID: 355393257}
   charCreatorManager: {fileID: 1467886123}
   settingsManager: {fileID: 3237570}

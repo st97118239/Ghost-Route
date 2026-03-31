@@ -59,6 +59,9 @@ public class GhostHuntManager : MonoBehaviour
 
         shootCursorTimeWait = new WaitForSeconds(shootCursorTime);
         cursorImage.color = baseCursorColor;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Mouse.current.WarpCursorPosition(new Vector2(Screen.width / 2, Screen.height / 2));
     }
 
     private void Start()
@@ -242,6 +245,8 @@ public class GhostHuntManager : MonoBehaviour
             FadeManager.StartFade(false, RestartGame, Color.black);
 
         AudioManager.FadeMusicOut();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private static void ExitGame()

@@ -412,7 +412,8 @@ public class DialogueManager : MonoBehaviour
         {
             isTyping = true;
             canClick = true;
-            EventSystem.current.SetSelectedGameObject(nextButton.gameObject);
+            if (nextButton != null)
+                EventSystem.current.SetSelectedGameObject(nextButton.gameObject);
         }
         else
         {
