@@ -28,7 +28,7 @@ public class MainMenuBackground : MonoBehaviour
     [SerializeField] private float starsContinueDelay;
     private WaitForSeconds starsContinueDelayWait;
 
-    private readonly Color invisibleColor = new(1, 1, 1, 0);
+    public static readonly Color invisibleColor = new(1, 1, 1, 0);
 
     private void Awake()
     {
