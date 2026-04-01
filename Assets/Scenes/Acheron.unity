@@ -3936,7 +3936,7 @@ MonoBehaviour:
   endingText: {fileID: 0}
   endingDescriptionText: {fileID: 0}
   endingFadeTime: 0
-  mainMenuSceneName: 
+  mainMenuSceneName: Main Menu
   autoContinue: 1
   shouldUseSave: 0
   dialogueHolder: {fileID: 11400000, guid: 865183cabd601ab4aa6c820b54bc8bad, type: 2}

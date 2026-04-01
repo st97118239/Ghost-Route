@@ -49,6 +49,8 @@ public static class SaveDataManager
             }
         }
 
+        saveData.hasSeenAcheronDialogue = false;
+
 #if UNITY_EDITOR
         Debug.Log("Save loaded");
 #endif

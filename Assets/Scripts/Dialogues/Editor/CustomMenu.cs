@@ -167,7 +167,6 @@ public class CustomMenu : NewGraph.ContextMenu
             dialogue.loopSound = nodeData.loopSound;
             dialogue.musicToPlay = nodeData.musicToPlay;
             dialogue.minigame = nodeData.minigame;
-            dialogue.scoreToWin = nodeData.scoreToWin;
             dialogue.wonDialogueID = nodeData.wonDialogue != null ? nodeData.wonDialogue.dialogue.name : string.Empty;
             dialogue.loseDialogueID = nodeData.loseDialogue != null ? nodeData.loseDialogue.dialogue.name : string.Empty;
             dialogue.ending = nodeData.ending;
@@ -326,7 +325,6 @@ public class CustomMenu : NewGraph.ContextMenu
             nodeData.loopSound = dialogue.loopSound;
             nodeData.musicToPlay = dialogue.soundToPlay;
             nodeData.minigame = dialogue.minigame;
-            nodeData.scoreToWin = dialogue.scoreToWin;
             nodeData.ending = dialogue.ending;
             nodeData.sprite = dialogue.sprite;
             nodeData.background = dialogue.background;

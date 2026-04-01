@@ -66,6 +66,14 @@ public class AudioManager : MonoBehaviour
             return -1f;
         }
 
+        if (instance.voicelineSource.volume == 0)
+        {
+#if UNITY_EDITOR
+            Debug.LogWarning("Voiceline volume is 0... Skipping audio");
+#endif
+            return 0f;
+        }
+
         instance.voicelineSource.clip = audioClip;
         instance.voicelineSource.Play();
 #if UNITY_EDITOR
@@ -80,7 +88,9 @@ public class AudioManager : MonoBehaviour
 
         if (clipToPlay == null)
         {
+#if UNITY_EDITOR
             Debug.LogWarning("Audio clip for " + sound + " is null");
+#endif
             return -1f;
         }
 
@@ -90,6 +100,14 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogError("AudioSource does not exist");
             return -1f;
+        }
+
+        if (source.volume == 0)
+        {
+#if UNITY_EDITOR
+            Debug.LogWarning("SFX volume is 0... Skipping audio");
+#endif
+            return 0f;
         }
 
         if (!isOneShot)
@@ -122,6 +140,14 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogError("AudioSource does not exist");
             return -1f;
+        }
+
+        if (source.volume == 0)
+        {
+#if UNITY_EDITOR
+            Debug.LogWarning("Looping SFX volume is 0... Skipping audio");
+#endif
+            return 0f;
         }
 
         if (source.isPlaying)
@@ -168,6 +194,14 @@ public class AudioManager : MonoBehaviour
     {
         if (instance.musicPlaying == music)
             return;
+
+        if (SaveDataManager.saveData.bgmVolume == 0)
+        {
+#if UNITY_EDITOR
+            Debug.LogWarning("Music volume is 0... Skipping audio");
+#endif
+            return;
+        }
 
         instance.musicPlaying = music;
 
@@ -225,6 +259,14 @@ public class AudioManager : MonoBehaviour
     {
         if (instance.musicPlaying == Sounds.None)
             return;
+
+        if (SaveDataManager.saveData.bgmVolume == 0)
+        {
+#if UNITY_EDITOR
+            Debug.LogWarning("Music volume is 0... Skipping audio");
+#endif
+            return;
+        }
 
         if (instance.fadeCoroutine != null)
             instance.StopCoroutine(instance.fadeCoroutine);

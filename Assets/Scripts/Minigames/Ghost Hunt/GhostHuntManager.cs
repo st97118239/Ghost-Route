@@ -31,6 +31,7 @@ public class GhostHuntManager : MonoBehaviour
 
     [SerializeField] private InputActionAsset inputActionAsset;
     private InputAction devInputAction;
+    private InputAction quit;
 
     private int points;
     [SerializeField] private int maxPoints;
@@ -60,8 +61,11 @@ public class GhostHuntManager : MonoBehaviour
         shootCursorTimeWait = new WaitForSeconds(shootCursorTime);
         cursorImage.color = baseCursorColor;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-        Mouse.current.WarpCursorPosition(new Vector2(Screen.width / 2, Screen.height / 2));
+        Cursor.lockState = CursorLockMode.Locked;
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction.performed += DevCheat;
+        quit = inputActionAsset.FindAction("Main/Quit");
+        quit.performed += EscapeButton;
     }
 
     private void Start()
@@ -78,6 +82,7 @@ public class GhostHuntManager : MonoBehaviour
 
     private void LoadGame()
     {
+        quit.Enable();
         StartCoroutine(PlayVoicelines());
     }
 
@@ -95,8 +100,6 @@ public class GhostHuntManager : MonoBehaviour
     {
         StartCoroutine(SpawnLoop());
 
-        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
-        devInputAction.performed += DevCheat;
         devInputAction.Enable();
     }
 
@@ -208,6 +211,7 @@ public class GhostHuntManager : MonoBehaviour
 
     private IEnumerator FollowCursor()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         cursor.gameObject.SetActive(true);
 
@@ -218,13 +222,12 @@ public class GhostHuntManager : MonoBehaviour
         }
 
         cursor.gameObject.SetActive(false);
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void EndGame()
     {
-        devInputAction.Disable();
-        devInputAction.performed -= DevCheat;
+        DisableActions();
 
 #if UNITY_EDITOR
         if (SaveDataManager.saveData == null)
@@ -237,16 +240,43 @@ public class GhostHuntManager : MonoBehaviour
 
         if (points >= maxPoints)
         {
-            SaveDataManager.saveData.hasPlayedGhostHunt = true;
-            SaveDataManager.saveData.ghostHuntScore = points;
+            SaveDataManager.saveData.hasFinishedGhostHunt = true;
             FadeManager.StartFade(false, ExitGame, Color.black);
         }
         else
             FadeManager.StartFade(false, RestartGame, Color.black);
 
         AudioManager.FadeMusicOut();
+    }
+
+    private void EscapeButton(InputAction.CallbackContext context)
+    {
+        DisableActions();
+        isPlaying = false;   
+        FadeManager.StartFade(false, QuitMainMenu, Color.black);
+        AudioManager.FadeMusicOut();
+    }
+
+    private void DisableActions()
+    {
+        if (devInputAction.enabled)
+        {
+            devInputAction.performed -= DevCheat;
+            if (devInputAction.enabled)
+                devInputAction.Disable();
+        }
+
+        quit.performed -= EscapeButton;
+        if (quit.enabled)
+            quit.Disable();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    private static void QuitMainMenu()
+    {
+        Cursor.visible = true;
+        SceneManager.LoadScene("Main Menu");
     }
 
     private static void ExitGame()

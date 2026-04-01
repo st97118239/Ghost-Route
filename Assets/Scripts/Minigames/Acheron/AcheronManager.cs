@@ -54,7 +54,12 @@ public class AcheronManager : MonoBehaviour
             UnlockButton();
     }
 
-    public void UnlockButton() => startButton.interactable = true;
+    public void UnlockButton()
+    {
+        SaveDataManager.saveData.hasSeenAcheronDialogue = true;
+        SaveDataManager.Save();
+        startButton.interactable = true;
+    }
 
     public void StartGame()
     {
@@ -131,7 +136,7 @@ public class AcheronManager : MonoBehaviour
     public void Finish()
     {
         AudioManager.PlaySound(Sounds.KeyJingle, true);
-        SaveDataManager.saveData.hasPlayedAcheron = true;
+        SaveDataManager.saveData.hasFinishedAcheron = true;
         sceneToGoTo = "Dialogue";
         FadeManager.StartFade(false, LoadScene, Color.black);
         AudioManager.FadeMusicOut();

@@ -32,7 +32,6 @@ public class DialogueNode : INode
     public Sounds musicToPlay;
     [GraphDisplay(DisplayType.BothViews)]
     public Minigames minigame;
-    public int scoreToWin;
     [Port, SerializeReference]
     public DialogueNode wonDialogue;
     [Port, SerializeReference]

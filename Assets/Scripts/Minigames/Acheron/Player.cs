@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
     private InputAction jump;
     private InputAction walkLeft;
     private InputAction walkRight;
-    private InputAction quit;
     private InputAction devInputAction;
 
     private Platform currentPlatform;
@@ -71,7 +70,6 @@ public class Player : MonoBehaviour
         jump = inputActionAsset.FindAction("Main/Move Up");
         walkLeft = inputActionAsset.FindAction("Main/Move Left");
         walkRight = inputActionAsset.FindAction("Main/Move Right");
-        quit = inputActionAsset.FindAction("Main/Quit");
         devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
 
         jump.performed += OnMoveUp;
@@ -79,10 +77,8 @@ public class Player : MonoBehaviour
         walkLeft.canceled += OnMoveLeftCancel;
         walkRight.started += OnMoveRight;
         walkRight.canceled += OnMoveRightCancel;
-        quit.performed += Quit;
         devInputAction.performed += DevInvincible;
 
-        quit.Enable();
         devInputAction.Enable();
 
         AudioManager.PlaySound(Sounds.Fall, true);
@@ -216,11 +212,6 @@ public class Player : MonoBehaviour
         animator.SetBool("Jump", true);
     }
 
-    private void Quit(InputAction.CallbackContext context)
-    {
-        End(false, false);
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Spear"))
@@ -278,8 +269,6 @@ public class Player : MonoBehaviour
         walkRight.started -= OnMoveRight;
         walkRight.canceled -= OnMoveRightCancel;
         walkRight.Disable();
-        quit.performed -= Quit;
-        quit.Disable();
         devInputAction.performed -= DevInvincible;
         devInputAction.Disable();
 

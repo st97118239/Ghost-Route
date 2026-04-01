@@ -28,6 +28,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private RectTransform moveAnimPosOpponent;
     [SerializeField] private float moveAnimSpeed;
 
+    [SerializeField] private int pointsNeededToWin = 5;
     private int playerPoints;
     private int opponentPoints;
 
@@ -36,6 +37,7 @@ public class MemoryManager : MonoBehaviour
 
     [SerializeField] private InputActionAsset inputActionAsset;
     private InputAction devInputAction;
+    private InputAction quit;
 
     [SerializeField] private AudioClip beginVoiceline;
 
@@ -51,6 +53,8 @@ public class MemoryManager : MonoBehaviour
 
     private void Awake()
     {
+        quit = inputActionAsset.FindAction("Main/Quit");
+        quit.performed += EscapeButton;
         FadeManager.Show();
         turn = -1;
         timeTillCheck = new WaitForSeconds(_timeTillCheck);
@@ -62,7 +66,11 @@ public class MemoryManager : MonoBehaviour
         StartCoroutine(SpawnCards());
     }
 
-    private void Start() => FadeManager.StartFade(true, StartVoicelines, Color.black);
+    private void Start()
+    {
+        quit.Enable();
+        FadeManager.StartFade(true, StartVoicelines, Color.black);
+    }
 
     private void StartVoicelines() => StartCoroutine(PlayVoicelines());
 
@@ -201,7 +209,6 @@ public class MemoryManager : MonoBehaviour
                 card0Rect.position = Vector2.MoveTowards(card0Rect.position, targetPos, moveAnimSpeed);
                 card1Rect.position = Vector2.MoveTowards(card1Rect.position, targetPos, moveAnimSpeed);
 
-                //voicelineTime -= Time.fixedDeltaTime;
                 yield return Time.fixedDeltaTime;
             }
 
@@ -246,17 +253,29 @@ public class MemoryManager : MonoBehaviour
 
     public bool IsCardAllowed(int idx) => cardsObj[idx].isActive;
 
+    private void EscapeButton(InputAction.CallbackContext context)
+    {
+        devInputAction.Disable();
+        devInputAction.performed -= DevShowCards;
+        quit.Disable();
+        quit.performed -= EscapeButton;
+        FadeManager.StartFade(false, QuitMainMenu, Color.black);
+        AudioManager.FadeMusicOut();
+    }
+
     public void EndGame()
     {
         devInputAction.Disable();
         devInputAction.performed -= DevShowCards;
-        SaveDataManager.saveData.hasPlayedMemory = true;
-        SaveDataManager.saveData.memoryScore = playerPoints;
+        SaveDataManager.saveData.hasFinishedMemory = true;
+        SaveDataManager.saveData.hasWonMemory = playerPoints >= pointsNeededToWin;
         FadeManager.StartFade(false, ExitGame, Color.black);
         AudioManager.FadeMusicOut();
     }
 
     private static void ExitGame() => SceneManager.LoadScene("Dialogue");
+
+    private static void QuitMainMenu() => SceneManager.LoadScene("Main Menu");
 
     private void DevShowCards(InputAction.CallbackContext context)
     {

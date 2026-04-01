@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 [Serializable]
 public class SaveData
@@ -19,13 +18,16 @@ public class SaveData
 
     public string currentDialogueID;
 
-    public bool hasPlayedGhostHunt;
-    public int ghostHuntScore;
+    public bool hasFinishedGhostHunt;
+    public bool hasStartedGhostHunt;
 
-    public bool hasPlayedAcheron;
+    public bool hasFinishedAcheron;
+    public bool hasStartedAcheron;
+    public bool hasSeenAcheronDialogue;
 
-    public bool hasPlayedMemory;
-    public int memoryScore;
+    public bool hasFinishedMemory;
+    public bool hasStartedMemory;
+    public bool hasWonMemory;
 
     public void Reset(Ending[] givenEndings)
     {
@@ -57,12 +59,15 @@ public class SaveData
 
         currentDialogueID = string.Empty;
 
-        hasPlayedGhostHunt = false;
-        ghostHuntScore = -1;
+        hasFinishedGhostHunt = false;
+        hasStartedGhostHunt = false;
 
-        hasPlayedAcheron = false;
+        hasFinishedAcheron = false;
+        hasStartedAcheron = false;
+        hasSeenAcheronDialogue = false;
 
-        hasPlayedMemory = false;
-        memoryScore = -1;
+        hasFinishedMemory = false;
+        hasFinishedMemory = false;
+        hasWonMemory = false;
     }
 }

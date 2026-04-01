@@ -141,6 +141,7 @@ public class DialogueManager : MonoBehaviour
 
         quit = inputActionAsset.FindAction("Main/Quit");
         quit.performed += EscapeButton;
+        
 
         if (textBox != null)
             textBox.text = string.Empty;
@@ -164,17 +165,56 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogue.minigame != Minigames.None)
         {
-            int score = dialogue.minigame switch
+            int score = -1;
+            switch (dialogue.minigame)
             {
-                Minigames.GhostHunt when SaveDataManager.saveData.hasPlayedGhostHunt => SaveDataManager.saveData.ghostHuntScore,
-                Minigames.Acheron when SaveDataManager.saveData.hasPlayedAcheron => 0,
-                Minigames.Memory when SaveDataManager.saveData.hasPlayedMemory => SaveDataManager.saveData.memoryScore,
-                _ => -1
-            };
+                case Minigames.GhostHunt when SaveDataManager.saveData.hasFinishedGhostHunt:
+                    score = 1;
+                    break;
+                case Minigames.GhostHunt:
+                {
+                    if (SaveDataManager.saveData.hasStartedGhostHunt)
+                    {
+                        sceneToGoTo = "Ghost Hunt";
+                        LoadScene();
+                    }
+
+                    break;
+                }
+                case Minigames.Acheron when SaveDataManager.saveData.hasFinishedAcheron:
+                    score = 1;
+                    break;
+                case Minigames.Acheron:
+                {
+                    if (SaveDataManager.saveData.hasStartedAcheron)
+                    {
+                        sceneToGoTo = "Acheron";
+                        LoadScene();
+                    }
+
+                    break;
+                }
+                case Minigames.Memory when SaveDataManager.saveData.hasFinishedMemory:
+                    score = SaveDataManager.saveData.hasWonMemory ? 1 : 0;
+                    break;
+                case Minigames.Memory:
+                {
+                    if (SaveDataManager.saveData.hasStartedMemory)
+                    {
+                        sceneToGoTo = "Memory";
+                        LoadScene();
+                    }
+
+                    break;
+                }
+                default:
+                    score = -1;
+                    break;
+            }
 
             if (score != -1)
             {
-                startingDialogue = score >= dialogue.scoreToWin
+                startingDialogue = score == 1
                     ? dialogue.wonDialogueID
                     : dialogue.loseDialogueID;
 
@@ -208,6 +248,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Load()
     {
+        if (acheronManager != null && SaveDataManager.saveData.hasSeenAcheronDialogue)
+        {
+            acheronManager.UnlockButton();
+            return;
+        }
         dialogueBox.SetActive(true);
         LoadNewDialogue(startingDialogue);
     }
@@ -331,14 +376,17 @@ public class DialogueManager : MonoBehaviour
             case Minigames.None:
                 break;
             case Minigames.GhostHunt:
+                SaveDataManager.saveData.hasStartedGhostHunt = true;
                 Save();
                 StartLoadScene("Ghost Hunt");
                 return;
             case Minigames.Acheron:
+                SaveDataManager.saveData.hasStartedAcheron = true;
                 Save();
                 StartLoadScene("Acheron");
                 return;
             case Minigames.Memory:
+                SaveDataManager.saveData.hasStartedMemory = true;
                 Save();
                 StartLoadScene("Memory");
                 return;
@@ -472,13 +520,17 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         dialogueCoroutine = null;
 
-        if (!autoContinue && textBox.text != string.Empty && textBox.text != "") yield break;
-
-        if (!autoContinue)
+        switch (autoContinue)
         {
-            yield return wait1Second;
-            if (voiceLineLength > 0)
-                yield return new WaitForSeconds(voiceLineLength);
+            case false when textBox.text != string.Empty && textBox.text != "":
+                yield break;
+            case false:
+            {
+                yield return wait1Second;
+                if (voiceLineLength > 0)
+                    yield return new WaitForSeconds(voiceLineLength);
+                break;
+            }
         }
 
         startDelayCoroutine = StartCoroutine(StartDelay());
@@ -787,19 +839,31 @@ public class DialogueManager : MonoBehaviour
 
     private void StartLoadScene(string sceneName)
     {
-        if (enableDevInput)
-        {
-            devInputAction.performed -= DevDialogueField;
-            devInputAction.Disable();
-        }
-        quit.performed -= EscapeButton;
-        quit.Disable();
+        DisableActions();
         sceneToGoTo = sceneName;
         FadeManager.StartFade(false, LoadScene, Color.black);
         AudioManager.FadeMusicOut();
     }
 
-    private void LoadScene() => SceneManager.LoadScene(sceneToGoTo);
+    private void LoadScene()
+    {
+        DisableActions();
+        SceneManager.LoadScene(sceneToGoTo);
+    }
+
+    private void DisableActions()
+    {
+        if (enableDevInput)
+        {
+            devInputAction.performed -= DevDialogueField;
+            if (devInputAction.enabled)
+                devInputAction.Disable();
+        }
+
+        quit.performed -= EscapeButton;
+        if (quit.enabled)
+            quit.Disable();
+    }
 
     private Dialogue FindDialogue(string id)
     {
