@@ -23,7 +23,6 @@ MonoBehaviour:
   loopSound: 1
   musicToPlay: 22
   minigame: 0
-  scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 0}

@@ -23,7 +23,6 @@ MonoBehaviour:
   loopSound: 0
   musicToPlay: 4
   minigame: 0
-  scoreToWin: 0
   wonDialogueID: 
   loseDialogueID: 
   ending: {fileID: 11400000, guid: a7a9361dfb43c5645abca9789e07c383, type: 2}

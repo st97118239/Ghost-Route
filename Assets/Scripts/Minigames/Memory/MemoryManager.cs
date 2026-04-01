@@ -55,6 +55,8 @@ public class MemoryManager : MonoBehaviour
     {
         quit = inputActionAsset.FindAction("Main/Quit");
         quit.performed += EscapeButton;
+        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
+        devInputAction.performed += DevShowCards;
         FadeManager.Show();
         turn = -1;
         timeTillCheck = new WaitForSeconds(_timeTillCheck);
@@ -92,8 +94,6 @@ public class MemoryManager : MonoBehaviour
         turn = 0;
         clickBlocker.SetActive(false);
 
-        devInputAction = inputActionAsset.FindAction("Dev/Dev Input");
-        devInputAction.performed += DevShowCards;
         devInputAction.Enable();
     }
 
@@ -255,18 +255,24 @@ public class MemoryManager : MonoBehaviour
 
     private void EscapeButton(InputAction.CallbackContext context)
     {
-        devInputAction.Disable();
-        devInputAction.performed -= DevShowCards;
-        quit.Disable();
-        quit.performed -= EscapeButton;
+        DisableActions();
         FadeManager.StartFade(false, QuitMainMenu, Color.black);
         AudioManager.FadeMusicOut();
     }
 
+    private void DisableActions()
+    {
+        if (devInputAction.enabled)
+            devInputAction.Disable();
+        devInputAction.performed -= DevShowCards;
+        if (quit.enabled)
+            quit.Disable();
+        quit.performed -= EscapeButton;
+    }
+
     public void EndGame()
     {
-        devInputAction.Disable();
-        devInputAction.performed -= DevShowCards;
+        DisableActions();
         SaveDataManager.saveData.hasFinishedMemory = true;
         SaveDataManager.saveData.hasWonMemory = playerPoints >= pointsNeededToWin;
         FadeManager.StartFade(false, ExitGame, Color.black);
