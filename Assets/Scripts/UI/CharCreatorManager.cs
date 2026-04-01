@@ -80,7 +80,7 @@ public class CharCreatorManager : MonoBehaviour
 
     public void UpdateName()
     {
-        if (nameInput.text == string.Empty || nameInput.text.StartsWith(" ") || invalidDialogueID)
+        if (nameInput.text == string.Empty || nameInput.text.StartsWith(" ") || nameInput.text == "Lethia" || invalidDialogueID)
             confirmButton.interactable = false;
         else
             confirmButton.interactable = true;

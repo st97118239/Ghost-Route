@@ -16,8 +16,12 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private GridLayoutGroup cardsParent;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private int cardAmt;
+    [SerializeField] private Transform[] cardHolders;
     [SerializeField] private CardObj[] cardsObj;
     [SerializeField] private Cards[] cards;
+
+    [SerializeField] private Transform defaultCardPos;
+    [SerializeField] private float animSpeed;
 
     public int cardsLeft { get; private set; }
 
@@ -65,7 +69,7 @@ public class MemoryManager : MonoBehaviour
         cardsId = new[] { string.Empty, string.Empty };
         GenerateCardsArray();
         cardsLeft = cardAmt;
-        StartCoroutine(SpawnCards());
+        SpawnCards();
     }
 
     private void Start()
@@ -116,27 +120,38 @@ public class MemoryManager : MonoBehaviour
         cards = tempCards.OrderBy(_ => rng.Next()).ToArray();
     }
 
-    private IEnumerator SpawnCards()
+    private void SpawnCards()
     {
-        cardsParent.enabled = true;
         cardsObj = new CardObj[cardAmt];
         for (int i = 0; i < cardAmt; i++)
         {
-            CardObj card = Instantiate(cardPrefab, cardsParent.transform).GetComponent<CardObj>();
+            CardObj card = Instantiate(cardPrefab, cardHolders[i]).GetComponent<CardObj>();
+            card.transform.position = defaultCardPos.position;
             cardsObj[i] = card;
             card.Load(this, cards[i], i);
         }
-
-        yield return new WaitForEndOfFrame();
-        cardsParent.enabled = false;
     }
 
     private IEnumerator EnableCards()
     {
         foreach (CardObj card in cardsObj)
         {
+            card.transform.position = defaultCardPos.position;
             card.Show();
-            yield return timeBetweenCardPopupWait;
+        }
+
+        for (int i = cardsObj.Length - 1; i >= 0; i--)
+        {
+            cardHolders[i].SetParent(cardsParent.transform);
+            Transform cardTrans = cardsObj[i].transform;
+            Vector3 targetPos = cardHolders[i].position;
+
+            while (Vector2.Distance(cardTrans.position, targetPos) > 1)
+            {
+                cardTrans.position = Vector2.MoveTowards(cardTrans.position, targetPos, moveAnimSpeed);
+
+                yield return Time.fixedDeltaTime;
+            }
         }
 
         StartGame();
