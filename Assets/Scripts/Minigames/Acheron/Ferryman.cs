@@ -82,7 +82,8 @@ public class Ferryman : Enemy
         RaycastHit2D ray = Physics2D.Raycast(transform.position, Vector2.up, raycastLength, platformLayer);
 
         if (ray.collider != null)
-            playerPos = new Vector3(playerPos.x, ray.collider.transform.position.y + distanceAbovePlatform, playerPos.z);
+            playerPos = new Vector3(playerPos.x, ray.collider.transform.position.y + distanceAbovePlatform,
+                playerPos.z);
         else
             playerPos += Vector3.down * distanceUnderPlayer;
 

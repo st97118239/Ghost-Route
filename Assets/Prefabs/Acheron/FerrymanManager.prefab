@@ -228,7 +228,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.37, z: 0}
-  m_LocalScale: {x: 5.18, y: 5.18, z: 5.18}
+  m_LocalScale: {x: 3.41, y: 3.41, z: 3.41}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3690419896276097480}
@@ -314,8 +314,8 @@ MonoBehaviour:
   spearCollider: {fileID: 2014158269365533865}
   defaultSprite: {fileID: 21300000, guid: fe1c3bcffbe32b5469fcb8d73858e546, type: 3}
   stabSprite: {fileID: 21300000, guid: a4b3bc155b2d8a2449a3250cfe3805f0, type: 3}
-  distanceUnderPlayer: 1.5
-  distanceAbovePlatform: -0.2
+  distanceUnderPlayer: 2.2
+  distanceAbovePlatform: -0.3
   spearSpeed: 0.8
   _spearSpeedTimer: 0.03
   _timeUntilSpearDown: 0.1

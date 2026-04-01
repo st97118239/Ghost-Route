@@ -56,9 +56,15 @@ public class AcheronManager : MonoBehaviour
 
     public void UnlockButton()
     {
+        startButton.interactable = true;
+        EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+
+#if UNITY_EDITOR
+        if (SaveDataManager.saveData == null)
+            return;
+#endif
         SaveDataManager.saveData.hasSeenAcheronDialogue = true;
         SaveDataManager.Save();
-        startButton.interactable = true;
     }
 
     public void StartGame()

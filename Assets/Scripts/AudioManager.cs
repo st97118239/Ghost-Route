@@ -195,6 +195,11 @@ public class AudioManager : MonoBehaviour
         if (instance.musicPlaying == music)
             return;
 
+#if UNITY_EDITOR
+        if (SaveDataManager.saveData == null)
+            return;
+#endif
+
         if (SaveDataManager.saveData.bgmVolume == 0)
         {
 #if UNITY_EDITOR
@@ -259,6 +264,11 @@ public class AudioManager : MonoBehaviour
     {
         if (instance.musicPlaying == Sounds.None)
             return;
+
+#if UNITY_EDITOR
+        if (SaveDataManager.saveData == null)
+            return;
+#endif
 
         if (SaveDataManager.saveData.bgmVolume == 0)
         {
