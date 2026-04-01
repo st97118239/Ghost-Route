@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 [Serializable]
 public class SaveData
@@ -32,7 +33,7 @@ public class SaveData
     public void Reset(Ending[] givenEndings)
     {
         textSpeed = 0.04f;
-        windowType = 1;
+        windowType = (int)Screen.fullScreenMode;
         bgmVolume = 1;
         sfxVolume = 1;
         voicelinesVolume = 1;
