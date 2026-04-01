@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -38,13 +37,8 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private MainMenuBackground backgroundChanger;
 
-    [SerializeField] private Image companyLogoImage;
-    [SerializeField] private float companyLogoFadeTime;
-    [SerializeField] private float companyLogoContinueDelay;
-    private WaitForSeconds companyLogoContinueDelayWait;
     [SerializeField] private Color companyLogoEndColor;
 
-    private bool shouldFadeLogo;
     private bool shouldMoveEye;
 
     private void Awake()
@@ -61,8 +55,6 @@ public class MainMenuManager : MonoBehaviour
         eye0Trans.localPosition = Vector3.zero;
         eye1Trans.localPosition = Vector3.zero;
         eye2Trans.localPosition = Vector3.zero;
-
-        companyLogoContinueDelayWait = new WaitForSeconds(companyLogoContinueDelay);
     }
 
     private void Start()
@@ -151,41 +143,12 @@ public class MainMenuManager : MonoBehaviour
         eye2Trans.localPosition = Vector3.zero;
     }
 
-    private IEnumerator CompanyLogoAnimation()
-    {
-        bool isGoingBack = false;
-        shouldFadeLogo = true;
-        while (shouldFadeLogo)
-        {
-            Color startColor = isGoingBack ? companyLogoEndColor : Color.white;
-            Color endColor = isGoingBack ? Color.white : companyLogoEndColor;
-
-            for (float i = 0; i <= companyLogoFadeTime + Time.deltaTime; i += Time.deltaTime)
-            {
-                if (i > companyLogoFadeTime) i = companyLogoFadeTime;
-
-                float fillAmount = i / companyLogoFadeTime;
-
-                companyLogoImage.color = Color.Lerp(startColor, endColor, fillAmount);
-
-                yield return null;
-            }
-
-            companyLogoImage.color = endColor;
-
-            yield return companyLogoContinueDelayWait;
-
-            isGoingBack = !isGoingBack;
-        }
-    }
-
     public void Show(bool isFromStart)
     {
         mainMenuCanvas.gameObject.SetActive(true);
         if (!isFromStart)
             backgroundChanger.ChangeBackground(true);
         StartCoroutine(MoveEyeLoop());
-        StartCoroutine(CompanyLogoAnimation());
     }
 
     public void StartButton()
@@ -202,7 +165,6 @@ public class MainMenuManager : MonoBehaviour
 
     private void Hide()
     {
-        shouldFadeLogo = false;
         shouldMoveEye = false;
         mainMenuCanvas.gameObject.SetActive(false);
     }

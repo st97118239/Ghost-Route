@@ -8,6 +8,7 @@ public class MainMenuBackground : MonoBehaviour
     [SerializeField] private Image moon;
     [SerializeField] private Image moonGlow;
     [SerializeField] private Image[] stars;
+    [SerializeField] private Image companyLogo;
 
     [SerializeField] private Color moonGlowStartColor;
     [SerializeField] private Color moonGlowEndColor;
@@ -65,8 +66,8 @@ public class MainMenuBackground : MonoBehaviour
         Color startColor = moon.color;
         Color endColor = fadeOut ? invisibleColor : Color.white;
 
-        moon.color = startColor;
-        moonGlow.color = startMoonGlowColor;
+        Color startLogoColor = companyLogo.color;
+        Color endLogoColor = fadeOut ? invisibleColor : Color.white;
 
         for (float i = 0; i <= fadeTime + Time.deltaTime; i += Time.deltaTime)
         {
@@ -77,6 +78,7 @@ public class MainMenuBackground : MonoBehaviour
             moon.color = Color.Lerp(startColor, endColor, fillAmount);
             if (fadeOut) 
                 moonGlow.color = Color.Lerp(startMoonGlowColor, endMoonGlowColor, fillAmount);
+            companyLogo.color = Color.Lerp(startLogoColor, endLogoColor, fillAmount);
 
             yield return null;
         }

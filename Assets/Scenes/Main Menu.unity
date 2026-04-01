@@ -2207,6 +2207,7 @@ MonoBehaviour:
   - {fileID: 1536751753}
   - {fileID: 1742790811}
   - {fileID: 685521589}
+  companyLogo: {fileID: 1754281073}
   moonGlowStartColor: {r: 1, g: 1, b: 1, a: 0.03529412}
   moonGlowEndColor: {r: 1, g: 1, b: 1, a: 0.16470589}
   moonGlowTime: 2
@@ -2291,6 +2292,7 @@ RectTransform:
   m_Children:
   - {fileID: 372866096}
   - {fileID: 1866301917}
+  - {fileID: 1754281072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2921,7 +2923,6 @@ RectTransform:
   m_Children:
   - {fileID: 1872190630}
   - {fileID: 1239488522}
-  - {fileID: 1754281072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9602,9 +9603,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4aac6eb7bff4840479de55616034cfca, type: 2}
   mainCamera: {fileID: 519420031}
   backgroundChanger: {fileID: 229623526}
-  companyLogoImage: {fileID: 1754281073}
-  companyLogoFadeTime: 1
-  companyLogoContinueDelay: 0.3
   companyLogoEndColor: {r: 1, g: 1, b: 1, a: 0.14117648}
 --- !u!4 &1137948111
 Transform:
@@ -14158,7 +14156,7 @@ GameObject:
   - component: {fileID: 1754281074}
   - component: {fileID: 1754281073}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Company Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14171,12 +14169,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754281071}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 355393254}
+  m_Father: {fileID: 229623530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
