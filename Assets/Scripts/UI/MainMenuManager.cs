@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -163,7 +164,7 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
-    private void Hide()
+    public void Hide()
     {
         shouldMoveEye = false;
         mainMenuCanvas.gameObject.SetActive(false);

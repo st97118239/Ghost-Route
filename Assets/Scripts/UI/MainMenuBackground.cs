@@ -9,6 +9,10 @@ public class MainMenuBackground : MonoBehaviour
     [SerializeField] private Image moonGlow;
     [SerializeField] private Image[] stars;
     [SerializeField] private Image companyLogo;
+    [SerializeField] private Button companyLogoButton;
+
+    [SerializeField] private GameObject creditsScreen;
+    [SerializeField] private MainMenuManager mainMenu;
 
     [SerializeField] private Color moonGlowStartColor;
     [SerializeField] private Color moonGlowEndColor;
@@ -36,6 +40,20 @@ public class MainMenuBackground : MonoBehaviour
         moonGlowTimeUntilLoopWait = new WaitForSeconds(moonGlowTimeUntilLoop);
         starsContinueDelayWait = new WaitForSeconds(starsContinueDelay);
         StartCoroutine(FadeStars());
+    }
+
+    public void ShowCredits()
+    {
+        if (creditsScreen.activeSelf)
+        {
+            creditsScreen.SetActive(false);
+            mainMenu.Show(false);
+        }
+        else
+        {
+            mainMenu.Hide();
+            creditsScreen.SetActive(true);
+        }
     }
 
     public void ChangeBackground(bool hasMoon)
